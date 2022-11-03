@@ -1,0 +1,83 @@
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe.config
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csprojResolveAssemblyReference.cache
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Form1.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Properties.Resources.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.GenerateResource.Cache
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).exe
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.login.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\MySql.Data.dll
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transactions.resources
+C:\Users\eric agino valdez\Desktop\wew\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.authenticator.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe.config
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).exe
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csprojResolveAssemblyReference.cache
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.authenticator.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Form1.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.login.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Properties.Resources.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transactions.resources
+C:\Users\Kesterific\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.GenerateResource.Cache
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe.config
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).exe
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).pdb
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csprojResolveAssemblyReference.cache
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.authenticator.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Form1.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.login.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Properties.Resources.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transactions.resources
+C:\Users\Kester de Vera\Documents\School Related Files\3rd year 1st sem program\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.GenerateResource.Cache
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe.config
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).pdb
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.AssemblyReference.cache
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.SuggestedBindingRedirects.cache
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.authenticator.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Form1.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.login.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Properties.Resources.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transactions.resources
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.GenerateResource.cache
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.CoreCompileInputs.cache
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.CopyComplete
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).exe
+F:\Programing Projects\YvonnieStorePOS(Copro III 2k17 finals)\2nd\YvonnieStore(Beta 2)\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).pdb
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe.config
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).exe
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\bin\Debug\YvonnieStore(Beta 2).pdb
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.AssemblyReference.cache
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.SuggestedBindingRedirects.cache
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.authenticator.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Form1.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.login.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Properties.Resources.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transactions.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.GenerateResource.cache
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.CoreCompileInputs.cache
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).csproj.CopyComplete
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).exe
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore(Beta 2).pdb
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.POS_Form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.inventory_Form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.employees_Form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transaction_Form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.sales_form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.customer_form.resources
