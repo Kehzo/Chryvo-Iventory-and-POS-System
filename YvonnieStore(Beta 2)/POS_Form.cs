@@ -22,6 +22,7 @@ namespace YvonnieStore_Beta_2_
         {
             InitializeComponent();
             fill_POSwithProducts();
+            populateCustomerComboBoxUpdate();
         }
 
         private void t_Tick(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace YvonnieStore_Beta_2_
 
                 connection.Open();
                 MySqlCommand command = connection.CreateCommand();
-                string query = "select * from inventory_table";
+                string query = "select * from inventory_table WHERE stock_forReplacement = '" + "false" +"' AND stock_forScrap = '" + "false" + "' AND stock_status = '" + 1 + "' ";
                 command.CommandText = query;
                 MySqlDataReader read = command.ExecuteReader();
 
@@ -64,6 +65,7 @@ namespace YvonnieStore_Beta_2_
                     item.SubItems.Add(read["stock_selling_price"].ToString());
                     item.SubItems.Add(read["stock_number_of_items"].ToString());
                     item.SubItems.Add(read["stock_category"].ToString());
+                    item.SubItems.Add(read["stock_purchase_price"].ToString());
 
                     POSForm_items_list_lstView.Items.Add(item);
                     POSForm_items_list_lstView.FullRowSelect = true;
@@ -81,7 +83,7 @@ namespace YvonnieStore_Beta_2_
             }
 
         }
-        public void populate_Customer()
+        public void populateCustomerComboBoxUpdate()
         {
             try
             {
@@ -91,24 +93,13 @@ namespace YvonnieStore_Beta_2_
 
                 connection.Open();
                 MySqlCommand command = connection.CreateCommand();
-                string query = "select * from inventory_table";
+                string query = "select * from customer_table ";
                 command.CommandText = query;
                 MySqlDataReader read = command.ExecuteReader();
 
                 while (read.Read())
                 {
-                    ListViewItem item = new ListViewItem(read["stock_id_number"].ToString());
-                    item.SubItems.Add(read["stock_product_name"].ToString());
-                    item.SubItems.Add(read["stock_selling_price"].ToString());
-                    item.SubItems.Add(read["stock_number_of_items"].ToString());
-                    item.SubItems.Add(read["stock_category"].ToString());
-
-                    POSForm_items_list_lstView.Items.Add(item);
-                    POSForm_items_list_lstView.FullRowSelect = true;
-
-
-
-
+                    POSForm_customerinfo_name_lbl.Items.Add(read["customer_firstname"].ToString() + " " + read["customer_lastname"].ToString());
                 }
                 connection.Close();
             }
@@ -184,6 +175,7 @@ namespace YvonnieStore_Beta_2_
                 }
                 else
                 {
+                    decimal profit = Convert.ToDecimal(selectedItemOnInventory.SubItems[2].Text) - Convert.ToDecimal(selectedItemOnInventory.SubItems[5].Text) * Convert.ToDecimal(POSForm_Quantity_txtBox.Text);
                     ListViewItem inventoryItem = new ListViewItem(selectedItemOnInventory.SubItems[0].Text);
                     inventoryItem.SubItems.Add(selectedItemOnInventory.SubItems[1].Text);
                     inventoryItem.SubItems.Add(POSForm_Quantity_txtBox.Text);
@@ -191,9 +183,11 @@ namespace YvonnieStore_Beta_2_
                     decimal total = Convert.ToDecimal(selectedItemOnInventory.SubItems[2].Text) * Convert.ToDecimal(POSForm_Quantity_txtBox.Text);
                     inventoryItem.SubItems.Add(total.ToString());
                     inventoryItem.SubItems.Add(selectedItemOnInventory.SubItems[4].Text);
+                    inventoryItem.SubItems.Add(profit.ToString());
 
                     POSForm_shoppingCart_lstView.Items.Add(inventoryItem);
 
+                   
                     decimal y = Convert.ToDecimal(POSForm_Quantity_txtBox.Text);
                     decimal x = Convert.ToDecimal(selectedItemOnInventory.SubItems[3].Text);
 
@@ -210,8 +204,7 @@ namespace YvonnieStore_Beta_2_
                     POSForm_shoppingCart_totalValue_lbl.Text = "₱" + inventoryTotalWorth.ToString("N0");
                     POSForm_items_list_lstView.Enabled = true; POSForm_minus_btn.Enabled = false; POSForm_plus_btn.Enabled = false;
                     POSForm_Quantity_txtBox.Enabled = false; POSForm_addtoCart_btn.Enabled = false; POSForm_ChangeItem_btn.Enabled = false;
-                    POSForm_shoppingCart_lstView.Enabled = true;
-                    POSForm_shoppingCart_cash_txtBox.Enabled = true; POSForm_processCartitems_btn.Enabled = true;
+                    POSForm_shoppingCart_lstView.Enabled = true; POSForm_shoppingCart_cash_txtBox.Enabled = true;
                     inventoryItem.Focused = false; inventoryItem.Selected = false;
                 }
             }
@@ -240,14 +233,7 @@ namespace YvonnieStore_Beta_2_
                             POSForm_Quantity_txtBox.Enabled = false; POSForm_addtoCart_btn.Enabled = false; POSForm_ChangeItem_btn.Enabled = false; POSForm_itemSearch_txtBox.Enabled = false;
                             POSForm_Category_cmboBox.Enabled = false; inventoryForm_sortGo_btn.Enabled = false;
                         }
-                        if(POSForm_transactiontype_Credit_rdBtn.Checked = true)
-                        {
-                            POSForm_Customerinfo_grpBox.Visible = true;
-                        }
-                        if (POSForm_transactiontype_cash_RdBtn.Checked = true)
-                        {
-                            POSForm_Customerinfo_grpBox.Visible = false;
-                        }
+                        
                         break;
                     case "Save":
                             var cashPaymentType = "Cash";
@@ -261,47 +247,55 @@ namespace YvonnieStore_Beta_2_
                             var item_Product_line = ""; var item_supplier = ""; var item_additional_details = ""; var item_expiration_date = "";
                              var transac_change = POSForm_shoppingCart_change_lbl.Text; string removePesoSign2 = transac_change.Remove(0, 1); var transac_total_price = POSForm_shoppingCart_totalValue_lbl.Text; string removePesoSign3 = transac_total_price.Remove(0, 1);
                             decimal transac_change_value = Convert.ToDecimal(removePesoSign2); decimal transac_total_value = Convert.ToDecimal(removePesoSign3); var inventoryCount = "";
+
+
+
+
+
+
+
+
                         for (int i = 0; i < POSForm_shoppingCart_lstView.Items.Count; i++)
+                        {
+                            transactionID = POSForm_shoppingCart_transactionNumber_lbl.Text;
+                            transaction_item_ID = POSForm_shoppingCart_lstView.Items[i].SubItems[0].Text;
+
+                            MySqlConnection connection = new MySqlConnection(myConnection);
+                            connection.Close();
+                            connection.Open();
+                            MySqlCommand command = connection.CreateCommand();
+                            string query = "select * from inventory_table where stock_id_number = '" + transaction_item_ID + "'";
+                            command.CommandText = query;
+                            MySqlDataReader read = command.ExecuteReader();
+
+                            while (read.Read())
                             {
-                                transactionID = POSForm_shoppingCart_transactionNumber_lbl.Text;
-                                transaction_item_ID = POSForm_shoppingCart_lstView.Items[i].SubItems[0].Text;
-
-                                MySqlConnection connection = new MySqlConnection(myConnection);
-                                connection.Close();
-                                connection.Open();
-                                MySqlCommand command = connection.CreateCommand();
-                                string query = "select * from inventory_table where stock_id_number = '" + transaction_item_ID + "'";
-                                command.CommandText = query;
-                                MySqlDataReader read = command.ExecuteReader();
-
-                                while (read.Read())
-                                {
-                                    item_Product_line = read["stock_product_line"].ToString();
-                                    item_supplier = read["stock_supplier"].ToString();
-                                    item_additional_details = read["stock_additional_details"].ToString();
-                                    item_expiration_date = read["stock_expiration_date"].ToString();
-                                    inventoryCount = read["stock_number_of_items"].ToString();
+                                item_Product_line = read["stock_product_line"].ToString();
+                                item_supplier = read["stock_supplier"].ToString();
+                                item_additional_details = read["stock_additional_details"].ToString();
+                                item_expiration_date = read["stock_expiration_date"].ToString();
+                                inventoryCount = read["stock_number_of_items"].ToString();
                             }
-                                connection.Close();
+                            connection.Close();
 
-                            
-                                transaction_item_name = POSForm_shoppingCart_lstView.Items[i].SubItems[1].Text;
-                                transaction_item_pieces = POSForm_shoppingCart_lstView.Items[i].SubItems[2].Text;
-                                transaction_item_price = POSForm_shoppingCart_lstView.Items[i].SubItems[3].Text;
-                                transaction_item_subtotal = POSForm_shoppingCart_lstView.Items[i].SubItems[4].Text;
-                                transaction_item_category = POSForm_shoppingCart_lstView.Items[i].SubItems[5].Text;
+
+                            transaction_item_name = POSForm_shoppingCart_lstView.Items[i].SubItems[1].Text;
+                            transaction_item_pieces = POSForm_shoppingCart_lstView.Items[i].SubItems[2].Text;
+                            transaction_item_price = POSForm_shoppingCart_lstView.Items[i].SubItems[3].Text;
+                            transaction_item_subtotal = POSForm_shoppingCart_lstView.Items[i].SubItems[4].Text;
+                            transaction_item_category = POSForm_shoppingCart_lstView.Items[i].SubItems[5].Text;
 
                             connection.Open();
 
-                           MySqlCommand command2 = new MySqlCommand("insert into transaction_table (transaction_id,transaction_item_ID,transaction_item_name" +
-                                ",transaction_item_count,transaction_item_category," +
-                                "transaction_item_price,transaction_item_product_line,transaction_item_supplier,transaction_item_additional_details,transaction_item_expiration_date,transaction_item_item_subtotal,transaction_total_price,transaction_cash_rendered,transaction_change_rendered" +
-                                ",transaction_user,transaction_date_made,transaction_status,transaction_customer_name) values " +
-                                "('" + transactionID + "','" + transaction_item_ID + "','" + transaction_item_name + "'" +
-                                ",'" + transaction_item_pieces + "'," +
-                                "'" + transaction_item_category + "','" + transaction_item_price + "','" + item_Product_line + "'" +
-                                ",'" + item_supplier +
-                                "','" + item_additional_details + "','" + item_expiration_date + "','" + transaction_item_subtotal + "','" + transac_total_value + "','" + POSForm_shoppingCart_cash_txtBox.Text + "','" + transac_change_value + "','" + POS_user_Firstname.Text + "','" + DateTime.Now + "','" + "Unread" + "','" + "N/A" +"')", connection);
+                            MySqlCommand command2 = new MySqlCommand("insert into transaction_table (transaction_id,transaction_item_ID,transaction_item_name" +
+                                 ",transaction_item_count,transaction_item_category," +
+                                 "transaction_item_price,transaction_item_product_line,transaction_item_supplier,transaction_item_additional_details,transaction_item_expiration_date,transaction_item_item_subtotal,transaction_total_price,transaction_cash_rendered,transaction_change_rendered" +
+                                 ",transaction_user,transaction_date_made,transaction_status,transaction_customer_name) values " +
+                                 "('" + transactionID + "','" + transaction_item_ID + "','" + transaction_item_name + "'" +
+                                 ",'" + transaction_item_pieces + "'," +
+                                 "'" + transaction_item_category + "','" + transaction_item_price + "','" + item_Product_line + "'" +
+                                 ",'" + item_supplier +
+                                 "','" + item_additional_details + "','" + item_expiration_date + "','" + transaction_item_subtotal + "','" + transac_total_value + "','" + POSForm_shoppingCart_cash_txtBox.Text + "','" + transac_change_value + "','" + POS_user_Firstname.Text + "','" + DateTime.Now + "','" + "Unread" + "','" + "N/A" + "')", connection);
 
                             command2.ExecuteNonQuery();
 
@@ -315,6 +309,91 @@ namespace YvonnieStore_Beta_2_
                             save.ExecuteNonQuery();
                             con.Close();
                             MessageBox.Show("Stock updated!");
+                        }
+
+                        for (int i = 0; i < POSForm_shoppingCart_lstView.Items.Count; i++)
+                        {
+                            MySqlConnection connection = new MySqlConnection(myConnection);
+                            connection.Close();
+                            connection.Open();
+                            decimal CartCashValue = 0;
+                            decimal CartCreditValue = 0;
+                            if (POSForm_transactiontype_cash_RdBtn.Checked == true)
+                            {
+                                CartCashValue = transac_total_value;
+                            }
+                            else if(POSForm_transactiontype_Credit_rdBtn.Checked == true)
+                            {
+                                CartCreditValue = transac_total_value;
+                            }
+                            decimal CartTotalValue = transac_total_value;
+                            decimal fetchedCash = 0; decimal fetchedCredit = 0; decimal fetchedTotal = 0; var fetchedGross = ""; var fetchedNet = ""; decimal fetchTotalSales = 0;
+
+                            MySqlCommand commandx = connection.CreateCommand();
+                            string queryx = "select * from sales_table where sales_date = '" + datenow_value.Text + "'";
+                            commandx.CommandText = queryx;
+                            MySqlDataReader readx = commandx.ExecuteReader();
+                            int count1 = 0;
+                            while (readx.Read())
+                            {
+                                fetchedCash = Convert.ToDecimal(readx["sales_cash"].ToString());
+                                fetchedCredit = Convert.ToDecimal(readx["sales_credit"].ToString());
+                                fetchedTotal = Convert.ToDecimal(readx["sales_total"].ToString());
+                                fetchTotalSales = Convert.ToDecimal(readx["sales_transactotal"].ToString());
+                                count1++;
+                            }
+                            if (fetchedCash.ToString() == "") { fetchedCash = 0; }
+                            if (fetchedCredit.ToString() == "") { fetchedCredit = 0; }
+                            if (fetchedTotal.ToString() == "") { fetchedTotal = 0; } 
+                            if (fetchTotalSales.ToString() == "") { fetchTotalSales = 0; }
+                                 
+                            connection.Close();
+                            decimal newCartCashValue = Convert.ToDecimal(fetchedCash) + CartCashValue; 
+                            decimal newCartCreditValue = Convert.ToDecimal(fetchedCredit) + CartCreditValue; 
+                            decimal newCartTotalValue = Convert.ToDecimal(fetchedTotal) + transac_total_value;
+                            int cartNumberofItems = 0;
+                            for (int b = 0; b < POSForm_shoppingCart_lstView.Items.Count; b++)
+                            {
+                                cartNumberofItems++;
+                            }
+                            decimal inventoryProfit = 0;
+                            for (int v = 0; i < POSForm_shoppingCart_lstView.Items.Count; i++)
+                            {
+                                inventoryProfit += decimal.Parse(POSForm_shoppingCart_lstView.Items[i].SubItems[6].Text);
+                            }
+                            int newNumberofItems = Convert.ToInt32(fetchTotalSales) + cartNumberofItems;
+                            var transacMethod = ""; decimal ifCashAmount = 0; decimal ifCreditAmount = 0; decimal totalAmount = transac_total_value;
+                            if (POSForm_transactiontype_cash_RdBtn.Checked == true)
+                            {
+                                transacMethod = "CASH"; ifCashAmount = transac_total_value;
+                            }
+                            else if (POSForm_transactiontype_Credit_rdBtn.Checked == true)
+                            {
+                                transacMethod = "CREDIT"; ifCreditAmount = transac_total_value;
+                            }
+                            if (count1 <= 0)
+                            {
+                                connection.Close();
+                                connection.Open();
+                                MySqlCommand command3 = new MySqlCommand("insert into sales_table (sales_date,sales_cash,sales_credit" +
+                                    ",sales_total,sales_transactotal,sales_cashier,sales_type,sales_profit) values " +
+                                    "('" + datenow_value.Text + "','" + ifCashAmount + "','" + ifCreditAmount + "'" +
+                                    ",'" + totalAmount + "'," +
+                                    "'" + cartNumberofItems + "','" + POS_user_Firstname.Text + "','" + transacMethod + "','" + inventoryProfit + "')", connection);
+
+                                command3.ExecuteNonQuery();
+                                MessageBox.Show("Added Sales successfull!", "EDITION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                connection.Close();
+                                connection.Open();
+                                MySqlCommand command5 = connection.CreateCommand();
+                                string queryc = "update sales_table set sales_cash = '" + newCartCashValue + "' , sales_credit = '" + newCartCreditValue + "' , sales_total = '" + newCartTotalValue + "' , sales_transactotal = '" + newNumberofItems + "' , sales_cashier = '" + POS_user_Firstname.Text + "', sales_type = '" + transacMethod + "' where sales_date  = '" + datenow_value.Text + "' ";
+                                command5.CommandText = queryc;
+                                command5.ExecuteNonQuery();
+                                MessageBox.Show("Update Sales successfull!", "EDITION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         MessageBox.Show("Transaction successfull!");
                         POSForm_processCartitems_btn.Text = "Process";
@@ -343,7 +422,13 @@ namespace YvonnieStore_Beta_2_
 
         private void POSForm_shoppingCart_cash_txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(POSForm_shoppingCart_cash_txtBox.Text != "")
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+
+            if (POSForm_shoppingCart_cash_txtBox.Text != "")
             {
                 POSForm_processCartitems_btn.Enabled = true;
             }
@@ -387,8 +472,9 @@ namespace YvonnieStore_Beta_2_
 
         private void POSForm_Quantity_txtBox_TextChanged(object sender, EventArgs e)
         {
-            int addCart_Value = Convert.ToInt32(POSForm_Quantity_txtBox.Text);
-            if(addCart_Value <= -1) { POSForm_Quantity_txtBox.Text = "0"; }
+            if (POSForm_Quantity_txtBox.Text == "") { POSForm_Quantity_txtBox.Text = "1"; }
+            else { int addCart_Value = Convert.ToInt32(POSForm_Quantity_txtBox.Text); if (addCart_Value <= 0) { POSForm_Quantity_txtBox.Text = "1"; } }
+            
         }
 
         private void POSForm_transactiontype_cash_RdBtn_CheckedChanged(object sender, EventArgs e)
@@ -401,31 +487,48 @@ namespace YvonnieStore_Beta_2_
             {
                 POSForm_transactiontype_confirm_btn.Enabled = false;
             }
+            if (POSForm_transactiontype_Credit_rdBtn.Checked == true && POSForm_customerinfo_name_lbl.Text == "N/A")
+            {
+                POSForm_processCartitems_btn.Enabled = false;
+            }
+            else
+            {
+                POSForm_processCartitems_btn.Enabled = false;
+            }
         }
 
         private void POSForm_transactiontype_Credit_rdBtn_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (POSForm_transactiontype_Credit_rdBtn.Checked == true && POSForm_customerinfo_name_lbl.Text == "N/A")
+            {
+                POSForm_processCartitems_btn.Enabled = false;
+            }
+            else
+            {
+                POSForm_processCartitems_btn.Enabled = false;
+            }
+            if (POSForm_transactiontype_cash_RdBtn.Checked == true || POSForm_transactiontype_Credit_rdBtn.Checked == true)
+            {
+                POSForm_transactiontype_confirm_btn.Enabled = true;
+            }
+            else
+            {
+                POSForm_transactiontype_confirm_btn.Enabled = false;
+            }
         }
 
         private void POSForm_transactiontype_confirm_btn_Click(object sender, EventArgs e)
         {
-            if (POSForm_transactiontype_Credit_rdBtn.Checked == true)
-            {
-                POSForm_Customerinfo_grpBox.Visible = true;
-            }
-            else
-            {
-                POSForm_Customerinfo_grpBox.Visible = false;
-            }
+            
             if (POSForm_transactiontype_cash_RdBtn.Checked == true || POSForm_transactiontype_Credit_rdBtn.Checked == true)
             {
-                POSForm_shoppingCart_cash_txtBox.Enabled = true;
+                POSForm_shoppingCart_cash_txtBox.Enabled = true; POSForm_customerinfo_name_lbl.Visible = true; label5.Visible = true; POSForm_processCartitems_btn.Enabled = true;
             }
             else
             {
-                POSForm_shoppingCart_cash_txtBox.Enabled = false;
+                POSForm_shoppingCart_cash_txtBox.Enabled = false; POSForm_customerinfo_name_lbl.Visible = false; label5.Visible = false; POSForm_processCartitems_btn.Enabled = true;
             }
+        
         }
 
         private void POSForm_toCustomer_btn_Click(object sender, EventArgs e)
@@ -444,6 +547,24 @@ namespace YvonnieStore_Beta_2_
             toSalesForm.salesForm_user_idnumber.Text = POS_user_idnumber.Text;
             this.Close();
             toSalesForm.Show();
+        }
+
+        private void POSForm_toSuppliers_btn_Click(object sender, EventArgs e)
+        {
+            supplier_Form toSupplier = new supplier_Form();
+            toSupplier.Supplier_user_Firstname.Text = POS_user_Firstname.Text;
+            toSupplier.Supplier_user_idnumber.Text = POS_user_idnumber.Text;
+            this.Close();
+            toSupplier.Show();
+        }
+
+        private void POSForm_Quantity_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
     }
 

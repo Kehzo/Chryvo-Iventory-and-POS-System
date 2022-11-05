@@ -15,6 +15,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Security.Policy;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Text.RegularExpressions;
 
 namespace YvonnieStore_Beta_2_
 {
@@ -29,6 +30,7 @@ namespace YvonnieStore_Beta_2_
             checkLowStocks();
             checkProductforReplacement();
             inventoryWorth();
+            nonInventorySales();
         }
         private void t_Tick(object sender, EventArgs e)
         {
@@ -59,9 +61,9 @@ namespace YvonnieStore_Beta_2_
                 {
                     string purchasePrice = read["stock_selling_price"].ToString(); string numberofItems = read["stock_number_of_items"].ToString();
                     decimal TotalWorth = Convert.ToDecimal(purchasePrice) * Convert.ToDecimal(numberofItems);
-                    string numberofStocks = read["stock_number_of_items"].ToString(); string lowStockValue = read["stock_low_stock_alert"].ToString(); 
+                    string numberofStocks = read["stock_number_of_items"].ToString(); string lowStockValue = read["stock_low_stock_alert"].ToString();
                     string isLowStock = "";
-                    if(Convert.ToInt32(numberofStocks)<=Convert.ToInt32(lowStockValue))
+                    if (Convert.ToInt32(numberofStocks) <= Convert.ToInt32(lowStockValue))
                     {
                         isLowStock = "true";
                     }
@@ -97,9 +99,9 @@ namespace YvonnieStore_Beta_2_
                     }
                     inventoryForm_inventorylist_listview.Items.Add(item);
                     inventoryForm_inventorylist_listview.FullRowSelect = true;
-                    
-                        
-                    
+
+
+
 
                 }
                 connection.Close();
@@ -118,7 +120,7 @@ namespace YvonnieStore_Beta_2_
         {
             int stockValue = Convert.ToInt32(inventoryForm_newitemamount_txtBox.Text); int lowStockValue = Convert.ToInt32(inventoryForm_lowStockAlert_txtBox.Text);
             string isLowValue = "false";
-            if(stockValue < lowStockValue)
+            if (stockValue < lowStockValue)
             {
                 isLowValue = "true";
             }
@@ -132,7 +134,7 @@ namespace YvonnieStore_Beta_2_
                 ",stock_addedbyUser_name,stock_lastupdatedby,stock_low_stock_alert,stock_isLow,stock_forReplacement,stock_forScrap) values " +
                 "('" + inventoryForm_newproductid_txtBox.Text + "','" + inventoryForm_newproductname_txtBox.Text + "','" + inventoryForm_newitemamount_txtBox.Text + "'" +
                 ",'" + inventoryForm_newitempurchaseprice_txtBox.Text + "'," +
-                "'" + inventoryForm_newitemsellingprice_txtBox.Text + "','" + inventoryForm_newproductline_txtBox.Text + "','" + inventoryForm_newsupplier_txtBox.Text + "'" +
+                "'" + inventoryForm_newitemsellingprice_txtBox.Text + "','" + inventoryForm_newproductline_txtBox.Text + "','" + inventoryForm_newsupplier_CBbox.Text + "'" +
                 ",'" + inventoryForm_newitemadditionaldetails_txtBox.Text +
                 "','" + inventoryForm_newitemcategory_cmBox.Text + "','" + DateTime.Now + "','" + "N/A" + "','" + "N/A" + "','" + "1" + "','" + inventoryForm_newitemexpiration_DTpicker.Text + "','" + inventoryForm_user_Firstname.Text + "','" + "N/A" + "','" + inventoryForm_lowStockAlert_txtBox.Text + "','" + isLowValue + "','" + "false" + "','" + "false" + "')", connection);
 
@@ -144,7 +146,7 @@ namespace YvonnieStore_Beta_2_
             inventoryForm_newitempurchaseprice_txtBox.Clear();
             inventoryForm_newitemsellingprice_txtBox.Text = "";
             inventoryForm_newproductline_txtBox.Clear();
-            inventoryForm_newsupplier_txtBox.Text = "";
+            inventoryForm_newsupplier_CBbox.Items.Clear();
             inventoryForm_newitemadditionaldetails_txtBox.Clear();
             inventoryForm_lowStockAlert_txtBox.Clear();
             MessageBox.Show("New item successfully inserted into the inventory list.", "SUCCESS!");
@@ -158,6 +160,63 @@ namespace YvonnieStore_Beta_2_
         }
         //ADD ITEM TO INVENTORY METHOD ENDS HERE//
 
+        public void populateSupplierComboBox()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(myConnection);
+                inventoryForm_newsupplier_CBbox.Items.Clear();
+                connection.Close();
+
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                string query = "select * from supplier_table ";
+                command.CommandText = query;
+                MySqlDataReader read = command.ExecuteReader();
+
+                while (read.Read())
+                {
+                    //for (int i = 0; i < read.; i++)
+                    //{
+                    inventoryForm_newsupplier_CBbox.Items.Add(read["supplier_company"].ToString());
+                    // }
+                }
+                connection.Close();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR: " + e);
+            }
+
+        }
+        public void populateSupplierComboBoxUpdate()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(myConnection);
+                inventoryForm_update_supplier_cBox.Items.Clear();
+                connection.Close();
+
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                string query = "select * from supplier_table ";
+                command.CommandText = query;
+                MySqlDataReader read = command.ExecuteReader();
+
+                while (read.Read())
+                {
+                    inventoryForm_update_supplier_cBox.Items.Add(read["supplier_company"].ToString());
+                }
+                connection.Close();
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR: " + e);
+            }
+
+        }
         public void inventoryWorth()
         {
             if (inventoryForm_inventorylist_listview.Items.Count == 0)
@@ -175,10 +234,29 @@ namespace YvonnieStore_Beta_2_
                 inventoryForm_inventoryworth_lbl.Text = "₱" + inventoryTotalWorth.ToString("N0");
             }
         }
+        public void nonInventorySales()
+        {
+            MySqlConnection connection = new MySqlConnection(myConnection);
+
+            connection.Open();
+            MySqlCommand command = connection.CreateCommand();
+            string query0 = "select SUM(sales_noninventorytotal) FROM sales_table where sales_type = '" + "NONINVENTORY" + "'";
+            command.CommandText = query0;
+            //MySqlDataReader read = command.ExecuteReader();
+
+            inventoryForm_noninventorysales_lbl.Text = "₱" + command.ExecuteScalar().ToString();
+            // var salesValue = read["stock_selling_price"].ToString();
+            //while (read.Read())
+            //{
+            // inventoryForm_noninventorysales_lbl.Text = salesValue;
+            //}
+            connection.Close();
+
+        }
         public void checkLowStocks()
         {
             int numberOfLowStocks = 0;
-           
+
             for (int i = 0; i < inventoryForm_inventorylist_listview.Items.Count; i++)
             {
                 string isLowStock = inventoryForm_inventorylist_listview.Items[i].SubItems[19].Text;
@@ -199,7 +277,7 @@ namespace YvonnieStore_Beta_2_
 
                 if (isLowStock == "true")
                 {
-                    
+
 
                     if (count == 1)
                     {
@@ -226,7 +304,7 @@ namespace YvonnieStore_Beta_2_
                 }
 
             }
-                inventoryForm_lowstacksvalue_lbl.Text = numberOfLowStocks.ToString();
+            inventoryForm_lowstacksvalue_lbl.Text = numberOfLowStocks.ToString();
         }
         private void ResetForm()
         {
@@ -266,7 +344,7 @@ namespace YvonnieStore_Beta_2_
                 {
                     itemsForReplacement++;
                 }
-                 if (forScrap == "true")
+                if (forScrap == "true")
                 {
                     itemsForScrap++;
                 }
@@ -276,9 +354,9 @@ namespace YvonnieStore_Beta_2_
         }
         public void updatemethod()
         {
-                DialogResult dr = MessageBox.Show("Are you sure you want to apply the new changes to this item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dr == DialogResult.Yes)
-                {
+            DialogResult dr = MessageBox.Show("Are you sure you want to apply the new changes to this item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
                 int statusValue = 1;
                 if (inventoryForm_update_statusActive_rBtn.Checked == true)
                 {
@@ -290,40 +368,40 @@ namespace YvonnieStore_Beta_2_
                 }
                 MySqlConnection connection = new MySqlConnection(myConnection);
 
-                    connection.Open();
-                    MySqlCommand command = connection.CreateCommand();
-                    string query0 = "select * from inventory_table where stock_id_number = '" + inventoryForm_update_productID_txtBox.Text + "'";
-                    command.CommandText = query0;
-                    MySqlDataReader read = command.ExecuteReader();
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                string query0 = "select * from inventory_table where stock_id_number = '" + inventoryForm_update_productID_txtBox.Text + "'";
+                command.CommandText = query0;
+                MySqlDataReader read = command.ExecuteReader();
 
-                    int count = 0;
-                    while (read.Read())
-                    {
-                        count++;
-                    }
-
-                    if (count == 1)
-                    {
-                        connection.Close();
-                        connection.Open();
-                        MySqlCommand command2 = connection.CreateCommand();
-                        string query1 = "update inventory_table set  stock_product_name = '" + inventoryForm_update_productName_txtBox.Text + "' , stock_number_of_items = '" + inventoryForm_update_stocks_txtBox.Text + "' , stock_purchase_price = '" + inventoryForm_update_purchaseprice_txtBox.Text + "' , stock_selling_price = '" + inventoryForm_update_sellingPrice_txtBox.Text + "' , stock_product_line = '" + inventoryForm_update_productline_txtBox.Text + "' , stock_supplier = '" + inventoryForm_update_supplier_cBox.Text + "' , stock_additional_details = '" + inventoryForm_update_additionaldetails_txtBox.Text + "', stock_expiration_date = '" + inventoryForm_update_expirationDate_DTpicker.Text + "' , stock_category = '" + inventoryForm_update_category_txtBox.Text + "' , stock_date_updated = '" + DateTime.Now + "' , stock_status = '" + statusValue + "', stock_lastupdatedby = '" + inventoryForm_user_Firstname.Text + "' where stock_id_number  = '" + inventoryForm_update_productID_txtBox.Text + "' ";
-                        command2.CommandText = query1;
-                        command2.ExecuteNonQuery();
-                        fill_InventoryList();
-                        MessageBox.Show("Update successfull!", "EDITION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    }
-                    //else if (count > 1)
-                    //{
-                    //    MessageBox.Show("Please make sure there is no duplicate", "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //}
-                }
-
-                else
+                int count = 0;
+                while (read.Read())
                 {
-                    return;
+                    count++;
                 }
+
+                if (count == 1)
+                {
+                    connection.Close();
+                    connection.Open();
+                    MySqlCommand command2 = connection.CreateCommand();
+                    string query1 = "update inventory_table set  stock_product_name = '" + inventoryForm_update_productName_txtBox.Text + "' , stock_number_of_items = '" + inventoryForm_update_stocks_txtBox.Text + "' , stock_purchase_price = '" + inventoryForm_update_purchaseprice_txtBox.Text + "' , stock_selling_price = '" + inventoryForm_update_sellingPrice_txtBox.Text + "' , stock_product_line = '" + inventoryForm_update_productline_txtBox.Text + "' , stock_supplier = '" + inventoryForm_update_supplier_cBox.Text + "' , stock_additional_details = '" + inventoryForm_update_additionaldetails_txtBox.Text + "', stock_expiration_date = '" + inventoryForm_update_expirationDate_DTpicker.Text + "' , stock_category = '" + inventoryForm_update_category_txtBox.Text + "' , stock_date_updated = '" + DateTime.Now + "' , stock_status = '" + statusValue + "', stock_lastupdatedby = '" + inventoryForm_user_Firstname.Text + "' where stock_id_number  = '" + inventoryForm_update_productID_txtBox.Text + "' ";
+                    command2.CommandText = query1;
+                    command2.ExecuteNonQuery();
+                    fill_InventoryList(); checkLowStocks();
+                    MessageBox.Show("Update successfull!", "EDITION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                //else if (count > 1)
+                //{
+                //    MessageBox.Show("Please make sure there is no duplicate", "ERROR MESSAGE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            }
+
+            else
+            {
+                return;
+            }
         }
         private void button9_Click(object sender, EventArgs e)
         {
@@ -352,6 +430,7 @@ namespace YvonnieStore_Beta_2_
                     inventoryForm_addnewitem_btn.Visible = false;
                     inventoryForm_inventorylist_listview.Visible = false;
                     inventoryForm_addnewItem_panel.Visible = true;
+                    populateSupplierComboBox();
                     break;
                 case "Update Item":
                     inventoryForm_updateForm_panel.Visible = true;
@@ -359,9 +438,10 @@ namespace YvonnieStore_Beta_2_
                     inventoryForm_addnewitem_btn.Visible = false;
                     panel5.Visible = false;
                     panel1.Visible = false;
+                    populateSupplierComboBoxUpdate();
                     break;
             }
-                    
+
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -433,7 +513,7 @@ namespace YvonnieStore_Beta_2_
                     fill_InventoryList(); inventoryForm_lowStock_lstView.Visible = false; inventoryForm_inventorylist_listview.Visible = true; inventoryForm_addnewitem_btn.Visible = true;
                     break;
             }
-            
+
         }
 
         private void inventoryForm_refreshList_btn_Click(object sender, EventArgs e)
@@ -441,19 +521,29 @@ namespace YvonnieStore_Beta_2_
             inventoryForm_sort_comboBox.SelectedItem = "None";
             inventoryForm_inventorylist_listview.Items.Clear();
             fill_InventoryList();
-            
+
         }
 
         private void inventoryForm_addnewproduct_btn_Click(object sender, EventArgs e)
         {
             string purchaseValue = inventoryForm_newitempurchaseprice_txtBox.Text; string sellingValue = inventoryForm_newitemsellingprice_txtBox.Text;
-            if (Convert.ToDecimal(purchaseValue) > Convert.ToDecimal(sellingValue))
+
+            if (inventoryForm_newproductid_txtBox.Text == "" || inventoryForm_newproductname_txtBox.Text == "" || inventoryForm_newitemamount_txtBox.Text == "" ||
+                inventoryForm_newitemcategory_cmBox.Text == "" || inventoryForm_newitempurchaseprice_txtBox.Text == "" || inventoryForm_newitemsellingprice_txtBox.Text == "" ||
+                inventoryForm_newproductline_txtBox.Text == "" || inventoryForm_newsupplier_CBbox.Text == "" || inventoryForm_lowStockAlert_txtBox.Text == "")
             {
-                MessageBox.Show("Purchase price is greater than Selling price! You will not earn profit", "No Profit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please do not leave a textbox empty. Thank you", "Value missing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                add_product_to_inventory();
+                if (Convert.ToDecimal(purchaseValue) > Convert.ToDecimal(sellingValue))
+                {
+                    MessageBox.Show("Purchase price is greater than Selling price! You will not earn profit", "No Profit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    add_product_to_inventory();
+                }
             }
         }
 
@@ -485,7 +575,7 @@ namespace YvonnieStore_Beta_2_
             inventoryForm_update_expirationDate_DTpicker.Text = inventoryList.SubItems[8].Text;
             inventoryForm_update_category_txtBox.Text = inventoryList.SubItems[9].Text;
             statusValue = Convert.ToInt32(inventoryList.SubItems[13].Text);
-            if(statusValue == 1)
+            if (statusValue == 1)
             {
                 inventoryForm_update_statusActive_rBtn.Checked = true;
             }
@@ -493,7 +583,7 @@ namespace YvonnieStore_Beta_2_
             {
                 inventoryForm_update_statusHidden_rBtn.Checked = true;
             }
-
+            inventoryForm_updateLowStockalert_txtBox.Text = inventoryList.SubItems[16].Text;
             inventoryForm_addnewitem_btn.Text = "Update Item";
 
         }
@@ -693,7 +783,7 @@ namespace YvonnieStore_Beta_2_
                     inventoryForm_inventorylist_listview.Visible = false; inventoryForm_lowStock_lstView.Visible = false; inventoryForm_addnewitem_btn.Visible = false;
                     inventoryForm_forReplacement_lbl.Visible = true; inventoryForm_forReplacement_lstView.Visible = true; inventoryForm_forScrap_lbl.Visible = true; inventoryForm_forScrap_lstView.Visible = true;
                     inventoryForm_BOstocks_btn.Text = "Done"; inventoryForm_sort_comboBox.Enabled = false; inventoryForm_sortGo_btn.Enabled = false; inventoryForm_refreshList_btn.Enabled = false;
-                    inventoryForm_nonInventory_Sales_btn.Enabled=false; inventoryForm_lowStocks_btn.Enabled = false; inventoryForm_inventorylistsearch_txtbox.Enabled = false;
+                    inventoryForm_nonInventory_Sales_btn.Enabled = false; inventoryForm_lowStocks_btn.Enabled = false; inventoryForm_inventorylistsearch_txtbox.Enabled = false;
                     label6.Visible = true; inventoryForm_forScrapSearch_txtBox.Visible = true; label7.Visible = true; inventoryForm_forReplacementSearch_txtBox.Visible = true;
                     //POPULATE LISTVIEW FOR REPLACEMENT ITEMS START HERE//
                     try
@@ -793,7 +883,7 @@ namespace YvonnieStore_Beta_2_
                     label6.Visible = false; inventoryForm_forScrapSearch_txtBox.Visible = false; label7.Visible = false; inventoryForm_forReplacementSearch_txtBox.Visible = false;
                     break;
             }
-            
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -813,6 +903,116 @@ namespace YvonnieStore_Beta_2_
             this.Close();
             toCustomer.Show();
         }
+
+        private void inventoryForm_newitemamount_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void inventoryForm_newitempurchaseprice_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+                && !char.IsDigit(e.KeyChar)
+                && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.'
+                && inventoryForm_newitempurchaseprice_txtBox.Text.IndexOf('.') >= 1)
+            {
+                e.Handled = true;
+            }
+        }
+        private void inventoryForm_newitemsellingprice_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+                && !char.IsDigit(e.KeyChar)
+                && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.'
+                && inventoryForm_newitemsellingprice_txtBox.Text.IndexOf('.') >= 1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void inventoryForm_lowStockAlert_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void inventoryForm_update_stocks_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void inventoryForm_updateLowStockalert_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (!char.IsLetter(e.KeyChar)
+              && !Char.IsDigit(e.KeyChar)
+                 && e.KeyChar != Convert.ToInt16(Keys.Back));
+
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+            private void inventoryForm_update_purchaseprice_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+            {
+                if (!char.IsControl(e.KeyChar)
+                    && !char.IsDigit(e.KeyChar)
+                    && e.KeyChar != '.')
+                {
+                    e.Handled = true;
+                }
+
+                // only allow one decimal point
+                if (e.KeyChar == '.'
+                    && inventoryForm_newitemsellingprice_txtBox.Text.IndexOf('.') >= 1)
+                {
+                    e.Handled = true;
+                }
+
+            }
+
+            private void inventoryForm_update_sellingPrice_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+            {
+
+                if (!char.IsControl(e.KeyChar)
+                    && !char.IsDigit(e.KeyChar)
+                    && e.KeyChar != '.')
+                {
+                    e.Handled = true;
+                }
+
+                // only allow one decimal point
+                if (e.KeyChar == '.'
+                    && inventoryForm_newitemsellingprice_txtBox.Text.IndexOf('.') >= 1)
+                {
+                    e.Handled = true;
+                }
+            }
+        }
     }
-}
 

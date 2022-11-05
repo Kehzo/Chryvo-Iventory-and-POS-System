@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.inventoryForm_user_idnumber = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -145,7 +147,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.inventoryForm_nonInventory_Sales_btn = new System.Windows.Forms.Button();
             this.inventoryForm_noninventorysales_lbl = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.inventoryForm_BOstocks_btn = new System.Windows.Forms.Button();
@@ -159,6 +160,7 @@
             this.inventoryForm_inventoryworth_lbl = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.inventoryForm_addnewItem_panel = new System.Windows.Forms.Panel();
+            this.inventoryForm_newsupplier_CBbox = new System.Windows.Forms.ComboBox();
             this.testButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.inventoryForm_add_profit_lbl = new System.Windows.Forms.Label();
@@ -176,7 +178,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.inventoryForm_newitemexpiration_DTpicker = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.inventoryForm_newsupplier_txtBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.inventoryForm_newproductline_txtBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -218,8 +219,13 @@
             this.label40 = new System.Windows.Forms.Label();
             this.inventoryForm_update_productID_txtBox = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.inventoryForm_updateLowStockalert_txtBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -253,6 +259,28 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(153, 740);
             this.panel5.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 58);
+            this.button1.TabIndex = 83;
+            this.button1.Text = "CUSTOMER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(2, 447);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 57);
+            this.button2.TabIndex = 82;
+            this.button2.Text = "TRANSACTION";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox1
             // 
@@ -1133,7 +1161,6 @@
             // 
             this.panel4.Controls.Add(this.inventoryForm_nonInventory_Sales_btn);
             this.panel4.Controls.Add(this.inventoryForm_noninventorysales_lbl);
-            this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label21);
             this.panel4.Location = new System.Drawing.Point(694, 4);
             this.panel4.Name = "panel4";
@@ -1152,25 +1179,12 @@
             // inventoryForm_noninventorysales_lbl
             // 
             this.inventoryForm_noninventorysales_lbl.AutoSize = true;
-            this.inventoryForm_noninventorysales_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_noninventorysales_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_noninventorysales_lbl.Location = new System.Drawing.Point(92, 31);
             this.inventoryForm_noninventorysales_lbl.Name = "inventoryForm_noninventorysales_lbl";
             this.inventoryForm_noninventorysales_lbl.Size = new System.Drawing.Size(150, 22);
             this.inventoryForm_noninventorysales_lbl.TabIndex = 38;
             this.inventoryForm_noninventorysales_lbl.Text = "999,999,999.00";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(51, 34);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(20, 20);
-            this.label18.TabIndex = 39;
-            this.label18.Text = "₱";
-            this.label18.Visible = false;
             // 
             // label21
             // 
@@ -1302,6 +1316,7 @@
             // 
             this.inventoryForm_addnewItem_panel.BackColor = System.Drawing.SystemColors.Highlight;
             this.inventoryForm_addnewItem_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.inventoryForm_addnewItem_panel.Controls.Add(this.inventoryForm_newsupplier_CBbox);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.testButton);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.label3);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.inventoryForm_add_profit_lbl);
@@ -1319,7 +1334,6 @@
             this.inventoryForm_addnewItem_panel.Controls.Add(this.label26);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.inventoryForm_newitemexpiration_DTpicker);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.label11);
-            this.inventoryForm_addnewItem_panel.Controls.Add(this.inventoryForm_newsupplier_txtBox);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.label15);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.inventoryForm_newproductline_txtBox);
             this.inventoryForm_addnewItem_panel.Controls.Add(this.label16);
@@ -1336,6 +1350,15 @@
             this.inventoryForm_addnewItem_panel.Size = new System.Drawing.Size(1294, 723);
             this.inventoryForm_addnewItem_panel.TabIndex = 45;
             this.inventoryForm_addnewItem_panel.Visible = false;
+            // 
+            // inventoryForm_newsupplier_CBbox
+            // 
+            this.inventoryForm_newsupplier_CBbox.Font = new System.Drawing.Font("Consolas", 9.75F);
+            this.inventoryForm_newsupplier_CBbox.FormattingEnabled = true;
+            this.inventoryForm_newsupplier_CBbox.Location = new System.Drawing.Point(591, 191);
+            this.inventoryForm_newsupplier_CBbox.Name = "inventoryForm_newsupplier_CBbox";
+            this.inventoryForm_newsupplier_CBbox.Size = new System.Drawing.Size(205, 23);
+            this.inventoryForm_newsupplier_CBbox.TabIndex = 33;
             // 
             // testButton
             // 
@@ -1371,9 +1394,11 @@
             // 
             this.inventoryForm_lowStockAlert_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_lowStockAlert_txtBox.Location = new System.Drawing.Point(591, 356);
+            this.inventoryForm_lowStockAlert_txtBox.MaxLength = 3;
             this.inventoryForm_lowStockAlert_txtBox.Name = "inventoryForm_lowStockAlert_txtBox";
             this.inventoryForm_lowStockAlert_txtBox.Size = new System.Drawing.Size(67, 23);
-            this.inventoryForm_lowStockAlert_txtBox.TabIndex = 60;
+            this.inventoryForm_lowStockAlert_txtBox.TabIndex = 35;
+            this.inventoryForm_lowStockAlert_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_lowStockAlert_txtBox_KeyPress);
             // 
             // label1
             // 
@@ -1399,10 +1424,11 @@
             // 
             this.inventoryForm_newitemadditionaldetails_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newitemadditionaldetails_txtBox.Location = new System.Drawing.Point(591, 221);
+            this.inventoryForm_newitemadditionaldetails_txtBox.MaxLength = 100;
             this.inventoryForm_newitemadditionaldetails_txtBox.Multiline = true;
             this.inventoryForm_newitemadditionaldetails_txtBox.Name = "inventoryForm_newitemadditionaldetails_txtBox";
             this.inventoryForm_newitemadditionaldetails_txtBox.Size = new System.Drawing.Size(205, 104);
-            this.inventoryForm_newitemadditionaldetails_txtBox.TabIndex = 58;
+            this.inventoryForm_newitemadditionaldetails_txtBox.TabIndex = 34;
             // 
             // label29
             // 
@@ -1418,9 +1444,11 @@
             // 
             this.inventoryForm_newitemsellingprice_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newitemsellingprice_txtBox.Location = new System.Drawing.Point(591, 126);
+            this.inventoryForm_newitemsellingprice_txtBox.MaxLength = 8;
             this.inventoryForm_newitemsellingprice_txtBox.Name = "inventoryForm_newitemsellingprice_txtBox";
             this.inventoryForm_newitemsellingprice_txtBox.Size = new System.Drawing.Size(67, 23);
-            this.inventoryForm_newitemsellingprice_txtBox.TabIndex = 56;
+            this.inventoryForm_newitemsellingprice_txtBox.TabIndex = 31;
+            this.inventoryForm_newitemsellingprice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_newitemsellingprice_txtBox_KeyPress);
             // 
             // label28
             // 
@@ -1448,7 +1476,7 @@
             this.inventoryForm_newitemcategory_cmBox.Location = new System.Drawing.Point(143, 234);
             this.inventoryForm_newitemcategory_cmBox.Name = "inventoryForm_newitemcategory_cmBox";
             this.inventoryForm_newitemcategory_cmBox.Size = new System.Drawing.Size(121, 21);
-            this.inventoryForm_newitemcategory_cmBox.TabIndex = 53;
+            this.inventoryForm_newitemcategory_cmBox.TabIndex = 29;
             // 
             // inventoryForm_addnewitemclear_btn
             // 
@@ -1466,7 +1494,7 @@
             this.inventoryForm_addnewproduct_btn.Location = new System.Drawing.Point(445, 516);
             this.inventoryForm_addnewproduct_btn.Name = "inventoryForm_addnewproduct_btn";
             this.inventoryForm_addnewproduct_btn.Size = new System.Drawing.Size(143, 96);
-            this.inventoryForm_addnewproduct_btn.TabIndex = 51;
+            this.inventoryForm_addnewproduct_btn.TabIndex = 36;
             this.inventoryForm_addnewproduct_btn.Text = "Add";
             this.inventoryForm_addnewproduct_btn.UseVisualStyleBackColor = true;
             this.inventoryForm_addnewproduct_btn.Click += new System.EventHandler(this.inventoryForm_addnewproduct_btn_Click);
@@ -1488,7 +1516,7 @@
             this.inventoryForm_newitemexpiration_DTpicker.Location = new System.Drawing.Point(144, 202);
             this.inventoryForm_newitemexpiration_DTpicker.Name = "inventoryForm_newitemexpiration_DTpicker";
             this.inventoryForm_newitemexpiration_DTpicker.Size = new System.Drawing.Size(223, 21);
-            this.inventoryForm_newitemexpiration_DTpicker.TabIndex = 37;
+            this.inventoryForm_newitemexpiration_DTpicker.TabIndex = 28;
             // 
             // label11
             // 
@@ -1499,14 +1527,6 @@
             this.label11.Size = new System.Drawing.Size(119, 15);
             this.label11.TabIndex = 36;
             this.label11.Text = "Expiration Date:";
-            // 
-            // inventoryForm_newsupplier_txtBox
-            // 
-            this.inventoryForm_newsupplier_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_newsupplier_txtBox.Location = new System.Drawing.Point(591, 192);
-            this.inventoryForm_newsupplier_txtBox.Name = "inventoryForm_newsupplier_txtBox";
-            this.inventoryForm_newsupplier_txtBox.Size = new System.Drawing.Size(205, 23);
-            this.inventoryForm_newsupplier_txtBox.TabIndex = 35;
             // 
             // label15
             // 
@@ -1522,9 +1542,10 @@
             // 
             this.inventoryForm_newproductline_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newproductline_txtBox.Location = new System.Drawing.Point(591, 159);
+            this.inventoryForm_newproductline_txtBox.MaxLength = 30;
             this.inventoryForm_newproductline_txtBox.Name = "inventoryForm_newproductline_txtBox";
             this.inventoryForm_newproductline_txtBox.Size = new System.Drawing.Size(205, 23);
-            this.inventoryForm_newproductline_txtBox.TabIndex = 33;
+            this.inventoryForm_newproductline_txtBox.TabIndex = 32;
             // 
             // label16
             // 
@@ -1540,9 +1561,11 @@
             // 
             this.inventoryForm_newitempurchaseprice_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newitempurchaseprice_txtBox.Location = new System.Drawing.Point(591, 97);
+            this.inventoryForm_newitempurchaseprice_txtBox.MaxLength = 8;
             this.inventoryForm_newitempurchaseprice_txtBox.Name = "inventoryForm_newitempurchaseprice_txtBox";
             this.inventoryForm_newitempurchaseprice_txtBox.Size = new System.Drawing.Size(67, 23);
-            this.inventoryForm_newitempurchaseprice_txtBox.TabIndex = 31;
+            this.inventoryForm_newitempurchaseprice_txtBox.TabIndex = 30;
+            this.inventoryForm_newitempurchaseprice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_newitempurchaseprice_txtBox_KeyPress);
             // 
             // label17
             // 
@@ -1558,9 +1581,11 @@
             // 
             this.inventoryForm_newitemamount_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newitemamount_txtBox.Location = new System.Drawing.Point(143, 164);
+            this.inventoryForm_newitemamount_txtBox.MaxLength = 5;
             this.inventoryForm_newitemamount_txtBox.Name = "inventoryForm_newitemamount_txtBox";
             this.inventoryForm_newitemamount_txtBox.Size = new System.Drawing.Size(63, 23);
-            this.inventoryForm_newitemamount_txtBox.TabIndex = 29;
+            this.inventoryForm_newitemamount_txtBox.TabIndex = 27;
+            this.inventoryForm_newitemamount_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_newitemamount_txtBox_KeyPress);
             // 
             // label23
             // 
@@ -1576,9 +1601,10 @@
             // 
             this.inventoryForm_newproductname_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_newproductname_txtBox.Location = new System.Drawing.Point(143, 132);
+            this.inventoryForm_newproductname_txtBox.MaxLength = 20;
             this.inventoryForm_newproductname_txtBox.Name = "inventoryForm_newproductname_txtBox";
             this.inventoryForm_newproductname_txtBox.Size = new System.Drawing.Size(260, 23);
-            this.inventoryForm_newproductname_txtBox.TabIndex = 27;
+            this.inventoryForm_newproductname_txtBox.TabIndex = 26;
             // 
             // label24
             // 
@@ -1613,6 +1639,13 @@
             // 
             this.inventoryForm_updateForm_panel.BackColor = System.Drawing.Color.Green;
             this.inventoryForm_updateForm_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.inventoryForm_updateForm_panel.Controls.Add(this.textBox2);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.textBox1);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.checkBox2);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.checkBox1);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.label9);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.inventoryForm_updateLowStockalert_txtBox);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.label8);
             this.inventoryForm_updateForm_panel.Controls.Add(this.update_test_Btn);
             this.inventoryForm_updateForm_panel.Controls.Add(this.label5);
             this.inventoryForm_updateForm_panel.Controls.Add(this.inventoryForm_update_profit_lbl);
@@ -1683,7 +1716,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(959, 258);
+            this.label4.Location = new System.Drawing.Point(1050, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 28);
             this.label4.TabIndex = 62;
@@ -1692,16 +1725,19 @@
             // inventoryForm_update_supplier_cBox
             // 
             this.inventoryForm_update_supplier_cBox.FormattingEnabled = true;
+            this.inventoryForm_update_supplier_cBox.Items.AddRange(new object[] {
+            "N/A"});
             this.inventoryForm_update_supplier_cBox.Location = new System.Drawing.Point(591, 189);
             this.inventoryForm_update_supplier_cBox.Name = "inventoryForm_update_supplier_cBox";
             this.inventoryForm_update_supplier_cBox.Size = new System.Drawing.Size(205, 21);
             this.inventoryForm_update_supplier_cBox.TabIndex = 61;
+            this.inventoryForm_update_supplier_cBox.Text = "N/A";
             // 
             // inventoryForm_update_statusHidden_rBtn
             // 
             this.inventoryForm_update_statusHidden_rBtn.AutoSize = true;
             this.inventoryForm_update_statusHidden_rBtn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_update_statusHidden_rBtn.Location = new System.Drawing.Point(964, 342);
+            this.inventoryForm_update_statusHidden_rBtn.Location = new System.Drawing.Point(1055, 154);
             this.inventoryForm_update_statusHidden_rBtn.Name = "inventoryForm_update_statusHidden_rBtn";
             this.inventoryForm_update_statusHidden_rBtn.Size = new System.Drawing.Size(122, 36);
             this.inventoryForm_update_statusHidden_rBtn.TabIndex = 60;
@@ -1713,7 +1749,7 @@
             // 
             this.inventoryForm_update_statusActive_rBtn.AutoSize = true;
             this.inventoryForm_update_statusActive_rBtn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_update_statusActive_rBtn.Location = new System.Drawing.Point(964, 289);
+            this.inventoryForm_update_statusActive_rBtn.Location = new System.Drawing.Point(1055, 101);
             this.inventoryForm_update_statusActive_rBtn.Name = "inventoryForm_update_statusActive_rBtn";
             this.inventoryForm_update_statusActive_rBtn.Size = new System.Drawing.Size(122, 36);
             this.inventoryForm_update_statusActive_rBtn.TabIndex = 59;
@@ -1735,6 +1771,7 @@
             // 
             this.inventoryForm_update_additionaldetails_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_additionaldetails_txtBox.Location = new System.Drawing.Point(591, 221);
+            this.inventoryForm_update_additionaldetails_txtBox.MaxLength = 50;
             this.inventoryForm_update_additionaldetails_txtBox.Multiline = true;
             this.inventoryForm_update_additionaldetails_txtBox.Name = "inventoryForm_update_additionaldetails_txtBox";
             this.inventoryForm_update_additionaldetails_txtBox.Size = new System.Drawing.Size(205, 104);
@@ -1754,9 +1791,11 @@
             // 
             this.inventoryForm_update_sellingPrice_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_sellingPrice_txtBox.Location = new System.Drawing.Point(591, 126);
+            this.inventoryForm_update_sellingPrice_txtBox.MaxLength = 8;
             this.inventoryForm_update_sellingPrice_txtBox.Name = "inventoryForm_update_sellingPrice_txtBox";
             this.inventoryForm_update_sellingPrice_txtBox.Size = new System.Drawing.Size(67, 23);
             this.inventoryForm_update_sellingPrice_txtBox.TabIndex = 56;
+            this.inventoryForm_update_sellingPrice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_update_sellingPrice_txtBox_KeyPress);
             // 
             // label32
             // 
@@ -1840,6 +1879,7 @@
             // 
             this.inventoryForm_update_productline_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_productline_txtBox.Location = new System.Drawing.Point(591, 159);
+            this.inventoryForm_update_productline_txtBox.MaxLength = 50;
             this.inventoryForm_update_productline_txtBox.Name = "inventoryForm_update_productline_txtBox";
             this.inventoryForm_update_productline_txtBox.Size = new System.Drawing.Size(205, 23);
             this.inventoryForm_update_productline_txtBox.TabIndex = 33;
@@ -1858,9 +1898,11 @@
             // 
             this.inventoryForm_update_purchaseprice_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_purchaseprice_txtBox.Location = new System.Drawing.Point(591, 97);
+            this.inventoryForm_update_purchaseprice_txtBox.MaxLength = 8;
             this.inventoryForm_update_purchaseprice_txtBox.Name = "inventoryForm_update_purchaseprice_txtBox";
             this.inventoryForm_update_purchaseprice_txtBox.Size = new System.Drawing.Size(67, 23);
             this.inventoryForm_update_purchaseprice_txtBox.TabIndex = 31;
+            this.inventoryForm_update_purchaseprice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_update_purchaseprice_txtBox_KeyPress);
             // 
             // label38
             // 
@@ -1876,9 +1918,11 @@
             // 
             this.inventoryForm_update_stocks_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_stocks_txtBox.Location = new System.Drawing.Point(143, 164);
+            this.inventoryForm_update_stocks_txtBox.MaxLength = 5;
             this.inventoryForm_update_stocks_txtBox.Name = "inventoryForm_update_stocks_txtBox";
             this.inventoryForm_update_stocks_txtBox.Size = new System.Drawing.Size(63, 23);
             this.inventoryForm_update_stocks_txtBox.TabIndex = 29;
+            this.inventoryForm_update_stocks_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_update_stocks_txtBox_KeyPress);
             // 
             // label39
             // 
@@ -1894,6 +1938,7 @@
             // 
             this.inventoryForm_update_productName_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryForm_update_productName_txtBox.Location = new System.Drawing.Point(143, 132);
+            this.inventoryForm_update_productName_txtBox.MaxLength = 20;
             this.inventoryForm_update_productName_txtBox.Name = "inventoryForm_update_productName_txtBox";
             this.inventoryForm_update_productName_txtBox.Size = new System.Drawing.Size(260, 23);
             this.inventoryForm_update_productName_txtBox.TabIndex = 27;
@@ -1927,36 +1972,84 @@
             this.label41.TabIndex = 24;
             this.label41.Text = "Product ID:";
             // 
-            // button1
+            // inventoryForm_updateLowStockalert_txtBox
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 510);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 58);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "CUSTOMER";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.inventoryForm_updateLowStockalert_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_updateLowStockalert_txtBox.Location = new System.Drawing.Point(589, 352);
+            this.inventoryForm_updateLowStockalert_txtBox.MaxLength = 3;
+            this.inventoryForm_updateLowStockalert_txtBox.Name = "inventoryForm_updateLowStockalert_txtBox";
+            this.inventoryForm_updateLowStockalert_txtBox.Size = new System.Drawing.Size(67, 23);
+            this.inventoryForm_updateLowStockalert_txtBox.TabIndex = 67;
+            this.inventoryForm_updateLowStockalert_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_updateLowStockalert_txtBox_KeyPress);
             // 
-            // button2
+            // label8
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(2, 447);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 57);
-            this.button2.TabIndex = 82;
-            this.button2.Text = "TRANSACTION";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(464, 355);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 15);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Low stock alert:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(979, 319);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 28);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "For B.O:";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(1015, 370);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(226, 32);
+            this.checkBox1.TabIndex = 70;
+            this.checkBox1.Text = "For replacement";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(1015, 507);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(148, 32);
+            this.checkBox2.TabIndex = 71;
+            this.checkBox2.Text = "For Scrap";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(1015, 408);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 23);
+            this.textBox1.TabIndex = 72;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(1015, 545);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(141, 23);
+            this.textBox2.TabIndex = 73;
             // 
             // inventory_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1308, 742);
+            this.Controls.Add(this.inventoryForm_updateForm_panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.inventoryForm_updateForm_panel);
             this.Controls.Add(this.inventoryForm_addnewItem_panel);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2023,7 +2116,6 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label inventoryForm_noninventorysales_lbl;
-        public System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox inventoryForm_inventorylistsearch_txtbox;
@@ -2047,7 +2139,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DateTimePicker inventoryForm_newitemexpiration_DTpicker;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox inventoryForm_newsupplier_txtBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox inventoryForm_newproductline_txtBox;
         private System.Windows.Forms.Label label16;
@@ -2184,5 +2275,13 @@
         private System.Windows.Forms.TextBox inventoryForm_forReplacementSearch_txtBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox inventoryForm_newsupplier_CBbox;
+        private System.Windows.Forms.TextBox inventoryForm_updateLowStockalert_txtBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label9;
     }
 }

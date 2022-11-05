@@ -335,7 +335,7 @@ namespace YvonnieStore_Beta_2_
                 save.Parameters.AddWithValue("@customer_gender", gendervalue);
                 save.Parameters.AddWithValue("@customer_address", customerForm_new_address_txtBox.Text);
                 save.Parameters.AddWithValue("@customer_contactno", customerForm_new_contactno_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_registered", DateTime.Now);
+                save.Parameters.AddWithValue("@customer_registered", DateTime.Now.ToString());
                 save.Parameters.AddWithValue("@customer_lastpurchased", "N/A");
                 save.Parameters.AddWithValue("@customer_balance", "N/A");
                 save.Parameters.AddWithValue("@customer_insertedby", Customer_user_Firstname.Text);

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(customer_form));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.POS_toUsers_btn = new System.Windows.Forms.Button();
+            this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.customerForm_CancelCustomerPicturePreview_btn = new System.Windows.Forms.Button();
             this.stopdebug_btn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -136,8 +138,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.customerForm_refreshlist_btn = new System.Windows.Forms.Button();
-            this.POS_toUsers_btn = new System.Windows.Forms.Button();
-            this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -176,6 +176,32 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(153, 721);
             this.panel5.TabIndex = 11;
+            // 
+            // POS_toUsers_btn
+            // 
+            this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 463);
+            this.POS_toUsers_btn.Name = "POS_toUsers_btn";
+            this.POS_toUsers_btn.Size = new System.Drawing.Size(144, 51);
+            this.POS_toUsers_btn.TabIndex = 95;
+            this.POS_toUsers_btn.Text = "USERS";
+            this.POS_toUsers_btn.UseVisualStyleBackColor = false;
+            this.POS_toUsers_btn.Click += new System.EventHandler(this.POS_toUsers_btn_Click);
+            // 
+            // POSForm_toTransactions_btn
+            // 
+            this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(5, 518);
+            this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
+            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
+            this.POSForm_toTransactions_btn.TabIndex = 94;
+            this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
+            this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
+            this.POSForm_toTransactions_btn.Click += new System.EventHandler(this.POSForm_toTransactions_btn_Click);
             // 
             // customerForm_CancelCustomerPicturePreview_btn
             // 
@@ -1260,7 +1286,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Customer ID";
-            this.columnHeader1.Width = 50;
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
@@ -1270,57 +1296,62 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Birthdate";
-            this.columnHeader5.Width = 50;
+            this.columnHeader5.Width = 0;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Gender";
-            this.columnHeader6.Width = 50;
+            this.columnHeader6.Width = 0;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Address";
-            this.columnHeader7.Width = 50;
+            this.columnHeader7.Width = 0;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Contact no";
-            this.columnHeader8.Width = 50;
+            this.columnHeader8.Width = 0;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Date registered";
-            this.columnHeader9.Width = 50;
+            this.columnHeader9.Width = 0;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Last purchase";
-            this.columnHeader10.Width = 50;
+            this.columnHeader10.Width = 0;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "Balance";
-            this.columnHeader11.Width = 50;
+            this.columnHeader11.Width = 0;
             // 
             // columnHeader12
             // 
             this.columnHeader12.Text = "Inserted by";
+            this.columnHeader12.Width = 0;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "first name";
+            this.columnHeader13.Width = 0;
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "middle name";
+            this.columnHeader14.Width = 0;
             // 
             // columnHeader15
             // 
             this.columnHeader15.Text = "lastname";
+            this.columnHeader15.Width = 0;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "status";
+            this.columnHeader3.Width = 0;
             // 
             // panel3
             // 
@@ -1344,32 +1375,6 @@
             this.customerForm_refreshlist_btn.TabIndex = 53;
             this.customerForm_refreshlist_btn.Text = "Refresh list";
             this.customerForm_refreshlist_btn.UseVisualStyleBackColor = false;
-            // 
-            // POS_toUsers_btn
-            // 
-            this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 463);
-            this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(144, 51);
-            this.POS_toUsers_btn.TabIndex = 95;
-            this.POS_toUsers_btn.Text = "USERS";
-            this.POS_toUsers_btn.UseVisualStyleBackColor = false;
-            this.POS_toUsers_btn.Click += new System.EventHandler(this.POS_toUsers_btn_Click);
-            // 
-            // POSForm_toTransactions_btn
-            // 
-            this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(5, 518);
-            this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
-            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
-            this.POSForm_toTransactions_btn.TabIndex = 94;
-            this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
-            this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
-            this.POSForm_toTransactions_btn.Click += new System.EventHandler(this.POSForm_toTransactions_btn_Click);
             // 
             // customer_form
             // 

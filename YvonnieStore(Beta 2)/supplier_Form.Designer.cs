@@ -28,31 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.customerForm_insertedby_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_insertedby_lbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.customerForm_lastpurchasedate_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_dateAdded_lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.customerForm_customerstatusarchived_lbl = new System.Windows.Forms.Label();
-            this.customerForm_update_employeeFemaleGender_rdBtn = new System.Windows.Forms.RadioButton();
-            this.customerForm_update_employeeMaleGender_rdBtn = new System.Windows.Forms.RadioButton();
+            this.supplierForm_customerstatusarchived_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_update_supplierFemaleGender_rdBtn = new System.Windows.Forms.RadioButton();
+            this.supplierForm_update_supplierMaleGender_rdBtn = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.customerForm_new_middlename_txtBox = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.customerForm_new_uploadPhoto_lnkLbl = new System.Windows.Forms.LinkLabel();
-            this.customerForm_new_employeePhoto_pctrBox = new System.Windows.Forms.PictureBox();
-            this.customerForm_new_address_txtBox = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.customerForm_new_signiture_pctrBox = new System.Windows.Forms.PictureBox();
-            this.customerForm_new_uploadSigniture_btn = new System.Windows.Forms.Button();
-            this.customerForm_new_contactno_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_new_lastname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_new_middlename_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_new_contactno_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_new_lastname_txtBox = new System.Windows.Forms.TextBox();
             this.contactno = new System.Windows.Forms.Label();
-            this.customerForm_new_customerID_lbl = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.supplierForm_new_supplierID_lbl = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.customerForm_addnewusertoDB_btn = new System.Windows.Forms.Button();
+            this.supplierForm_addnewusertoDB_btn = new System.Windows.Forms.Button();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -62,47 +53,41 @@
             this.employeeForm_update_employeeGender_lbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.customerForm_update_contactno_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_customerID_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_update_contactno_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_customerID_lbl = new System.Windows.Forms.Label();
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.customerForm_customerbalance_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_customerdatehired_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.customerForm_customerDOB_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.customerForm_customeraddress_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_supplierbalance_txtBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.customerForm_customerlist_lstView = new System.Windows.Forms.ListView();
+            this.supplierForm_supplierlist_lstView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.customerForm_refreshlist_btn = new System.Windows.Forms.Button();
+            this.supplierForm_refreshlist_btn = new System.Windows.Forms.Button();
             this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.employeeForm_update_fullname_lbl = new System.Windows.Forms.Label();
-            this.customerForm_customerfullname_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_new_firstname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_update_fullname_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_supplierfullname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_new_firstname_txtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.employeeForm_updatelname_lbl = new System.Windows.Forms.Label();
-            this.customerForm_addnewuser_btn = new System.Windows.Forms.Button();
+            this.supplierForm_updatelname_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_addnewuser_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.customerForm_edit_btn = new System.Windows.Forms.Button();
-            this.customerForm_update_cancel_btn = new System.Windows.Forms.Button();
+            this.supplierForm_edit_btn = new System.Windows.Forms.Button();
+            this.supplierForm_update_cancel_btn = new System.Windows.Forms.Button();
             this.customerForm_inventory_btn = new System.Windows.Forms.Button();
             this.POS_employeeCurrentPhoto_pctrBox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Customer_user_idnumber = new System.Windows.Forms.Label();
+            this.Supplier_user_idnumber = new System.Windows.Forms.Label();
             this.customerForm_supplier_btn = new System.Windows.Forms.Button();
             this.POSForm_logout_btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.Customer_user_Firstname = new System.Windows.Forms.Label();
+            this.Supplier_user_Firstname = new System.Windows.Forms.Label();
             this.customerForm_POS_btn = new System.Windows.Forms.Button();
             this.customerForm_sales_btn = new System.Windows.Forms.Button();
             this.datenow_value = new System.Windows.Forms.Label();
@@ -111,25 +96,26 @@
             this.timenow_value = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.POS_toUsers_btn = new System.Windows.Forms.Button();
-            this.customerForm_new_employeeDOB_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.customerForm_new_gendermale_rdBtn = new System.Windows.Forms.RadioButton();
+            this.supplierForm_new_gendermale_rdBtn = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
-            this.customerForm_new_genderfemale_rdBtn = new System.Windows.Forms.RadioButton();
-            this.customerForm_customerSigniture_path_txtBox = new System.Windows.Forms.TextBox();
-            this.employeeForm_new_employee_grpBox = new System.Windows.Forms.GroupBox();
-            this.customerForm_customerPhoto_path_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_update_lname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_new_genderfemale_rdBtn = new System.Windows.Forms.RadioButton();
+            this.supplierForm_new_supplier_grpBox = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.supplierForm_new_companyName_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_update_lname_txtBox = new System.Windows.Forms.TextBox();
             this.employeeForm_updatemname_lbl = new System.Windows.Forms.Label();
-            this.customerForm_update_mname_txtBox = new System.Windows.Forms.TextBox();
-            this.employeeForm_updatefname_lbl = new System.Windows.Forms.Label();
-            this.customerForm_update_fname_txtBox = new System.Windows.Forms.TextBox();
-            this.customerForm_customerstatusActive_chkBox = new System.Windows.Forms.CheckBox();
-            this.customerForm_customeraccstatusInactive_chkBox = new System.Windows.Forms.CheckBox();
-            this.customerForm_customerdetails_grpBox = new System.Windows.Forms.GroupBox();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerForm_new_employeePhoto_pctrBox)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerForm_new_signiture_pctrBox)).BeginInit();
+            this.supplierForm_update_mname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_updatefname_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_update_fname_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_customerstatusActive_chkBox = new System.Windows.Forms.CheckBox();
+            this.supplierForm_customeraccstatusInactive_chkBox = new System.Windows.Forms.CheckBox();
+            this.supplierForm_supplierdetails_grpBox = new System.Windows.Forms.GroupBox();
+            this.supplierForm_supplierProducts_txtBox = new System.Windows.Forms.ListView();
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.supplierForm_updatecompanyName_txtBox = new System.Windows.Forms.TextBox();
+            this.supplierForm_supplierlastvisit_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.supplierForm_dateLastvisit_lbl = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).BeginInit();
@@ -137,19 +123,19 @@
             this.groupBox4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.employeeForm_new_employee_grpBox.SuspendLayout();
-            this.customerForm_customerdetails_grpBox.SuspendLayout();
+            this.supplierForm_new_supplier_grpBox.SuspendLayout();
+            this.supplierForm_supplierdetails_grpBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // customerForm_insertedby_lbl
+            // supplierForm_insertedby_lbl
             // 
-            this.customerForm_insertedby_lbl.AutoSize = true;
-            this.customerForm_insertedby_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_insertedby_lbl.Location = new System.Drawing.Point(126, 449);
-            this.customerForm_insertedby_lbl.Name = "customerForm_insertedby_lbl";
-            this.customerForm_insertedby_lbl.Size = new System.Drawing.Size(238, 15);
-            this.customerForm_insertedby_lbl.TabIndex = 94;
-            this.customerForm_insertedby_lbl.Text = "Emmanuel Christopher Maru de Vera";
+            this.supplierForm_insertedby_lbl.AutoSize = true;
+            this.supplierForm_insertedby_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_insertedby_lbl.Location = new System.Drawing.Point(126, 449);
+            this.supplierForm_insertedby_lbl.Name = "supplierForm_insertedby_lbl";
+            this.supplierForm_insertedby_lbl.Size = new System.Drawing.Size(238, 15);
+            this.supplierForm_insertedby_lbl.TabIndex = 94;
+            this.supplierForm_insertedby_lbl.Text = "Emmanuel Christopher Maru de Vera";
             // 
             // label7
             // 
@@ -161,61 +147,61 @@
             this.label7.TabIndex = 93;
             this.label7.Text = "Inserted by:";
             // 
-            // customerForm_lastpurchasedate_lbl
+            // supplierForm_dateAdded_lbl
             // 
-            this.customerForm_lastpurchasedate_lbl.AutoSize = true;
-            this.customerForm_lastpurchasedate_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_lastpurchasedate_lbl.Location = new System.Drawing.Point(174, 289);
-            this.customerForm_lastpurchasedate_lbl.Name = "customerForm_lastpurchasedate_lbl";
-            this.customerForm_lastpurchasedate_lbl.Size = new System.Drawing.Size(196, 15);
-            this.customerForm_lastpurchasedate_lbl.TabIndex = 92;
-            this.customerForm_lastpurchasedate_lbl.Text = "Wednesday, November 2, 2022";
+            this.supplierForm_dateAdded_lbl.AutoSize = true;
+            this.supplierForm_dateAdded_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_dateAdded_lbl.Location = new System.Drawing.Point(172, 287);
+            this.supplierForm_dateAdded_lbl.Name = "supplierForm_dateAdded_lbl";
+            this.supplierForm_dateAdded_lbl.Size = new System.Drawing.Size(196, 15);
+            this.supplierForm_dateAdded_lbl.TabIndex = 92;
+            this.supplierForm_dateAdded_lbl.Text = "Wednesday, November 2, 2022";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 288);
+            this.label2.Location = new System.Drawing.Point(80, 288);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 15);
+            this.label2.Size = new System.Drawing.Size(84, 15);
             this.label2.TabIndex = 91;
-            this.label2.Text = "Date of last purchase:";
+            this.label2.Text = "Date added:";
             // 
-            // customerForm_customerstatusarchived_lbl
+            // supplierForm_customerstatusarchived_lbl
             // 
-            this.customerForm_customerstatusarchived_lbl.AutoSize = true;
-            this.customerForm_customerstatusarchived_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerstatusarchived_lbl.ForeColor = System.Drawing.Color.Red;
-            this.customerForm_customerstatusarchived_lbl.Location = new System.Drawing.Point(125, 485);
-            this.customerForm_customerstatusarchived_lbl.Name = "customerForm_customerstatusarchived_lbl";
-            this.customerForm_customerstatusarchived_lbl.Size = new System.Drawing.Size(90, 22);
-            this.customerForm_customerstatusarchived_lbl.TabIndex = 89;
-            this.customerForm_customerstatusarchived_lbl.Text = "ARCHIVED";
-            this.customerForm_customerstatusarchived_lbl.Visible = false;
+            this.supplierForm_customerstatusarchived_lbl.AutoSize = true;
+            this.supplierForm_customerstatusarchived_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_customerstatusarchived_lbl.ForeColor = System.Drawing.Color.Red;
+            this.supplierForm_customerstatusarchived_lbl.Location = new System.Drawing.Point(125, 485);
+            this.supplierForm_customerstatusarchived_lbl.Name = "supplierForm_customerstatusarchived_lbl";
+            this.supplierForm_customerstatusarchived_lbl.Size = new System.Drawing.Size(90, 22);
+            this.supplierForm_customerstatusarchived_lbl.TabIndex = 89;
+            this.supplierForm_customerstatusarchived_lbl.Text = "ARCHIVED";
+            this.supplierForm_customerstatusarchived_lbl.Visible = false;
             // 
-            // customerForm_update_employeeFemaleGender_rdBtn
+            // supplierForm_update_supplierFemaleGender_rdBtn
             // 
-            this.customerForm_update_employeeFemaleGender_rdBtn.AutoSize = true;
-            this.customerForm_update_employeeFemaleGender_rdBtn.Enabled = false;
-            this.customerForm_update_employeeFemaleGender_rdBtn.Location = new System.Drawing.Point(619, 46);
-            this.customerForm_update_employeeFemaleGender_rdBtn.Name = "customerForm_update_employeeFemaleGender_rdBtn";
-            this.customerForm_update_employeeFemaleGender_rdBtn.Size = new System.Drawing.Size(81, 23);
-            this.customerForm_update_employeeFemaleGender_rdBtn.TabIndex = 79;
-            this.customerForm_update_employeeFemaleGender_rdBtn.Text = "Female";
-            this.customerForm_update_employeeFemaleGender_rdBtn.UseVisualStyleBackColor = true;
+            this.supplierForm_update_supplierFemaleGender_rdBtn.AutoSize = true;
+            this.supplierForm_update_supplierFemaleGender_rdBtn.Enabled = false;
+            this.supplierForm_update_supplierFemaleGender_rdBtn.Location = new System.Drawing.Point(619, 46);
+            this.supplierForm_update_supplierFemaleGender_rdBtn.Name = "supplierForm_update_supplierFemaleGender_rdBtn";
+            this.supplierForm_update_supplierFemaleGender_rdBtn.Size = new System.Drawing.Size(81, 23);
+            this.supplierForm_update_supplierFemaleGender_rdBtn.TabIndex = 79;
+            this.supplierForm_update_supplierFemaleGender_rdBtn.Text = "Female";
+            this.supplierForm_update_supplierFemaleGender_rdBtn.UseVisualStyleBackColor = true;
             // 
-            // customerForm_update_employeeMaleGender_rdBtn
+            // supplierForm_update_supplierMaleGender_rdBtn
             // 
-            this.customerForm_update_employeeMaleGender_rdBtn.AutoSize = true;
-            this.customerForm_update_employeeMaleGender_rdBtn.Checked = true;
-            this.customerForm_update_employeeMaleGender_rdBtn.Enabled = false;
-            this.customerForm_update_employeeMaleGender_rdBtn.Location = new System.Drawing.Point(551, 46);
-            this.customerForm_update_employeeMaleGender_rdBtn.Name = "customerForm_update_employeeMaleGender_rdBtn";
-            this.customerForm_update_employeeMaleGender_rdBtn.Size = new System.Drawing.Size(63, 23);
-            this.customerForm_update_employeeMaleGender_rdBtn.TabIndex = 78;
-            this.customerForm_update_employeeMaleGender_rdBtn.TabStop = true;
-            this.customerForm_update_employeeMaleGender_rdBtn.Text = "Male";
-            this.customerForm_update_employeeMaleGender_rdBtn.UseVisualStyleBackColor = true;
+            this.supplierForm_update_supplierMaleGender_rdBtn.AutoSize = true;
+            this.supplierForm_update_supplierMaleGender_rdBtn.Checked = true;
+            this.supplierForm_update_supplierMaleGender_rdBtn.Enabled = false;
+            this.supplierForm_update_supplierMaleGender_rdBtn.Location = new System.Drawing.Point(551, 46);
+            this.supplierForm_update_supplierMaleGender_rdBtn.Name = "supplierForm_update_supplierMaleGender_rdBtn";
+            this.supplierForm_update_supplierMaleGender_rdBtn.Size = new System.Drawing.Size(63, 23);
+            this.supplierForm_update_supplierMaleGender_rdBtn.TabIndex = 78;
+            this.supplierForm_update_supplierMaleGender_rdBtn.TabStop = true;
+            this.supplierForm_update_supplierMaleGender_rdBtn.Text = "Male";
+            this.supplierForm_update_supplierMaleGender_rdBtn.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -237,148 +223,53 @@
             this.label21.TabIndex = 70;
             this.label21.Text = "Middle name:";
             // 
-            // customerForm_new_middlename_txtBox
+            // supplierForm_new_middlename_txtBox
             // 
-            this.customerForm_new_middlename_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_middlename_txtBox.Location = new System.Drawing.Point(165, 102);
-            this.customerForm_new_middlename_txtBox.MaxLength = 20;
-            this.customerForm_new_middlename_txtBox.Name = "customerForm_new_middlename_txtBox";
-            this.customerForm_new_middlename_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_new_middlename_txtBox.TabIndex = 2;
+            this.supplierForm_new_middlename_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_middlename_txtBox.Location = new System.Drawing.Point(165, 102);
+            this.supplierForm_new_middlename_txtBox.MaxLength = 20;
+            this.supplierForm_new_middlename_txtBox.Name = "supplierForm_new_middlename_txtBox";
+            this.supplierForm_new_middlename_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_new_middlename_txtBox.TabIndex = 2;
             // 
-            // groupBox3
+            // supplierForm_new_contactno_txtBox
             // 
-            this.groupBox3.Controls.Add(this.customerForm_new_uploadPhoto_lnkLbl);
-            this.groupBox3.Controls.Add(this.customerForm_new_employeePhoto_pctrBox);
-            this.groupBox3.Location = new System.Drawing.Point(602, 229);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(201, 202);
-            this.groupBox3.TabIndex = 65;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Employee photo";
+            this.supplierForm_new_contactno_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_contactno_txtBox.Location = new System.Drawing.Point(166, 197);
+            this.supplierForm_new_contactno_txtBox.MaxLength = 11;
+            this.supplierForm_new_contactno_txtBox.Name = "supplierForm_new_contactno_txtBox";
+            this.supplierForm_new_contactno_txtBox.Size = new System.Drawing.Size(110, 22);
+            this.supplierForm_new_contactno_txtBox.TabIndex = 5;
             // 
-            // customerForm_new_uploadPhoto_lnkLbl
+            // supplierForm_new_lastname_txtBox
             // 
-            this.customerForm_new_uploadPhoto_lnkLbl.AutoSize = true;
-            this.customerForm_new_uploadPhoto_lnkLbl.Location = new System.Drawing.Point(42, 163);
-            this.customerForm_new_uploadPhoto_lnkLbl.Name = "customerForm_new_uploadPhoto_lnkLbl";
-            this.customerForm_new_uploadPhoto_lnkLbl.Size = new System.Drawing.Size(117, 19);
-            this.customerForm_new_uploadPhoto_lnkLbl.TabIndex = 13;
-            this.customerForm_new_uploadPhoto_lnkLbl.TabStop = true;
-            this.customerForm_new_uploadPhoto_lnkLbl.Text = "Upload photo";
-            // 
-            // customerForm_new_employeePhoto_pctrBox
-            // 
-            this.customerForm_new_employeePhoto_pctrBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.customerForm_new_employeePhoto_pctrBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.customerForm_new_employeePhoto_pctrBox.Location = new System.Drawing.Point(19, 23);
-            this.customerForm_new_employeePhoto_pctrBox.Name = "customerForm_new_employeePhoto_pctrBox";
-            this.customerForm_new_employeePhoto_pctrBox.Size = new System.Drawing.Size(164, 130);
-            this.customerForm_new_employeePhoto_pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customerForm_new_employeePhoto_pctrBox.TabIndex = 60;
-            this.customerForm_new_employeePhoto_pctrBox.TabStop = false;
-            // 
-            // customerForm_new_address_txtBox
-            // 
-            this.customerForm_new_address_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_address_txtBox.Location = new System.Drawing.Point(165, 171);
-            this.customerForm_new_address_txtBox.MaxLength = 150;
-            this.customerForm_new_address_txtBox.Multiline = true;
-            this.customerForm_new_address_txtBox.Name = "customerForm_new_address_txtBox";
-            this.customerForm_new_address_txtBox.Size = new System.Drawing.Size(300, 49);
-            this.customerForm_new_address_txtBox.TabIndex = 4;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.customerForm_new_signiture_pctrBox);
-            this.groupBox2.Controls.Add(this.customerForm_new_uploadSigniture_btn);
-            this.groupBox2.Location = new System.Drawing.Point(604, 18);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 202);
-            this.groupBox2.TabIndex = 64;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Signiture";
-            // 
-            // customerForm_new_signiture_pctrBox
-            // 
-            this.customerForm_new_signiture_pctrBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.customerForm_new_signiture_pctrBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.customerForm_new_signiture_pctrBox.Location = new System.Drawing.Point(19, 23);
-            this.customerForm_new_signiture_pctrBox.Name = "customerForm_new_signiture_pctrBox";
-            this.customerForm_new_signiture_pctrBox.Size = new System.Drawing.Size(164, 130);
-            this.customerForm_new_signiture_pctrBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.customerForm_new_signiture_pctrBox.TabIndex = 60;
-            this.customerForm_new_signiture_pctrBox.TabStop = false;
-            // 
-            // customerForm_new_uploadSigniture_btn
-            // 
-            this.customerForm_new_uploadSigniture_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_new_uploadSigniture_btn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_uploadSigniture_btn.Location = new System.Drawing.Point(15, 159);
-            this.customerForm_new_uploadSigniture_btn.Name = "customerForm_new_uploadSigniture_btn";
-            this.customerForm_new_uploadSigniture_btn.Size = new System.Drawing.Size(168, 32);
-            this.customerForm_new_uploadSigniture_btn.TabIndex = 12;
-            this.customerForm_new_uploadSigniture_btn.Text = "Upload signiture";
-            this.customerForm_new_uploadSigniture_btn.UseVisualStyleBackColor = false;
-            // 
-            // customerForm_new_contactno_txtBox
-            // 
-            this.customerForm_new_contactno_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_contactno_txtBox.Location = new System.Drawing.Point(164, 228);
-            this.customerForm_new_contactno_txtBox.MaxLength = 11;
-            this.customerForm_new_contactno_txtBox.Name = "customerForm_new_contactno_txtBox";
-            this.customerForm_new_contactno_txtBox.Size = new System.Drawing.Size(110, 22);
-            this.customerForm_new_contactno_txtBox.TabIndex = 5;
-            // 
-            // customerForm_new_lastname_txtBox
-            // 
-            this.customerForm_new_lastname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_lastname_txtBox.Location = new System.Drawing.Point(165, 131);
-            this.customerForm_new_lastname_txtBox.MaxLength = 20;
-            this.customerForm_new_lastname_txtBox.Name = "customerForm_new_lastname_txtBox";
-            this.customerForm_new_lastname_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_new_lastname_txtBox.TabIndex = 3;
+            this.supplierForm_new_lastname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_lastname_txtBox.Location = new System.Drawing.Point(165, 131);
+            this.supplierForm_new_lastname_txtBox.MaxLength = 20;
+            this.supplierForm_new_lastname_txtBox.Name = "supplierForm_new_lastname_txtBox";
+            this.supplierForm_new_lastname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_new_lastname_txtBox.TabIndex = 3;
             // 
             // contactno
             // 
             this.contactno.AutoSize = true;
             this.contactno.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactno.Location = new System.Drawing.Point(74, 231);
+            this.contactno.Location = new System.Drawing.Point(76, 200);
             this.contactno.Name = "contactno";
             this.contactno.Size = new System.Drawing.Size(84, 15);
             this.contactno.TabIndex = 49;
             this.contactno.Text = "Contact no:";
             // 
-            // customerForm_new_customerID_lbl
+            // supplierForm_new_supplierID_lbl
             // 
-            this.customerForm_new_customerID_lbl.AutoSize = true;
-            this.customerForm_new_customerID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_customerID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.customerForm_new_customerID_lbl.Location = new System.Drawing.Point(166, 42);
-            this.customerForm_new_customerID_lbl.Name = "customerForm_new_customerID_lbl";
-            this.customerForm_new_customerID_lbl.Size = new System.Drawing.Size(80, 18);
-            this.customerForm_new_customerID_lbl.TabIndex = 24;
-            this.customerForm_new_customerID_lbl.Text = "123456789";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(54, 268);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(105, 15);
-            this.label25.TabIndex = 6;
-            this.label25.Text = "Date of birth:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(96, 171);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 15);
-            this.label26.TabIndex = 5;
-            this.label26.Text = "Address:";
+            this.supplierForm_new_supplierID_lbl.AutoSize = true;
+            this.supplierForm_new_supplierID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_supplierID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.supplierForm_new_supplierID_lbl.Location = new System.Drawing.Point(166, 42);
+            this.supplierForm_new_supplierID_lbl.Name = "supplierForm_new_supplierID_lbl";
+            this.supplierForm_new_supplierID_lbl.Size = new System.Drawing.Size(80, 18);
+            this.supplierForm_new_supplierID_lbl.TabIndex = 24;
+            this.supplierForm_new_supplierID_lbl.Text = "123456789";
             // 
             // label27
             // 
@@ -390,46 +281,48 @@
             this.label27.TabIndex = 4;
             this.label27.Text = "First name:";
             // 
-            // customerForm_addnewusertoDB_btn
+            // supplierForm_addnewusertoDB_btn
             // 
-            this.customerForm_addnewusertoDB_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_addnewusertoDB_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_addnewusertoDB_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_addnewusertoDB_btn.Location = new System.Drawing.Point(191, 465);
-            this.customerForm_addnewusertoDB_btn.Name = "customerForm_addnewusertoDB_btn";
-            this.customerForm_addnewusertoDB_btn.Size = new System.Drawing.Size(205, 58);
-            this.customerForm_addnewusertoDB_btn.TabIndex = 14;
-            this.customerForm_addnewusertoDB_btn.Text = "Add new user";
-            this.customerForm_addnewusertoDB_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_addnewusertoDB_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierForm_addnewusertoDB_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_addnewusertoDB_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_addnewusertoDB_btn.Location = new System.Drawing.Point(191, 465);
+            this.supplierForm_addnewusertoDB_btn.Name = "supplierForm_addnewusertoDB_btn";
+            this.supplierForm_addnewusertoDB_btn.Size = new System.Drawing.Size(232, 58);
+            this.supplierForm_addnewusertoDB_btn.TabIndex = 14;
+            this.supplierForm_addnewusertoDB_btn.Text = "Add new supplier";
+            this.supplierForm_addnewusertoDB_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_addnewusertoDB_btn.Click += new System.EventHandler(this.supplierForm_addnewusertoDB_btn_Click);
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Address";
-            this.columnHeader7.Width = 50;
+            this.columnHeader7.Text = "Contact no";
+            this.columnHeader7.Width = 0;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "Date registered";
-            this.columnHeader9.Width = 50;
+            this.columnHeader9.Text = "last visit";
+            this.columnHeader9.Width = 0;
             // 
             // columnHeader10
             // 
-            this.columnHeader10.Text = "Last purchase";
-            this.columnHeader10.Width = 50;
+            this.columnHeader10.Text = "balance";
+            this.columnHeader10.Width = 0;
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "Balance";
-            this.columnHeader11.Width = 50;
+            this.columnHeader11.Text = "inserted by";
+            this.columnHeader11.Width = 0;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "Inserted by";
+            this.columnHeader12.Text = "status";
+            this.columnHeader12.Width = 0;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Contact no";
-            this.columnHeader8.Width = 50;
+            this.columnHeader8.Text = "Date added";
+            this.columnHeader8.Width = 0;
             // 
             // employeeForm_update_employeeGender_lbl
             // 
@@ -458,79 +351,49 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(461, 121);
+            this.label11.Location = new System.Drawing.Point(481, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 15);
             this.label11.TabIndex = 49;
             this.label11.Text = "Contact no:";
             // 
-            // customerForm_update_contactno_txtBox
+            // supplierForm_update_contactno_txtBox
             // 
-            this.customerForm_update_contactno_txtBox.Enabled = false;
-            this.customerForm_update_contactno_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_update_contactno_txtBox.Location = new System.Drawing.Point(551, 118);
-            this.customerForm_update_contactno_txtBox.MaxLength = 11;
-            this.customerForm_update_contactno_txtBox.Name = "customerForm_update_contactno_txtBox";
-            this.customerForm_update_contactno_txtBox.Size = new System.Drawing.Size(110, 22);
-            this.customerForm_update_contactno_txtBox.TabIndex = 22;
-            this.customerForm_update_contactno_txtBox.Text = "09123456789";
+            this.supplierForm_update_contactno_txtBox.Enabled = false;
+            this.supplierForm_update_contactno_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_update_contactno_txtBox.Location = new System.Drawing.Point(571, 132);
+            this.supplierForm_update_contactno_txtBox.MaxLength = 11;
+            this.supplierForm_update_contactno_txtBox.Name = "supplierForm_update_contactno_txtBox";
+            this.supplierForm_update_contactno_txtBox.Size = new System.Drawing.Size(110, 22);
+            this.supplierForm_update_contactno_txtBox.TabIndex = 22;
+            this.supplierForm_update_contactno_txtBox.Text = "09123456789";
             // 
-            // customerForm_customerID_lbl
+            // supplierForm_customerID_lbl
             // 
-            this.customerForm_customerID_lbl.AutoSize = true;
-            this.customerForm_customerID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.customerForm_customerID_lbl.Location = new System.Drawing.Point(152, 47);
-            this.customerForm_customerID_lbl.Name = "customerForm_customerID_lbl";
-            this.customerForm_customerID_lbl.Size = new System.Drawing.Size(16, 18);
-            this.customerForm_customerID_lbl.TabIndex = 24;
-            this.customerForm_customerID_lbl.Text = "-";
+            this.supplierForm_customerID_lbl.AutoSize = true;
+            this.supplierForm_customerID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_customerID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.supplierForm_customerID_lbl.Location = new System.Drawing.Point(152, 47);
+            this.supplierForm_customerID_lbl.Name = "supplierForm_customerID_lbl";
+            this.supplierForm_customerID_lbl.Size = new System.Drawing.Size(16, 18);
+            this.supplierForm_customerID_lbl.TabIndex = 24;
+            this.supplierForm_customerID_lbl.Text = "-";
             // 
             // columnHeader14
             // 
             this.columnHeader14.Text = "middle name";
+            this.columnHeader14.Width = 0;
             // 
-            // customerForm_customerbalance_txtBox
+            // supplierForm_supplierbalance_txtBox
             // 
-            this.customerForm_customerbalance_txtBox.Enabled = false;
-            this.customerForm_customerbalance_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerbalance_txtBox.Location = new System.Drawing.Point(624, 168);
-            this.customerForm_customerbalance_txtBox.MaxLength = 11;
-            this.customerForm_customerbalance_txtBox.Name = "customerForm_customerbalance_txtBox";
-            this.customerForm_customerbalance_txtBox.Size = new System.Drawing.Size(106, 23);
-            this.customerForm_customerbalance_txtBox.TabIndex = 19;
-            this.customerForm_customerbalance_txtBox.Text = "999,999,999";
-            // 
-            // customerForm_customerdatehired_DTpicker
-            // 
-            this.customerForm_customerdatehired_DTpicker.Enabled = false;
-            this.customerForm_customerdatehired_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerdatehired_DTpicker.Location = new System.Drawing.Point(174, 255);
-            this.customerForm_customerdatehired_DTpicker.Name = "customerForm_customerdatehired_DTpicker";
-            this.customerForm_customerdatehired_DTpicker.Size = new System.Drawing.Size(244, 22);
-            this.customerForm_customerdatehired_DTpicker.TabIndex = 18;
-            // 
-            // customerForm_customerDOB_DTpicker
-            // 
-            this.customerForm_customerDOB_DTpicker.Enabled = false;
-            this.customerForm_customerDOB_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerDOB_DTpicker.Location = new System.Drawing.Point(174, 224);
-            this.customerForm_customerDOB_DTpicker.Name = "customerForm_customerDOB_DTpicker";
-            this.customerForm_customerDOB_DTpicker.Size = new System.Drawing.Size(245, 22);
-            this.customerForm_customerDOB_DTpicker.TabIndex = 17;
-            // 
-            // customerForm_customeraddress_txtBox
-            // 
-            this.customerForm_customeraddress_txtBox.Enabled = false;
-            this.customerForm_customeraddress_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customeraddress_txtBox.Location = new System.Drawing.Point(152, 108);
-            this.customerForm_customeraddress_txtBox.MaxLength = 150;
-            this.customerForm_customeraddress_txtBox.Multiline = true;
-            this.customerForm_customeraddress_txtBox.Name = "customerForm_customeraddress_txtBox";
-            this.customerForm_customeraddress_txtBox.Size = new System.Drawing.Size(300, 78);
-            this.customerForm_customeraddress_txtBox.TabIndex = 16;
-            this.customerForm_customeraddress_txtBox.Text = "#99 Mahabang pangalan ng street, Mahabang barangay,City kung saan,Pilipnas lang s" +
-    "akalam";
+            this.supplierForm_supplierbalance_txtBox.Enabled = false;
+            this.supplierForm_supplierbalance_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierbalance_txtBox.Location = new System.Drawing.Point(168, 367);
+            this.supplierForm_supplierbalance_txtBox.MaxLength = 11;
+            this.supplierForm_supplierbalance_txtBox.Name = "supplierForm_supplierbalance_txtBox";
+            this.supplierForm_supplierbalance_txtBox.Size = new System.Drawing.Size(106, 23);
+            this.supplierForm_supplierbalance_txtBox.TabIndex = 19;
+            this.supplierForm_supplierbalance_txtBox.Text = "999,999,999";
             // 
             // label9
             // 
@@ -546,7 +409,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(478, 171);
+            this.label8.Location = new System.Drawing.Point(22, 370);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 15);
             this.label8.TabIndex = 10;
@@ -555,26 +418,23 @@
             // columnHeader15
             // 
             this.columnHeader15.Text = "lastname";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "status";
+            this.columnHeader15.Width = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightCoral;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.customerForm_customerlist_lstView);
-            this.panel3.Controls.Add(this.customerForm_refreshlist_btn);
+            this.panel3.Controls.Add(this.supplierForm_supplierlist_lstView);
+            this.panel3.Controls.Add(this.supplierForm_refreshlist_btn);
             this.panel3.Location = new System.Drawing.Point(165, 183);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(177, 526);
             this.panel3.TabIndex = 94;
             // 
-            // customerForm_customerlist_lstView
+            // supplierForm_supplierlist_lstView
             // 
-            this.customerForm_customerlist_lstView.BackgroundImageTiled = true;
-            this.customerForm_customerlist_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.supplierForm_supplierlist_lstView.BackgroundImageTiled = true;
+            this.supplierForm_supplierlist_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader5,
@@ -587,23 +447,23 @@
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader3});
-            this.customerForm_customerlist_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerlist_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.customerForm_customerlist_lstView.GridLines = true;
-            this.customerForm_customerlist_lstView.HideSelection = false;
-            this.customerForm_customerlist_lstView.Location = new System.Drawing.Point(3, 3);
-            this.customerForm_customerlist_lstView.Name = "customerForm_customerlist_lstView";
-            this.customerForm_customerlist_lstView.Size = new System.Drawing.Size(167, 480);
-            this.customerForm_customerlist_lstView.TabIndex = 12;
-            this.customerForm_customerlist_lstView.UseCompatibleStateImageBehavior = false;
-            this.customerForm_customerlist_lstView.View = System.Windows.Forms.View.Details;
+            this.columnHeader15});
+            this.supplierForm_supplierlist_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierlist_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.supplierForm_supplierlist_lstView.GridLines = true;
+            this.supplierForm_supplierlist_lstView.HideSelection = false;
+            this.supplierForm_supplierlist_lstView.Location = new System.Drawing.Point(3, 3);
+            this.supplierForm_supplierlist_lstView.Name = "supplierForm_supplierlist_lstView";
+            this.supplierForm_supplierlist_lstView.Size = new System.Drawing.Size(167, 480);
+            this.supplierForm_supplierlist_lstView.TabIndex = 12;
+            this.supplierForm_supplierlist_lstView.UseCompatibleStateImageBehavior = false;
+            this.supplierForm_supplierlist_lstView.View = System.Windows.Forms.View.Details;
+            this.supplierForm_supplierlist_lstView.DoubleClick += new System.EventHandler(this.customerForm_customerlist_lstView_DoubleClick);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Customer ID";
-            this.columnHeader1.Width = 50;
+            this.columnHeader1.Text = "Supplier ID";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
@@ -612,29 +472,30 @@
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Birthdate";
-            this.columnHeader5.Width = 50;
+            this.columnHeader5.Text = "Gender";
+            this.columnHeader5.Width = 0;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Gender";
-            this.columnHeader6.Width = 50;
+            this.columnHeader6.Text = "Company";
+            this.columnHeader6.Width = 0;
             // 
             // columnHeader13
             // 
             this.columnHeader13.Text = "first name";
+            this.columnHeader13.Width = 0;
             // 
-            // customerForm_refreshlist_btn
+            // supplierForm_refreshlist_btn
             // 
-            this.customerForm_refreshlist_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_refreshlist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_refreshlist_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_refreshlist_btn.Location = new System.Drawing.Point(3, 489);
-            this.customerForm_refreshlist_btn.Name = "customerForm_refreshlist_btn";
-            this.customerForm_refreshlist_btn.Size = new System.Drawing.Size(167, 31);
-            this.customerForm_refreshlist_btn.TabIndex = 53;
-            this.customerForm_refreshlist_btn.Text = "Refresh list";
-            this.customerForm_refreshlist_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_refreshlist_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierForm_refreshlist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_refreshlist_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_refreshlist_btn.Location = new System.Drawing.Point(3, 489);
+            this.supplierForm_refreshlist_btn.Name = "supplierForm_refreshlist_btn";
+            this.supplierForm_refreshlist_btn.Size = new System.Drawing.Size(167, 31);
+            this.supplierForm_refreshlist_btn.TabIndex = 53;
+            this.supplierForm_refreshlist_btn.Text = "Refresh list";
+            this.supplierForm_refreshlist_btn.UseVisualStyleBackColor = false;
             // 
             // POSForm_toTransactions_btn
             // 
@@ -652,60 +513,40 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(49, 260);
+            this.label5.Location = new System.Drawing.Point(47, 322);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 15);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Date registered:";
+            this.label5.Text = "Date last visit:";
             // 
-            // label4
+            // supplierForm_update_fullname_lbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(63, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Date of birth:";
+            this.supplierForm_update_fullname_lbl.AutoSize = true;
+            this.supplierForm_update_fullname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_update_fullname_lbl.Location = new System.Drawing.Point(69, 79);
+            this.supplierForm_update_fullname_lbl.Name = "supplierForm_update_fullname_lbl";
+            this.supplierForm_update_fullname_lbl.Size = new System.Drawing.Size(77, 15);
+            this.supplierForm_update_fullname_lbl.TabIndex = 4;
+            this.supplierForm_update_fullname_lbl.Text = "Full name:";
             // 
-            // label3
+            // supplierForm_supplierfullname_txtBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Address:";
+            this.supplierForm_supplierfullname_txtBox.Enabled = false;
+            this.supplierForm_supplierfullname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierfullname_txtBox.Location = new System.Drawing.Point(151, 73);
+            this.supplierForm_supplierfullname_txtBox.MaxLength = 50;
+            this.supplierForm_supplierfullname_txtBox.Name = "supplierForm_supplierfullname_txtBox";
+            this.supplierForm_supplierfullname_txtBox.Size = new System.Drawing.Size(301, 22);
+            this.supplierForm_supplierfullname_txtBox.TabIndex = 15;
             // 
-            // employeeForm_update_fullname_lbl
+            // supplierForm_new_firstname_txtBox
             // 
-            this.employeeForm_update_fullname_lbl.AutoSize = true;
-            this.employeeForm_update_fullname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_update_fullname_lbl.Location = new System.Drawing.Point(69, 79);
-            this.employeeForm_update_fullname_lbl.Name = "employeeForm_update_fullname_lbl";
-            this.employeeForm_update_fullname_lbl.Size = new System.Drawing.Size(77, 15);
-            this.employeeForm_update_fullname_lbl.TabIndex = 4;
-            this.employeeForm_update_fullname_lbl.Text = "Full name:";
-            // 
-            // customerForm_customerfullname_txtBox
-            // 
-            this.customerForm_customerfullname_txtBox.Enabled = false;
-            this.customerForm_customerfullname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerfullname_txtBox.Location = new System.Drawing.Point(151, 73);
-            this.customerForm_customerfullname_txtBox.MaxLength = 50;
-            this.customerForm_customerfullname_txtBox.Name = "customerForm_customerfullname_txtBox";
-            this.customerForm_customerfullname_txtBox.Size = new System.Drawing.Size(301, 22);
-            this.customerForm_customerfullname_txtBox.TabIndex = 15;
-            // 
-            // customerForm_new_firstname_txtBox
-            // 
-            this.customerForm_new_firstname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_firstname_txtBox.Location = new System.Drawing.Point(165, 70);
-            this.customerForm_new_firstname_txtBox.MaxLength = 20;
-            this.customerForm_new_firstname_txtBox.Name = "customerForm_new_firstname_txtBox";
-            this.customerForm_new_firstname_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_new_firstname_txtBox.TabIndex = 1;
+            this.supplierForm_new_firstname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_firstname_txtBox.Location = new System.Drawing.Point(165, 70);
+            this.supplierForm_new_firstname_txtBox.MaxLength = 20;
+            this.supplierForm_new_firstname_txtBox.Name = "supplierForm_new_firstname_txtBox";
+            this.supplierForm_new_firstname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_new_firstname_txtBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -727,68 +568,71 @@
             this.label28.TabIndex = 2;
             this.label28.Text = "ID:";
             // 
-            // employeeForm_updatelname_lbl
+            // supplierForm_updatelname_lbl
             // 
-            this.employeeForm_updatelname_lbl.AutoSize = true;
-            this.employeeForm_updatelname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_updatelname_lbl.Location = new System.Drawing.Point(541, 78);
-            this.employeeForm_updatelname_lbl.Name = "employeeForm_updatelname_lbl";
-            this.employeeForm_updatelname_lbl.Size = new System.Drawing.Size(77, 15);
-            this.employeeForm_updatelname_lbl.TabIndex = 85;
-            this.employeeForm_updatelname_lbl.Text = "Last name:";
-            this.employeeForm_updatelname_lbl.Visible = false;
+            this.supplierForm_updatelname_lbl.AutoSize = true;
+            this.supplierForm_updatelname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_updatelname_lbl.Location = new System.Drawing.Point(541, 78);
+            this.supplierForm_updatelname_lbl.Name = "supplierForm_updatelname_lbl";
+            this.supplierForm_updatelname_lbl.Size = new System.Drawing.Size(77, 15);
+            this.supplierForm_updatelname_lbl.TabIndex = 85;
+            this.supplierForm_updatelname_lbl.Text = "Last name:";
+            this.supplierForm_updatelname_lbl.Visible = false;
             // 
-            // customerForm_addnewuser_btn
+            // supplierForm_addnewuser_btn
             // 
-            this.customerForm_addnewuser_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_addnewuser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_addnewuser_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_addnewuser_btn.Location = new System.Drawing.Point(6, 3);
-            this.customerForm_addnewuser_btn.Name = "customerForm_addnewuser_btn";
-            this.customerForm_addnewuser_btn.Size = new System.Drawing.Size(153, 125);
-            this.customerForm_addnewuser_btn.TabIndex = 48;
-            this.customerForm_addnewuser_btn.Text = "Add new customer";
-            this.customerForm_addnewuser_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_addnewuser_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierForm_addnewuser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_addnewuser_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_addnewuser_btn.Location = new System.Drawing.Point(6, 3);
+            this.supplierForm_addnewuser_btn.Name = "supplierForm_addnewuser_btn";
+            this.supplierForm_addnewuser_btn.Size = new System.Drawing.Size(153, 125);
+            this.supplierForm_addnewuser_btn.TabIndex = 48;
+            this.supplierForm_addnewuser_btn.Text = "Add new supplier";
+            this.supplierForm_addnewuser_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_addnewuser_btn.Click += new System.EventHandler(this.customerForm_addnewuser_btn_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.customerForm_edit_btn);
-            this.panel2.Controls.Add(this.customerForm_addnewuser_btn);
-            this.panel2.Controls.Add(this.customerForm_update_cancel_btn);
+            this.panel2.Controls.Add(this.supplierForm_edit_btn);
+            this.panel2.Controls.Add(this.supplierForm_addnewuser_btn);
+            this.panel2.Controls.Add(this.supplierForm_update_cancel_btn);
             this.panel2.Location = new System.Drawing.Point(396, 23);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(520, 135);
             this.panel2.TabIndex = 98;
             // 
-            // customerForm_edit_btn
+            // supplierForm_edit_btn
             // 
-            this.customerForm_edit_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_edit_btn.Font = new System.Drawing.Font("Consolas", 15.75F);
-            this.customerForm_edit_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.customerForm_edit_btn.Location = new System.Drawing.Point(183, 4);
-            this.customerForm_edit_btn.Name = "customerForm_edit_btn";
-            this.customerForm_edit_btn.Size = new System.Drawing.Size(153, 124);
-            this.customerForm_edit_btn.TabIndex = 28;
-            this.customerForm_edit_btn.Text = "Edit record";
-            this.customerForm_edit_btn.UseVisualStyleBackColor = false;
-            this.customerForm_edit_btn.Visible = false;
+            this.supplierForm_edit_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierForm_edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_edit_btn.Font = new System.Drawing.Font("Consolas", 15.75F);
+            this.supplierForm_edit_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.supplierForm_edit_btn.Location = new System.Drawing.Point(183, 4);
+            this.supplierForm_edit_btn.Name = "supplierForm_edit_btn";
+            this.supplierForm_edit_btn.Size = new System.Drawing.Size(153, 124);
+            this.supplierForm_edit_btn.TabIndex = 28;
+            this.supplierForm_edit_btn.Text = "Edit record";
+            this.supplierForm_edit_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_edit_btn.Visible = false;
+            this.supplierForm_edit_btn.Click += new System.EventHandler(this.customerForm_edit_btn_Click);
             // 
-            // customerForm_update_cancel_btn
+            // supplierForm_update_cancel_btn
             // 
-            this.customerForm_update_cancel_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.customerForm_update_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_update_cancel_btn.Font = new System.Drawing.Font("Consolas", 15.75F);
-            this.customerForm_update_cancel_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.customerForm_update_cancel_btn.Location = new System.Drawing.Point(358, 4);
-            this.customerForm_update_cancel_btn.Name = "customerForm_update_cancel_btn";
-            this.customerForm_update_cancel_btn.Size = new System.Drawing.Size(153, 125);
-            this.customerForm_update_cancel_btn.TabIndex = 86;
-            this.customerForm_update_cancel_btn.Text = "Cancel";
-            this.customerForm_update_cancel_btn.UseVisualStyleBackColor = false;
-            this.customerForm_update_cancel_btn.Visible = false;
+            this.supplierForm_update_cancel_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.supplierForm_update_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_update_cancel_btn.Font = new System.Drawing.Font("Consolas", 15.75F);
+            this.supplierForm_update_cancel_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.supplierForm_update_cancel_btn.Location = new System.Drawing.Point(358, 4);
+            this.supplierForm_update_cancel_btn.Name = "supplierForm_update_cancel_btn";
+            this.supplierForm_update_cancel_btn.Size = new System.Drawing.Size(153, 125);
+            this.supplierForm_update_cancel_btn.TabIndex = 86;
+            this.supplierForm_update_cancel_btn.Text = "Cancel";
+            this.supplierForm_update_cancel_btn.UseVisualStyleBackColor = false;
+            this.supplierForm_update_cancel_btn.Visible = false;
+            this.supplierForm_update_cancel_btn.Click += new System.EventHandler(this.customerForm_update_cancel_btn_Click);
             // 
             // customerForm_inventory_btn
             // 
@@ -814,7 +658,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Customer_user_idnumber);
+            this.groupBox1.Controls.Add(this.Supplier_user_idnumber);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(-1, 53);
@@ -824,15 +668,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ID number:";
             // 
-            // Customer_user_idnumber
+            // Supplier_user_idnumber
             // 
-            this.Customer_user_idnumber.AutoSize = true;
-            this.Customer_user_idnumber.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customer_user_idnumber.Location = new System.Drawing.Point(8, 22);
-            this.Customer_user_idnumber.Name = "Customer_user_idnumber";
-            this.Customer_user_idnumber.Size = new System.Drawing.Size(23, 20);
-            this.Customer_user_idnumber.TabIndex = 51;
-            this.Customer_user_idnumber.Text = "xx";
+            this.Supplier_user_idnumber.AutoSize = true;
+            this.Supplier_user_idnumber.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Supplier_user_idnumber.Location = new System.Drawing.Point(8, 22);
+            this.Supplier_user_idnumber.Name = "Supplier_user_idnumber";
+            this.Supplier_user_idnumber.Size = new System.Drawing.Size(23, 20);
+            this.Supplier_user_idnumber.TabIndex = 51;
+            this.Supplier_user_idnumber.Text = "xx";
             // 
             // customerForm_supplier_btn
             // 
@@ -843,7 +687,7 @@
             this.customerForm_supplier_btn.Name = "customerForm_supplier_btn";
             this.customerForm_supplier_btn.Size = new System.Drawing.Size(145, 50);
             this.customerForm_supplier_btn.TabIndex = 2;
-            this.customerForm_supplier_btn.Text = "SUPPLIERS";
+            this.customerForm_supplier_btn.Text = "CUSTOMER";
             this.customerForm_supplier_btn.UseVisualStyleBackColor = false;
             // 
             // POSForm_logout_btn
@@ -858,7 +702,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.Customer_user_Firstname);
+            this.groupBox4.Controls.Add(this.Supplier_user_Firstname);
             this.groupBox4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(2, -2);
             this.groupBox4.Name = "groupBox4";
@@ -867,15 +711,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "User:";
             // 
-            // Customer_user_Firstname
+            // Supplier_user_Firstname
             // 
-            this.Customer_user_Firstname.AutoSize = true;
-            this.Customer_user_Firstname.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Customer_user_Firstname.Location = new System.Drawing.Point(6, 17);
-            this.Customer_user_Firstname.Name = "Customer_user_Firstname";
-            this.Customer_user_Firstname.Size = new System.Drawing.Size(20, 17);
-            this.Customer_user_Firstname.TabIndex = 1;
-            this.Customer_user_Firstname.Text = "xx";
+            this.Supplier_user_Firstname.AutoSize = true;
+            this.Supplier_user_Firstname.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Supplier_user_Firstname.Location = new System.Drawing.Point(6, 17);
+            this.Supplier_user_Firstname.Name = "Supplier_user_Firstname";
+            this.Supplier_user_Firstname.Size = new System.Drawing.Size(20, 17);
+            this.Supplier_user_Firstname.TabIndex = 1;
+            this.Supplier_user_Firstname.Text = "xx";
             // 
             // customerForm_POS_btn
             // 
@@ -921,6 +765,7 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
@@ -978,112 +823,97 @@
             this.POS_toUsers_btn.Text = "USERS";
             this.POS_toUsers_btn.UseVisualStyleBackColor = false;
             // 
-            // customerForm_new_employeeDOB_DTpicker
+            // supplierForm_new_gendermale_rdBtn
             // 
-            this.customerForm_new_employeeDOB_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_employeeDOB_DTpicker.Location = new System.Drawing.Point(165, 268);
-            this.customerForm_new_employeeDOB_DTpicker.Name = "customerForm_new_employeeDOB_DTpicker";
-            this.customerForm_new_employeeDOB_DTpicker.Size = new System.Drawing.Size(244, 22);
-            this.customerForm_new_employeeDOB_DTpicker.TabIndex = 76;
-            // 
-            // customerForm_new_gendermale_rdBtn
-            // 
-            this.customerForm_new_gendermale_rdBtn.AutoSize = true;
-            this.customerForm_new_gendermale_rdBtn.Checked = true;
-            this.customerForm_new_gendermale_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_gendermale_rdBtn.Location = new System.Drawing.Point(167, 301);
-            this.customerForm_new_gendermale_rdBtn.Name = "customerForm_new_gendermale_rdBtn";
-            this.customerForm_new_gendermale_rdBtn.Size = new System.Drawing.Size(53, 18);
-            this.customerForm_new_gendermale_rdBtn.TabIndex = 7;
-            this.customerForm_new_gendermale_rdBtn.TabStop = true;
-            this.customerForm_new_gendermale_rdBtn.Text = "Male";
-            this.customerForm_new_gendermale_rdBtn.UseVisualStyleBackColor = true;
+            this.supplierForm_new_gendermale_rdBtn.AutoSize = true;
+            this.supplierForm_new_gendermale_rdBtn.Checked = true;
+            this.supplierForm_new_gendermale_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_gendermale_rdBtn.Location = new System.Drawing.Point(167, 239);
+            this.supplierForm_new_gendermale_rdBtn.Name = "supplierForm_new_gendermale_rdBtn";
+            this.supplierForm_new_gendermale_rdBtn.Size = new System.Drawing.Size(53, 18);
+            this.supplierForm_new_gendermale_rdBtn.TabIndex = 7;
+            this.supplierForm_new_gendermale_rdBtn.TabStop = true;
+            this.supplierForm_new_gendermale_rdBtn.Text = "Male";
+            this.supplierForm_new_gendermale_rdBtn.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(102, 298);
+            this.label15.Location = new System.Drawing.Point(102, 236);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 15);
             this.label15.TabIndex = 50;
             this.label15.Text = "Gender:";
             // 
-            // customerForm_new_genderfemale_rdBtn
+            // supplierForm_new_genderfemale_rdBtn
             // 
-            this.customerForm_new_genderfemale_rdBtn.AutoSize = true;
-            this.customerForm_new_genderfemale_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_new_genderfemale_rdBtn.Location = new System.Drawing.Point(167, 329);
-            this.customerForm_new_genderfemale_rdBtn.Name = "customerForm_new_genderfemale_rdBtn";
-            this.customerForm_new_genderfemale_rdBtn.Size = new System.Drawing.Size(67, 18);
-            this.customerForm_new_genderfemale_rdBtn.TabIndex = 8;
-            this.customerForm_new_genderfemale_rdBtn.Text = "Female";
-            this.customerForm_new_genderfemale_rdBtn.UseVisualStyleBackColor = true;
+            this.supplierForm_new_genderfemale_rdBtn.AutoSize = true;
+            this.supplierForm_new_genderfemale_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_genderfemale_rdBtn.Location = new System.Drawing.Point(167, 267);
+            this.supplierForm_new_genderfemale_rdBtn.Name = "supplierForm_new_genderfemale_rdBtn";
+            this.supplierForm_new_genderfemale_rdBtn.Size = new System.Drawing.Size(67, 18);
+            this.supplierForm_new_genderfemale_rdBtn.TabIndex = 8;
+            this.supplierForm_new_genderfemale_rdBtn.Text = "Female";
+            this.supplierForm_new_genderfemale_rdBtn.UseVisualStyleBackColor = true;
             // 
-            // customerForm_customerSigniture_path_txtBox
+            // supplierForm_new_supplier_grpBox
             // 
-            this.customerForm_customerSigniture_path_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerSigniture_path_txtBox.Location = new System.Drawing.Point(621, 465);
-            this.customerForm_customerSigniture_path_txtBox.MaxLength = 200;
-            this.customerForm_customerSigniture_path_txtBox.Name = "customerForm_customerSigniture_path_txtBox";
-            this.customerForm_customerSigniture_path_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_customerSigniture_path_txtBox.TabIndex = 74;
-            this.customerForm_customerSigniture_path_txtBox.Visible = false;
+            this.supplierForm_new_supplier_grpBox.BackColor = System.Drawing.Color.Transparent;
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label6);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_gendermale_rdBtn);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_companyName_txtBox);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label15);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_genderfemale_rdBtn);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label22);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_lastname_txtBox);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label21);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_middlename_txtBox);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.contactno);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_contactno_txtBox);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_addnewusertoDB_btn);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_supplierID_lbl);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label27);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.supplierForm_new_firstname_txtBox);
+            this.supplierForm_new_supplier_grpBox.Controls.Add(this.label28);
+            this.supplierForm_new_supplier_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_new_supplier_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_supplier_grpBox.Location = new System.Drawing.Point(353, 169);
+            this.supplierForm_new_supplier_grpBox.Name = "supplierForm_new_supplier_grpBox";
+            this.supplierForm_new_supplier_grpBox.Size = new System.Drawing.Size(797, 535);
+            this.supplierForm_new_supplier_grpBox.TabIndex = 96;
+            this.supplierForm_new_supplier_grpBox.TabStop = false;
+            this.supplierForm_new_supplier_grpBox.Text = "New supplier details:";
+            this.supplierForm_new_supplier_grpBox.Visible = false;
             // 
-            // employeeForm_new_employee_grpBox
+            // label6
             // 
-            this.employeeForm_new_employee_grpBox.BackColor = System.Drawing.Color.Transparent;
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_employeeDOB_DTpicker);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_gendermale_rdBtn);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label15);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_genderfemale_rdBtn);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_customerSigniture_path_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_customerPhoto_path_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label22);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_lastname_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label21);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_middlename_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.groupBox3);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.groupBox2);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.contactno);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_contactno_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_addnewusertoDB_btn);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_customerID_lbl);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_address_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label25);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label26);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label27);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.customerForm_new_firstname_txtBox);
-            this.employeeForm_new_employee_grpBox.Controls.Add(this.label28);
-            this.employeeForm_new_employee_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.employeeForm_new_employee_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_new_employee_grpBox.Location = new System.Drawing.Point(353, 169);
-            this.employeeForm_new_employee_grpBox.Name = "employeeForm_new_employee_grpBox";
-            this.employeeForm_new_employee_grpBox.Size = new System.Drawing.Size(797, 535);
-            this.employeeForm_new_employee_grpBox.TabIndex = 96;
-            this.employeeForm_new_employee_grpBox.TabStop = false;
-            this.employeeForm_new_employee_grpBox.Text = "New customer details:";
-            this.employeeForm_new_employee_grpBox.Visible = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(96, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 15);
+            this.label6.TabIndex = 100;
+            this.label6.Text = "Company:";
             // 
-            // customerForm_customerPhoto_path_txtBox
+            // supplierForm_new_companyName_txtBox
             // 
-            this.customerForm_customerPhoto_path_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerPhoto_path_txtBox.Location = new System.Drawing.Point(620, 437);
-            this.customerForm_customerPhoto_path_txtBox.MaxLength = 200;
-            this.customerForm_customerPhoto_path_txtBox.Name = "customerForm_customerPhoto_path_txtBox";
-            this.customerForm_customerPhoto_path_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_customerPhoto_path_txtBox.TabIndex = 73;
-            this.customerForm_customerPhoto_path_txtBox.Visible = false;
+            this.supplierForm_new_companyName_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_new_companyName_txtBox.Location = new System.Drawing.Point(165, 162);
+            this.supplierForm_new_companyName_txtBox.MaxLength = 30;
+            this.supplierForm_new_companyName_txtBox.Name = "supplierForm_new_companyName_txtBox";
+            this.supplierForm_new_companyName_txtBox.Size = new System.Drawing.Size(300, 22);
+            this.supplierForm_new_companyName_txtBox.TabIndex = 99;
             // 
-            // customerForm_update_lname_txtBox
+            // supplierForm_update_lname_txtBox
             // 
-            this.customerForm_update_lname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_update_lname_txtBox.Location = new System.Drawing.Point(623, 75);
-            this.customerForm_update_lname_txtBox.MaxLength = 20;
-            this.customerForm_update_lname_txtBox.Name = "customerForm_update_lname_txtBox";
-            this.customerForm_update_lname_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_update_lname_txtBox.TabIndex = 82;
-            this.customerForm_update_lname_txtBox.Visible = false;
+            this.supplierForm_update_lname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_update_lname_txtBox.Location = new System.Drawing.Point(623, 75);
+            this.supplierForm_update_lname_txtBox.MaxLength = 20;
+            this.supplierForm_update_lname_txtBox.Name = "supplierForm_update_lname_txtBox";
+            this.supplierForm_update_lname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_update_lname_txtBox.TabIndex = 82;
+            this.supplierForm_update_lname_txtBox.Visible = false;
             // 
             // employeeForm_updatemname_lbl
             // 
@@ -1096,108 +926,169 @@
             this.employeeForm_updatemname_lbl.Text = "Middle name:";
             this.employeeForm_updatemname_lbl.Visible = false;
             // 
-            // customerForm_update_mname_txtBox
+            // supplierForm_update_mname_txtBox
             // 
-            this.customerForm_update_mname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_update_mname_txtBox.Location = new System.Drawing.Point(368, 75);
-            this.customerForm_update_mname_txtBox.MaxLength = 20;
-            this.customerForm_update_mname_txtBox.Name = "customerForm_update_mname_txtBox";
-            this.customerForm_update_mname_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_update_mname_txtBox.TabIndex = 81;
-            this.customerForm_update_mname_txtBox.Visible = false;
+            this.supplierForm_update_mname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_update_mname_txtBox.Location = new System.Drawing.Point(368, 75);
+            this.supplierForm_update_mname_txtBox.MaxLength = 20;
+            this.supplierForm_update_mname_txtBox.Name = "supplierForm_update_mname_txtBox";
+            this.supplierForm_update_mname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_update_mname_txtBox.TabIndex = 81;
+            this.supplierForm_update_mname_txtBox.Visible = false;
             // 
-            // employeeForm_updatefname_lbl
+            // supplierForm_updatefname_lbl
             // 
-            this.employeeForm_updatefname_lbl.AutoSize = true;
-            this.employeeForm_updatefname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_updatefname_lbl.Location = new System.Drawing.Point(13, 82);
-            this.employeeForm_updatefname_lbl.Name = "employeeForm_updatefname_lbl";
-            this.employeeForm_updatefname_lbl.Size = new System.Drawing.Size(84, 15);
-            this.employeeForm_updatefname_lbl.TabIndex = 83;
-            this.employeeForm_updatefname_lbl.Text = "First name:";
-            this.employeeForm_updatefname_lbl.Visible = false;
+            this.supplierForm_updatefname_lbl.AutoSize = true;
+            this.supplierForm_updatefname_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_updatefname_lbl.Location = new System.Drawing.Point(13, 82);
+            this.supplierForm_updatefname_lbl.Name = "supplierForm_updatefname_lbl";
+            this.supplierForm_updatefname_lbl.Size = new System.Drawing.Size(84, 15);
+            this.supplierForm_updatefname_lbl.TabIndex = 83;
+            this.supplierForm_updatefname_lbl.Text = "First name:";
+            this.supplierForm_updatefname_lbl.Visible = false;
             // 
-            // customerForm_update_fname_txtBox
+            // supplierForm_update_fname_txtBox
             // 
-            this.customerForm_update_fname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_update_fname_txtBox.Location = new System.Drawing.Point(102, 78);
-            this.customerForm_update_fname_txtBox.MaxLength = 20;
-            this.customerForm_update_fname_txtBox.Name = "customerForm_update_fname_txtBox";
-            this.customerForm_update_fname_txtBox.Size = new System.Drawing.Size(166, 22);
-            this.customerForm_update_fname_txtBox.TabIndex = 80;
-            this.customerForm_update_fname_txtBox.Visible = false;
+            this.supplierForm_update_fname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_update_fname_txtBox.Location = new System.Drawing.Point(102, 78);
+            this.supplierForm_update_fname_txtBox.MaxLength = 20;
+            this.supplierForm_update_fname_txtBox.Name = "supplierForm_update_fname_txtBox";
+            this.supplierForm_update_fname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.supplierForm_update_fname_txtBox.TabIndex = 80;
+            this.supplierForm_update_fname_txtBox.Visible = false;
             // 
-            // customerForm_customerstatusActive_chkBox
+            // supplierForm_customerstatusActive_chkBox
             // 
-            this.customerForm_customerstatusActive_chkBox.AutoSize = true;
-            this.customerForm_customerstatusActive_chkBox.Enabled = false;
-            this.customerForm_customerstatusActive_chkBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerstatusActive_chkBox.ForeColor = System.Drawing.Color.Green;
-            this.customerForm_customerstatusActive_chkBox.Location = new System.Drawing.Point(125, 479);
-            this.customerForm_customerstatusActive_chkBox.Name = "customerForm_customerstatusActive_chkBox";
-            this.customerForm_customerstatusActive_chkBox.Size = new System.Drawing.Size(109, 32);
-            this.customerForm_customerstatusActive_chkBox.TabIndex = 95;
-            this.customerForm_customerstatusActive_chkBox.Text = "ACTIVE";
-            this.customerForm_customerstatusActive_chkBox.UseVisualStyleBackColor = true;
-            this.customerForm_customerstatusActive_chkBox.Visible = false;
+            this.supplierForm_customerstatusActive_chkBox.AutoSize = true;
+            this.supplierForm_customerstatusActive_chkBox.Enabled = false;
+            this.supplierForm_customerstatusActive_chkBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_customerstatusActive_chkBox.ForeColor = System.Drawing.Color.Green;
+            this.supplierForm_customerstatusActive_chkBox.Location = new System.Drawing.Point(125, 479);
+            this.supplierForm_customerstatusActive_chkBox.Name = "supplierForm_customerstatusActive_chkBox";
+            this.supplierForm_customerstatusActive_chkBox.Size = new System.Drawing.Size(109, 32);
+            this.supplierForm_customerstatusActive_chkBox.TabIndex = 95;
+            this.supplierForm_customerstatusActive_chkBox.Text = "ACTIVE";
+            this.supplierForm_customerstatusActive_chkBox.UseVisualStyleBackColor = true;
+            this.supplierForm_customerstatusActive_chkBox.Visible = false;
             // 
-            // customerForm_customeraccstatusInactive_chkBox
+            // supplierForm_customeraccstatusInactive_chkBox
             // 
-            this.customerForm_customeraccstatusInactive_chkBox.AutoSize = true;
-            this.customerForm_customeraccstatusInactive_chkBox.Enabled = false;
-            this.customerForm_customeraccstatusInactive_chkBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customeraccstatusInactive_chkBox.ForeColor = System.Drawing.Color.Red;
-            this.customerForm_customeraccstatusInactive_chkBox.Location = new System.Drawing.Point(240, 478);
-            this.customerForm_customeraccstatusInactive_chkBox.Name = "customerForm_customeraccstatusInactive_chkBox";
-            this.customerForm_customeraccstatusInactive_chkBox.Size = new System.Drawing.Size(135, 32);
-            this.customerForm_customeraccstatusInactive_chkBox.TabIndex = 96;
-            this.customerForm_customeraccstatusInactive_chkBox.Text = "INACTIVE";
-            this.customerForm_customeraccstatusInactive_chkBox.UseVisualStyleBackColor = true;
-            this.customerForm_customeraccstatusInactive_chkBox.Visible = false;
+            this.supplierForm_customeraccstatusInactive_chkBox.AutoSize = true;
+            this.supplierForm_customeraccstatusInactive_chkBox.Enabled = false;
+            this.supplierForm_customeraccstatusInactive_chkBox.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_customeraccstatusInactive_chkBox.ForeColor = System.Drawing.Color.Red;
+            this.supplierForm_customeraccstatusInactive_chkBox.Location = new System.Drawing.Point(240, 478);
+            this.supplierForm_customeraccstatusInactive_chkBox.Name = "supplierForm_customeraccstatusInactive_chkBox";
+            this.supplierForm_customeraccstatusInactive_chkBox.Size = new System.Drawing.Size(135, 32);
+            this.supplierForm_customeraccstatusInactive_chkBox.TabIndex = 96;
+            this.supplierForm_customeraccstatusInactive_chkBox.Text = "INACTIVE";
+            this.supplierForm_customeraccstatusInactive_chkBox.UseVisualStyleBackColor = true;
+            this.supplierForm_customeraccstatusInactive_chkBox.Visible = false;
             // 
-            // customerForm_customerdetails_grpBox
+            // supplierForm_supplierdetails_grpBox
             // 
-            this.customerForm_customerdetails_grpBox.BackColor = System.Drawing.Color.Transparent;
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_insertedby_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label7);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_lastpurchasedate_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label2);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerstatusarchived_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_employeeFemaleGender_rdBtn);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_employeeMaleGender_rdBtn);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.employeeForm_update_employeeGender_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label12);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label11);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_contactno_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerID_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerbalance_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerdatehired_DTpicker);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerDOB_DTpicker);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customeraddress_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label9);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label8);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label5);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label4);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label3);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.employeeForm_update_fullname_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerfullname_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.label1);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.employeeForm_updatelname_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_lname_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.employeeForm_updatemname_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_mname_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.employeeForm_updatefname_lbl);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_update_fname_txtBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customerstatusActive_chkBox);
-            this.customerForm_customerdetails_grpBox.Controls.Add(this.customerForm_customeraccstatusInactive_chkBox);
-            this.customerForm_customerdetails_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customerForm_customerdetails_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_customerdetails_grpBox.Location = new System.Drawing.Point(354, 168);
-            this.customerForm_customerdetails_grpBox.Name = "customerForm_customerdetails_grpBox";
-            this.customerForm_customerdetails_grpBox.Size = new System.Drawing.Size(798, 535);
-            this.customerForm_customerdetails_grpBox.TabIndex = 95;
-            this.customerForm_customerdetails_grpBox.TabStop = false;
-            this.customerForm_customerdetails_grpBox.Text = "Customer details:";
+            this.supplierForm_supplierdetails_grpBox.BackColor = System.Drawing.Color.Transparent;
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_dateLastvisit_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_supplierlastvisit_DTpicker);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_supplierProducts_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label4);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_updatecompanyName_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_insertedby_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label7);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_dateAdded_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label2);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_customerstatusarchived_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_supplierFemaleGender_rdBtn);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_supplierMaleGender_rdBtn);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.employeeForm_update_employeeGender_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label12);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label11);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_contactno_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_customerID_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_supplierbalance_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label9);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label8);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label5);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_fullname_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_supplierfullname_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.label1);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_updatelname_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_lname_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.employeeForm_updatemname_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_mname_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_updatefname_lbl);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_update_fname_txtBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_customerstatusActive_chkBox);
+            this.supplierForm_supplierdetails_grpBox.Controls.Add(this.supplierForm_customeraccstatusInactive_chkBox);
+            this.supplierForm_supplierdetails_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.supplierForm_supplierdetails_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierdetails_grpBox.Location = new System.Drawing.Point(354, 168);
+            this.supplierForm_supplierdetails_grpBox.Name = "supplierForm_supplierdetails_grpBox";
+            this.supplierForm_supplierdetails_grpBox.Size = new System.Drawing.Size(798, 535);
+            this.supplierForm_supplierdetails_grpBox.TabIndex = 95;
+            this.supplierForm_supplierdetails_grpBox.TabStop = false;
+            this.supplierForm_supplierdetails_grpBox.Text = "Supplier details:";
+            // 
+            // supplierForm_supplierProducts_txtBox
+            // 
+            this.supplierForm_supplierProducts_txtBox.BackgroundImageTiled = true;
+            this.supplierForm_supplierProducts_txtBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader26});
+            this.supplierForm_supplierProducts_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierProducts_txtBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.supplierForm_supplierProducts_txtBox.GridLines = true;
+            this.supplierForm_supplierProducts_txtBox.HideSelection = false;
+            this.supplierForm_supplierProducts_txtBox.Location = new System.Drawing.Point(524, 172);
+            this.supplierForm_supplierProducts_txtBox.Name = "supplierForm_supplierProducts_txtBox";
+            this.supplierForm_supplierProducts_txtBox.Size = new System.Drawing.Size(167, 347);
+            this.supplierForm_supplierProducts_txtBox.TabIndex = 99;
+            this.supplierForm_supplierProducts_txtBox.UseCompatibleStateImageBehavior = false;
+            this.supplierForm_supplierProducts_txtBox.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Products";
+            this.columnHeader26.Width = 163;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(99, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 15);
+            this.label4.TabIndex = 98;
+            this.label4.Text = "Company:";
+            // 
+            // supplierForm_updatecompanyName_txtBox
+            // 
+            this.supplierForm_updatecompanyName_txtBox.Enabled = false;
+            this.supplierForm_updatecompanyName_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_updatecompanyName_txtBox.Location = new System.Drawing.Point(168, 133);
+            this.supplierForm_updatecompanyName_txtBox.MaxLength = 30;
+            this.supplierForm_updatecompanyName_txtBox.Name = "supplierForm_updatecompanyName_txtBox";
+            this.supplierForm_updatecompanyName_txtBox.Size = new System.Drawing.Size(300, 22);
+            this.supplierForm_updatecompanyName_txtBox.TabIndex = 97;
+            this.supplierForm_updatecompanyName_txtBox.Text = "Frosties";
+            // 
+            // supplierForm_supplierlastvisit_DTpicker
+            // 
+            this.supplierForm_supplierlastvisit_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierlastvisit_DTpicker.Location = new System.Drawing.Point(168, 322);
+            this.supplierForm_supplierlastvisit_DTpicker.Name = "supplierForm_supplierlastvisit_DTpicker";
+            this.supplierForm_supplierlastvisit_DTpicker.Size = new System.Drawing.Size(244, 22);
+            this.supplierForm_supplierlastvisit_DTpicker.TabIndex = 100;
+            this.supplierForm_supplierlastvisit_DTpicker.Visible = false;
+            // 
+            // supplierForm_dateLastvisit_lbl
+            // 
+            this.supplierForm_dateLastvisit_lbl.AutoSize = true;
+            this.supplierForm_dateLastvisit_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_dateLastvisit_lbl.Location = new System.Drawing.Point(172, 322);
+            this.supplierForm_dateLastvisit_lbl.Name = "supplierForm_dateLastvisit_lbl";
+            this.supplierForm_dateLastvisit_lbl.Size = new System.Drawing.Size(28, 15);
+            this.supplierForm_dateLastvisit_lbl.TabIndex = 101;
+            this.supplierForm_dateLastvisit_lbl.Text = "N/A";
             // 
             // supplier_Form
             // 
@@ -1207,18 +1098,14 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.customerForm_customerdetails_grpBox);
-            this.Controls.Add(this.employeeForm_new_employee_grpBox);
+            this.Controls.Add(this.supplierForm_new_supplier_grpBox);
+            this.Controls.Add(this.supplierForm_supplierdetails_grpBox);
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "supplier_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "supplier_Form";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerForm_new_employeePhoto_pctrBox)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerForm_new_signiture_pctrBox)).EndInit();
+            this.Load += new System.EventHandler(this.supplier_Form_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).EndInit();
@@ -1229,41 +1116,32 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.employeeForm_new_employee_grpBox.ResumeLayout(false);
-            this.employeeForm_new_employee_grpBox.PerformLayout();
-            this.customerForm_customerdetails_grpBox.ResumeLayout(false);
-            this.customerForm_customerdetails_grpBox.PerformLayout();
+            this.supplierForm_new_supplier_grpBox.ResumeLayout(false);
+            this.supplierForm_new_supplier_grpBox.PerformLayout();
+            this.supplierForm_supplierdetails_grpBox.ResumeLayout(false);
+            this.supplierForm_supplierdetails_grpBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label customerForm_insertedby_lbl;
+        private System.Windows.Forms.Label supplierForm_insertedby_lbl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label customerForm_lastpurchasedate_lbl;
+        private System.Windows.Forms.Label supplierForm_dateAdded_lbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label customerForm_customerstatusarchived_lbl;
-        private System.Windows.Forms.RadioButton customerForm_update_employeeFemaleGender_rdBtn;
-        private System.Windows.Forms.RadioButton customerForm_update_employeeMaleGender_rdBtn;
+        private System.Windows.Forms.Label supplierForm_customerstatusarchived_lbl;
+        private System.Windows.Forms.RadioButton supplierForm_update_supplierFemaleGender_rdBtn;
+        private System.Windows.Forms.RadioButton supplierForm_update_supplierMaleGender_rdBtn;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox customerForm_new_middlename_txtBox;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.LinkLabel customerForm_new_uploadPhoto_lnkLbl;
-        private System.Windows.Forms.PictureBox customerForm_new_employeePhoto_pctrBox;
-        private System.Windows.Forms.TextBox customerForm_new_address_txtBox;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox customerForm_new_signiture_pctrBox;
-        private System.Windows.Forms.Button customerForm_new_uploadSigniture_btn;
-        private System.Windows.Forms.TextBox customerForm_new_contactno_txtBox;
-        private System.Windows.Forms.TextBox customerForm_new_lastname_txtBox;
+        private System.Windows.Forms.TextBox supplierForm_new_middlename_txtBox;
+        private System.Windows.Forms.TextBox supplierForm_new_contactno_txtBox;
+        private System.Windows.Forms.TextBox supplierForm_new_lastname_txtBox;
         private System.Windows.Forms.Label contactno;
-        private System.Windows.Forms.Label customerForm_new_customerID_lbl;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label supplierForm_new_supplierID_lbl;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button customerForm_addnewusertoDB_btn;
+        private System.Windows.Forms.Button supplierForm_addnewusertoDB_btn;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
@@ -1273,47 +1151,41 @@
         private System.Windows.Forms.Label employeeForm_update_employeeGender_lbl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox customerForm_update_contactno_txtBox;
-        private System.Windows.Forms.Label customerForm_customerID_lbl;
+        private System.Windows.Forms.TextBox supplierForm_update_contactno_txtBox;
+        private System.Windows.Forms.Label supplierForm_customerID_lbl;
         private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.TextBox customerForm_customerbalance_txtBox;
-        private System.Windows.Forms.DateTimePicker customerForm_customerdatehired_DTpicker;
-        private System.Windows.Forms.DateTimePicker customerForm_customerDOB_DTpicker;
-        private System.Windows.Forms.TextBox customerForm_customeraddress_txtBox;
+        private System.Windows.Forms.TextBox supplierForm_supplierbalance_txtBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView customerForm_customerlist_lstView;
+        private System.Windows.Forms.ListView supplierForm_supplierlist_lstView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.Button customerForm_refreshlist_btn;
+        private System.Windows.Forms.Button supplierForm_refreshlist_btn;
         private System.Windows.Forms.Button POSForm_toTransactions_btn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label employeeForm_update_fullname_lbl;
-        private System.Windows.Forms.TextBox customerForm_customerfullname_txtBox;
-        private System.Windows.Forms.TextBox customerForm_new_firstname_txtBox;
+        private System.Windows.Forms.Label supplierForm_update_fullname_lbl;
+        private System.Windows.Forms.TextBox supplierForm_supplierfullname_txtBox;
+        private System.Windows.Forms.TextBox supplierForm_new_firstname_txtBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label employeeForm_updatelname_lbl;
-        private System.Windows.Forms.Button customerForm_addnewuser_btn;
+        private System.Windows.Forms.Label supplierForm_updatelname_lbl;
+        private System.Windows.Forms.Button supplierForm_addnewuser_btn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button customerForm_edit_btn;
-        private System.Windows.Forms.Button customerForm_update_cancel_btn;
+        private System.Windows.Forms.Button supplierForm_edit_btn;
+        private System.Windows.Forms.Button supplierForm_update_cancel_btn;
         private System.Windows.Forms.Button customerForm_inventory_btn;
         public System.Windows.Forms.PictureBox POS_employeeCurrentPhoto_pctrBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.Label Customer_user_idnumber;
+        public System.Windows.Forms.Label Supplier_user_idnumber;
         private System.Windows.Forms.Button customerForm_supplier_btn;
         private System.Windows.Forms.Button POSForm_logout_btn;
         private System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.Label Customer_user_Firstname;
+        public System.Windows.Forms.Label Supplier_user_Firstname;
         private System.Windows.Forms.Button customerForm_POS_btn;
         private System.Windows.Forms.Button customerForm_sales_btn;
         public System.Windows.Forms.Label datenow_value;
@@ -1322,20 +1194,25 @@
         public System.Windows.Forms.Label timenow_value;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button POS_toUsers_btn;
-        private System.Windows.Forms.DateTimePicker customerForm_new_employeeDOB_DTpicker;
-        private System.Windows.Forms.RadioButton customerForm_new_gendermale_rdBtn;
+        private System.Windows.Forms.RadioButton supplierForm_new_gendermale_rdBtn;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RadioButton customerForm_new_genderfemale_rdBtn;
-        private System.Windows.Forms.TextBox customerForm_customerSigniture_path_txtBox;
-        public System.Windows.Forms.GroupBox employeeForm_new_employee_grpBox;
-        private System.Windows.Forms.TextBox customerForm_customerPhoto_path_txtBox;
-        private System.Windows.Forms.TextBox customerForm_update_lname_txtBox;
+        private System.Windows.Forms.RadioButton supplierForm_new_genderfemale_rdBtn;
+        public System.Windows.Forms.GroupBox supplierForm_new_supplier_grpBox;
+        private System.Windows.Forms.TextBox supplierForm_update_lname_txtBox;
         private System.Windows.Forms.Label employeeForm_updatemname_lbl;
-        private System.Windows.Forms.TextBox customerForm_update_mname_txtBox;
-        private System.Windows.Forms.Label employeeForm_updatefname_lbl;
-        private System.Windows.Forms.TextBox customerForm_update_fname_txtBox;
-        private System.Windows.Forms.CheckBox customerForm_customerstatusActive_chkBox;
-        private System.Windows.Forms.CheckBox customerForm_customeraccstatusInactive_chkBox;
-        public System.Windows.Forms.GroupBox customerForm_customerdetails_grpBox;
+        private System.Windows.Forms.TextBox supplierForm_update_mname_txtBox;
+        private System.Windows.Forms.Label supplierForm_updatefname_lbl;
+        private System.Windows.Forms.TextBox supplierForm_update_fname_txtBox;
+        private System.Windows.Forms.CheckBox supplierForm_customerstatusActive_chkBox;
+        private System.Windows.Forms.CheckBox supplierForm_customeraccstatusInactive_chkBox;
+        public System.Windows.Forms.GroupBox supplierForm_supplierdetails_grpBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox supplierForm_updatecompanyName_txtBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox supplierForm_new_companyName_txtBox;
+        private System.Windows.Forms.ListView supplierForm_supplierProducts_txtBox;
+        private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.DateTimePicker supplierForm_supplierlastvisit_DTpicker;
+        private System.Windows.Forms.Label supplierForm_dateLastvisit_lbl;
     }
 }

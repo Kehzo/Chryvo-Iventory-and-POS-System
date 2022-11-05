@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.salesForm_addnoninventorysales_btn = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.salesForm_sales_detailed_numoftransacmade_lbl = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
@@ -62,6 +62,8 @@
             this.sales_credit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sales_total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.stopdebug_btn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -138,6 +140,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.salesForm_billsandwages_detailed_accnum_lbl = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.salesForm_addnoninventorybox_grpBox = new System.Windows.Forms.GroupBox();
+            this.salesForm_Canceladdsales_btn = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.salesForm_nonsalesTotal_txtBox = new System.Windows.Forms.TextBox();
+            this.salesForm_addnonsales_btn = new System.Windows.Forms.Button();
+            this.salesForm_noninventoryID_lbl = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.salesForm_nonsalesname_txtBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -154,30 +169,33 @@
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.salesForm_addnoninventorybox_grpBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 32);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Sales";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.salesForm_addnoninventorysales_btn);
             this.panel3.Controls.Add(this.groupBox6);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.salesForm_sales_refresh_btn);
             this.panel3.Controls.Add(this.salesForm_sales_view_lstView);
-            this.panel3.Location = new System.Drawing.Point(157, 42);
+            this.panel3.Location = new System.Drawing.Point(157, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(405, 657);
+            this.panel3.Size = new System.Drawing.Size(405, 614);
             this.panel3.TabIndex = 11;
+            // 
+            // salesForm_addnoninventorysales_btn
+            // 
+            this.salesForm_addnoninventorysales_btn.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnoninventorysales_btn.Location = new System.Drawing.Point(187, 9);
+            this.salesForm_addnoninventorysales_btn.Name = "salesForm_addnoninventorysales_btn";
+            this.salesForm_addnoninventorysales_btn.Size = new System.Drawing.Size(214, 45);
+            this.salesForm_addnoninventorysales_btn.TabIndex = 60;
+            this.salesForm_addnoninventorysales_btn.Text = "add non-inventory sales";
+            this.salesForm_addnoninventorysales_btn.UseVisualStyleBackColor = true;
+            this.salesForm_addnoninventorysales_btn.Click += new System.EventHandler(this.salesForm_addnoninventorysales_btn_Click);
             // 
             // groupBox6
             // 
@@ -484,7 +502,11 @@
             this.sales_date,
             this.sales_cash,
             this.sales_credit,
-            this.sales_total});
+            this.sales_total,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
             this.salesForm_sales_view_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesForm_sales_view_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.salesForm_sales_view_lstView.GridLines = true;
@@ -505,22 +527,24 @@
             // sales_cash
             // 
             this.sales_cash.Text = "Cash sales:";
-            this.sales_cash.Width = 106;
+            this.sales_cash.Width = 0;
             // 
             // sales_credit
             // 
             this.sales_credit.Text = "Credit sales:";
-            this.sales_credit.Width = 78;
+            this.sales_credit.Width = 0;
             // 
             // sales_total
             // 
             this.sales_total.Text = "Total sales:";
-            this.sales_total.Width = 92;
+            this.sales_total.Width = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.POSForm_toTransactions_btn);
             this.panel5.Controls.Add(this.stopdebug_btn);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.POS_toUsers_btn);
@@ -533,6 +557,30 @@
             this.panel5.Size = new System.Drawing.Size(153, 729);
             this.panel5.TabIndex = 10;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(3, 262);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 45);
+            this.button2.TabIndex = 97;
+            this.button2.Text = "POS";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // POSForm_toTransactions_btn
+            // 
+            this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(4, 508);
+            this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
+            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
+            this.POSForm_toTransactions_btn.TabIndex = 96;
+            this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
+            this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
+            // 
             // stopdebug_btn
             // 
             this.stopdebug_btn.Location = new System.Drawing.Point(42, 662);
@@ -541,6 +589,7 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
@@ -637,10 +686,10 @@
             // 
             this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(3, 477);
+            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 456);
             this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(143, 71);
+            this.POS_toUsers_btn.Size = new System.Drawing.Size(143, 47);
             this.POS_toUsers_btn.TabIndex = 4;
             this.POS_toUsers_btn.Text = "USERS";
             this.POS_toUsers_btn.UseVisualStyleBackColor = false;
@@ -649,22 +698,22 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(3, 400);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(4, 313);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 71);
+            this.button4.Size = new System.Drawing.Size(143, 42);
             this.button4.TabIndex = 3;
-            this.button4.Text = "SALES";
+            this.button4.Text = "CUSTOMERS";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(3, 322);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(3, 361);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 71);
+            this.button3.Size = new System.Drawing.Size(143, 42);
             this.button3.TabIndex = 2;
             this.button3.Text = "SUPPLIERS";
             this.button3.UseVisualStyleBackColor = false;
@@ -673,10 +722,10 @@
             // 
             this.POSForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POSForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.POSForm_inventory_btn.Location = new System.Drawing.Point(3, 245);
+            this.POSForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.POSForm_inventory_btn.Location = new System.Drawing.Point(3, 409);
             this.POSForm_inventory_btn.Name = "POSForm_inventory_btn";
-            this.POSForm_inventory_btn.Size = new System.Drawing.Size(143, 71);
+            this.POSForm_inventory_btn.Size = new System.Drawing.Size(143, 42);
             this.POSForm_inventory_btn.TabIndex = 1;
             this.POSForm_inventory_btn.Text = "INVENTORY";
             this.POSForm_inventory_btn.UseVisualStyleBackColor = false;
@@ -702,9 +751,9 @@
             this.panel1.Controls.Add(this.salesForm_billsandwages_refreshList_btn);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Location = new System.Drawing.Point(563, 42);
+            this.panel1.Location = new System.Drawing.Point(563, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 657);
+            this.panel1.Size = new System.Drawing.Size(617, 614);
             this.panel1.TabIndex = 54;
             // 
             // salesForm_billsandwages_addbill_btn
@@ -839,9 +888,9 @@
             this.salesForm_Salaries_view_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.salesForm_Salaries_view_lstView.GridLines = true;
             this.salesForm_Salaries_view_lstView.HideSelection = false;
-            this.salesForm_Salaries_view_lstView.Location = new System.Drawing.Point(2, 2);
+            this.salesForm_Salaries_view_lstView.Location = new System.Drawing.Point(5, 2);
             this.salesForm_Salaries_view_lstView.Name = "salesForm_Salaries_view_lstView";
-            this.salesForm_Salaries_view_lstView.Size = new System.Drawing.Size(342, 261);
+            this.salesForm_Salaries_view_lstView.Size = new System.Drawing.Size(337, 261);
             this.salesForm_Salaries_view_lstView.TabIndex = 13;
             this.salesForm_Salaries_view_lstView.UseCompatibleStateImageBehavior = false;
             this.salesForm_Salaries_view_lstView.View = System.Windows.Forms.View.Details;
@@ -1334,15 +1383,137 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Bill # / Acc #:";
             // 
+            // salesForm_addnoninventorybox_grpBox
+            // 
+            this.salesForm_addnoninventorybox_grpBox.BackColor = System.Drawing.Color.Transparent;
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.salesForm_Canceladdsales_btn);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.label21);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.salesForm_nonsalesTotal_txtBox);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.salesForm_addnonsales_btn);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.salesForm_noninventoryID_lbl);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.label18);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.salesForm_nonsalesname_txtBox);
+            this.salesForm_addnoninventorybox_grpBox.Controls.Add(this.label19);
+            this.salesForm_addnoninventorybox_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnoninventorybox_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnoninventorybox_grpBox.Location = new System.Drawing.Point(224, 85);
+            this.salesForm_addnoninventorybox_grpBox.Name = "salesForm_addnoninventorybox_grpBox";
+            this.salesForm_addnoninventorybox_grpBox.Size = new System.Drawing.Size(297, 232);
+            this.salesForm_addnoninventorybox_grpBox.TabIndex = 55;
+            this.salesForm_addnoninventorybox_grpBox.TabStop = false;
+            this.salesForm_addnoninventorybox_grpBox.Text = "Add non-inventory sales";
+            this.salesForm_addnoninventorybox_grpBox.Visible = false;
+            // 
+            // salesForm_Canceladdsales_btn
+            // 
+            this.salesForm_Canceladdsales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Canceladdsales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Canceladdsales_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_Canceladdsales_btn.Location = new System.Drawing.Point(146, 137);
+            this.salesForm_Canceladdsales_btn.Name = "salesForm_Canceladdsales_btn";
+            this.salesForm_Canceladdsales_btn.Size = new System.Drawing.Size(121, 39);
+            this.salesForm_Canceladdsales_btn.TabIndex = 71;
+            this.salesForm_Canceladdsales_btn.Text = "Cancel";
+            this.salesForm_Canceladdsales_btn.UseVisualStyleBackColor = false;
+            this.salesForm_Canceladdsales_btn.Click += new System.EventHandler(this.salesForm_Canceladdsales_btn_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(45, 91);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 15);
+            this.label21.TabIndex = 70;
+            this.label21.Text = "Total:";
+            // 
+            // salesForm_nonsalesTotal_txtBox
+            // 
+            this.salesForm_nonsalesTotal_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_nonsalesTotal_txtBox.Location = new System.Drawing.Point(101, 89);
+            this.salesForm_nonsalesTotal_txtBox.MaxLength = 20;
+            this.salesForm_nonsalesTotal_txtBox.Name = "salesForm_nonsalesTotal_txtBox";
+            this.salesForm_nonsalesTotal_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_nonsalesTotal_txtBox.TabIndex = 2;
+            // 
+            // salesForm_addnonsales_btn
+            // 
+            this.salesForm_addnonsales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_addnonsales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnonsales_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnonsales_btn.Location = new System.Drawing.Point(14, 137);
+            this.salesForm_addnonsales_btn.Name = "salesForm_addnonsales_btn";
+            this.salesForm_addnonsales_btn.Size = new System.Drawing.Size(121, 39);
+            this.salesForm_addnonsales_btn.TabIndex = 14;
+            this.salesForm_addnonsales_btn.Text = "Add";
+            this.salesForm_addnonsales_btn.UseVisualStyleBackColor = false;
+            this.salesForm_addnonsales_btn.Click += new System.EventHandler(this.salesForm_addnonsales_btn_Click);
+            // 
+            // salesForm_noninventoryID_lbl
+            // 
+            this.salesForm_noninventoryID_lbl.AutoSize = true;
+            this.salesForm_noninventoryID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_noninventoryID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.salesForm_noninventoryID_lbl.Location = new System.Drawing.Point(102, 29);
+            this.salesForm_noninventoryID_lbl.Name = "salesForm_noninventoryID_lbl";
+            this.salesForm_noninventoryID_lbl.Size = new System.Drawing.Size(80, 18);
+            this.salesForm_noninventoryID_lbl.TabIndex = 24;
+            this.salesForm_noninventoryID_lbl.Text = "123456789";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(52, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(42, 15);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Name:";
+            // 
+            // salesForm_nonsalesname_txtBox
+            // 
+            this.salesForm_nonsalesname_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_nonsalesname_txtBox.Location = new System.Drawing.Point(101, 57);
+            this.salesForm_nonsalesname_txtBox.MaxLength = 20;
+            this.salesForm_nonsalesname_txtBox.Name = "salesForm_nonsalesname_txtBox";
+            this.salesForm_nonsalesname_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_nonsalesname_txtBox.TabIndex = 1;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(68, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(28, 15);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "ID:";
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Cashier";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Gross";
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Net";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "total";
+            // 
             // sales_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 726);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.salesForm_addnoninventorybox_grpBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "sales_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1373,14 +1544,13 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.salesForm_addnoninventorybox_grpBox.ResumeLayout(false);
+            this.salesForm_addnoninventorybox_grpBox.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.Label label20;
@@ -1490,5 +1660,21 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label salesForm_salary_detailed_employeeID_lbl;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button salesForm_addnoninventorysales_btn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button POSForm_toTransactions_btn;
+        public System.Windows.Forms.GroupBox salesForm_addnoninventorybox_grpBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox salesForm_nonsalesTotal_txtBox;
+        private System.Windows.Forms.Button salesForm_addnonsales_btn;
+        private System.Windows.Forms.Label salesForm_noninventoryID_lbl;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox salesForm_nonsalesname_txtBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button salesForm_Canceladdsales_btn;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
     }
 }

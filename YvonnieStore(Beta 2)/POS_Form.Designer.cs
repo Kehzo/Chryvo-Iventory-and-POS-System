@@ -40,21 +40,14 @@
             this.POS_employeeCurrentPhoto_pctrBox = new System.Windows.Forms.PictureBox();
             this.POSForm_shoppingCart_process_btn = new System.Windows.Forms.Panel();
             this.POSForm_shoppingCart_totalitems_lbl = new System.Windows.Forms.Label();
-            this.POSForm_Customerinfo_grpBox = new System.Windows.Forms.GroupBox();
-            this.POSForm_customerContact_lbl = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.POSForm_customerAddress_lbl = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.POSForm_customerID_lbl = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.POSForm_customerinfo_name_lbl = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.POSForm_transactiontype_confirm_btn = new System.Windows.Forms.Button();
             this.POSForm_transactiontype_Credit_rdBtn = new System.Windows.Forms.RadioButton();
             this.POSForm_transactiontype_cash_RdBtn = new System.Windows.Forms.RadioButton();
             this.POSForm_Cart_Back_btn = new System.Windows.Forms.Button();
+            this.POSForm_customerinfo_name_lbl = new System.Windows.Forms.ComboBox();
             this.POSForm_shoppingCart_change_lbl = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.POSForm_shoppingCart_cash_txtBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -102,11 +95,12 @@
             this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.POSForm_toSuppliers_btn = new System.Windows.Forms.Button();
             this.POSForm_inventory_btn = new System.Windows.Forms.Button();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.product_puchasePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).BeginInit();
             this.POSForm_shoppingCart_process_btn.SuspendLayout();
-            this.POSForm_Customerinfo_grpBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -223,10 +217,11 @@
             this.POSForm_shoppingCart_process_btn.BackColor = System.Drawing.Color.Transparent;
             this.POSForm_shoppingCart_process_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_shoppingCart_totalitems_lbl);
-            this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_Customerinfo_grpBox);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.groupBox2);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_Cart_Back_btn);
+            this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_customerinfo_name_lbl);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_shoppingCart_change_lbl);
+            this.POSForm_shoppingCart_process_btn.Controls.Add(this.label5);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.label10);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_shoppingCart_cash_txtBox);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.label9);
@@ -251,112 +246,6 @@
             this.POSForm_shoppingCart_totalitems_lbl.TabIndex = 39;
             this.POSForm_shoppingCart_totalitems_lbl.Text = "0";
             // 
-            // POSForm_Customerinfo_grpBox
-            // 
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.POSForm_customerContact_lbl);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.label11);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.POSForm_customerAddress_lbl);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.label7);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.label5);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.POSForm_customerID_lbl);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.label37);
-            this.POSForm_Customerinfo_grpBox.Controls.Add(this.POSForm_customerinfo_name_lbl);
-            this.POSForm_Customerinfo_grpBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_Customerinfo_grpBox.Location = new System.Drawing.Point(335, 424);
-            this.POSForm_Customerinfo_grpBox.Name = "POSForm_Customerinfo_grpBox";
-            this.POSForm_Customerinfo_grpBox.Size = new System.Drawing.Size(231, 213);
-            this.POSForm_Customerinfo_grpBox.TabIndex = 51;
-            this.POSForm_Customerinfo_grpBox.TabStop = false;
-            this.POSForm_Customerinfo_grpBox.Text = "Customer info:";
-            this.POSForm_Customerinfo_grpBox.Visible = false;
-            // 
-            // POSForm_customerContact_lbl
-            // 
-            this.POSForm_customerContact_lbl.AutoSize = true;
-            this.POSForm_customerContact_lbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.POSForm_customerContact_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_customerContact_lbl.Location = new System.Drawing.Point(93, 181);
-            this.POSForm_customerContact_lbl.Name = "POSForm_customerContact_lbl";
-            this.POSForm_customerContact_lbl.Size = new System.Drawing.Size(84, 15);
-            this.POSForm_customerContact_lbl.TabIndex = 46;
-            this.POSForm_customerContact_lbl.Text = "09123456789";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 181);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 15);
-            this.label11.TabIndex = 45;
-            this.label11.Text = "Contact #:";
-            // 
-            // POSForm_customerAddress_lbl
-            // 
-            this.POSForm_customerAddress_lbl.Enabled = false;
-            this.POSForm_customerAddress_lbl.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_customerAddress_lbl.Location = new System.Drawing.Point(6, 105);
-            this.POSForm_customerAddress_lbl.Multiline = true;
-            this.POSForm_customerAddress_lbl.Name = "POSForm_customerAddress_lbl";
-            this.POSForm_customerAddress_lbl.Size = new System.Drawing.Size(214, 67);
-            this.POSForm_customerAddress_lbl.TabIndex = 44;
-            this.POSForm_customerAddress_lbl.Text = "Isang mahabang address st, Barangay mahabang pangalan, City na napaka haba, Probi" +
-    "nsya na mahaba, Philippines";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 86);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 15);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "Address:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Name:";
-            // 
-            // POSForm_customerID_lbl
-            // 
-            this.POSForm_customerID_lbl.AutoSize = true;
-            this.POSForm_customerID_lbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.POSForm_customerID_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_customerID_lbl.Location = new System.Drawing.Point(99, 29);
-            this.POSForm_customerID_lbl.Name = "POSForm_customerID_lbl";
-            this.POSForm_customerID_lbl.Size = new System.Drawing.Size(77, 15);
-            this.POSForm_customerID_lbl.TabIndex = 41;
-            this.POSForm_customerID_lbl.Text = "1234567890";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label37.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(9, 29);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(91, 15);
-            this.label37.TabIndex = 40;
-            this.label37.Text = "Customer ID:";
-            // 
-            // POSForm_customerinfo_name_lbl
-            // 
-            this.POSForm_customerinfo_name_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_customerinfo_name_lbl.FormattingEnabled = true;
-            this.POSForm_customerinfo_name_lbl.Location = new System.Drawing.Point(52, 56);
-            this.POSForm_customerinfo_name_lbl.Name = "POSForm_customerinfo_name_lbl";
-            this.POSForm_customerinfo_name_lbl.Size = new System.Drawing.Size(158, 23);
-            this.POSForm_customerinfo_name_lbl.TabIndex = 0;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.POSForm_transactiontype_confirm_btn);
@@ -365,7 +254,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(335, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(231, 100);
+            this.groupBox2.Size = new System.Drawing.Size(231, 104);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Transaction type:";
@@ -414,7 +303,7 @@
             this.POSForm_Cart_Back_btn.Enabled = false;
             this.POSForm_Cart_Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.POSForm_Cart_Back_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_Cart_Back_btn.Location = new System.Drawing.Point(354, 358);
+            this.POSForm_Cart_Back_btn.Location = new System.Drawing.Point(357, 477);
             this.POSForm_Cart_Back_btn.Name = "POSForm_Cart_Back_btn";
             this.POSForm_Cart_Back_btn.Size = new System.Drawing.Size(85, 45);
             this.POSForm_Cart_Back_btn.TabIndex = 49;
@@ -423,23 +312,48 @@
             this.POSForm_Cart_Back_btn.Visible = false;
             this.POSForm_Cart_Back_btn.Click += new System.EventHandler(this.POSForm_Cart_Back_btn_Click);
             // 
+            // POSForm_customerinfo_name_lbl
+            // 
+            this.POSForm_customerinfo_name_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POSForm_customerinfo_name_lbl.FormattingEnabled = true;
+            this.POSForm_customerinfo_name_lbl.Items.AddRange(new object[] {
+            "N/A"});
+            this.POSForm_customerinfo_name_lbl.Location = new System.Drawing.Point(342, 151);
+            this.POSForm_customerinfo_name_lbl.Name = "POSForm_customerinfo_name_lbl";
+            this.POSForm_customerinfo_name_lbl.Size = new System.Drawing.Size(158, 23);
+            this.POSForm_customerinfo_name_lbl.TabIndex = 0;
+            this.POSForm_customerinfo_name_lbl.Text = "N/A";
+            this.POSForm_customerinfo_name_lbl.Visible = false;
+            // 
             // POSForm_shoppingCart_change_lbl
             // 
             this.POSForm_shoppingCart_change_lbl.AutoSize = true;
             this.POSForm_shoppingCart_change_lbl.BackColor = System.Drawing.Color.Transparent;
             this.POSForm_shoppingCart_change_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.POSForm_shoppingCart_change_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.POSForm_shoppingCart_change_lbl.Location = new System.Drawing.Point(383, 323);
+            this.POSForm_shoppingCart_change_lbl.Location = new System.Drawing.Point(386, 442);
             this.POSForm_shoppingCart_change_lbl.Name = "POSForm_shoppingCart_change_lbl";
             this.POSForm_shoppingCart_change_lbl.Size = new System.Drawing.Size(16, 24);
             this.POSForm_shoppingCart_change_lbl.TabIndex = 47;
             this.POSForm_shoppingCart_change_lbl.Text = "-";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(343, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 15);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Customer name:";
+            this.label5.Visible = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(340, 282);
+            this.label10.Location = new System.Drawing.Point(343, 401);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 22);
             this.label10.TabIndex = 46;
@@ -449,7 +363,7 @@
             // 
             this.POSForm_shoppingCart_cash_txtBox.Enabled = false;
             this.POSForm_shoppingCart_cash_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_shoppingCart_cash_txtBox.Location = new System.Drawing.Point(364, 236);
+            this.POSForm_shoppingCart_cash_txtBox.Location = new System.Drawing.Point(367, 355);
             this.POSForm_shoppingCart_cash_txtBox.MaxLength = 12;
             this.POSForm_shoppingCart_cash_txtBox.Name = "POSForm_shoppingCart_cash_txtBox";
             this.POSForm_shoppingCart_cash_txtBox.Size = new System.Drawing.Size(181, 31);
@@ -461,7 +375,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(335, 209);
+            this.label9.Location = new System.Drawing.Point(338, 328);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 22);
             this.label9.TabIndex = 44;
@@ -473,7 +387,7 @@
             this.POSForm_processCartitems_btn.Enabled = false;
             this.POSForm_processCartitems_btn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.POSForm_processCartitems_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_processCartitems_btn.Location = new System.Drawing.Point(457, 358);
+            this.POSForm_processCartitems_btn.Location = new System.Drawing.Point(460, 477);
             this.POSForm_processCartitems_btn.Name = "POSForm_processCartitems_btn";
             this.POSForm_processCartitems_btn.Size = new System.Drawing.Size(83, 45);
             this.POSForm_processCartitems_btn.TabIndex = 43;
@@ -485,7 +399,7 @@
             // 
             this.panel3.Controls.Add(this.POSForm_shoppingCart_totalValue_lbl);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(335, 145);
+            this.panel3.Location = new System.Drawing.Point(338, 264);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(210, 46);
             this.panel3.TabIndex = 42;
@@ -520,7 +434,8 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.POSForm_shoppingCart_lstView.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.POSForm_shoppingCart_lstView.GridLines = true;
             this.POSForm_shoppingCart_lstView.HideSelection = false;
@@ -666,9 +581,10 @@
             this.POSForm_Quantity_txtBox.Name = "POSForm_Quantity_txtBox";
             this.POSForm_Quantity_txtBox.Size = new System.Drawing.Size(75, 29);
             this.POSForm_Quantity_txtBox.TabIndex = 57;
-            this.POSForm_Quantity_txtBox.Text = "0";
+            this.POSForm_Quantity_txtBox.Text = "1";
             this.POSForm_Quantity_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.POSForm_Quantity_txtBox.TextChanged += new System.EventHandler(this.POSForm_Quantity_txtBox_TextChanged);
+            this.POSForm_Quantity_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.POSForm_Quantity_txtBox_KeyPress);
             // 
             // inventoryForm_sortGo_btn
             // 
@@ -733,7 +649,8 @@
             this.product_name,
             this.product_price,
             this.product_stocks,
-            this.product_category});
+            this.product_category,
+            this.product_puchasePrice});
             this.POSForm_items_list_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.POSForm_items_list_lstView.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.POSForm_items_list_lstView.GridLines = true;
@@ -927,6 +844,7 @@
             this.POSForm_toSuppliers_btn.TabIndex = 2;
             this.POSForm_toSuppliers_btn.Text = "SUPPLIERS";
             this.POSForm_toSuppliers_btn.UseVisualStyleBackColor = false;
+            this.POSForm_toSuppliers_btn.Click += new System.EventHandler(this.POSForm_toSuppliers_btn_Click);
             // 
             // POSForm_inventory_btn
             // 
@@ -940,6 +858,14 @@
             this.POSForm_inventory_btn.Text = "INVENTORY";
             this.POSForm_inventory_btn.UseVisualStyleBackColor = false;
             this.POSForm_inventory_btn.Click += new System.EventHandler(this.POSForm_inventory_btn_Click);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Profit";
+            // 
+            // product_puchasePrice
+            // 
+            this.product_puchasePrice.Text = "PP";
             // 
             // POS_Form
             // 
@@ -963,8 +889,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).EndInit();
             this.POSForm_shoppingCart_process_btn.ResumeLayout(false);
             this.POSForm_shoppingCart_process_btn.PerformLayout();
-            this.POSForm_Customerinfo_grpBox.ResumeLayout(false);
-            this.POSForm_Customerinfo_grpBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1043,20 +967,15 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button POSForm_ChangeItem_btn;
         private System.Windows.Forms.Button POSForm_Cart_Back_btn;
-        private System.Windows.Forms.GroupBox POSForm_Customerinfo_grpBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton POSForm_transactiontype_Credit_rdBtn;
         private System.Windows.Forms.RadioButton POSForm_transactiontype_cash_RdBtn;
         private System.Windows.Forms.ComboBox POSForm_customerinfo_name_lbl;
-        private System.Windows.Forms.Label POSForm_customerContact_lbl;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox POSForm_customerAddress_lbl;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label POSForm_customerID_lbl;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button POSForm_transactiontype_confirm_btn;
         private System.Windows.Forms.Button POSForm_toSales_btn;
         private System.Windows.Forms.Button POSForm_toCustomer_btn;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader product_puchasePrice;
     }
 }
