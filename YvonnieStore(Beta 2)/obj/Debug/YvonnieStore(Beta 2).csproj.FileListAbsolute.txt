@@ -81,3 +81,4 @@ F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\ob
 F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.Transaction_Form.resources
 F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.sales_form.resources
 F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.customer_form.resources
+F:\Programing Projects\Chryvo Store POS and Inventory II\YvonnieStore(Beta 2)\obj\Debug\YvonnieStore_Beta_2_.supplier_Form.resources

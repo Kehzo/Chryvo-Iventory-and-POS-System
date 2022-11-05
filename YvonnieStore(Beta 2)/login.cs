@@ -55,7 +55,6 @@ namespace YvonnieStore_Beta_2_
                 while (read.Read())
                 {
                     count1++;
-
                 }
                 connection.Close();
                 if (count1 == 1)
@@ -71,34 +70,17 @@ namespace YvonnieStore_Beta_2_
                         string lastname = (copro["lastname"].ToString());
                         string ID = (copro["id_number"].ToString());
                         string pass = (copro["password"].ToString());
-
-
-                        if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text)
-                        {
-                            MySqlConnection conn = new MySqlConnection(myConnection);
-
-                            MySqlCommand coprox = new MySqlCommand();
-                            conn.Open();
-                            copro3.Connection = conn;
-                            copro3.CommandText = "select employee_picture from useraccounts where id_number = '" + usernametxtbox.Text + "'";
-                            MySqlDataReader photoReader = copro3.ExecuteReader();
-                            while (copro.Read())
+                            if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text)
                             {
-
-
-
+                                MessageBox.Show("Welcome! " + firstname + " " + lastname, "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                POS_Form POS_Form = new POS_Form();
+                                POS_Form.Show();
+                                POS_Form.POS_user_Firstname.Text = firstname;
+                                POS_Form.POS_user_idnumber.Text = ID;
+                                this.Hide();
 
                             }
-                            conn.Close();
-                            MessageBox.Show("Welcome! " + firstname + " " + lastname, "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            POS_Form POS_Form = new POS_Form();
-                            POS_Form.Show();
-                            POS_Form.POS_user_Firstname.Text = firstname;
-                            POS_Form.POS_user_idnumber.Text = ID;
-                            this.Hide();
-
-                        }
-
+                        
                     }
 
 
