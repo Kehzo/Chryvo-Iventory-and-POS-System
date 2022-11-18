@@ -62,6 +62,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.POSForm_shoppingCart_transactionNumber_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             this.product_price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.product_stocks = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.product_category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.product_puchasePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.POSForm_itemSearch_txtBox = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -95,8 +97,12 @@
             this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
             this.POSForm_toSuppliers_btn = new System.Windows.Forms.Button();
             this.POSForm_inventory_btn = new System.Windows.Forms.Button();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.product_puchasePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label7 = new System.Windows.Forms.Label();
+            this.POSForm_customerinfo_id_lbl = new System.Windows.Forms.Label();
+            this.POSForm_Cart_removeItem_btn = new System.Windows.Forms.Button();
+            this.account_level = new System.Windows.Forms.Label();
+            this.product_additional = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).BeginInit();
@@ -216,6 +222,9 @@
             // 
             this.POSForm_shoppingCart_process_btn.BackColor = System.Drawing.Color.Transparent;
             this.POSForm_shoppingCart_process_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_Cart_removeItem_btn);
+            this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_customerinfo_id_lbl);
+            this.POSForm_shoppingCart_process_btn.Controls.Add(this.label7);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_shoppingCart_totalitems_lbl);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.groupBox2);
             this.POSForm_shoppingCart_process_btn.Controls.Add(this.POSForm_Cart_Back_btn);
@@ -314,6 +323,7 @@
             // 
             // POSForm_customerinfo_name_lbl
             // 
+            this.POSForm_customerinfo_name_lbl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.POSForm_customerinfo_name_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.POSForm_customerinfo_name_lbl.FormattingEnabled = true;
             this.POSForm_customerinfo_name_lbl.Items.AddRange(new object[] {
@@ -322,8 +332,8 @@
             this.POSForm_customerinfo_name_lbl.Name = "POSForm_customerinfo_name_lbl";
             this.POSForm_customerinfo_name_lbl.Size = new System.Drawing.Size(158, 23);
             this.POSForm_customerinfo_name_lbl.TabIndex = 0;
-            this.POSForm_customerinfo_name_lbl.Text = "N/A";
             this.POSForm_customerinfo_name_lbl.Visible = false;
+            this.POSForm_customerinfo_name_lbl.SelectedIndexChanged += new System.EventHandler(this.POSForm_customerinfo_name_lbl_SelectedIndexChanged);
             // 
             // POSForm_shoppingCart_change_lbl
             // 
@@ -344,9 +354,9 @@
             this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(343, 133);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 15);
+            this.label5.Size = new System.Drawing.Size(91, 15);
             this.label5.TabIndex = 42;
-            this.label5.Text = "Customer name:";
+            this.label5.Text = "Customer ID:";
             this.label5.Visible = false;
             // 
             // label10
@@ -412,9 +422,9 @@
             this.POSForm_shoppingCart_totalValue_lbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.POSForm_shoppingCart_totalValue_lbl.Location = new System.Drawing.Point(70, 10);
             this.POSForm_shoppingCart_totalValue_lbl.Name = "POSForm_shoppingCart_totalValue_lbl";
-            this.POSForm_shoppingCart_totalValue_lbl.Size = new System.Drawing.Size(135, 24);
+            this.POSForm_shoppingCart_totalValue_lbl.Size = new System.Drawing.Size(55, 24);
             this.POSForm_shoppingCart_totalValue_lbl.TabIndex = 42;
-            this.POSForm_shoppingCart_totalValue_lbl.Text = "999,999,999.99";
+            this.POSForm_shoppingCart_totalValue_lbl.Text = "00.00";
             // 
             // label6
             // 
@@ -431,6 +441,7 @@
             this.POSForm_shoppingCart_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
+            this.columnHeader8,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
@@ -441,10 +452,11 @@
             this.POSForm_shoppingCart_lstView.HideSelection = false;
             this.POSForm_shoppingCart_lstView.Location = new System.Drawing.Point(5, 68);
             this.POSForm_shoppingCart_lstView.Name = "POSForm_shoppingCart_lstView";
-            this.POSForm_shoppingCart_lstView.Size = new System.Drawing.Size(324, 569);
+            this.POSForm_shoppingCart_lstView.Size = new System.Drawing.Size(324, 519);
             this.POSForm_shoppingCart_lstView.TabIndex = 40;
             this.POSForm_shoppingCart_lstView.UseCompatibleStateImageBehavior = false;
             this.POSForm_shoppingCart_lstView.View = System.Windows.Forms.View.Details;
+            this.POSForm_shoppingCart_lstView.MouseClick += new System.Windows.Forms.MouseEventHandler(this.POSForm_shoppingCart_lstView_MouseClick);
             // 
             // columnHeader1
             // 
@@ -454,7 +466,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Product name";
-            this.columnHeader2.Width = 215;
+            this.columnHeader2.Width = 175;
             // 
             // columnHeader3
             // 
@@ -473,6 +485,10 @@
             // columnHeader6
             // 
             this.columnHeader6.Text = "Category";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Profit";
             // 
             // POSForm_shoppingCart_transactionNumber_lbl
             // 
@@ -647,6 +663,7 @@
             this.POSForm_items_list_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.product_id,
             this.product_name,
+            this.product_additional,
             this.product_price,
             this.product_stocks,
             this.product_category,
@@ -671,7 +688,7 @@
             // product_name
             // 
             this.product_name.Text = "Product Name:";
-            this.product_name.Width = 312;
+            this.product_name.Width = 200;
             // 
             // product_price
             // 
@@ -686,6 +703,10 @@
             // product_category
             // 
             this.product_category.Text = "Category:";
+            // 
+            // product_puchasePrice
+            // 
+            this.product_puchasePrice.Text = "PP";
             // 
             // label1
             // 
@@ -705,6 +726,7 @@
             this.POSForm_itemSearch_txtBox.Name = "POSForm_itemSearch_txtBox";
             this.POSForm_itemSearch_txtBox.Size = new System.Drawing.Size(124, 20);
             this.POSForm_itemSearch_txtBox.TabIndex = 42;
+            this.POSForm_itemSearch_txtBox.TextChanged += new System.EventHandler(this.POSForm_itemSearch_txtBox_TextChanged);
             // 
             // panel5
             // 
@@ -753,6 +775,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.account_level);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.POSForm_logout_btn);
             this.panel6.Controls.Add(this.groupBox4);
@@ -859,13 +882,64 @@
             this.POSForm_inventory_btn.UseVisualStyleBackColor = false;
             this.POSForm_inventory_btn.Click += new System.EventHandler(this.POSForm_inventory_btn_Click);
             // 
-            // columnHeader7
+            // label7
             // 
-            this.columnHeader7.Text = "Profit";
+            this.label7.AutoSize = true;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(340, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 15);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Customer name:";
+            this.label7.Visible = false;
             // 
-            // product_puchasePrice
+            // POSForm_customerinfo_id_lbl
             // 
-            this.product_puchasePrice.Text = "PP";
+            this.POSForm_customerinfo_id_lbl.AutoSize = true;
+            this.POSForm_customerinfo_id_lbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.POSForm_customerinfo_id_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POSForm_customerinfo_id_lbl.Location = new System.Drawing.Point(344, 205);
+            this.POSForm_customerinfo_id_lbl.Name = "POSForm_customerinfo_id_lbl";
+            this.POSForm_customerinfo_id_lbl.Size = new System.Drawing.Size(0, 15);
+            this.POSForm_customerinfo_id_lbl.TabIndex = 52;
+            this.POSForm_customerinfo_id_lbl.Visible = false;
+            // 
+            // POSForm_Cart_removeItem_btn
+            // 
+            this.POSForm_Cart_removeItem_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.POSForm_Cart_removeItem_btn.Enabled = false;
+            this.POSForm_Cart_removeItem_btn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.POSForm_Cart_removeItem_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.POSForm_Cart_removeItem_btn.Location = new System.Drawing.Point(3, 590);
+            this.POSForm_Cart_removeItem_btn.Name = "POSForm_Cart_removeItem_btn";
+            this.POSForm_Cart_removeItem_btn.Size = new System.Drawing.Size(323, 47);
+            this.POSForm_Cart_removeItem_btn.TabIndex = 53;
+            this.POSForm_Cart_removeItem_btn.Text = "Remove item";
+            this.POSForm_Cart_removeItem_btn.UseVisualStyleBackColor = false;
+            this.POSForm_Cart_removeItem_btn.Visible = false;
+            this.POSForm_Cart_removeItem_btn.Click += new System.EventHandler(this.POSForm_Cart_removeItem_btn_Click);
+            // 
+            // account_level
+            // 
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(3, 127);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 84;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
+            // 
+            // product_additional
+            // 
+            this.product_additional.Text = "Additional details";
+            this.product_additional.Width = 110;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Additional details";
+            this.columnHeader8.Width = 99;
             // 
             // POS_Form
             // 
@@ -977,5 +1051,11 @@
         private System.Windows.Forms.Button POSForm_toCustomer_btn;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader product_puchasePrice;
+        private System.Windows.Forms.Label POSForm_customerinfo_id_lbl;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button POSForm_Cart_removeItem_btn;
+        public System.Windows.Forms.Label account_level;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader product_additional;
     }
 }

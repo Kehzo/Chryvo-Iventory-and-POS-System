@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employees_Form));
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.employeeForm_user_idnumber = new System.Windows.Forms.Label();
             this.debugLbl = new System.Windows.Forms.Label();
@@ -119,9 +121,10 @@
             this.employeeForm_new_gendermale_rdBtn = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.employeeForm_new_acctypeEmployee_rdBtn = new System.Windows.Forms.RadioButton();
             this.employeeForm_new_acctypeAdmin_rdBtn = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
-            this.employeeForm_new_acctypeEmployee_rdBtn = new System.Windows.Forms.RadioButton();
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn = new System.Windows.Forms.RadioButton();
             this.employeeForm_new_genderfemale_rdBtn = new System.Windows.Forms.RadioButton();
             this.employeeForm_employeeSigniture_path_txtBox = new System.Windows.Forms.TextBox();
             this.employeeForm_employeePhoto_path_txtBox = new System.Windows.Forms.TextBox();
@@ -151,8 +154,7 @@
             this.employeeForm_CancelEmployeePicturePreview_btn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -178,6 +180,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.account_level);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.groupBox1);
@@ -196,6 +199,32 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(150, 682);
             this.panel5.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 54);
+            this.button1.TabIndex = 79;
+            this.button1.Text = "TRANSACTIONS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1, 464);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 55);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "CUSTOMER";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -223,11 +252,12 @@
             // 
             this.debugLbl.AutoSize = true;
             this.debugLbl.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.debugLbl.Location = new System.Drawing.Point(57, 569);
+            this.debugLbl.Location = new System.Drawing.Point(56, 599);
             this.debugLbl.Name = "debugLbl";
             this.debugLbl.Size = new System.Drawing.Size(23, 20);
             this.debugLbl.TabIndex = 52;
             this.debugLbl.Text = "xx";
+            this.debugLbl.Visible = false;
             // 
             // groupBox4
             // 
@@ -271,13 +301,14 @@
             this.stopdebug_btn.TabIndex = 50;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Visible = false;
             this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // employeeForm_home_btn
             // 
             this.employeeForm_home_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeForm_home_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.employeeForm_home_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeForm_home_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.employeeForm_home_btn.Location = new System.Drawing.Point(1, 238);
             this.employeeForm_home_btn.Name = "employeeForm_home_btn";
             this.employeeForm_home_btn.Size = new System.Drawing.Size(143, 54);
@@ -291,7 +322,7 @@
             this.employeeForm_sales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeForm_sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeForm_sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_sales_btn.Location = new System.Drawing.Point(1, 416);
+            this.employeeForm_sales_btn.Location = new System.Drawing.Point(1, 407);
             this.employeeForm_sales_btn.Name = "employeeForm_sales_btn";
             this.employeeForm_sales_btn.Size = new System.Drawing.Size(143, 55);
             this.employeeForm_sales_btn.TabIndex = 3;
@@ -304,7 +335,7 @@
             this.employeeForm_suppliers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeForm_suppliers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeForm_suppliers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_suppliers_btn.Location = new System.Drawing.Point(1, 356);
+            this.employeeForm_suppliers_btn.Location = new System.Drawing.Point(1, 521);
             this.employeeForm_suppliers_btn.Name = "employeeForm_suppliers_btn";
             this.employeeForm_suppliers_btn.Size = new System.Drawing.Size(143, 55);
             this.employeeForm_suppliers_btn.TabIndex = 2;
@@ -329,7 +360,7 @@
             this.employeeForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.employeeForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_inventory_btn.Location = new System.Drawing.Point(1, 296);
+            this.employeeForm_inventory_btn.Location = new System.Drawing.Point(1, 294);
             this.employeeForm_inventory_btn.Name = "employeeForm_inventory_btn";
             this.employeeForm_inventory_btn.Size = new System.Drawing.Size(143, 55);
             this.employeeForm_inventory_btn.TabIndex = 1;
@@ -1180,26 +1211,40 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.employeeForm_new_acctypeEmployee_rdBtn);
             this.panel1.Controls.Add(this.employeeForm_new_acctypeAdmin_rdBtn);
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.employeeForm_new_acctypeEmployee_rdBtn);
+            this.panel1.Controls.Add(this.employeeForm_new_acctypeEmployeewAccess_rdBtn);
             this.panel1.Location = new System.Drawing.Point(57, 393);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 60);
+            this.panel1.Size = new System.Drawing.Size(352, 60);
             this.panel1.TabIndex = 75;
+            // 
+            // employeeForm_new_acctypeEmployee_rdBtn
+            // 
+            this.employeeForm_new_acctypeEmployee_rdBtn.AutoSize = true;
+            this.employeeForm_new_acctypeEmployee_rdBtn.Checked = true;
+            this.employeeForm_new_acctypeEmployee_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeForm_new_acctypeEmployee_rdBtn.Location = new System.Drawing.Point(105, 8);
+            this.employeeForm_new_acctypeEmployee_rdBtn.Name = "employeeForm_new_acctypeEmployee_rdBtn";
+            this.employeeForm_new_acctypeEmployee_rdBtn.Size = new System.Drawing.Size(81, 18);
+            this.employeeForm_new_acctypeEmployee_rdBtn.TabIndex = 67;
+            this.employeeForm_new_acctypeEmployee_rdBtn.TabStop = true;
+            this.employeeForm_new_acctypeEmployee_rdBtn.Text = "Employee";
+            this.employeeForm_new_acctypeEmployee_rdBtn.UseVisualStyleBackColor = true;
             // 
             // employeeForm_new_acctypeAdmin_rdBtn
             // 
             this.employeeForm_new_acctypeAdmin_rdBtn.AutoSize = true;
-            this.employeeForm_new_acctypeAdmin_rdBtn.Checked = true;
             this.employeeForm_new_acctypeAdmin_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_new_acctypeAdmin_rdBtn.Location = new System.Drawing.Point(111, 8);
+            this.employeeForm_new_acctypeAdmin_rdBtn.Location = new System.Drawing.Point(105, 31);
             this.employeeForm_new_acctypeAdmin_rdBtn.Name = "employeeForm_new_acctypeAdmin_rdBtn";
             this.employeeForm_new_acctypeAdmin_rdBtn.Size = new System.Drawing.Size(60, 18);
             this.employeeForm_new_acctypeAdmin_rdBtn.TabIndex = 10;
-            this.employeeForm_new_acctypeAdmin_rdBtn.TabStop = true;
             this.employeeForm_new_acctypeAdmin_rdBtn.Text = "Admin";
             this.employeeForm_new_acctypeAdmin_rdBtn.UseVisualStyleBackColor = true;
+            this.employeeForm_new_acctypeAdmin_rdBtn.Visible = false;
+            this.employeeForm_new_acctypeAdmin_rdBtn.CheckedChanged += new System.EventHandler(this.employeeForm_new_acctypeAdmin_rdBtn_CheckedChanged);
             // 
             // label20
             // 
@@ -1211,16 +1256,16 @@
             this.label20.TabIndex = 66;
             this.label20.Text = "Account type:";
             // 
-            // employeeForm_new_acctypeEmployee_rdBtn
+            // employeeForm_new_acctypeEmployeewAccess_rdBtn
             // 
-            this.employeeForm_new_acctypeEmployee_rdBtn.AutoSize = true;
-            this.employeeForm_new_acctypeEmployee_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeForm_new_acctypeEmployee_rdBtn.Location = new System.Drawing.Point(111, 36);
-            this.employeeForm_new_acctypeEmployee_rdBtn.Name = "employeeForm_new_acctypeEmployee_rdBtn";
-            this.employeeForm_new_acctypeEmployee_rdBtn.Size = new System.Drawing.Size(81, 18);
-            this.employeeForm_new_acctypeEmployee_rdBtn.TabIndex = 11;
-            this.employeeForm_new_acctypeEmployee_rdBtn.Text = "Employee";
-            this.employeeForm_new_acctypeEmployee_rdBtn.UseVisualStyleBackColor = true;
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.AutoSize = true;
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.Location = new System.Drawing.Point(189, 8);
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.Name = "employeeForm_new_acctypeEmployeewAccess_rdBtn";
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.Size = new System.Drawing.Size(151, 18);
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.TabIndex = 11;
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.Text = "Employee w/ Access";
+            this.employeeForm_new_acctypeEmployeewAccess_rdBtn.UseVisualStyleBackColor = true;
             // 
             // employeeForm_new_genderfemale_rdBtn
             // 
@@ -1395,6 +1440,7 @@
             this.employeeForm_new_contactno_txtBox.Name = "employeeForm_new_contactno_txtBox";
             this.employeeForm_new_contactno_txtBox.Size = new System.Drawing.Size(110, 22);
             this.employeeForm_new_contactno_txtBox.TabIndex = 5;
+            this.employeeForm_new_contactno_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.employeeForm_new_contactno_txtBox_KeyPress);
             // 
             // employeeForm_addnewusertoDB_btn
             // 
@@ -1514,9 +1560,9 @@
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.employeeForm_employeedetails_grpBox);
             this.panel4.Controls.Add(this.employeeForm_new_employee_grpBox);
             this.panel4.Controls.Add(this.employeeForm_enlarge_EmployeePhoto_pctrBox);
-            this.panel4.Controls.Add(this.employeeForm_employeedetails_grpBox);
             this.panel4.Location = new System.Drawing.Point(7, 7);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1141, 687);
@@ -1534,31 +1580,16 @@
             this.panel2.Size = new System.Drawing.Size(520, 135);
             this.panel2.TabIndex = 87;
             // 
-            // button1
+            // account_level
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(2, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 54);
-            this.button1.TabIndex = 79;
-            this.button1.Text = "TRANSACTIONS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 477);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 55);
-            this.button2.TabIndex = 78;
-            this.button2.Text = "CUSTOMER";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(10, 112);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 87;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
             // 
             // employees_Form
             // 
@@ -1674,7 +1705,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox employeeForm_update_password_txtBox;
-        private System.Windows.Forms.RadioButton employeeForm_new_acctypeEmployee_rdBtn;
+        private System.Windows.Forms.RadioButton employeeForm_new_acctypeEmployeewAccess_rdBtn;
         private System.Windows.Forms.RadioButton employeeForm_new_acctypeAdmin_rdBtn;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -1733,5 +1764,7 @@
         private System.Windows.Forms.Label employeeForm_doubleClickpicture_lbl;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton employeeForm_new_acctypeEmployee_rdBtn;
+        public System.Windows.Forms.Label account_level;
     }
 }

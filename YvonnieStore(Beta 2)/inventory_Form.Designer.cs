@@ -48,7 +48,36 @@
             this.inventoryForm_lowStocks_btn = new System.Windows.Forms.Button();
             this.inventoryForm_lowstacksvalue_lbl = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.inventoryForm_nonInventory_Sales_btn = new System.Windows.Forms.Button();
+            this.inventoryForm_noninventorysales_lbl = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.inventoryForm_BOstocks_btn = new System.Windows.Forms.Button();
+            this.inventoryForm_Scral_lbl = new System.Windows.Forms.Label();
+            this.inventoryForm_Replacement_lbl = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.inventoryForm_inventoryworth_lbl = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.inventoryForm_forScrap_lstView = new System.Windows.Forms.ListView();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader59 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader60 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader61 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader62 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader63 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader64 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader65 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryForm_sortGo_btn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.inventoryForm_sort_comboBox = new System.Windows.Forms.ComboBox();
@@ -56,6 +85,26 @@
             this.inventoryForm_refreshList_btn = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.inventoryForm_inventorylistsearch_txtbox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.inventoryForm_forScrapSearch_txtBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.inventoryForm_forReplacementSearch_txtBox = new System.Windows.Forms.TextBox();
+            this.inventoryForm_forScrap_lbl = new System.Windows.Forms.Label();
+            this.inventoryForm_forReplacement_lbl = new System.Windows.Forms.Label();
+            this.inventoryForm_forReplacement_lstView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryForm_inventorylist_listview = new System.Windows.Forms.ListView();
             this.Product_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Product_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -78,6 +127,7 @@
             this.for_Scrap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.is_Low = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.total_Worth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader58 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inventoryForm_lowStock_lstView = new System.Windows.Forms.ListView();
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,67 +148,6 @@
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
-            this.inventoryForm_forScrapSearch_txtBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.inventoryForm_forReplacementSearch_txtBox = new System.Windows.Forms.TextBox();
-            this.inventoryForm_forScrap_lbl = new System.Windows.Forms.Label();
-            this.inventoryForm_forReplacement_lbl = new System.Windows.Forms.Label();
-            this.inventoryForm_forScrap_lstView = new System.Windows.Forms.ListView();
-            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader51 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader52 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader53 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader56 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader57 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.inventoryForm_forReplacement_lstView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.inventoryForm_nonInventory_Sales_btn = new System.Windows.Forms.Button();
-            this.inventoryForm_noninventorysales_lbl = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.inventoryForm_BOstocks_btn = new System.Windows.Forms.Button();
-            this.inventoryForm_Scral_lbl = new System.Windows.Forms.Label();
-            this.inventoryForm_Replacement_lbl = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.inventoryForm_inventoryworth_lbl = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.inventoryForm_addnewItem_panel = new System.Windows.Forms.Panel();
             this.inventoryForm_newsupplier_CBbox = new System.Windows.Forms.ComboBox();
             this.testButton = new System.Windows.Forms.Button();
@@ -190,6 +179,19 @@
             this.inventoryForm_newproductid_txtBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.inventoryForm_updateForm_panel = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.inventoryForm_update_totalValue_lbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.inventorForm_update_forreplacement_txtBox = new System.Windows.Forms.TextBox();
+            this.inventorForm_update_forscrap_txtBox = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.inventorForm_update_forsrap_lbl = new System.Windows.Forms.Label();
+            this.inventorForm_update_forsrap_chkBox = new System.Windows.Forms.CheckBox();
+            this.inventorForm_update_forreplacement_chkBox = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.inventoryForm_update_forReplacement_lbl = new System.Windows.Forms.Label();
+            this.inventoryForm_updateLowStockalert_txtBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.update_test_Btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.inventoryForm_update_profit_lbl = new System.Windows.Forms.Label();
@@ -219,30 +221,28 @@
             this.label40 = new System.Windows.Forms.Label();
             this.inventoryForm_update_productID_txtBox = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.inventoryForm_updateLowStockalert_txtBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryForm_user_picture)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.inventoryForm_addnewItem_panel.SuspendLayout();
             this.inventoryForm_updateForm_panel.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.account_level);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.groupBox1);
@@ -262,24 +262,28 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 510);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(2, 488);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 58);
+            this.button1.Size = new System.Drawing.Size(143, 71);
             this.button1.TabIndex = 83;
             this.button1.Text = "CUSTOMER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(2, 447);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(2, 342);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 57);
+            this.button2.Size = new System.Drawing.Size(143, 71);
             this.button2.TabIndex = 82;
             this.button2.Text = "TRANSACTION";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox1
@@ -333,37 +337,47 @@
             this.button9.TabIndex = 49;
             this.button9.Text = "Stop";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // inventoryForm_Users_Btn
             // 
+            this.inventoryForm_Users_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.inventoryForm_Users_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_Users_Btn.Location = new System.Drawing.Point(3, 383);
+            this.inventoryForm_Users_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.inventoryForm_Users_Btn.Location = new System.Drawing.Point(2, 269);
             this.inventoryForm_Users_Btn.Name = "inventoryForm_Users_Btn";
-            this.inventoryForm_Users_Btn.Size = new System.Drawing.Size(143, 58);
+            this.inventoryForm_Users_Btn.Size = new System.Drawing.Size(143, 71);
             this.inventoryForm_Users_Btn.TabIndex = 4;
             this.inventoryForm_Users_Btn.Text = "USERS";
-            this.inventoryForm_Users_Btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_Users_Btn.UseVisualStyleBackColor = false;
+            this.inventoryForm_Users_Btn.Click += new System.EventHandler(this.inventoryForm_Users_Btn_Click);
             // 
             // inventoryForm_Sales_Btn
             // 
+            this.inventoryForm_Sales_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.inventoryForm_Sales_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_Sales_Btn.Location = new System.Drawing.Point(2, 320);
+            this.inventoryForm_Sales_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.inventoryForm_Sales_Btn.Location = new System.Drawing.Point(2, 415);
             this.inventoryForm_Sales_Btn.Name = "inventoryForm_Sales_Btn";
-            this.inventoryForm_Sales_Btn.Size = new System.Drawing.Size(143, 57);
+            this.inventoryForm_Sales_Btn.Size = new System.Drawing.Size(143, 71);
             this.inventoryForm_Sales_Btn.TabIndex = 3;
             this.inventoryForm_Sales_Btn.Text = "SALES";
-            this.inventoryForm_Sales_Btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_Sales_Btn.UseVisualStyleBackColor = false;
+            this.inventoryForm_Sales_Btn.Click += new System.EventHandler(this.inventoryForm_Sales_Btn_Click);
             // 
             // inventoryForm_Supplier_Btn
             // 
+            this.inventoryForm_Supplier_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.inventoryForm_Supplier_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_Supplier_Btn.Location = new System.Drawing.Point(1, 256);
+            this.inventoryForm_Supplier_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.inventoryForm_Supplier_Btn.Location = new System.Drawing.Point(2, 561);
             this.inventoryForm_Supplier_Btn.Name = "inventoryForm_Supplier_Btn";
-            this.inventoryForm_Supplier_Btn.Size = new System.Drawing.Size(143, 57);
+            this.inventoryForm_Supplier_Btn.Size = new System.Drawing.Size(143, 71);
             this.inventoryForm_Supplier_Btn.TabIndex = 2;
             this.inventoryForm_Supplier_Btn.Text = "SUPPLIERS";
-            this.inventoryForm_Supplier_Btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_Supplier_Btn.UseVisualStyleBackColor = false;
+            this.inventoryForm_Supplier_Btn.Click += new System.EventHandler(this.inventoryForm_Supplier_Btn_Click);
             // 
             // inventoryForm_timenow_value
             // 
@@ -379,13 +393,15 @@
             // 
             // inventoryForm_Home_Btn
             // 
+            this.inventoryForm_Home_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.inventoryForm_Home_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventoryForm_Home_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.inventoryForm_Home_Btn.Location = new System.Drawing.Point(2, 196);
             this.inventoryForm_Home_Btn.Name = "inventoryForm_Home_Btn";
-            this.inventoryForm_Home_Btn.Size = new System.Drawing.Size(143, 54);
+            this.inventoryForm_Home_Btn.Size = new System.Drawing.Size(143, 71);
             this.inventoryForm_Home_Btn.TabIndex = 1;
             this.inventoryForm_Home_Btn.Text = "POS";
-            this.inventoryForm_Home_Btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_Home_Btn.UseVisualStyleBackColor = false;
             this.inventoryForm_Home_Btn.Click += new System.EventHandler(this.button2_Click);
             // 
             // inventoryForm_datenow_value
@@ -414,10 +430,10 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(160, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1145, 736);
@@ -464,8 +480,165 @@
             this.label22.TabIndex = 46;
             this.label22.Text = "Low stocks:";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.inventoryForm_nonInventory_Sales_btn);
+            this.panel4.Controls.Add(this.inventoryForm_noninventorysales_lbl);
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Location = new System.Drawing.Point(694, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(327, 86);
+            this.panel4.TabIndex = 41;
+            // 
+            // inventoryForm_nonInventory_Sales_btn
+            // 
+            this.inventoryForm_nonInventory_Sales_btn.Location = new System.Drawing.Point(130, 59);
+            this.inventoryForm_nonInventory_Sales_btn.Name = "inventoryForm_nonInventory_Sales_btn";
+            this.inventoryForm_nonInventory_Sales_btn.Size = new System.Drawing.Size(75, 23);
+            this.inventoryForm_nonInventory_Sales_btn.TabIndex = 50;
+            this.inventoryForm_nonInventory_Sales_btn.Text = "View";
+            this.inventoryForm_nonInventory_Sales_btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_nonInventory_Sales_btn.Visible = false;
+            // 
+            // inventoryForm_noninventorysales_lbl
+            // 
+            this.inventoryForm_noninventorysales_lbl.AutoSize = true;
+            this.inventoryForm_noninventorysales_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_noninventorysales_lbl.Location = new System.Drawing.Point(92, 31);
+            this.inventoryForm_noninventorysales_lbl.Name = "inventoryForm_noninventorysales_lbl";
+            this.inventoryForm_noninventorysales_lbl.Size = new System.Drawing.Size(150, 22);
+            this.inventoryForm_noninventorysales_lbl.TabIndex = 38;
+            this.inventoryForm_noninventorysales_lbl.Text = "999,999,999.00";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(16, 4);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(297, 19);
+            this.label21.TabIndex = 37;
+            this.label21.Text = "Profit from non-inventory sales:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.inventoryForm_BOstocks_btn);
+            this.panel3.Controls.Add(this.inventoryForm_Scral_lbl);
+            this.panel3.Controls.Add(this.inventoryForm_Replacement_lbl);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(5, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(286, 86);
+            this.panel3.TabIndex = 40;
+            // 
+            // inventoryForm_BOstocks_btn
+            // 
+            this.inventoryForm_BOstocks_btn.Location = new System.Drawing.Point(106, 52);
+            this.inventoryForm_BOstocks_btn.Name = "inventoryForm_BOstocks_btn";
+            this.inventoryForm_BOstocks_btn.Size = new System.Drawing.Size(75, 23);
+            this.inventoryForm_BOstocks_btn.TabIndex = 49;
+            this.inventoryForm_BOstocks_btn.Text = "View";
+            this.inventoryForm_BOstocks_btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_BOstocks_btn.Click += new System.EventHandler(this.inventoryForm_BOstocks_btn_Click);
+            // 
+            // inventoryForm_Scral_lbl
+            // 
+            this.inventoryForm_Scral_lbl.AutoSize = true;
+            this.inventoryForm_Scral_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_Scral_lbl.Location = new System.Drawing.Point(208, 43);
+            this.inventoryForm_Scral_lbl.Name = "inventoryForm_Scral_lbl";
+            this.inventoryForm_Scral_lbl.Size = new System.Drawing.Size(44, 32);
+            this.inventoryForm_Scral_lbl.TabIndex = 40;
+            this.inventoryForm_Scral_lbl.Text = "99";
+            // 
+            // inventoryForm_Replacement_lbl
+            // 
+            this.inventoryForm_Replacement_lbl.AutoSize = true;
+            this.inventoryForm_Replacement_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_Replacement_lbl.Location = new System.Drawing.Point(37, 43);
+            this.inventoryForm_Replacement_lbl.Name = "inventoryForm_Replacement_lbl";
+            this.inventoryForm_Replacement_lbl.Size = new System.Drawing.Size(44, 32);
+            this.inventoryForm_Replacement_lbl.TabIndex = 37;
+            this.inventoryForm_Replacement_lbl.Text = "99";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(211, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 15);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Scrap:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(39, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(202, 24);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Total B.O stocks";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(13, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 15);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Replacement:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.inventoryForm_inventoryworth_lbl);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Location = new System.Drawing.Point(297, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(391, 86);
+            this.panel2.TabIndex = 39;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(68, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(274, 24);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Total inventory worth:";
+            // 
+            // inventoryForm_inventoryworth_lbl
+            // 
+            this.inventoryForm_inventoryworth_lbl.AutoSize = true;
+            this.inventoryForm_inventoryworth_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_inventoryworth_lbl.Location = new System.Drawing.Point(79, 34);
+            this.inventoryForm_inventoryworth_lbl.Name = "inventoryForm_inventoryworth_lbl";
+            this.inventoryForm_inventoryworth_lbl.Size = new System.Drawing.Size(224, 32);
+            this.inventoryForm_inventoryworth_lbl.TabIndex = 14;
+            this.inventoryForm_inventoryworth_lbl.Text = "999,999,999.00";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label19.Location = new System.Drawing.Point(41, 33);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(32, 31);
+            this.label19.TabIndex = 36;
+            this.label19.Text = "₱";
+            this.label19.Visible = false;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.inventoryForm_forScrap_lstView);
             this.groupBox2.Controls.Add(this.inventoryForm_sortGo_btn);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.inventoryForm_sort_comboBox);
@@ -473,16 +646,15 @@
             this.groupBox2.Controls.Add(this.inventoryForm_refreshList_btn);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.inventoryForm_inventorylistsearch_txtbox);
-            this.groupBox2.Controls.Add(this.inventoryForm_inventorylist_listview);
-            this.groupBox2.Controls.Add(this.inventoryForm_lowStock_lstView);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.inventoryForm_forScrapSearch_txtBox);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.inventoryForm_forReplacementSearch_txtBox);
             this.groupBox2.Controls.Add(this.inventoryForm_forScrap_lbl);
             this.groupBox2.Controls.Add(this.inventoryForm_forReplacement_lbl);
-            this.groupBox2.Controls.Add(this.inventoryForm_forScrap_lstView);
             this.groupBox2.Controls.Add(this.inventoryForm_forReplacement_lstView);
+            this.groupBox2.Controls.Add(this.inventoryForm_inventorylist_listview);
+            this.groupBox2.Controls.Add(this.inventoryForm_lowStock_lstView);
             this.groupBox2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(5, 96);
             this.groupBox2.Name = "groupBox2";
@@ -490,6 +662,98 @@
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inventory list:";
+            // 
+            // inventoryForm_forScrap_lstView
+            // 
+            this.inventoryForm_forScrap_lstView.BackgroundImageTiled = true;
+            this.inventoryForm_forScrap_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader59,
+            this.columnHeader60,
+            this.columnHeader61,
+            this.columnHeader62,
+            this.columnHeader63,
+            this.columnHeader64,
+            this.columnHeader65});
+            this.inventoryForm_forScrap_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forScrap_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.inventoryForm_forScrap_lstView.GridLines = true;
+            this.inventoryForm_forScrap_lstView.HideSelection = false;
+            this.inventoryForm_forScrap_lstView.Location = new System.Drawing.Point(528, 100);
+            this.inventoryForm_forScrap_lstView.Name = "inventoryForm_forScrap_lstView";
+            this.inventoryForm_forScrap_lstView.Size = new System.Drawing.Size(461, 470);
+            this.inventoryForm_forScrap_lstView.TabIndex = 62;
+            this.inventoryForm_forScrap_lstView.UseCompatibleStateImageBehavior = false;
+            this.inventoryForm_forScrap_lstView.View = System.Windows.Forms.View.Details;
+            this.inventoryForm_forScrap_lstView.Visible = false;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Product ID:";
+            this.columnHeader14.Width = 92;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Product name:";
+            this.columnHeader15.Width = 206;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Expiration date:";
+            this.columnHeader16.Width = 59;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Category:";
+            this.columnHeader17.Width = 100;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Purchase price:";
+            this.columnHeader18.Width = 91;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Selling price:";
+            this.columnHeader19.Width = 145;
+            // 
+            // columnHeader59
+            // 
+            this.columnHeader59.Text = "Product line:";
+            this.columnHeader59.Width = 159;
+            // 
+            // columnHeader60
+            // 
+            this.columnHeader60.Text = "Supplier:";
+            this.columnHeader60.Width = 0;
+            // 
+            // columnHeader61
+            // 
+            this.columnHeader61.Text = "Addtional details:";
+            this.columnHeader61.Width = 173;
+            // 
+            // columnHeader62
+            // 
+            this.columnHeader62.Text = "Added by:";
+            // 
+            // columnHeader63
+            // 
+            this.columnHeader63.Text = "Date & Time Added:";
+            // 
+            // columnHeader64
+            // 
+            this.columnHeader64.Text = "# for scrap:";
+            this.columnHeader64.Width = 0;
+            // 
+            // columnHeader65
+            // 
+            this.columnHeader65.Text = "Total value:";
+            this.columnHeader65.Width = 0;
             // 
             // inventoryForm_sortGo_btn
             // 
@@ -535,11 +799,10 @@
             // 
             // inventoryForm_addnewitem_btn
             // 
-            this.inventoryForm_addnewitem_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventoryForm_addnewitem_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_addnewitem_btn.Location = new System.Drawing.Point(1011, 55);
+            this.inventoryForm_addnewitem_btn.Location = new System.Drawing.Point(1011, 96);
             this.inventoryForm_addnewitem_btn.Name = "inventoryForm_addnewitem_btn";
-            this.inventoryForm_addnewitem_btn.Size = new System.Drawing.Size(118, 68);
+            this.inventoryForm_addnewitem_btn.Size = new System.Drawing.Size(118, 109);
             this.inventoryForm_addnewitem_btn.TabIndex = 46;
             this.inventoryForm_addnewitem_btn.Text = "ADD NEW ITEM";
             this.inventoryForm_addnewitem_btn.UseVisualStyleBackColor = true;
@@ -577,6 +840,166 @@
             this.inventoryForm_inventorylistsearch_txtbox.TabIndex = 44;
             this.inventoryForm_inventorylistsearch_txtbox.TextChanged += new System.EventHandler(this.inventoryForm_inventorylistsearch_txtbox_TextChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(649, 67);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 25);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "🔍";
+            this.label7.Visible = false;
+            // 
+            // inventoryForm_forScrapSearch_txtBox
+            // 
+            this.inventoryForm_forScrapSearch_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forScrapSearch_txtBox.Location = new System.Drawing.Point(689, 67);
+            this.inventoryForm_forScrapSearch_txtBox.Name = "inventoryForm_forScrapSearch_txtBox";
+            this.inventoryForm_forScrapSearch_txtBox.Size = new System.Drawing.Size(300, 25);
+            this.inventoryForm_forScrapSearch_txtBox.TabIndex = 60;
+            this.inventoryForm_forScrapSearch_txtBox.Visible = false;
+            this.inventoryForm_forScrapSearch_txtBox.TextChanged += new System.EventHandler(this.inventoryForm_forScrapSearch_txtBox_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(232, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 25);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "🔍";
+            this.label6.Visible = false;
+            // 
+            // inventoryForm_forReplacementSearch_txtBox
+            // 
+            this.inventoryForm_forReplacementSearch_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forReplacementSearch_txtBox.Location = new System.Drawing.Point(272, 67);
+            this.inventoryForm_forReplacementSearch_txtBox.Name = "inventoryForm_forReplacementSearch_txtBox";
+            this.inventoryForm_forReplacementSearch_txtBox.Size = new System.Drawing.Size(220, 25);
+            this.inventoryForm_forReplacementSearch_txtBox.TabIndex = 58;
+            this.inventoryForm_forReplacementSearch_txtBox.Visible = false;
+            this.inventoryForm_forReplacementSearch_txtBox.TextChanged += new System.EventHandler(this.inventoryForm_forReplacementSearch_txtBox_TextChanged);
+            // 
+            // inventoryForm_forScrap_lbl
+            // 
+            this.inventoryForm_forScrap_lbl.AutoSize = true;
+            this.inventoryForm_forScrap_lbl.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forScrap_lbl.Location = new System.Drawing.Point(514, 68);
+            this.inventoryForm_forScrap_lbl.Name = "inventoryForm_forScrap_lbl";
+            this.inventoryForm_forScrap_lbl.Size = new System.Drawing.Size(130, 24);
+            this.inventoryForm_forScrap_lbl.TabIndex = 57;
+            this.inventoryForm_forScrap_lbl.Text = "For Scrap:";
+            this.inventoryForm_forScrap_lbl.Visible = false;
+            // 
+            // inventoryForm_forReplacement_lbl
+            // 
+            this.inventoryForm_forReplacement_lbl.AutoSize = true;
+            this.inventoryForm_forReplacement_lbl.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forReplacement_lbl.Location = new System.Drawing.Point(27, 67);
+            this.inventoryForm_forReplacement_lbl.Name = "inventoryForm_forReplacement_lbl";
+            this.inventoryForm_forReplacement_lbl.Size = new System.Drawing.Size(202, 24);
+            this.inventoryForm_forReplacement_lbl.TabIndex = 56;
+            this.inventoryForm_forReplacement_lbl.Text = "For Replacement:";
+            this.inventoryForm_forReplacement_lbl.Visible = false;
+            // 
+            // inventoryForm_forReplacement_lstView
+            // 
+            this.inventoryForm_forReplacement_lstView.BackgroundImageTiled = true;
+            this.inventoryForm_forReplacement_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13});
+            this.inventoryForm_forReplacement_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_forReplacement_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.inventoryForm_forReplacement_lstView.GridLines = true;
+            this.inventoryForm_forReplacement_lstView.HideSelection = false;
+            this.inventoryForm_forReplacement_lstView.Location = new System.Drawing.Point(31, 100);
+            this.inventoryForm_forReplacement_lstView.Name = "inventoryForm_forReplacement_lstView";
+            this.inventoryForm_forReplacement_lstView.Size = new System.Drawing.Size(461, 470);
+            this.inventoryForm_forReplacement_lstView.TabIndex = 54;
+            this.inventoryForm_forReplacement_lstView.UseCompatibleStateImageBehavior = false;
+            this.inventoryForm_forReplacement_lstView.View = System.Windows.Forms.View.Details;
+            this.inventoryForm_forReplacement_lstView.Visible = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Product ID:";
+            this.columnHeader1.Width = 92;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Product name:";
+            this.columnHeader2.Width = 206;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Expiration date:";
+            this.columnHeader3.Width = 59;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Category:";
+            this.columnHeader4.Width = 100;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Purchase price:";
+            this.columnHeader5.Width = 91;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Selling price:";
+            this.columnHeader6.Width = 145;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Product line:";
+            this.columnHeader7.Width = 159;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Supplier:";
+            this.columnHeader8.Width = 0;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Addtional details:";
+            this.columnHeader9.Width = 173;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Added by:";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Date & Time Added:";
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "# for replacement:";
+            this.columnHeader12.Width = 0;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Total value:";
+            this.columnHeader13.Width = 0;
+            // 
             // inventoryForm_inventorylist_listview
             // 
             this.inventoryForm_inventorylist_listview.BackgroundImageTiled = true;
@@ -601,9 +1024,10 @@
             this.for_Replacement,
             this.for_Scrap,
             this.is_Low,
-            this.total_Worth});
+            this.total_Worth,
+            this.columnHeader58});
             this.inventoryForm_inventorylist_listview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_inventorylist_listview.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.inventoryForm_inventorylist_listview.ForeColor = System.Drawing.Color.Black;
             this.inventoryForm_inventorylist_listview.GridLines = true;
             this.inventoryForm_inventorylist_listview.HideSelection = false;
             this.inventoryForm_inventorylist_listview.Location = new System.Drawing.Point(3, 60);
@@ -841,477 +1265,6 @@
             // 
             this.columnHeader38.Text = "Total Worth:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(649, 67);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 25);
-            this.label7.TabIndex = 61;
-            this.label7.Text = "🔍";
-            this.label7.Visible = false;
-            // 
-            // inventoryForm_forScrapSearch_txtBox
-            // 
-            this.inventoryForm_forScrapSearch_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forScrapSearch_txtBox.Location = new System.Drawing.Point(689, 67);
-            this.inventoryForm_forScrapSearch_txtBox.Name = "inventoryForm_forScrapSearch_txtBox";
-            this.inventoryForm_forScrapSearch_txtBox.Size = new System.Drawing.Size(300, 25);
-            this.inventoryForm_forScrapSearch_txtBox.TabIndex = 60;
-            this.inventoryForm_forScrapSearch_txtBox.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(232, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 25);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "🔍";
-            this.label6.Visible = false;
-            // 
-            // inventoryForm_forReplacementSearch_txtBox
-            // 
-            this.inventoryForm_forReplacementSearch_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forReplacementSearch_txtBox.Location = new System.Drawing.Point(272, 67);
-            this.inventoryForm_forReplacementSearch_txtBox.Name = "inventoryForm_forReplacementSearch_txtBox";
-            this.inventoryForm_forReplacementSearch_txtBox.Size = new System.Drawing.Size(220, 25);
-            this.inventoryForm_forReplacementSearch_txtBox.TabIndex = 58;
-            this.inventoryForm_forReplacementSearch_txtBox.Visible = false;
-            // 
-            // inventoryForm_forScrap_lbl
-            // 
-            this.inventoryForm_forScrap_lbl.AutoSize = true;
-            this.inventoryForm_forScrap_lbl.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forScrap_lbl.Location = new System.Drawing.Point(514, 68);
-            this.inventoryForm_forScrap_lbl.Name = "inventoryForm_forScrap_lbl";
-            this.inventoryForm_forScrap_lbl.Size = new System.Drawing.Size(130, 24);
-            this.inventoryForm_forScrap_lbl.TabIndex = 57;
-            this.inventoryForm_forScrap_lbl.Text = "For Scrap:";
-            this.inventoryForm_forScrap_lbl.Visible = false;
-            // 
-            // inventoryForm_forReplacement_lbl
-            // 
-            this.inventoryForm_forReplacement_lbl.AutoSize = true;
-            this.inventoryForm_forReplacement_lbl.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forReplacement_lbl.Location = new System.Drawing.Point(27, 67);
-            this.inventoryForm_forReplacement_lbl.Name = "inventoryForm_forReplacement_lbl";
-            this.inventoryForm_forReplacement_lbl.Size = new System.Drawing.Size(202, 24);
-            this.inventoryForm_forReplacement_lbl.TabIndex = 56;
-            this.inventoryForm_forReplacement_lbl.Text = "For Replacement:";
-            this.inventoryForm_forReplacement_lbl.Visible = false;
-            // 
-            // inventoryForm_forScrap_lstView
-            // 
-            this.inventoryForm_forScrap_lstView.BackgroundImageTiled = true;
-            this.inventoryForm_forScrap_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader39,
-            this.columnHeader40,
-            this.columnHeader41,
-            this.columnHeader42,
-            this.columnHeader43,
-            this.columnHeader44,
-            this.columnHeader45,
-            this.columnHeader46,
-            this.columnHeader47,
-            this.columnHeader48,
-            this.columnHeader49,
-            this.columnHeader50,
-            this.columnHeader51,
-            this.columnHeader52,
-            this.columnHeader53,
-            this.columnHeader54,
-            this.columnHeader55,
-            this.columnHeader56,
-            this.columnHeader57});
-            this.inventoryForm_forScrap_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forScrap_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.inventoryForm_forScrap_lstView.GridLines = true;
-            this.inventoryForm_forScrap_lstView.HideSelection = false;
-            this.inventoryForm_forScrap_lstView.Location = new System.Drawing.Point(518, 100);
-            this.inventoryForm_forScrap_lstView.Name = "inventoryForm_forScrap_lstView";
-            this.inventoryForm_forScrap_lstView.Size = new System.Drawing.Size(471, 470);
-            this.inventoryForm_forScrap_lstView.TabIndex = 55;
-            this.inventoryForm_forScrap_lstView.UseCompatibleStateImageBehavior = false;
-            this.inventoryForm_forScrap_lstView.View = System.Windows.Forms.View.Details;
-            this.inventoryForm_forScrap_lstView.Visible = false;
-            // 
-            // columnHeader39
-            // 
-            this.columnHeader39.Text = "Product ID:";
-            this.columnHeader39.Width = 92;
-            // 
-            // columnHeader40
-            // 
-            this.columnHeader40.Text = "Product Name:";
-            this.columnHeader40.Width = 206;
-            // 
-            // columnHeader41
-            // 
-            this.columnHeader41.Text = "Stocks:";
-            this.columnHeader41.Width = 59;
-            // 
-            // columnHeader42
-            // 
-            this.columnHeader42.Text = "Purchase Price:";
-            this.columnHeader42.Width = 100;
-            // 
-            // columnHeader43
-            // 
-            this.columnHeader43.Text = "Price:";
-            this.columnHeader43.Width = 91;
-            // 
-            // columnHeader44
-            // 
-            this.columnHeader44.Text = "Product Line:";
-            this.columnHeader44.Width = 145;
-            // 
-            // columnHeader45
-            // 
-            this.columnHeader45.Text = "Supplier";
-            this.columnHeader45.Width = 159;
-            // 
-            // columnHeader46
-            // 
-            this.columnHeader46.Text = "Additional Details:";
-            this.columnHeader46.Width = 0;
-            // 
-            // columnHeader47
-            // 
-            this.columnHeader47.Text = "Expiration Date:";
-            this.columnHeader47.Width = 173;
-            // 
-            // columnHeader48
-            // 
-            this.columnHeader48.Text = "Category:";
-            // 
-            // columnHeader49
-            // 
-            this.columnHeader49.Text = "Date & Time Added:";
-            // 
-            // columnHeader50
-            // 
-            this.columnHeader50.Text = "Date Updated:";
-            this.columnHeader50.Width = 0;
-            // 
-            // columnHeader51
-            // 
-            this.columnHeader51.Text = "Date Archived";
-            this.columnHeader51.Width = 0;
-            // 
-            // columnHeader52
-            // 
-            this.columnHeader52.Text = "Status";
-            this.columnHeader52.Width = 0;
-            // 
-            // columnHeader53
-            // 
-            this.columnHeader53.Text = "Added By:";
-            this.columnHeader53.Width = 100;
-            // 
-            // columnHeader54
-            // 
-            this.columnHeader54.Text = "Last updated by:";
-            this.columnHeader54.Width = 100;
-            // 
-            // columnHeader55
-            // 
-            this.columnHeader55.Text = "Low Stock Alert";
-            // 
-            // columnHeader56
-            // 
-            this.columnHeader56.Text = "is Low Stock";
-            // 
-            // columnHeader57
-            // 
-            this.columnHeader57.Text = "Total Worth:";
-            // 
-            // inventoryForm_forReplacement_lstView
-            // 
-            this.inventoryForm_forReplacement_lstView.BackgroundImageTiled = true;
-            this.inventoryForm_forReplacement_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18,
-            this.columnHeader19});
-            this.inventoryForm_forReplacement_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_forReplacement_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.inventoryForm_forReplacement_lstView.GridLines = true;
-            this.inventoryForm_forReplacement_lstView.HideSelection = false;
-            this.inventoryForm_forReplacement_lstView.Location = new System.Drawing.Point(31, 100);
-            this.inventoryForm_forReplacement_lstView.Name = "inventoryForm_forReplacement_lstView";
-            this.inventoryForm_forReplacement_lstView.Size = new System.Drawing.Size(461, 470);
-            this.inventoryForm_forReplacement_lstView.TabIndex = 54;
-            this.inventoryForm_forReplacement_lstView.UseCompatibleStateImageBehavior = false;
-            this.inventoryForm_forReplacement_lstView.View = System.Windows.Forms.View.Details;
-            this.inventoryForm_forReplacement_lstView.Visible = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Product ID:";
-            this.columnHeader1.Width = 92;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Product Name:";
-            this.columnHeader2.Width = 206;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Stocks:";
-            this.columnHeader3.Width = 59;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Purchase Price:";
-            this.columnHeader4.Width = 100;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Price:";
-            this.columnHeader5.Width = 91;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Product Line:";
-            this.columnHeader6.Width = 145;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Supplier";
-            this.columnHeader7.Width = 159;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Additional Details:";
-            this.columnHeader8.Width = 0;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Expiration Date:";
-            this.columnHeader9.Width = 173;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Category:";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Date & Time Added:";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Date Updated:";
-            this.columnHeader12.Width = 0;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Date Archived";
-            this.columnHeader13.Width = 0;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Status";
-            this.columnHeader14.Width = 0;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Added By:";
-            this.columnHeader15.Width = 100;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Last updated by:";
-            this.columnHeader16.Width = 100;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Low Stock Alert";
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "is Low Stock";
-            // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Total Worth:";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.inventoryForm_nonInventory_Sales_btn);
-            this.panel4.Controls.Add(this.inventoryForm_noninventorysales_lbl);
-            this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(694, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(327, 86);
-            this.panel4.TabIndex = 41;
-            // 
-            // inventoryForm_nonInventory_Sales_btn
-            // 
-            this.inventoryForm_nonInventory_Sales_btn.Location = new System.Drawing.Point(130, 59);
-            this.inventoryForm_nonInventory_Sales_btn.Name = "inventoryForm_nonInventory_Sales_btn";
-            this.inventoryForm_nonInventory_Sales_btn.Size = new System.Drawing.Size(75, 23);
-            this.inventoryForm_nonInventory_Sales_btn.TabIndex = 50;
-            this.inventoryForm_nonInventory_Sales_btn.Text = "View";
-            this.inventoryForm_nonInventory_Sales_btn.UseVisualStyleBackColor = true;
-            // 
-            // inventoryForm_noninventorysales_lbl
-            // 
-            this.inventoryForm_noninventorysales_lbl.AutoSize = true;
-            this.inventoryForm_noninventorysales_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_noninventorysales_lbl.Location = new System.Drawing.Point(92, 31);
-            this.inventoryForm_noninventorysales_lbl.Name = "inventoryForm_noninventorysales_lbl";
-            this.inventoryForm_noninventorysales_lbl.Size = new System.Drawing.Size(150, 22);
-            this.inventoryForm_noninventorysales_lbl.TabIndex = 38;
-            this.inventoryForm_noninventorysales_lbl.Text = "999,999,999.00";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(16, 4);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(297, 19);
-            this.label21.TabIndex = 37;
-            this.label21.Text = "Profit from non-inventory sales:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.inventoryForm_BOstocks_btn);
-            this.panel3.Controls.Add(this.inventoryForm_Scral_lbl);
-            this.panel3.Controls.Add(this.inventoryForm_Replacement_lbl);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Location = new System.Drawing.Point(5, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(286, 86);
-            this.panel3.TabIndex = 40;
-            // 
-            // inventoryForm_BOstocks_btn
-            // 
-            this.inventoryForm_BOstocks_btn.Location = new System.Drawing.Point(106, 52);
-            this.inventoryForm_BOstocks_btn.Name = "inventoryForm_BOstocks_btn";
-            this.inventoryForm_BOstocks_btn.Size = new System.Drawing.Size(75, 23);
-            this.inventoryForm_BOstocks_btn.TabIndex = 49;
-            this.inventoryForm_BOstocks_btn.Text = "View";
-            this.inventoryForm_BOstocks_btn.UseVisualStyleBackColor = true;
-            this.inventoryForm_BOstocks_btn.Click += new System.EventHandler(this.inventoryForm_BOstocks_btn_Click);
-            // 
-            // inventoryForm_Scral_lbl
-            // 
-            this.inventoryForm_Scral_lbl.AutoSize = true;
-            this.inventoryForm_Scral_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_Scral_lbl.Location = new System.Drawing.Point(208, 43);
-            this.inventoryForm_Scral_lbl.Name = "inventoryForm_Scral_lbl";
-            this.inventoryForm_Scral_lbl.Size = new System.Drawing.Size(44, 32);
-            this.inventoryForm_Scral_lbl.TabIndex = 40;
-            this.inventoryForm_Scral_lbl.Text = "99";
-            // 
-            // inventoryForm_Replacement_lbl
-            // 
-            this.inventoryForm_Replacement_lbl.AutoSize = true;
-            this.inventoryForm_Replacement_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_Replacement_lbl.Location = new System.Drawing.Point(37, 43);
-            this.inventoryForm_Replacement_lbl.Name = "inventoryForm_Replacement_lbl";
-            this.inventoryForm_Replacement_lbl.Size = new System.Drawing.Size(44, 32);
-            this.inventoryForm_Replacement_lbl.TabIndex = 37;
-            this.inventoryForm_Replacement_lbl.Text = "99";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(211, 28);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 15);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "Scrap:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(39, 4);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(202, 24);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Total B.O stocks";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(13, 28);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 15);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Replacement:";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.inventoryForm_inventoryworth_lbl);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Location = new System.Drawing.Point(297, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(391, 86);
-            this.panel2.TabIndex = 39;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(68, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(274, 24);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Total inventory worth:";
-            // 
-            // inventoryForm_inventoryworth_lbl
-            // 
-            this.inventoryForm_inventoryworth_lbl.AutoSize = true;
-            this.inventoryForm_inventoryworth_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_inventoryworth_lbl.Location = new System.Drawing.Point(79, 34);
-            this.inventoryForm_inventoryworth_lbl.Name = "inventoryForm_inventoryworth_lbl";
-            this.inventoryForm_inventoryworth_lbl.Size = new System.Drawing.Size(224, 32);
-            this.inventoryForm_inventoryworth_lbl.TabIndex = 14;
-            this.inventoryForm_inventoryworth_lbl.Text = "999,999,999.00";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(41, 33);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(32, 31);
-            this.label19.TabIndex = 36;
-            this.label19.Text = "₱";
-            this.label19.Visible = false;
-            // 
             // inventoryForm_addnewItem_panel
             // 
             this.inventoryForm_addnewItem_panel.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1362,6 +1315,7 @@
             // 
             // testButton
             // 
+            this.testButton.Enabled = false;
             this.testButton.Location = new System.Drawing.Point(889, 147);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(75, 23);
@@ -1412,9 +1366,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(959, 11);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1089, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(189, 84);
             this.button3.TabIndex = 49;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
@@ -1448,6 +1403,7 @@
             this.inventoryForm_newitemsellingprice_txtBox.Name = "inventoryForm_newitemsellingprice_txtBox";
             this.inventoryForm_newitemsellingprice_txtBox.Size = new System.Drawing.Size(67, 23);
             this.inventoryForm_newitemsellingprice_txtBox.TabIndex = 31;
+            this.inventoryForm_newitemsellingprice_txtBox.TextChanged += new System.EventHandler(this.inventoryForm_newitemsellingprice_txtBox_TextChanged);
             this.inventoryForm_newitemsellingprice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_newitemsellingprice_txtBox_KeyPress);
             // 
             // label28
@@ -1480,23 +1436,26 @@
             // 
             // inventoryForm_addnewitemclear_btn
             // 
-            this.inventoryForm_addnewitemclear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_addnewitemclear_btn.Location = new System.Drawing.Point(296, 516);
+            this.inventoryForm_addnewitemclear_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.inventoryForm_addnewitemclear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_addnewitemclear_btn.Location = new System.Drawing.Point(215, 516);
             this.inventoryForm_addnewitemclear_btn.Name = "inventoryForm_addnewitemclear_btn";
-            this.inventoryForm_addnewitemclear_btn.Size = new System.Drawing.Size(143, 96);
+            this.inventoryForm_addnewitemclear_btn.Size = new System.Drawing.Size(309, 96);
             this.inventoryForm_addnewitemclear_btn.TabIndex = 52;
             this.inventoryForm_addnewitemclear_btn.Text = "Clear";
-            this.inventoryForm_addnewitemclear_btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_addnewitemclear_btn.UseVisualStyleBackColor = false;
+            this.inventoryForm_addnewitemclear_btn.Click += new System.EventHandler(this.inventoryForm_addnewitemclear_btn_Click);
             // 
             // inventoryForm_addnewproduct_btn
             // 
-            this.inventoryForm_addnewproduct_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_addnewproduct_btn.Location = new System.Drawing.Point(445, 516);
+            this.inventoryForm_addnewproduct_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.inventoryForm_addnewproduct_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_addnewproduct_btn.Location = new System.Drawing.Point(550, 516);
             this.inventoryForm_addnewproduct_btn.Name = "inventoryForm_addnewproduct_btn";
-            this.inventoryForm_addnewproduct_btn.Size = new System.Drawing.Size(143, 96);
+            this.inventoryForm_addnewproduct_btn.Size = new System.Drawing.Size(309, 96);
             this.inventoryForm_addnewproduct_btn.TabIndex = 36;
             this.inventoryForm_addnewproduct_btn.Text = "Add";
-            this.inventoryForm_addnewproduct_btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_addnewproduct_btn.UseVisualStyleBackColor = false;
             this.inventoryForm_addnewproduct_btn.Click += new System.EventHandler(this.inventoryForm_addnewproduct_btn_Click);
             // 
             // label26
@@ -1565,6 +1524,7 @@
             this.inventoryForm_newitempurchaseprice_txtBox.Name = "inventoryForm_newitempurchaseprice_txtBox";
             this.inventoryForm_newitempurchaseprice_txtBox.Size = new System.Drawing.Size(67, 23);
             this.inventoryForm_newitempurchaseprice_txtBox.TabIndex = 30;
+            this.inventoryForm_newitempurchaseprice_txtBox.TextChanged += new System.EventHandler(this.inventoryForm_newitempurchaseprice_txtBox_TextChanged);
             this.inventoryForm_newitempurchaseprice_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_newitempurchaseprice_txtBox_KeyPress);
             // 
             // label17
@@ -1639,11 +1599,7 @@
             // 
             this.inventoryForm_updateForm_panel.BackColor = System.Drawing.Color.Green;
             this.inventoryForm_updateForm_panel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.inventoryForm_updateForm_panel.Controls.Add(this.textBox2);
-            this.inventoryForm_updateForm_panel.Controls.Add(this.textBox1);
-            this.inventoryForm_updateForm_panel.Controls.Add(this.checkBox2);
-            this.inventoryForm_updateForm_panel.Controls.Add(this.checkBox1);
-            this.inventoryForm_updateForm_panel.Controls.Add(this.label9);
+            this.inventoryForm_updateForm_panel.Controls.Add(this.groupBox3);
             this.inventoryForm_updateForm_panel.Controls.Add(this.inventoryForm_updateLowStockalert_txtBox);
             this.inventoryForm_updateForm_panel.Controls.Add(this.label8);
             this.inventoryForm_updateForm_panel.Controls.Add(this.update_test_Btn);
@@ -1676,15 +1632,161 @@
             this.inventoryForm_updateForm_panel.Controls.Add(this.inventoryForm_update_productID_txtBox);
             this.inventoryForm_updateForm_panel.Controls.Add(this.label41);
             this.inventoryForm_updateForm_panel.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_updateForm_panel.Location = new System.Drawing.Point(1, 32);
+            this.inventoryForm_updateForm_panel.Location = new System.Drawing.Point(16, 32);
             this.inventoryForm_updateForm_panel.Name = "inventoryForm_updateForm_panel";
-            this.inventoryForm_updateForm_panel.Size = new System.Drawing.Size(1299, 685);
+            this.inventoryForm_updateForm_panel.Size = new System.Drawing.Size(1284, 685);
             this.inventoryForm_updateForm_panel.TabIndex = 46;
             this.inventoryForm_updateForm_panel.Visible = false;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.inventoryForm_update_totalValue_lbl);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.inventorForm_update_forreplacement_txtBox);
+            this.groupBox3.Controls.Add(this.inventorForm_update_forscrap_txtBox);
+            this.groupBox3.Controls.Add(this.groupBox6);
+            this.groupBox3.Controls.Add(this.inventorForm_update_forsrap_chkBox);
+            this.groupBox3.Controls.Add(this.inventorForm_update_forreplacement_chkBox);
+            this.groupBox3.Controls.Add(this.groupBox5);
+            this.groupBox3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(873, 320);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(404, 294);
+            this.groupBox3.TabIndex = 74;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "For B.O";
+            // 
+            // inventoryForm_update_totalValue_lbl
+            // 
+            this.inventoryForm_update_totalValue_lbl.AutoSize = true;
+            this.inventoryForm_update_totalValue_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_update_totalValue_lbl.Location = new System.Drawing.Point(172, 171);
+            this.inventoryForm_update_totalValue_lbl.Name = "inventoryForm_update_totalValue_lbl";
+            this.inventoryForm_update_totalValue_lbl.Size = new System.Drawing.Size(50, 22);
+            this.inventoryForm_update_totalValue_lbl.TabIndex = 80;
+            this.inventoryForm_update_totalValue_lbl.Text = "0.00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(71, 176);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 15);
+            this.label9.TabIndex = 75;
+            this.label9.Text = "Total value:";
+            // 
+            // inventorForm_update_forreplacement_txtBox
+            // 
+            this.inventorForm_update_forreplacement_txtBox.Enabled = false;
+            this.inventorForm_update_forreplacement_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventorForm_update_forreplacement_txtBox.Location = new System.Drawing.Point(22, 258);
+            this.inventorForm_update_forreplacement_txtBox.Name = "inventorForm_update_forreplacement_txtBox";
+            this.inventorForm_update_forreplacement_txtBox.Size = new System.Drawing.Size(141, 23);
+            this.inventorForm_update_forreplacement_txtBox.TabIndex = 78;
+            this.inventorForm_update_forreplacement_txtBox.TextChanged += new System.EventHandler(this.inventorForm_update_forreplacement_txtBox_TextChanged);
+            this.inventorForm_update_forreplacement_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventorForm_update_forreplacement_txtBox_KeyPress);
+            // 
+            // inventorForm_update_forscrap_txtBox
+            // 
+            this.inventorForm_update_forscrap_txtBox.Enabled = false;
+            this.inventorForm_update_forscrap_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventorForm_update_forscrap_txtBox.Location = new System.Drawing.Point(238, 258);
+            this.inventorForm_update_forscrap_txtBox.Name = "inventorForm_update_forscrap_txtBox";
+            this.inventorForm_update_forscrap_txtBox.Size = new System.Drawing.Size(141, 23);
+            this.inventorForm_update_forscrap_txtBox.TabIndex = 79;
+            this.inventorForm_update_forscrap_txtBox.TextChanged += new System.EventHandler(this.inventorForm_update_forscrap_txtBox_TextChanged);
+            this.inventorForm_update_forscrap_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventorForm_update_forscrap_txtBox_KeyPress);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.inventorForm_update_forsrap_lbl);
+            this.groupBox6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(238, 35);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(142, 122);
+            this.groupBox6.TabIndex = 79;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "For Scrap";
+            // 
+            // inventorForm_update_forsrap_lbl
+            // 
+            this.inventorForm_update_forsrap_lbl.AutoSize = true;
+            this.inventorForm_update_forsrap_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventorForm_update_forsrap_lbl.Location = new System.Drawing.Point(31, 50);
+            this.inventorForm_update_forsrap_lbl.Name = "inventorForm_update_forsrap_lbl";
+            this.inventorForm_update_forsrap_lbl.Size = new System.Drawing.Size(20, 22);
+            this.inventorForm_update_forsrap_lbl.TabIndex = 79;
+            this.inventorForm_update_forsrap_lbl.Text = "0";
+            // 
+            // inventorForm_update_forsrap_chkBox
+            // 
+            this.inventorForm_update_forsrap_chkBox.AutoSize = true;
+            this.inventorForm_update_forsrap_chkBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventorForm_update_forsrap_chkBox.Location = new System.Drawing.Point(238, 220);
+            this.inventorForm_update_forsrap_chkBox.Name = "inventorForm_update_forsrap_chkBox";
+            this.inventorForm_update_forsrap_chkBox.Size = new System.Drawing.Size(109, 23);
+            this.inventorForm_update_forsrap_chkBox.TabIndex = 78;
+            this.inventorForm_update_forsrap_chkBox.Text = "For Scrap";
+            this.inventorForm_update_forsrap_chkBox.UseVisualStyleBackColor = true;
+            this.inventorForm_update_forsrap_chkBox.CheckedChanged += new System.EventHandler(this.inventorForm_update_forsrap_chkBox_CheckedChanged);
+            // 
+            // inventorForm_update_forreplacement_chkBox
+            // 
+            this.inventorForm_update_forreplacement_chkBox.AutoSize = true;
+            this.inventorForm_update_forreplacement_chkBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventorForm_update_forreplacement_chkBox.Location = new System.Drawing.Point(22, 220);
+            this.inventorForm_update_forreplacement_chkBox.Name = "inventorForm_update_forreplacement_chkBox";
+            this.inventorForm_update_forreplacement_chkBox.Size = new System.Drawing.Size(163, 23);
+            this.inventorForm_update_forreplacement_chkBox.TabIndex = 77;
+            this.inventorForm_update_forreplacement_chkBox.Text = "For replacement";
+            this.inventorForm_update_forreplacement_chkBox.UseVisualStyleBackColor = true;
+            this.inventorForm_update_forreplacement_chkBox.CheckedChanged += new System.EventHandler(this.inventorForm_update_forreplacement_chkBox_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.inventoryForm_update_forReplacement_lbl);
+            this.groupBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(41, 35);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(142, 125);
+            this.groupBox5.TabIndex = 75;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "For replacement";
+            // 
+            // inventoryForm_update_forReplacement_lbl
+            // 
+            this.inventoryForm_update_forReplacement_lbl.AutoSize = true;
+            this.inventoryForm_update_forReplacement_lbl.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_update_forReplacement_lbl.Location = new System.Drawing.Point(31, 52);
+            this.inventoryForm_update_forReplacement_lbl.Name = "inventoryForm_update_forReplacement_lbl";
+            this.inventoryForm_update_forReplacement_lbl.Size = new System.Drawing.Size(20, 22);
+            this.inventoryForm_update_forReplacement_lbl.TabIndex = 78;
+            this.inventoryForm_update_forReplacement_lbl.Text = "0";
+            // 
+            // inventoryForm_updateLowStockalert_txtBox
+            // 
+            this.inventoryForm_updateLowStockalert_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_updateLowStockalert_txtBox.Location = new System.Drawing.Point(589, 352);
+            this.inventoryForm_updateLowStockalert_txtBox.MaxLength = 3;
+            this.inventoryForm_updateLowStockalert_txtBox.Name = "inventoryForm_updateLowStockalert_txtBox";
+            this.inventoryForm_updateLowStockalert_txtBox.Size = new System.Drawing.Size(67, 23);
+            this.inventoryForm_updateLowStockalert_txtBox.TabIndex = 67;
+            this.inventoryForm_updateLowStockalert_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_updateLowStockalert_txtBox_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(464, 355);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 15);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Low stock alert:";
+            // 
             // update_test_Btn
             // 
-            this.update_test_Btn.Location = new System.Drawing.Point(914, 132);
+            this.update_test_Btn.Location = new System.Drawing.Point(915, 211);
             this.update_test_Btn.Name = "update_test_Btn";
             this.update_test_Btn.Size = new System.Drawing.Size(75, 23);
             this.update_test_Btn.TabIndex = 66;
@@ -1696,7 +1798,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(910, 78);
+            this.label5.Location = new System.Drawing.Point(911, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 22);
             this.label5.TabIndex = 65;
@@ -1706,7 +1808,7 @@
             // 
             this.inventoryForm_update_profit_lbl.AutoSize = true;
             this.inventoryForm_update_profit_lbl.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_update_profit_lbl.Location = new System.Drawing.Point(917, 100);
+            this.inventoryForm_update_profit_lbl.Location = new System.Drawing.Point(918, 179);
             this.inventoryForm_update_profit_lbl.Name = "inventoryForm_update_profit_lbl";
             this.inventoryForm_update_profit_lbl.Size = new System.Drawing.Size(59, 32);
             this.inventoryForm_update_profit_lbl.TabIndex = 64;
@@ -1716,7 +1818,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1050, 70);
+            this.label4.Location = new System.Drawing.Point(1051, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 28);
             this.label4.TabIndex = 62;
@@ -1737,7 +1839,7 @@
             // 
             this.inventoryForm_update_statusHidden_rBtn.AutoSize = true;
             this.inventoryForm_update_statusHidden_rBtn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_update_statusHidden_rBtn.Location = new System.Drawing.Point(1055, 154);
+            this.inventoryForm_update_statusHidden_rBtn.Location = new System.Drawing.Point(1056, 233);
             this.inventoryForm_update_statusHidden_rBtn.Name = "inventoryForm_update_statusHidden_rBtn";
             this.inventoryForm_update_statusHidden_rBtn.Size = new System.Drawing.Size(122, 36);
             this.inventoryForm_update_statusHidden_rBtn.TabIndex = 60;
@@ -1749,7 +1851,7 @@
             // 
             this.inventoryForm_update_statusActive_rBtn.AutoSize = true;
             this.inventoryForm_update_statusActive_rBtn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_update_statusActive_rBtn.Location = new System.Drawing.Point(1055, 101);
+            this.inventoryForm_update_statusActive_rBtn.Location = new System.Drawing.Point(1056, 180);
             this.inventoryForm_update_statusActive_rBtn.Name = "inventoryForm_update_statusActive_rBtn";
             this.inventoryForm_update_statusActive_rBtn.Size = new System.Drawing.Size(122, 36);
             this.inventoryForm_update_statusActive_rBtn.TabIndex = 59;
@@ -1759,9 +1861,10 @@
             // 
             // inventoryForm_update_back_btn
             // 
-            this.inventoryForm_update_back_btn.Location = new System.Drawing.Point(959, 11);
+            this.inventoryForm_update_back_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_update_back_btn.Location = new System.Drawing.Point(1056, 4);
             this.inventoryForm_update_back_btn.Name = "inventoryForm_update_back_btn";
-            this.inventoryForm_update_back_btn.Size = new System.Drawing.Size(75, 23);
+            this.inventoryForm_update_back_btn.Size = new System.Drawing.Size(220, 66);
             this.inventoryForm_update_back_btn.TabIndex = 49;
             this.inventoryForm_update_back_btn.Text = "Back";
             this.inventoryForm_update_back_btn.UseVisualStyleBackColor = true;
@@ -1827,13 +1930,14 @@
             // 
             // inventoryForm_update_update_btn
             // 
-            this.inventoryForm_update_update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryForm_update_update_btn.Location = new System.Drawing.Point(466, 418);
+            this.inventoryForm_update_update_btn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.inventoryForm_update_update_btn.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryForm_update_update_btn.Location = new System.Drawing.Point(308, 514);
             this.inventoryForm_update_update_btn.Name = "inventoryForm_update_update_btn";
-            this.inventoryForm_update_update_btn.Size = new System.Drawing.Size(143, 96);
+            this.inventoryForm_update_update_btn.Size = new System.Drawing.Size(280, 96);
             this.inventoryForm_update_update_btn.TabIndex = 51;
             this.inventoryForm_update_update_btn.Text = "Update";
-            this.inventoryForm_update_update_btn.UseVisualStyleBackColor = true;
+            this.inventoryForm_update_update_btn.UseVisualStyleBackColor = false;
             this.inventoryForm_update_update_btn.Click += new System.EventHandler(this.inventoryForm_update_update_btn_Click);
             // 
             // label34
@@ -1972,84 +2076,25 @@
             this.label41.TabIndex = 24;
             this.label41.Text = "Product ID:";
             // 
-            // inventoryForm_updateLowStockalert_txtBox
+            // account_level
             // 
-            this.inventoryForm_updateLowStockalert_txtBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryForm_updateLowStockalert_txtBox.Location = new System.Drawing.Point(589, 352);
-            this.inventoryForm_updateLowStockalert_txtBox.MaxLength = 3;
-            this.inventoryForm_updateLowStockalert_txtBox.Name = "inventoryForm_updateLowStockalert_txtBox";
-            this.inventoryForm_updateLowStockalert_txtBox.Size = new System.Drawing.Size(67, 23);
-            this.inventoryForm_updateLowStockalert_txtBox.TabIndex = 67;
-            this.inventoryForm_updateLowStockalert_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inventoryForm_updateLowStockalert_txtBox_KeyPress);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(464, 355);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 15);
-            this.label8.TabIndex = 68;
-            this.label8.Text = "Low stock alert:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(979, 319);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 28);
-            this.label9.TabIndex = 69;
-            this.label9.Text = "For B.O:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(1015, 370);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(226, 32);
-            this.checkBox1.TabIndex = 70;
-            this.checkBox1.Text = "For replacement";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(1015, 507);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(148, 32);
-            this.checkBox2.TabIndex = 71;
-            this.checkBox2.Text = "For Scrap";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1015, 408);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 23);
-            this.textBox1.TabIndex = 72;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(1015, 545);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 23);
-            this.textBox2.TabIndex = 73;
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(7, 106);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 85;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
             // 
             // inventory_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1308, 742);
-            this.Controls.Add(this.inventoryForm_updateForm_panel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.inventoryForm_updateForm_panel);
             this.Controls.Add(this.inventoryForm_addnewItem_panel);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2067,18 +2112,24 @@
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.inventoryForm_addnewItem_panel.ResumeLayout(false);
             this.inventoryForm_addnewItem_panel.PerformLayout();
             this.inventoryForm_updateForm_panel.ResumeLayout(false);
             this.inventoryForm_updateForm_panel.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2229,26 +2280,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label inventoryForm_forScrap_lbl;
         private System.Windows.Forms.Label inventoryForm_forReplacement_lbl;
-        private System.Windows.Forms.ListView inventoryForm_forScrap_lstView;
-        private System.Windows.Forms.ColumnHeader columnHeader39;
-        private System.Windows.Forms.ColumnHeader columnHeader40;
-        private System.Windows.Forms.ColumnHeader columnHeader41;
-        private System.Windows.Forms.ColumnHeader columnHeader42;
-        private System.Windows.Forms.ColumnHeader columnHeader43;
-        private System.Windows.Forms.ColumnHeader columnHeader44;
-        private System.Windows.Forms.ColumnHeader columnHeader45;
-        private System.Windows.Forms.ColumnHeader columnHeader46;
-        private System.Windows.Forms.ColumnHeader columnHeader47;
-        private System.Windows.Forms.ColumnHeader columnHeader48;
-        private System.Windows.Forms.ColumnHeader columnHeader49;
-        private System.Windows.Forms.ColumnHeader columnHeader50;
-        private System.Windows.Forms.ColumnHeader columnHeader51;
-        private System.Windows.Forms.ColumnHeader columnHeader52;
-        private System.Windows.Forms.ColumnHeader columnHeader53;
-        private System.Windows.Forms.ColumnHeader columnHeader54;
-        private System.Windows.Forms.ColumnHeader columnHeader55;
-        private System.Windows.Forms.ColumnHeader columnHeader56;
-        private System.Windows.Forms.ColumnHeader columnHeader57;
         private System.Windows.Forms.ListView inventoryForm_forReplacement_lstView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -2263,12 +2294,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ColumnHeader columnHeader19;
         public System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox inventoryForm_forScrapSearch_txtBox;
         public System.Windows.Forms.Label label6;
@@ -2278,10 +2303,32 @@
         private System.Windows.Forms.ComboBox inventoryForm_newsupplier_CBbox;
         private System.Windows.Forms.TextBox inventoryForm_updateLowStockalert_txtBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox inventorForm_update_forreplacement_txtBox;
+        private System.Windows.Forms.TextBox inventorForm_update_forscrap_txtBox;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label inventorForm_update_forsrap_lbl;
+        private System.Windows.Forms.CheckBox inventorForm_update_forsrap_chkBox;
+        private System.Windows.Forms.CheckBox inventorForm_update_forreplacement_chkBox;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label inventoryForm_update_forReplacement_lbl;
+        private System.Windows.Forms.Label inventoryForm_update_totalValue_lbl;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ColumnHeader columnHeader58;
+        private System.Windows.Forms.ListView inventoryForm_forScrap_lstView;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader59;
+        private System.Windows.Forms.ColumnHeader columnHeader60;
+        private System.Windows.Forms.ColumnHeader columnHeader61;
+        private System.Windows.Forms.ColumnHeader columnHeader62;
+        private System.Windows.Forms.ColumnHeader columnHeader63;
+        private System.Windows.Forms.ColumnHeader columnHeader64;
+        private System.Windows.Forms.ColumnHeader columnHeader65;
+        public System.Windows.Forms.Label account_level;
     }
 }
