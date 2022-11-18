@@ -61,9 +61,13 @@
             this.sales_cash = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sales_credit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.sales_total = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
+            this.salesForm_Home_Btn = new System.Windows.Forms.Button();
+            this.salesForm_Transactions_Btn = new System.Windows.Forms.Button();
             this.stopdebug_btn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -73,15 +77,15 @@
             this.salesForm_user_Firstname = new System.Windows.Forms.Label();
             this.datenow_value = new System.Windows.Forms.Label();
             this.timenow_value = new System.Windows.Forms.Label();
-            this.POS_toUsers_btn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.POSForm_inventory_btn = new System.Windows.Forms.Button();
+            this.salesForm_Users_Btn = new System.Windows.Forms.Button();
+            this.salesForm_Customer_Btn = new System.Windows.Forms.Button();
+            this.salesForm_Supplier_Btn = new System.Windows.Forms.Button();
+            this.salesForm_Inventory_Btn = new System.Windows.Forms.Button();
             this.POS_employeeCurrentPhoto_pctrBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.salesForm_billsandwages_addbill_btn = new System.Windows.Forms.Button();
             this.salesForm_billsandwages_tabcntrl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.salesForm_bill_addbill_btn = new System.Windows.Forms.Button();
             this.salesForm_bills_view_lstView = new System.Windows.Forms.ListView();
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -92,7 +96,26 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.salesView_bills_displayoption_grpBox = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.salesForm_billsandwages_search_btn = new System.Windows.Forms.Button();
+            this.salesForm_bills_search_txtBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.salesForm_billsandwages_from_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.salesForm_bills_refreshList_btn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.salesForm_salaries_addSalary_btn = new System.Windows.Forms.Button();
+            this.salesView_salary_displayoption_grpBox = new System.Windows.Forms.GroupBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.salesForm_salary_search_txtBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.salesForm_salaries_refreshList_btn = new System.Windows.Forms.Button();
             this.salesForm_Salaries_view_lstView = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -101,16 +124,7 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label7 = new System.Windows.Forms.Label();
-            this.salesView_billsandwages_displayoption_grpBox = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.salesForm_billsandwages_search_btn = new System.Windows.Forms.Button();
-            this.salesForm_billsandwages_search_txtBox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1salesForm_billsandwages_to_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.salesForm_billsandwages_from_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.salesForm_billsandwages_refreshList_btn = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.salesForm_SalaryDetailedView_grpBox = new System.Windows.Forms.GroupBox();
             this.salesForm_salary_detailed_received_lbl = new System.Windows.Forms.Label();
             this.salesForm_salary_detailed_deduction_lbl = new System.Windows.Forms.Label();
             this.salesForm_salary_detailed_payoutamount_lbl = new System.Windows.Forms.Label();
@@ -121,9 +135,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.salesForm_salary_detailed_employeeID_lbl = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salesForm_billDetailedView_grpBox = new System.Windows.Forms.GroupBox();
             this.salesForm_billsandwages_detailed_receipt_lbl = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.salesForm_billsandwages_detailed_change_lbl = new System.Windows.Forms.Label();
@@ -149,10 +161,44 @@
             this.label18 = new System.Windows.Forms.Label();
             this.salesForm_nonsalesname_txtBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.salesForm_addnewbillRecord_grpBox = new System.Windows.Forms.GroupBox();
+            this.salesForm_addnewbill_receiptnumber_txtBox = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_change_txtBox = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_DOP_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_amountpaid_txtBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_dueamount_txtBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_Duedate_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_Cancel_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_transactionName_txtBox = new System.Windows.Forms.TextBox();
+            this.salesForm_addnewbill_add_btn = new System.Windows.Forms.Button();
+            this.salesForm_addnewbill_billID_lbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.salesForm_addnewbill_billnumber_txtBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.salesForm_addnewSalaryRecord_grpBox = new System.Windows.Forms.GroupBox();
+            this.salesForm_addSalaryForm_selectedID_lbl = new System.Windows.Forms.Label();
+            this.salesForm_addSalaryRecord_employeeID_cmbBox = new System.Windows.Forms.ComboBox();
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox = new System.Windows.Forms.TextBox();
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox = new System.Windows.Forms.TextBox();
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox = new System.Windows.Forms.TextBox();
+            this.salesForm_addSalaryRecord_cancel_btn = new System.Windows.Forms.Button();
+            this.salesForm_addSalaryRecord_Add_btn = new System.Windows.Forms.Button();
+            this.salesForm_addSalaryRecord_RecordID_lbl = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,12 +210,14 @@
             this.panel1.SuspendLayout();
             this.salesForm_billsandwages_tabcntrl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.salesView_bills_displayoption_grpBox.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.salesView_billsandwages_displayoption_grpBox.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.salesView_salary_displayoption_grpBox.SuspendLayout();
+            this.salesForm_SalaryDetailedView_grpBox.SuspendLayout();
+            this.salesForm_billDetailedView_grpBox.SuspendLayout();
             this.salesForm_addnoninventorybox_grpBox.SuspendLayout();
+            this.salesForm_addnewbillRecord_grpBox.SuspendLayout();
+            this.salesForm_addnewSalaryRecord_grpBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -408,10 +456,10 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.salesForm_sales_from_DTpicker);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(187, 60);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(214, 216);
+            this.groupBox2.Size = new System.Drawing.Size(214, 66);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Display options:";
@@ -436,6 +484,7 @@
             this.salesForm_sales_search_btn.TabIndex = 10;
             this.salesForm_sales_search_btn.Text = "Search";
             this.salesForm_sales_search_btn.UseVisualStyleBackColor = true;
+            this.salesForm_sales_search_btn.Visible = false;
             // 
             // salesForm_sales_search_txtBox
             // 
@@ -444,14 +493,16 @@
             this.salesForm_sales_search_txtBox.Name = "salesForm_sales_search_txtBox";
             this.salesForm_sales_search_txtBox.Size = new System.Drawing.Size(151, 25);
             this.salesForm_sales_search_txtBox.TabIndex = 46;
+            this.salesForm_sales_search_txtBox.TextChanged += new System.EventHandler(this.salesForm_sales_search_txtBox_TextChanged);
             // 
             // salesForm_sales_to_DTpicker
             // 
             this.salesForm_sales_to_DTpicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesForm_sales_to_DTpicker.Location = new System.Drawing.Point(6, 160);
             this.salesForm_sales_to_DTpicker.Name = "salesForm_sales_to_DTpicker";
-            this.salesForm_sales_to_DTpicker.Size = new System.Drawing.Size(193, 22);
+            this.salesForm_sales_to_DTpicker.Size = new System.Drawing.Size(193, 20);
             this.salesForm_sales_to_DTpicker.TabIndex = 56;
+            this.salesForm_sales_to_DTpicker.Visible = false;
             // 
             // label3
             // 
@@ -463,6 +514,7 @@
             this.label3.Size = new System.Drawing.Size(28, 15);
             this.label3.TabIndex = 55;
             this.label3.Text = "To:";
+            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -474,14 +526,16 @@
             this.label2.Size = new System.Drawing.Size(91, 15);
             this.label2.TabIndex = 10;
             this.label2.Text = "Period from:";
+            this.label2.Visible = false;
             // 
             // salesForm_sales_from_DTpicker
             // 
             this.salesForm_sales_from_DTpicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesForm_sales_from_DTpicker.Location = new System.Drawing.Point(6, 100);
             this.salesForm_sales_from_DTpicker.Name = "salesForm_sales_from_DTpicker";
-            this.salesForm_sales_from_DTpicker.Size = new System.Drawing.Size(193, 22);
+            this.salesForm_sales_from_DTpicker.Size = new System.Drawing.Size(193, 20);
             this.salesForm_sales_from_DTpicker.TabIndex = 54;
+            this.salesForm_sales_from_DTpicker.Visible = false;
             // 
             // salesForm_sales_refresh_btn
             // 
@@ -494,6 +548,7 @@
             this.salesForm_sales_refresh_btn.TabIndex = 53;
             this.salesForm_sales_refresh_btn.Text = "Refresh list";
             this.salesForm_sales_refresh_btn.UseVisualStyleBackColor = false;
+            this.salesForm_sales_refresh_btn.Click += new System.EventHandler(this.salesForm_sales_refresh_btn_Click);
             // 
             // salesForm_sales_view_lstView
             // 
@@ -539,47 +594,65 @@
             this.sales_total.Text = "Total sales:";
             this.sales_total.Width = 0;
             // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Cashier";
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Gross";
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Net";
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "total";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.POSForm_toTransactions_btn);
+            this.panel5.Controls.Add(this.salesForm_Home_Btn);
+            this.panel5.Controls.Add(this.salesForm_Transactions_Btn);
             this.panel5.Controls.Add(this.stopdebug_btn);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.POS_toUsers_btn);
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.POSForm_inventory_btn);
+            this.panel5.Controls.Add(this.salesForm_Users_Btn);
+            this.panel5.Controls.Add(this.salesForm_Customer_Btn);
+            this.panel5.Controls.Add(this.salesForm_Supplier_Btn);
+            this.panel5.Controls.Add(this.salesForm_Inventory_Btn);
             this.panel5.Controls.Add(this.POS_employeeCurrentPhoto_pctrBox);
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(153, 729);
             this.panel5.TabIndex = 10;
             // 
-            // button2
+            // salesForm_Home_Btn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 45);
-            this.button2.TabIndex = 97;
-            this.button2.Text = "POS";
-            this.button2.UseVisualStyleBackColor = false;
+            this.salesForm_Home_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Home_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Home_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_Home_Btn.Location = new System.Drawing.Point(3, 262);
+            this.salesForm_Home_Btn.Name = "salesForm_Home_Btn";
+            this.salesForm_Home_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Home_Btn.TabIndex = 97;
+            this.salesForm_Home_Btn.Text = "POS";
+            this.salesForm_Home_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Home_Btn.Click += new System.EventHandler(this.salesForm_Home_Btn_Click);
             // 
-            // POSForm_toTransactions_btn
+            // salesForm_Transactions_Btn
             // 
-            this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(4, 508);
-            this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
-            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
-            this.POSForm_toTransactions_btn.TabIndex = 96;
-            this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
-            this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
+            this.salesForm_Transactions_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Transactions_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Transactions_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_Transactions_Btn.Location = new System.Drawing.Point(3, 423);
+            this.salesForm_Transactions_Btn.Name = "salesForm_Transactions_Btn";
+            this.salesForm_Transactions_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Transactions_Btn.TabIndex = 96;
+            this.salesForm_Transactions_Btn.Text = "TRANSACTIONS";
+            this.salesForm_Transactions_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Transactions_Btn.Click += new System.EventHandler(this.salesForm_Transactions_Btn_Click);
             // 
             // stopdebug_btn
             // 
@@ -589,12 +662,14 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Visible = false;
             this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.account_level);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.POSForm_logout_btn);
             this.panel6.Controls.Add(this.groupBox4);
@@ -636,6 +711,7 @@
             this.POSForm_logout_btn.TabIndex = 50;
             this.POSForm_logout_btn.Text = "Logout";
             this.POSForm_logout_btn.UseVisualStyleBackColor = false;
+            this.POSForm_logout_btn.Visible = false;
             // 
             // groupBox4
             // 
@@ -682,53 +758,57 @@
             this.timenow_value.TabIndex = 22;
             this.timenow_value.Text = "00:00:00";
             // 
-            // POS_toUsers_btn
+            // salesForm_Users_Btn
             // 
-            this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 456);
-            this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(143, 47);
-            this.POS_toUsers_btn.TabIndex = 4;
-            this.POS_toUsers_btn.Text = "USERS";
-            this.POS_toUsers_btn.UseVisualStyleBackColor = false;
+            this.salesForm_Users_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Users_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Users_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.salesForm_Users_Btn.Location = new System.Drawing.Point(3, 315);
+            this.salesForm_Users_Btn.Name = "salesForm_Users_Btn";
+            this.salesForm_Users_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Users_Btn.TabIndex = 4;
+            this.salesForm_Users_Btn.Text = "USERS";
+            this.salesForm_Users_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Users_Btn.Click += new System.EventHandler(this.salesForm_Users_Btn_Click);
             // 
-            // button4
+            // salesForm_Customer_Btn
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(4, 313);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "CUSTOMERS";
-            this.button4.UseVisualStyleBackColor = false;
+            this.salesForm_Customer_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Customer_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Customer_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.salesForm_Customer_Btn.Location = new System.Drawing.Point(3, 477);
+            this.salesForm_Customer_Btn.Name = "salesForm_Customer_Btn";
+            this.salesForm_Customer_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Customer_Btn.TabIndex = 3;
+            this.salesForm_Customer_Btn.Text = "CUSTOMERS";
+            this.salesForm_Customer_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Customer_Btn.Click += new System.EventHandler(this.salesForm_Customer_Btn_Click);
             // 
-            // button3
+            // salesForm_Supplier_Btn
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(3, 361);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 42);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "SUPPLIERS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.salesForm_Supplier_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Supplier_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Supplier_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.salesForm_Supplier_Btn.Location = new System.Drawing.Point(3, 530);
+            this.salesForm_Supplier_Btn.Name = "salesForm_Supplier_Btn";
+            this.salesForm_Supplier_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Supplier_Btn.TabIndex = 2;
+            this.salesForm_Supplier_Btn.Text = "SUPPLIERS";
+            this.salesForm_Supplier_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Supplier_Btn.Click += new System.EventHandler(this.salesForm_Supplier_Btn_Click);
             // 
-            // POSForm_inventory_btn
+            // salesForm_Inventory_Btn
             // 
-            this.POSForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POSForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.POSForm_inventory_btn.Location = new System.Drawing.Point(3, 409);
-            this.POSForm_inventory_btn.Name = "POSForm_inventory_btn";
-            this.POSForm_inventory_btn.Size = new System.Drawing.Size(143, 42);
-            this.POSForm_inventory_btn.TabIndex = 1;
-            this.POSForm_inventory_btn.Text = "INVENTORY";
-            this.POSForm_inventory_btn.UseVisualStyleBackColor = false;
+            this.salesForm_Inventory_Btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_Inventory_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_Inventory_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.salesForm_Inventory_Btn.Location = new System.Drawing.Point(3, 369);
+            this.salesForm_Inventory_Btn.Name = "salesForm_Inventory_Btn";
+            this.salesForm_Inventory_Btn.Size = new System.Drawing.Size(144, 51);
+            this.salesForm_Inventory_Btn.TabIndex = 1;
+            this.salesForm_Inventory_Btn.Text = "INVENTORY";
+            this.salesForm_Inventory_Btn.UseVisualStyleBackColor = false;
+            this.salesForm_Inventory_Btn.Click += new System.EventHandler(this.salesForm_Inventory_Btn_Click);
             // 
             // POS_employeeCurrentPhoto_pctrBox
             // 
@@ -744,27 +824,14 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.salesForm_billsandwages_addbill_btn);
             this.panel1.Controls.Add(this.salesForm_billsandwages_tabcntrl);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.salesView_billsandwages_displayoption_grpBox);
-            this.panel1.Controls.Add(this.salesForm_billsandwages_refreshList_btn);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox5);
+            this.panel1.Controls.Add(this.salesForm_billDetailedView_grpBox);
+            this.panel1.Controls.Add(this.salesForm_SalaryDetailedView_grpBox);
             this.panel1.Location = new System.Drawing.Point(563, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(617, 614);
             this.panel1.TabIndex = 54;
-            // 
-            // salesForm_billsandwages_addbill_btn
-            // 
-            this.salesForm_billsandwages_addbill_btn.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesForm_billsandwages_addbill_btn.Location = new System.Drawing.Point(366, 5);
-            this.salesForm_billsandwages_addbill_btn.Name = "salesForm_billsandwages_addbill_btn";
-            this.salesForm_billsandwages_addbill_btn.Size = new System.Drawing.Size(242, 70);
-            this.salesForm_billsandwages_addbill_btn.TabIndex = 57;
-            this.salesForm_billsandwages_addbill_btn.Text = "Add Bill";
-            this.salesForm_billsandwages_addbill_btn.UseVisualStyleBackColor = true;
             // 
             // salesForm_billsandwages_tabcntrl
             // 
@@ -774,22 +841,36 @@
             this.salesForm_billsandwages_tabcntrl.Location = new System.Drawing.Point(3, 35);
             this.salesForm_billsandwages_tabcntrl.Name = "salesForm_billsandwages_tabcntrl";
             this.salesForm_billsandwages_tabcntrl.SelectedIndex = 0;
-            this.salesForm_billsandwages_tabcntrl.Size = new System.Drawing.Size(357, 297);
+            this.salesForm_billsandwages_tabcntrl.Size = new System.Drawing.Size(607, 319);
             this.salesForm_billsandwages_tabcntrl.TabIndex = 56;
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.salesForm_bill_addbill_btn);
             this.tabPage1.Controls.Add(this.salesForm_bills_view_lstView);
+            this.tabPage1.Controls.Add(this.salesView_bills_displayoption_grpBox);
+            this.tabPage1.Controls.Add(this.salesForm_bills_refreshList_btn);
             this.tabPage1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(349, 268);
+            this.tabPage1.Size = new System.Drawing.Size(599, 290);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "BILLS";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // salesForm_bill_addbill_btn
+            // 
+            this.salesForm_bill_addbill_btn.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_bill_addbill_btn.Location = new System.Drawing.Point(347, 211);
+            this.salesForm_bill_addbill_btn.Name = "salesForm_bill_addbill_btn";
+            this.salesForm_bill_addbill_btn.Size = new System.Drawing.Size(242, 70);
+            this.salesForm_bill_addbill_btn.TabIndex = 57;
+            this.salesForm_bill_addbill_btn.Text = "Add bill record";
+            this.salesForm_bill_addbill_btn.UseVisualStyleBackColor = true;
+            this.salesForm_bill_addbill_btn.Click += new System.EventHandler(this.salesForm_billsandwages_addbill_btn_Click);
             // 
             // salesForm_bills_view_lstView
             // 
@@ -810,7 +891,7 @@
             this.salesForm_bills_view_lstView.HideSelection = false;
             this.salesForm_bills_view_lstView.Location = new System.Drawing.Point(2, 2);
             this.salesForm_bills_view_lstView.Name = "salesForm_bills_view_lstView";
-            this.salesForm_bills_view_lstView.Size = new System.Drawing.Size(342, 256);
+            this.salesForm_bills_view_lstView.Size = new System.Drawing.Size(342, 246);
             this.salesForm_bills_view_lstView.TabIndex = 12;
             this.salesForm_bills_view_lstView.UseCompatibleStateImageBehavior = false;
             this.salesForm_bills_view_lstView.View = System.Windows.Forms.View.Details;
@@ -861,18 +942,234 @@
             this.columnHeader8.Text = "Receipt number:";
             this.columnHeader8.Width = 106;
             // 
+            // salesView_bills_displayoption_grpBox
+            // 
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.label4);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.salesForm_billsandwages_search_btn);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.salesForm_bills_search_txtBox);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.dateTimePicker1salesForm_billsandwages_to_DTpicker);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.label5);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.label6);
+            this.salesView_bills_displayoption_grpBox.Controls.Add(this.salesForm_billsandwages_from_DTpicker);
+            this.salesView_bills_displayoption_grpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesView_bills_displayoption_grpBox.Location = new System.Drawing.Point(345, 14);
+            this.salesView_bills_displayoption_grpBox.Name = "salesView_bills_displayoption_grpBox";
+            this.salesView_bills_displayoption_grpBox.Size = new System.Drawing.Size(249, 63);
+            this.salesView_bills_displayoption_grpBox.TabIndex = 10;
+            this.salesView_bills_displayoption_grpBox.TabStop = false;
+            this.salesView_bills_displayoption_grpBox.Text = "Display options:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(11, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 25);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "🔍";
+            // 
+            // salesForm_billsandwages_search_btn
+            // 
+            this.salesForm_billsandwages_search_btn.Location = new System.Drawing.Point(81, 170);
+            this.salesForm_billsandwages_search_btn.Name = "salesForm_billsandwages_search_btn";
+            this.salesForm_billsandwages_search_btn.Size = new System.Drawing.Size(88, 25);
+            this.salesForm_billsandwages_search_btn.TabIndex = 10;
+            this.salesForm_billsandwages_search_btn.Text = "Search";
+            this.salesForm_billsandwages_search_btn.UseVisualStyleBackColor = true;
+            this.salesForm_billsandwages_search_btn.Visible = false;
+            // 
+            // salesForm_bills_search_txtBox
+            // 
+            this.salesForm_bills_search_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_bills_search_txtBox.Location = new System.Drawing.Point(48, 27);
+            this.salesForm_bills_search_txtBox.Name = "salesForm_bills_search_txtBox";
+            this.salesForm_bills_search_txtBox.Size = new System.Drawing.Size(144, 25);
+            this.salesForm_bills_search_txtBox.TabIndex = 46;
+            this.salesForm_bills_search_txtBox.TextChanged += new System.EventHandler(this.salesForm_billsandwages_search_txtBox_TextChanged);
+            // 
+            // dateTimePicker1salesForm_billsandwages_to_DTpicker
+            // 
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Location = new System.Drawing.Point(16, 138);
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Name = "dateTimePicker1salesForm_billsandwages_to_DTpicker";
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Size = new System.Drawing.Size(230, 22);
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.TabIndex = 56;
+            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 15);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "To:";
+            this.label5.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 15);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Period from:";
+            this.label6.Visible = false;
+            // 
+            // salesForm_billsandwages_from_DTpicker
+            // 
+            this.salesForm_billsandwages_from_DTpicker.Location = new System.Drawing.Point(16, 82);
+            this.salesForm_billsandwages_from_DTpicker.Name = "salesForm_billsandwages_from_DTpicker";
+            this.salesForm_billsandwages_from_DTpicker.Size = new System.Drawing.Size(230, 22);
+            this.salesForm_billsandwages_from_DTpicker.TabIndex = 54;
+            this.salesForm_billsandwages_from_DTpicker.Visible = false;
+            // 
+            // salesForm_bills_refreshList_btn
+            // 
+            this.salesForm_bills_refreshList_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_bills_refreshList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_bills_refreshList_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_bills_refreshList_btn.Location = new System.Drawing.Point(2, 254);
+            this.salesForm_bills_refreshList_btn.Name = "salesForm_bills_refreshList_btn";
+            this.salesForm_bills_refreshList_btn.Size = new System.Drawing.Size(342, 31);
+            this.salesForm_bills_refreshList_btn.TabIndex = 53;
+            this.salesForm_bills_refreshList_btn.Text = "Refresh list";
+            this.salesForm_bills_refreshList_btn.UseVisualStyleBackColor = false;
+            this.salesForm_bills_refreshList_btn.Click += new System.EventHandler(this.salesForm_bills_refreshList_btn_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.salesForm_salaries_addSalary_btn);
+            this.tabPage2.Controls.Add(this.salesView_salary_displayoption_grpBox);
+            this.tabPage2.Controls.Add(this.salesForm_salaries_refreshList_btn);
             this.tabPage2.Controls.Add(this.salesForm_Salaries_view_lstView);
             this.tabPage2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(349, 268);
+            this.tabPage2.Size = new System.Drawing.Size(599, 290);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "SALARIES AND WAGES";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // salesForm_salaries_addSalary_btn
+            // 
+            this.salesForm_salaries_addSalary_btn.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_salaries_addSalary_btn.Location = new System.Drawing.Point(346, 212);
+            this.salesForm_salaries_addSalary_btn.Name = "salesForm_salaries_addSalary_btn";
+            this.salesForm_salaries_addSalary_btn.Size = new System.Drawing.Size(242, 70);
+            this.salesForm_salaries_addSalary_btn.TabIndex = 60;
+            this.salesForm_salaries_addSalary_btn.Text = "Add salary record";
+            this.salesForm_salaries_addSalary_btn.UseVisualStyleBackColor = true;
+            this.salesForm_salaries_addSalary_btn.Click += new System.EventHandler(this.salesForm_salaries_addSalary_btn_Click);
+            // 
+            // salesView_salary_displayoption_grpBox
+            // 
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.label46);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.button5);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.salesForm_salary_search_txtBox);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.dateTimePicker1);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.label47);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.label48);
+            this.salesView_salary_displayoption_grpBox.Controls.Add(this.dateTimePicker2);
+            this.salesView_salary_displayoption_grpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesView_salary_displayoption_grpBox.Location = new System.Drawing.Point(344, 8);
+            this.salesView_salary_displayoption_grpBox.Name = "salesView_salary_displayoption_grpBox";
+            this.salesView_salary_displayoption_grpBox.Size = new System.Drawing.Size(249, 64);
+            this.salesView_salary_displayoption_grpBox.TabIndex = 58;
+            this.salesView_salary_displayoption_grpBox.TabStop = false;
+            this.salesView_salary_displayoption_grpBox.Text = "Display options:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label46.Location = new System.Drawing.Point(11, 25);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(34, 25);
+            this.label46.TabIndex = 47;
+            this.label46.Text = "🔍";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(81, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(88, 25);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "Search";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
+            // 
+            // salesForm_salary_search_txtBox
+            // 
+            this.salesForm_salary_search_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_salary_search_txtBox.Location = new System.Drawing.Point(48, 27);
+            this.salesForm_salary_search_txtBox.Name = "salesForm_salary_search_txtBox";
+            this.salesForm_salary_search_txtBox.Size = new System.Drawing.Size(144, 25);
+            this.salesForm_salary_search_txtBox.TabIndex = 46;
+            this.salesForm_salary_search_txtBox.TextChanged += new System.EventHandler(this.salesForm_salary_search_txtBox_TextChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(16, 138);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(230, 22);
+            this.dateTimePicker1.TabIndex = 56;
+            this.dateTimePicker1.Visible = false;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label47.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(79, 114);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(28, 15);
+            this.label47.TabIndex = 55;
+            this.label47.Text = "To:";
+            this.label47.Visible = false;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label48.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(16, 59);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(91, 15);
+            this.label48.TabIndex = 10;
+            this.label48.Text = "Period from:";
+            this.label48.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(16, 82);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(230, 22);
+            this.dateTimePicker2.TabIndex = 54;
+            this.dateTimePicker2.Visible = false;
+            // 
+            // salesForm_salaries_refreshList_btn
+            // 
+            this.salesForm_salaries_refreshList_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_salaries_refreshList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_salaries_refreshList_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_salaries_refreshList_btn.Location = new System.Drawing.Point(1, 255);
+            this.salesForm_salaries_refreshList_btn.Name = "salesForm_salaries_refreshList_btn";
+            this.salesForm_salaries_refreshList_btn.Size = new System.Drawing.Size(342, 31);
+            this.salesForm_salaries_refreshList_btn.TabIndex = 59;
+            this.salesForm_salaries_refreshList_btn.Text = "Refresh list";
+            this.salesForm_salaries_refreshList_btn.UseVisualStyleBackColor = false;
+            this.salesForm_salaries_refreshList_btn.Click += new System.EventHandler(this.salesForm_salaries_refreshList_btn_Click);
             // 
             // salesForm_Salaries_view_lstView
             // 
@@ -890,7 +1187,7 @@
             this.salesForm_Salaries_view_lstView.HideSelection = false;
             this.salesForm_Salaries_view_lstView.Location = new System.Drawing.Point(5, 2);
             this.salesForm_Salaries_view_lstView.Name = "salesForm_Salaries_view_lstView";
-            this.salesForm_Salaries_view_lstView.Size = new System.Drawing.Size(337, 261);
+            this.salesForm_Salaries_view_lstView.Size = new System.Drawing.Size(337, 247);
             this.salesForm_Salaries_view_lstView.TabIndex = 13;
             this.salesForm_Salaries_view_lstView.UseCompatibleStateImageBehavior = false;
             this.salesForm_Salaries_view_lstView.View = System.Windows.Forms.View.Details;
@@ -936,119 +1233,26 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Bills and Wages";
             // 
-            // salesView_billsandwages_displayoption_grpBox
+            // salesForm_SalaryDetailedView_grpBox
             // 
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.label4);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.salesForm_billsandwages_search_btn);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.salesForm_billsandwages_search_txtBox);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.dateTimePicker1salesForm_billsandwages_to_DTpicker);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.label5);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.label6);
-            this.salesView_billsandwages_displayoption_grpBox.Controls.Add(this.salesForm_billsandwages_from_DTpicker);
-            this.salesView_billsandwages_displayoption_grpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesView_billsandwages_displayoption_grpBox.Location = new System.Drawing.Point(362, 87);
-            this.salesView_billsandwages_displayoption_grpBox.Name = "salesView_billsandwages_displayoption_grpBox";
-            this.salesView_billsandwages_displayoption_grpBox.Size = new System.Drawing.Size(249, 207);
-            this.salesView_billsandwages_displayoption_grpBox.TabIndex = 10;
-            this.salesView_billsandwages_displayoption_grpBox.TabStop = false;
-            this.salesView_billsandwages_displayoption_grpBox.Text = "Display options:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(11, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 25);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "🔍";
-            // 
-            // salesForm_billsandwages_search_btn
-            // 
-            this.salesForm_billsandwages_search_btn.Location = new System.Drawing.Point(81, 170);
-            this.salesForm_billsandwages_search_btn.Name = "salesForm_billsandwages_search_btn";
-            this.salesForm_billsandwages_search_btn.Size = new System.Drawing.Size(88, 25);
-            this.salesForm_billsandwages_search_btn.TabIndex = 10;
-            this.salesForm_billsandwages_search_btn.Text = "Search";
-            this.salesForm_billsandwages_search_btn.UseVisualStyleBackColor = true;
-            // 
-            // salesForm_billsandwages_search_txtBox
-            // 
-            this.salesForm_billsandwages_search_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesForm_billsandwages_search_txtBox.Location = new System.Drawing.Point(48, 27);
-            this.salesForm_billsandwages_search_txtBox.Name = "salesForm_billsandwages_search_txtBox";
-            this.salesForm_billsandwages_search_txtBox.Size = new System.Drawing.Size(144, 25);
-            this.salesForm_billsandwages_search_txtBox.TabIndex = 46;
-            // 
-            // dateTimePicker1salesForm_billsandwages_to_DTpicker
-            // 
-            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Location = new System.Drawing.Point(16, 138);
-            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Name = "dateTimePicker1salesForm_billsandwages_to_DTpicker";
-            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.Size = new System.Drawing.Size(230, 22);
-            this.dateTimePicker1salesForm_billsandwages_to_DTpicker.TabIndex = 56;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 15);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "To:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 59);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 15);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Period from:";
-            // 
-            // salesForm_billsandwages_from_DTpicker
-            // 
-            this.salesForm_billsandwages_from_DTpicker.Location = new System.Drawing.Point(16, 82);
-            this.salesForm_billsandwages_from_DTpicker.Name = "salesForm_billsandwages_from_DTpicker";
-            this.salesForm_billsandwages_from_DTpicker.Size = new System.Drawing.Size(230, 22);
-            this.salesForm_billsandwages_from_DTpicker.TabIndex = 54;
-            // 
-            // salesForm_billsandwages_refreshList_btn
-            // 
-            this.salesForm_billsandwages_refreshList_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.salesForm_billsandwages_refreshList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salesForm_billsandwages_refreshList_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesForm_billsandwages_refreshList_btn.Location = new System.Drawing.Point(362, 295);
-            this.salesForm_billsandwages_refreshList_btn.Name = "salesForm_billsandwages_refreshList_btn";
-            this.salesForm_billsandwages_refreshList_btn.Size = new System.Drawing.Size(249, 31);
-            this.salesForm_billsandwages_refreshList_btn.TabIndex = 53;
-            this.salesForm_billsandwages_refreshList_btn.Text = "Refresh list";
-            this.salesForm_billsandwages_refreshList_btn.UseVisualStyleBackColor = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.salesForm_salary_detailed_received_lbl);
-            this.groupBox3.Controls.Add(this.salesForm_salary_detailed_deduction_lbl);
-            this.groupBox3.Controls.Add(this.salesForm_salary_detailed_payoutamount_lbl);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.salesForm_salary_detailed_payoutdate_lbl);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.salesForm_salary_detailed_employeeID_lbl);
-            this.groupBox3.Controls.Add(this.label37);
-            this.groupBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(2, 339);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(608, 154);
-            this.groupBox3.TabIndex = 59;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Detailed view";
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.salesForm_salary_detailed_received_lbl);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.salesForm_salary_detailed_deduction_lbl);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.salesForm_salary_detailed_payoutamount_lbl);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.label27);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.label29);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.label30);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.salesForm_salary_detailed_payoutdate_lbl);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.label32);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.salesForm_salary_detailed_employeeID_lbl);
+            this.salesForm_SalaryDetailedView_grpBox.Controls.Add(this.label37);
+            this.salesForm_SalaryDetailedView_grpBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_SalaryDetailedView_grpBox.Location = new System.Drawing.Point(2, 357);
+            this.salesForm_SalaryDetailedView_grpBox.Name = "salesForm_SalaryDetailedView_grpBox";
+            this.salesForm_SalaryDetailedView_grpBox.Size = new System.Drawing.Size(608, 154);
+            this.salesForm_SalaryDetailedView_grpBox.TabIndex = 59;
+            this.salesForm_SalaryDetailedView_grpBox.TabStop = false;
+            this.salesForm_SalaryDetailedView_grpBox.Text = "Detailed view";
+            this.salesForm_SalaryDetailedView_grpBox.Visible = false;
             // 
             // salesForm_salary_detailed_received_lbl
             // 
@@ -1160,52 +1364,31 @@
             this.label37.TabIndex = 11;
             this.label37.Text = "Employee ID:";
             // 
-            // groupBox5
+            // salesForm_billDetailedView_grpBox
             // 
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Controls.Add(this.pictureBox1);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_receipt_lbl);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_change_lbl);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_datepayed_lbl);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_amountpayed_lbl);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_dueamount_lbl);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_duedate_lbl);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_transacname_lbl);
-            this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Controls.Add(this.salesForm_billsandwages_detailed_accnum_lbl);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(3, 338);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(608, 236);
-            this.groupBox5.TabIndex = 58;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Detailed view";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(476, 194);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 23);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Add picture";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(441, 82);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 106);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_receipt_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label24);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_change_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label22);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_datepayed_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_amountpayed_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_dueamount_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_duedate_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label15);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label14);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label13);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label12);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_transacname_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label11);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.salesForm_billsandwages_detailed_accnum_lbl);
+            this.salesForm_billDetailedView_grpBox.Controls.Add(this.label8);
+            this.salesForm_billDetailedView_grpBox.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_billDetailedView_grpBox.Location = new System.Drawing.Point(3, 356);
+            this.salesForm_billDetailedView_grpBox.Name = "salesForm_billDetailedView_grpBox";
+            this.salesForm_billDetailedView_grpBox.Size = new System.Drawing.Size(608, 236);
+            this.salesForm_billDetailedView_grpBox.TabIndex = 58;
+            this.salesForm_billDetailedView_grpBox.TabStop = false;
+            this.salesForm_billDetailedView_grpBox.Text = "Detailed view";
             // 
             // salesForm_billsandwages_detailed_receipt_lbl
             // 
@@ -1489,31 +1672,444 @@
             this.label19.TabIndex = 2;
             this.label19.Text = "ID:";
             // 
-            // columnHeader16
+            // salesForm_addnewbillRecord_grpBox
             // 
-            this.columnHeader16.Text = "Cashier";
+            this.salesForm_addnewbillRecord_grpBox.BackColor = System.Drawing.Color.Transparent;
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_receiptnumber_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label39);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_change_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label33);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_DOP_DTpicker);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label31);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_amountpaid_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label25);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_dueamount_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label23);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_Duedate_DTpicker);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label17);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_Cancel_btn);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label1);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_transactionName_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_add_btn);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_billID_lbl);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label10);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.salesForm_addnewbill_billnumber_txtBox);
+            this.salesForm_addnewbillRecord_grpBox.Controls.Add(this.label16);
+            this.salesForm_addnewbillRecord_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnewbillRecord_grpBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbillRecord_grpBox.Location = new System.Drawing.Point(574, 86);
+            this.salesForm_addnewbillRecord_grpBox.Name = "salesForm_addnewbillRecord_grpBox";
+            this.salesForm_addnewbillRecord_grpBox.Size = new System.Drawing.Size(595, 394);
+            this.salesForm_addnewbillRecord_grpBox.TabIndex = 56;
+            this.salesForm_addnewbillRecord_grpBox.TabStop = false;
+            this.salesForm_addnewbillRecord_grpBox.Text = "Add bill record";
+            this.salesForm_addnewbillRecord_grpBox.Visible = false;
             // 
-            // columnHeader17
+            // salesForm_addnewbill_receiptnumber_txtBox
             // 
-            this.columnHeader17.Text = "Gross";
+            this.salesForm_addnewbill_receiptnumber_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_receiptnumber_txtBox.Location = new System.Drawing.Point(140, 346);
+            this.salesForm_addnewbill_receiptnumber_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_receiptnumber_txtBox.Name = "salesForm_addnewbill_receiptnumber_txtBox";
+            this.salesForm_addnewbill_receiptnumber_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_addnewbill_receiptnumber_txtBox.TabIndex = 82;
             // 
-            // columnHeader18
+            // label39
             // 
-            this.columnHeader18.Text = "Net";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(57, 351);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(77, 15);
+            this.label39.TabIndex = 81;
+            this.label39.Text = "Receipt #:";
             // 
-            // columnHeader19
+            // salesForm_addnewbill_change_txtBox
             // 
-            this.columnHeader19.Text = "total";
+            this.salesForm_addnewbill_change_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_change_txtBox.Location = new System.Drawing.Point(140, 315);
+            this.salesForm_addnewbill_change_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_change_txtBox.Name = "salesForm_addnewbill_change_txtBox";
+            this.salesForm_addnewbill_change_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_addnewbill_change_txtBox.TabIndex = 80;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(78, 320);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 15);
+            this.label33.TabIndex = 79;
+            this.label33.Text = "Change:";
+            // 
+            // salesForm_addnewbill_DOP_DTpicker
+            // 
+            this.salesForm_addnewbill_DOP_DTpicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_DOP_DTpicker.Location = new System.Drawing.Point(140, 280);
+            this.salesForm_addnewbill_DOP_DTpicker.Name = "salesForm_addnewbill_DOP_DTpicker";
+            this.salesForm_addnewbill_DOP_DTpicker.Size = new System.Drawing.Size(193, 20);
+            this.salesForm_addnewbill_DOP_DTpicker.TabIndex = 77;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(15, 284);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(119, 15);
+            this.label31.TabIndex = 78;
+            this.label31.Text = "Date of payment:";
+            // 
+            // salesForm_addnewbill_amountpaid_txtBox
+            // 
+            this.salesForm_addnewbill_amountpaid_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_amountpaid_txtBox.Location = new System.Drawing.Point(140, 241);
+            this.salesForm_addnewbill_amountpaid_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_amountpaid_txtBox.Name = "salesForm_addnewbill_amountpaid_txtBox";
+            this.salesForm_addnewbill_amountpaid_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_addnewbill_amountpaid_txtBox.TabIndex = 76;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(43, 243);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(91, 15);
+            this.label25.TabIndex = 75;
+            this.label25.Text = "Amount paid:";
+            // 
+            // salesForm_addnewbill_dueamount_txtBox
+            // 
+            this.salesForm_addnewbill_dueamount_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_dueamount_txtBox.Location = new System.Drawing.Point(140, 206);
+            this.salesForm_addnewbill_dueamount_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_dueamount_txtBox.Name = "salesForm_addnewbill_dueamount_txtBox";
+            this.salesForm_addnewbill_dueamount_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_addnewbill_dueamount_txtBox.TabIndex = 74;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(50, 211);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(84, 15);
+            this.label23.TabIndex = 73;
+            this.label23.Text = "Due amount:";
+            // 
+            // salesForm_addnewbill_Duedate_DTpicker
+            // 
+            this.salesForm_addnewbill_Duedate_DTpicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_Duedate_DTpicker.Location = new System.Drawing.Point(140, 174);
+            this.salesForm_addnewbill_Duedate_DTpicker.Name = "salesForm_addnewbill_Duedate_DTpicker";
+            this.salesForm_addnewbill_Duedate_DTpicker.Size = new System.Drawing.Size(193, 20);
+            this.salesForm_addnewbill_Duedate_DTpicker.TabIndex = 57;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(64, 176);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 15);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "Due date:";
+            // 
+            // salesForm_addnewbill_Cancel_btn
+            // 
+            this.salesForm_addnewbill_Cancel_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_addnewbill_Cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnewbill_Cancel_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_Cancel_btn.Location = new System.Drawing.Point(450, 117);
+            this.salesForm_addnewbill_Cancel_btn.Name = "salesForm_addnewbill_Cancel_btn";
+            this.salesForm_addnewbill_Cancel_btn.Size = new System.Drawing.Size(121, 77);
+            this.salesForm_addnewbill_Cancel_btn.TabIndex = 71;
+            this.salesForm_addnewbill_Cancel_btn.Text = "Cancel";
+            this.salesForm_addnewbill_Cancel_btn.UseVisualStyleBackColor = false;
+            this.salesForm_addnewbill_Cancel_btn.Click += new System.EventHandler(this.salesForm_addnewbill_Cancel_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 15);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "Transaction Name:";
+            // 
+            // salesForm_addnewbill_transactionName_txtBox
+            // 
+            this.salesForm_addnewbill_transactionName_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_transactionName_txtBox.Location = new System.Drawing.Point(140, 92);
+            this.salesForm_addnewbill_transactionName_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_transactionName_txtBox.Multiline = true;
+            this.salesForm_addnewbill_transactionName_txtBox.Name = "salesForm_addnewbill_transactionName_txtBox";
+            this.salesForm_addnewbill_transactionName_txtBox.Size = new System.Drawing.Size(166, 63);
+            this.salesForm_addnewbill_transactionName_txtBox.TabIndex = 2;
+            // 
+            // salesForm_addnewbill_add_btn
+            // 
+            this.salesForm_addnewbill_add_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_addnewbill_add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnewbill_add_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_add_btn.Location = new System.Drawing.Point(450, 245);
+            this.salesForm_addnewbill_add_btn.Name = "salesForm_addnewbill_add_btn";
+            this.salesForm_addnewbill_add_btn.Size = new System.Drawing.Size(121, 77);
+            this.salesForm_addnewbill_add_btn.TabIndex = 14;
+            this.salesForm_addnewbill_add_btn.Text = "Add";
+            this.salesForm_addnewbill_add_btn.UseVisualStyleBackColor = false;
+            this.salesForm_addnewbill_add_btn.Click += new System.EventHandler(this.salesForm_addnewbill_add_btn_Click);
+            // 
+            // salesForm_addnewbill_billID_lbl
+            // 
+            this.salesForm_addnewbill_billID_lbl.AutoSize = true;
+            this.salesForm_addnewbill_billID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_billID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.salesForm_addnewbill_billID_lbl.Location = new System.Drawing.Point(137, 31);
+            this.salesForm_addnewbill_billID_lbl.Name = "salesForm_addnewbill_billID_lbl";
+            this.salesForm_addnewbill_billID_lbl.Size = new System.Drawing.Size(80, 18);
+            this.salesForm_addnewbill_billID_lbl.TabIndex = 24;
+            this.salesForm_addnewbill_billID_lbl.Text = "123456789";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(22, 61);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 15);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Bill # / Acc #:";
+            // 
+            // salesForm_addnewbill_billnumber_txtBox
+            // 
+            this.salesForm_addnewbill_billnumber_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewbill_billnumber_txtBox.Location = new System.Drawing.Point(140, 58);
+            this.salesForm_addnewbill_billnumber_txtBox.MaxLength = 20;
+            this.salesForm_addnewbill_billnumber_txtBox.Name = "salesForm_addnewbill_billnumber_txtBox";
+            this.salesForm_addnewbill_billnumber_txtBox.Size = new System.Drawing.Size(166, 22);
+            this.salesForm_addnewbill_billnumber_txtBox.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(71, 33);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 15);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Bill ID:";
+            // 
+            // salesForm_addnewSalaryRecord_grpBox
+            // 
+            this.salesForm_addnewSalaryRecord_grpBox.BackColor = System.Drawing.Color.Transparent;
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryForm_selectedID_lbl);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_employeeID_cmbBox);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_payoutAmount_txtBox);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_PayoutDate_DTpicker);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label9);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label41);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label43);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label44);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label45);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_PayoutReceived_txtBox);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_SalaryDeduc_txtBox);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_cancel_btn);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_Add_btn);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.salesForm_addSalaryRecord_RecordID_lbl);
+            this.salesForm_addnewSalaryRecord_grpBox.Controls.Add(this.label50);
+            this.salesForm_addnewSalaryRecord_grpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addnewSalaryRecord_grpBox.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addnewSalaryRecord_grpBox.Location = new System.Drawing.Point(572, 74);
+            this.salesForm_addnewSalaryRecord_grpBox.Name = "salesForm_addnewSalaryRecord_grpBox";
+            this.salesForm_addnewSalaryRecord_grpBox.Size = new System.Drawing.Size(595, 212);
+            this.salesForm_addnewSalaryRecord_grpBox.TabIndex = 57;
+            this.salesForm_addnewSalaryRecord_grpBox.TabStop = false;
+            this.salesForm_addnewSalaryRecord_grpBox.Text = "Add salary record";
+            this.salesForm_addnewSalaryRecord_grpBox.Visible = false;
+            // 
+            // salesForm_addSalaryForm_selectedID_lbl
+            // 
+            this.salesForm_addSalaryForm_selectedID_lbl.AutoSize = true;
+            this.salesForm_addSalaryForm_selectedID_lbl.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryForm_selectedID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.salesForm_addSalaryForm_selectedID_lbl.Location = new System.Drawing.Point(277, 62);
+            this.salesForm_addSalaryForm_selectedID_lbl.Name = "salesForm_addSalaryForm_selectedID_lbl";
+            this.salesForm_addSalaryForm_selectedID_lbl.Size = new System.Drawing.Size(203, 14);
+            this.salesForm_addSalaryForm_selectedID_lbl.TabIndex = 86;
+            this.salesForm_addSalaryForm_selectedID_lbl.Text = "Emmanuel Kester Maru de Vera";
+            // 
+            // salesForm_addSalaryRecord_employeeID_cmbBox
+            // 
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.FormattingEnabled = true;
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.Location = new System.Drawing.Point(140, 60);
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.Name = "salesForm_addSalaryRecord_employeeID_cmbBox";
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.Size = new System.Drawing.Size(131, 21);
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.TabIndex = 85;
+            this.salesForm_addSalaryRecord_employeeID_cmbBox.SelectedIndexChanged += new System.EventHandler(this.salesForm_addSalaryRecord_employeeID_cmbBox_SelectedIndexChanged);
+            // 
+            // salesForm_addSalaryRecord_payoutAmount_txtBox
+            // 
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.Location = new System.Drawing.Point(142, 113);
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.MaxLength = 20;
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.Name = "salesForm_addSalaryRecord_payoutAmount_txtBox";
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.Size = new System.Drawing.Size(129, 22);
+            this.salesForm_addSalaryRecord_payoutAmount_txtBox.TabIndex = 84;
+            // 
+            // salesForm_addSalaryRecord_PayoutDate_DTpicker
+            // 
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker.Location = new System.Drawing.Point(140, 88);
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker.Name = "salesForm_addSalaryRecord_PayoutDate_DTpicker";
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker.Size = new System.Drawing.Size(193, 20);
+            this.salesForm_addSalaryRecord_PayoutDate_DTpicker.TabIndex = 83;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(29, 117);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 15);
+            this.label9.TabIndex = 82;
+            this.label9.Text = "Payout amount:";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label41.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(1, 145);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(133, 15);
+            this.label41.TabIndex = 81;
+            this.label41.Text = "Salary deductions:";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label43.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(15, 175);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(119, 15);
+            this.label43.TabIndex = 80;
+            this.label43.Text = "Payout received:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label44.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(36, 91);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(98, 15);
+            this.label44.TabIndex = 79;
+            this.label44.Text = "Pay out date:";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label45.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(43, 63);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(91, 15);
+            this.label45.TabIndex = 78;
+            this.label45.Text = "Employee ID:";
+            // 
+            // salesForm_addSalaryRecord_PayoutReceived_txtBox
+            // 
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.Location = new System.Drawing.Point(142, 172);
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.MaxLength = 20;
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.Name = "salesForm_addSalaryRecord_PayoutReceived_txtBox";
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.Size = new System.Drawing.Size(129, 22);
+            this.salesForm_addSalaryRecord_PayoutReceived_txtBox.TabIndex = 76;
+            // 
+            // salesForm_addSalaryRecord_SalaryDeduc_txtBox
+            // 
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.Location = new System.Drawing.Point(142, 143);
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.MaxLength = 20;
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.Name = "salesForm_addSalaryRecord_SalaryDeduc_txtBox";
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.Size = new System.Drawing.Size(129, 22);
+            this.salesForm_addSalaryRecord_SalaryDeduc_txtBox.TabIndex = 74;
+            // 
+            // salesForm_addSalaryRecord_cancel_btn
+            // 
+            this.salesForm_addSalaryRecord_cancel_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_addSalaryRecord_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addSalaryRecord_cancel_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_cancel_btn.Location = new System.Drawing.Point(427, 90);
+            this.salesForm_addSalaryRecord_cancel_btn.Name = "salesForm_addSalaryRecord_cancel_btn";
+            this.salesForm_addSalaryRecord_cancel_btn.Size = new System.Drawing.Size(111, 48);
+            this.salesForm_addSalaryRecord_cancel_btn.TabIndex = 71;
+            this.salesForm_addSalaryRecord_cancel_btn.Text = "Cancel";
+            this.salesForm_addSalaryRecord_cancel_btn.UseVisualStyleBackColor = false;
+            this.salesForm_addSalaryRecord_cancel_btn.Click += new System.EventHandler(this.salesForm_addSalaryRecord_cancel_btn_Click);
+            // 
+            // salesForm_addSalaryRecord_Add_btn
+            // 
+            this.salesForm_addSalaryRecord_Add_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salesForm_addSalaryRecord_Add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesForm_addSalaryRecord_Add_btn.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_Add_btn.Location = new System.Drawing.Point(427, 149);
+            this.salesForm_addSalaryRecord_Add_btn.Name = "salesForm_addSalaryRecord_Add_btn";
+            this.salesForm_addSalaryRecord_Add_btn.Size = new System.Drawing.Size(111, 46);
+            this.salesForm_addSalaryRecord_Add_btn.TabIndex = 14;
+            this.salesForm_addSalaryRecord_Add_btn.Text = "Add";
+            this.salesForm_addSalaryRecord_Add_btn.UseVisualStyleBackColor = false;
+            this.salesForm_addSalaryRecord_Add_btn.Click += new System.EventHandler(this.salesForm_addSalaryRecord_Add_btn_Click);
+            // 
+            // salesForm_addSalaryRecord_RecordID_lbl
+            // 
+            this.salesForm_addSalaryRecord_RecordID_lbl.AutoSize = true;
+            this.salesForm_addSalaryRecord_RecordID_lbl.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesForm_addSalaryRecord_RecordID_lbl.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.salesForm_addSalaryRecord_RecordID_lbl.Location = new System.Drawing.Point(137, 31);
+            this.salesForm_addSalaryRecord_RecordID_lbl.Name = "salesForm_addSalaryRecord_RecordID_lbl";
+            this.salesForm_addSalaryRecord_RecordID_lbl.Size = new System.Drawing.Size(80, 18);
+            this.salesForm_addSalaryRecord_RecordID_lbl.TabIndex = 24;
+            this.salesForm_addSalaryRecord_RecordID_lbl.Text = "123456789";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(57, 37);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(77, 15);
+            this.label50.TabIndex = 2;
+            this.label50.Text = "Record ID:";
+            // 
+            // account_level
+            // 
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(2, 125);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 86;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
             // 
             // sales_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 726);
+            this.Controls.Add(this.salesForm_addnewSalaryRecord_grpBox);
+            this.Controls.Add(this.salesForm_addnewbillRecord_grpBox);
+            this.Controls.Add(this.salesForm_addnoninventorybox_grpBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.salesForm_addnoninventorybox_grpBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "sales_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1536,16 +2132,21 @@
             this.panel1.PerformLayout();
             this.salesForm_billsandwages_tabcntrl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.salesView_bills_displayoption_grpBox.ResumeLayout(false);
+            this.salesView_bills_displayoption_grpBox.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.salesView_billsandwages_displayoption_grpBox.ResumeLayout(false);
-            this.salesView_billsandwages_displayoption_grpBox.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.salesView_salary_displayoption_grpBox.ResumeLayout(false);
+            this.salesView_salary_displayoption_grpBox.PerformLayout();
+            this.salesForm_SalaryDetailedView_grpBox.ResumeLayout(false);
+            this.salesForm_SalaryDetailedView_grpBox.PerformLayout();
+            this.salesForm_billDetailedView_grpBox.ResumeLayout(false);
+            this.salesForm_billDetailedView_grpBox.PerformLayout();
             this.salesForm_addnoninventorybox_grpBox.ResumeLayout(false);
             this.salesForm_addnoninventorybox_grpBox.PerformLayout();
+            this.salesForm_addnewbillRecord_grpBox.ResumeLayout(false);
+            this.salesForm_addnewbillRecord_grpBox.PerformLayout();
+            this.salesForm_addnewSalaryRecord_grpBox.ResumeLayout(false);
+            this.salesForm_addnewSalaryRecord_grpBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1576,10 +2177,10 @@
         public System.Windows.Forms.Label salesForm_user_Firstname;
         public System.Windows.Forms.Label datenow_value;
         public System.Windows.Forms.Label timenow_value;
-        private System.Windows.Forms.Button POS_toUsers_btn;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button POSForm_inventory_btn;
+        private System.Windows.Forms.Button salesForm_Users_Btn;
+        private System.Windows.Forms.Button salesForm_Customer_Btn;
+        private System.Windows.Forms.Button salesForm_Supplier_Btn;
+        private System.Windows.Forms.Button salesForm_Inventory_Btn;
         public System.Windows.Forms.PictureBox POS_employeeCurrentPhoto_pctrBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl salesForm_billsandwages_tabcntrl;
@@ -1602,15 +2203,15 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox salesView_billsandwages_displayoption_grpBox;
+        private System.Windows.Forms.GroupBox salesView_bills_displayoption_grpBox;
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button salesForm_billsandwages_search_btn;
-        private System.Windows.Forms.TextBox salesForm_billsandwages_search_txtBox;
+        private System.Windows.Forms.TextBox salesForm_bills_search_txtBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1salesForm_billsandwages_to_DTpicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker salesForm_billsandwages_from_DTpicker;
-        private System.Windows.Forms.Button salesForm_billsandwages_refreshList_btn;
+        private System.Windows.Forms.Button salesForm_bills_refreshList_btn;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label salesForm_sales_detailed_cashier_lbl;
         private System.Windows.Forms.Label salesForm_sales_detailed_sales_lbl;
@@ -1619,9 +2220,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox salesForm_billDetailedView_grpBox;
         private System.Windows.Forms.Label salesForm_billsandwages_detailed_receipt_lbl;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label salesForm_billsandwages_detailed_change_lbl;
@@ -1638,7 +2237,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label salesForm_billsandwages_detailed_accnum_lbl;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button salesForm_billsandwages_addbill_btn;
+        private System.Windows.Forms.Button salesForm_bill_addbill_btn;
         private System.Windows.Forms.Label salesForm_sales_detailed_net_lbl;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label salesForm_sales_detailed_gross_lbl;
@@ -1649,7 +2248,7 @@
         private System.Windows.Forms.Label salesForm_sales_detailed_numoftransacmade_lbl;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox salesForm_SalaryDetailedView_grpBox;
         private System.Windows.Forms.Label salesForm_salary_detailed_received_lbl;
         private System.Windows.Forms.Label salesForm_salary_detailed_deduction_lbl;
         private System.Windows.Forms.Label salesForm_salary_detailed_payoutamount_lbl;
@@ -1661,8 +2260,8 @@
         private System.Windows.Forms.Label salesForm_salary_detailed_employeeID_lbl;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Button salesForm_addnoninventorysales_btn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button POSForm_toTransactions_btn;
+        private System.Windows.Forms.Button salesForm_Home_Btn;
+        private System.Windows.Forms.Button salesForm_Transactions_Btn;
         public System.Windows.Forms.GroupBox salesForm_addnoninventorybox_grpBox;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox salesForm_nonsalesTotal_txtBox;
@@ -1676,5 +2275,53 @@
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
+        public System.Windows.Forms.GroupBox salesForm_addnewbillRecord_grpBox;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_receiptnumber_txtBox;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_change_txtBox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.DateTimePicker salesForm_addnewbill_DOP_DTpicker;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_amountpaid_txtBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_dueamount_txtBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker salesForm_addnewbill_Duedate_DTpicker;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button salesForm_addnewbill_Cancel_btn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_transactionName_txtBox;
+        private System.Windows.Forms.Button salesForm_addnewbill_add_btn;
+        private System.Windows.Forms.Label salesForm_addnewbill_billID_lbl;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox salesForm_addnewbill_billnumber_txtBox;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.GroupBox salesForm_addnewSalaryRecord_grpBox;
+        private System.Windows.Forms.ComboBox salesForm_addSalaryRecord_employeeID_cmbBox;
+        private System.Windows.Forms.TextBox salesForm_addSalaryRecord_payoutAmount_txtBox;
+        private System.Windows.Forms.DateTimePicker salesForm_addSalaryRecord_PayoutDate_DTpicker;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox salesForm_addSalaryRecord_PayoutReceived_txtBox;
+        private System.Windows.Forms.TextBox salesForm_addSalaryRecord_SalaryDeduc_txtBox;
+        private System.Windows.Forms.Button salesForm_addSalaryRecord_cancel_btn;
+        private System.Windows.Forms.Button salesForm_addSalaryRecord_Add_btn;
+        private System.Windows.Forms.Label salesForm_addSalaryRecord_RecordID_lbl;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label salesForm_addSalaryForm_selectedID_lbl;
+        private System.Windows.Forms.Button salesForm_salaries_addSalary_btn;
+        private System.Windows.Forms.GroupBox salesView_salary_displayoption_grpBox;
+        public System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox salesForm_salary_search_txtBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button salesForm_salaries_refreshList_btn;
+        public System.Windows.Forms.Label account_level;
     }
 }

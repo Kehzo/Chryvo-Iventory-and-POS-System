@@ -68,7 +68,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.supplierForm_refreshlist_btn = new System.Windows.Forms.Button();
-            this.POSForm_toTransactions_btn = new System.Windows.Forms.Button();
+            this.customerForm_transactions_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.supplierForm_update_fullname_lbl = new System.Windows.Forms.Label();
             this.supplierForm_supplierfullname_txtBox = new System.Windows.Forms.TextBox();
@@ -95,7 +95,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.timenow_value = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.POS_toUsers_btn = new System.Windows.Forms.Button();
+            this.customerForm_users_btn = new System.Windows.Forms.Button();
             this.supplierForm_new_gendermale_rdBtn = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.supplierForm_new_genderfemale_rdBtn = new System.Windows.Forms.RadioButton();
@@ -110,12 +110,13 @@
             this.supplierForm_customerstatusActive_chkBox = new System.Windows.Forms.CheckBox();
             this.supplierForm_customeraccstatusInactive_chkBox = new System.Windows.Forms.CheckBox();
             this.supplierForm_supplierdetails_grpBox = new System.Windows.Forms.GroupBox();
+            this.supplierForm_dateLastvisit_lbl = new System.Windows.Forms.Label();
+            this.supplierForm_supplierlastvisit_DTpicker = new System.Windows.Forms.DateTimePicker();
             this.supplierForm_supplierProducts_txtBox = new System.Windows.Forms.ListView();
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.supplierForm_updatecompanyName_txtBox = new System.Windows.Forms.TextBox();
-            this.supplierForm_supplierlastvisit_DTpicker = new System.Windows.Forms.DateTimePicker();
-            this.supplierForm_dateLastvisit_lbl = new System.Windows.Forms.Label();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).BeginInit();
@@ -497,17 +498,18 @@
             this.supplierForm_refreshlist_btn.Text = "Refresh list";
             this.supplierForm_refreshlist_btn.UseVisualStyleBackColor = false;
             // 
-            // POSForm_toTransactions_btn
+            // customerForm_transactions_btn
             // 
-            this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(5, 518);
-            this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
-            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
-            this.POSForm_toTransactions_btn.TabIndex = 94;
-            this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
-            this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
+            this.customerForm_transactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.customerForm_transactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerForm_transactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerForm_transactions_btn.Location = new System.Drawing.Point(2, 424);
+            this.customerForm_transactions_btn.Name = "customerForm_transactions_btn";
+            this.customerForm_transactions_btn.Size = new System.Drawing.Size(145, 57);
+            this.customerForm_transactions_btn.TabIndex = 94;
+            this.customerForm_transactions_btn.Text = "TRANSACTIONS";
+            this.customerForm_transactions_btn.UseVisualStyleBackColor = false;
+            this.customerForm_transactions_btn.Click += new System.EventHandler(this.customerForm_transactions_btn_Click);
             // 
             // label5
             // 
@@ -639,12 +641,13 @@
             this.customerForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_inventory_btn.Location = new System.Drawing.Point(3, 300);
+            this.customerForm_inventory_btn.Location = new System.Drawing.Point(2, 365);
             this.customerForm_inventory_btn.Name = "customerForm_inventory_btn";
-            this.customerForm_inventory_btn.Size = new System.Drawing.Size(145, 53);
+            this.customerForm_inventory_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_inventory_btn.TabIndex = 1;
             this.customerForm_inventory_btn.Text = "INVENTORY";
             this.customerForm_inventory_btn.UseVisualStyleBackColor = false;
+            this.customerForm_inventory_btn.Click += new System.EventHandler(this.customerForm_inventory_btn_Click);
             // 
             // POS_employeeCurrentPhoto_pctrBox
             // 
@@ -683,12 +686,13 @@
             this.customerForm_supplier_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_supplier_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_supplier_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_supplier_btn.Location = new System.Drawing.Point(3, 356);
+            this.customerForm_supplier_btn.Location = new System.Drawing.Point(2, 543);
             this.customerForm_supplier_btn.Name = "customerForm_supplier_btn";
-            this.customerForm_supplier_btn.Size = new System.Drawing.Size(145, 50);
+            this.customerForm_supplier_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_supplier_btn.TabIndex = 2;
             this.customerForm_supplier_btn.Text = "CUSTOMER";
             this.customerForm_supplier_btn.UseVisualStyleBackColor = false;
+            this.customerForm_supplier_btn.Click += new System.EventHandler(this.customerForm_supplier_btn_Click);
             // 
             // POSForm_logout_btn
             // 
@@ -699,6 +703,7 @@
             this.POSForm_logout_btn.TabIndex = 50;
             this.POSForm_logout_btn.Text = "Logout";
             this.POSForm_logout_btn.UseVisualStyleBackColor = false;
+            this.POSForm_logout_btn.Visible = false;
             // 
             // groupBox4
             // 
@@ -726,24 +731,26 @@
             this.customerForm_POS_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_POS_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_POS_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_POS_btn.Location = new System.Drawing.Point(3, 247);
+            this.customerForm_POS_btn.Location = new System.Drawing.Point(2, 247);
             this.customerForm_POS_btn.Name = "customerForm_POS_btn";
-            this.customerForm_POS_btn.Size = new System.Drawing.Size(145, 49);
+            this.customerForm_POS_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_POS_btn.TabIndex = 4;
             this.customerForm_POS_btn.Text = "POS";
             this.customerForm_POS_btn.UseVisualStyleBackColor = false;
+            this.customerForm_POS_btn.Click += new System.EventHandler(this.customerForm_POS_btn_Click);
             // 
             // customerForm_sales_btn
             // 
             this.customerForm_sales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_sales_btn.Location = new System.Drawing.Point(3, 409);
+            this.customerForm_sales_btn.Location = new System.Drawing.Point(2, 483);
             this.customerForm_sales_btn.Name = "customerForm_sales_btn";
-            this.customerForm_sales_btn.Size = new System.Drawing.Size(145, 50);
+            this.customerForm_sales_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_sales_btn.TabIndex = 3;
             this.customerForm_sales_btn.Text = "SALES";
             this.customerForm_sales_btn.UseVisualStyleBackColor = false;
+            this.customerForm_sales_btn.Click += new System.EventHandler(this.customerForm_sales_btn_Click);
             // 
             // datenow_value
             // 
@@ -765,12 +772,14 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Visible = false;
             this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.account_level);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.POSForm_logout_btn);
             this.panel6.Controls.Add(this.groupBox4);
@@ -797,8 +806,8 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.POS_toUsers_btn);
-            this.panel5.Controls.Add(this.POSForm_toTransactions_btn);
+            this.panel5.Controls.Add(this.customerForm_users_btn);
+            this.panel5.Controls.Add(this.customerForm_transactions_btn);
             this.panel5.Controls.Add(this.stopdebug_btn);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.customerForm_POS_btn);
@@ -811,17 +820,18 @@
             this.panel5.Size = new System.Drawing.Size(153, 721);
             this.panel5.TabIndex = 93;
             // 
-            // POS_toUsers_btn
+            // customerForm_users_btn
             // 
-            this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 463);
-            this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(144, 51);
-            this.POS_toUsers_btn.TabIndex = 95;
-            this.POS_toUsers_btn.Text = "USERS";
-            this.POS_toUsers_btn.UseVisualStyleBackColor = false;
+            this.customerForm_users_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.customerForm_users_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerForm_users_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerForm_users_btn.Location = new System.Drawing.Point(2, 306);
+            this.customerForm_users_btn.Name = "customerForm_users_btn";
+            this.customerForm_users_btn.Size = new System.Drawing.Size(145, 57);
+            this.customerForm_users_btn.TabIndex = 95;
+            this.customerForm_users_btn.Text = "USERS";
+            this.customerForm_users_btn.UseVisualStyleBackColor = false;
+            this.customerForm_users_btn.Click += new System.EventHandler(this.customerForm_users_btn_Click);
             // 
             // supplierForm_new_gendermale_rdBtn
             // 
@@ -1029,6 +1039,25 @@
             this.supplierForm_supplierdetails_grpBox.TabStop = false;
             this.supplierForm_supplierdetails_grpBox.Text = "Supplier details:";
             // 
+            // supplierForm_dateLastvisit_lbl
+            // 
+            this.supplierForm_dateLastvisit_lbl.AutoSize = true;
+            this.supplierForm_dateLastvisit_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_dateLastvisit_lbl.Location = new System.Drawing.Point(172, 322);
+            this.supplierForm_dateLastvisit_lbl.Name = "supplierForm_dateLastvisit_lbl";
+            this.supplierForm_dateLastvisit_lbl.Size = new System.Drawing.Size(28, 15);
+            this.supplierForm_dateLastvisit_lbl.TabIndex = 101;
+            this.supplierForm_dateLastvisit_lbl.Text = "N/A";
+            // 
+            // supplierForm_supplierlastvisit_DTpicker
+            // 
+            this.supplierForm_supplierlastvisit_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierForm_supplierlastvisit_DTpicker.Location = new System.Drawing.Point(168, 322);
+            this.supplierForm_supplierlastvisit_DTpicker.Name = "supplierForm_supplierlastvisit_DTpicker";
+            this.supplierForm_supplierlastvisit_DTpicker.Size = new System.Drawing.Size(244, 22);
+            this.supplierForm_supplierlastvisit_DTpicker.TabIndex = 100;
+            this.supplierForm_supplierlastvisit_DTpicker.Visible = false;
+            // 
             // supplierForm_supplierProducts_txtBox
             // 
             this.supplierForm_supplierProducts_txtBox.BackgroundImageTiled = true;
@@ -1071,24 +1100,16 @@
             this.supplierForm_updatecompanyName_txtBox.TabIndex = 97;
             this.supplierForm_updatecompanyName_txtBox.Text = "Frosties";
             // 
-            // supplierForm_supplierlastvisit_DTpicker
+            // account_level
             // 
-            this.supplierForm_supplierlastvisit_DTpicker.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supplierForm_supplierlastvisit_DTpicker.Location = new System.Drawing.Point(168, 322);
-            this.supplierForm_supplierlastvisit_DTpicker.Name = "supplierForm_supplierlastvisit_DTpicker";
-            this.supplierForm_supplierlastvisit_DTpicker.Size = new System.Drawing.Size(244, 22);
-            this.supplierForm_supplierlastvisit_DTpicker.TabIndex = 100;
-            this.supplierForm_supplierlastvisit_DTpicker.Visible = false;
-            // 
-            // supplierForm_dateLastvisit_lbl
-            // 
-            this.supplierForm_dateLastvisit_lbl.AutoSize = true;
-            this.supplierForm_dateLastvisit_lbl.Font = new System.Drawing.Font("Consolas", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supplierForm_dateLastvisit_lbl.Location = new System.Drawing.Point(172, 322);
-            this.supplierForm_dateLastvisit_lbl.Name = "supplierForm_dateLastvisit_lbl";
-            this.supplierForm_dateLastvisit_lbl.Size = new System.Drawing.Size(28, 15);
-            this.supplierForm_dateLastvisit_lbl.TabIndex = 101;
-            this.supplierForm_dateLastvisit_lbl.Text = "N/A";
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(3, 127);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 86;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
             // 
             // supplier_Form
             // 
@@ -1166,7 +1187,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.Button supplierForm_refreshlist_btn;
-        private System.Windows.Forms.Button POSForm_toTransactions_btn;
+        private System.Windows.Forms.Button customerForm_transactions_btn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label supplierForm_update_fullname_lbl;
         private System.Windows.Forms.TextBox supplierForm_supplierfullname_txtBox;
@@ -1193,7 +1214,7 @@
         private System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Label timenow_value;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button POS_toUsers_btn;
+        private System.Windows.Forms.Button customerForm_users_btn;
         private System.Windows.Forms.RadioButton supplierForm_new_gendermale_rdBtn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton supplierForm_new_genderfemale_rdBtn;
@@ -1214,5 +1235,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.DateTimePicker supplierForm_supplierlastvisit_DTpicker;
         private System.Windows.Forms.Label supplierForm_dateLastvisit_lbl;
+        public System.Windows.Forms.Label account_level;
     }
 }

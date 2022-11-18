@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel5 = new System.Windows.Forms.Panel();
+            this.transactionForm_toCustomer_btn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.stopdebug_btn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,20 +45,6 @@
             this.transactionForm_toSuppliers_btn = new System.Windows.Forms.Button();
             this.POSForm_inventory_btn = new System.Windows.Forms.Button();
             this.POS_employeeCurrentPhoto_pctrBox = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.transactionForm_displayoption_search_btn = new System.Windows.Forms.Button();
-            this.transactionForm_displayOptions_search_txtBox = new System.Windows.Forms.TextBox();
-            this.transactionForm_displayOptions_to_DTPicker = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.transactionForm_displayOptions_from_DTPicker = new System.Windows.Forms.DateTimePicker();
-            this.transactionForm_refreshlist_btn = new System.Windows.Forms.Button();
-            this.transactionForm_HistoryList_lstView = new System.Windows.Forms.ListView();
-            this.Transac_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Transac_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Transac_By = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.transactionForm_viewTransactionLog_lstView = new System.Windows.Forms.ListView();
@@ -78,15 +66,20 @@
             this.view_TransacDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.view_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.view_Customer_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.transactionForm_toCustomer_btn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.transactionForm_displayoption_search_btn = new System.Windows.Forms.Button();
+            this.transactionForm_displayOptions_search_txtBox = new System.Windows.Forms.TextBox();
+            this.transactionForm_displayOptions_to_DTPicker = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.transactionForm_displayOptions_from_DTPicker = new System.Windows.Forms.DateTimePicker();
+            this.transactionForm_refreshlist_btn = new System.Windows.Forms.Button();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +101,32 @@
             this.panel5.Size = new System.Drawing.Size(153, 729);
             this.panel5.TabIndex = 4;
             // 
+            // transactionForm_toCustomer_btn
+            // 
+            this.transactionForm_toCustomer_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.transactionForm_toCustomer_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transactionForm_toCustomer_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.transactionForm_toCustomer_btn.Location = new System.Drawing.Point(3, 454);
+            this.transactionForm_toCustomer_btn.Name = "transactionForm_toCustomer_btn";
+            this.transactionForm_toCustomer_btn.Size = new System.Drawing.Size(143, 52);
+            this.transactionForm_toCustomer_btn.TabIndex = 53;
+            this.transactionForm_toCustomer_btn.Text = "CUSTOMER";
+            this.transactionForm_toCustomer_btn.UseVisualStyleBackColor = false;
+            this.transactionForm_toCustomer_btn.Click += new System.EventHandler(this.transactionForm_toCustomer_btn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(3, 242);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 52);
+            this.button2.TabIndex = 52;
+            this.button2.Text = "POS";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // stopdebug_btn
             // 
             this.stopdebug_btn.Location = new System.Drawing.Point(42, 662);
@@ -116,12 +135,14 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Visible = false;
             this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.account_level);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.POSForm_logout_btn);
             this.panel6.Controls.Add(this.groupBox4);
@@ -163,6 +184,7 @@
             this.POSForm_logout_btn.TabIndex = 50;
             this.POSForm_logout_btn.Text = "Logout";
             this.POSForm_logout_btn.UseVisualStyleBackColor = false;
+            this.POSForm_logout_btn.Visible = false;
             // 
             // groupBox4
             // 
@@ -213,10 +235,10 @@
             // 
             this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(3, 465);
+            this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.POS_toUsers_btn.Location = new System.Drawing.Point(3, 295);
             this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(143, 49);
+            this.POS_toUsers_btn.Size = new System.Drawing.Size(143, 52);
             this.POS_toUsers_btn.TabIndex = 4;
             this.POS_toUsers_btn.Text = "USERS";
             this.POS_toUsers_btn.UseVisualStyleBackColor = false;
@@ -226,10 +248,10 @@
             // 
             this.transanctionForm_Sales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.transanctionForm_Sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.transanctionForm_Sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transanctionForm_Sales_btn.Location = new System.Drawing.Point(3, 410);
+            this.transanctionForm_Sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.transanctionForm_Sales_btn.Location = new System.Drawing.Point(3, 401);
             this.transanctionForm_Sales_btn.Name = "transanctionForm_Sales_btn";
-            this.transanctionForm_Sales_btn.Size = new System.Drawing.Size(143, 49);
+            this.transanctionForm_Sales_btn.Size = new System.Drawing.Size(143, 52);
             this.transanctionForm_Sales_btn.TabIndex = 3;
             this.transanctionForm_Sales_btn.Text = "SALES";
             this.transanctionForm_Sales_btn.UseVisualStyleBackColor = false;
@@ -239,10 +261,10 @@
             // 
             this.transactionForm_toSuppliers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.transactionForm_toSuppliers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.transactionForm_toSuppliers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionForm_toSuppliers_btn.Location = new System.Drawing.Point(3, 355);
+            this.transactionForm_toSuppliers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.transactionForm_toSuppliers_btn.Location = new System.Drawing.Point(3, 508);
             this.transactionForm_toSuppliers_btn.Name = "transactionForm_toSuppliers_btn";
-            this.transactionForm_toSuppliers_btn.Size = new System.Drawing.Size(143, 49);
+            this.transactionForm_toSuppliers_btn.Size = new System.Drawing.Size(143, 52);
             this.transactionForm_toSuppliers_btn.TabIndex = 2;
             this.transactionForm_toSuppliers_btn.Text = "SUPPLIERS";
             this.transactionForm_toSuppliers_btn.UseVisualStyleBackColor = false;
@@ -252,10 +274,10 @@
             // 
             this.POSForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POSForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.POSForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_inventory_btn.Location = new System.Drawing.Point(3, 300);
+            this.POSForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.POSForm_inventory_btn.Location = new System.Drawing.Point(3, 348);
             this.POSForm_inventory_btn.Name = "POSForm_inventory_btn";
-            this.POSForm_inventory_btn.Size = new System.Drawing.Size(143, 49);
+            this.POSForm_inventory_btn.Size = new System.Drawing.Size(143, 52);
             this.POSForm_inventory_btn.TabIndex = 1;
             this.POSForm_inventory_btn.Text = "INVENTORY";
             this.POSForm_inventory_btn.UseVisualStyleBackColor = false;
@@ -271,146 +293,6 @@
             this.POS_employeeCurrentPhoto_pctrBox.TabStop = false;
             this.POS_employeeCurrentPhoto_pctrBox.Visible = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.groupBox2);
-            this.panel3.Controls.Add(this.transactionForm_refreshlist_btn);
-            this.panel3.Controls.Add(this.transactionForm_HistoryList_lstView);
-            this.panel3.Location = new System.Drawing.Point(157, 42);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(314, 690);
-            this.panel3.TabIndex = 8;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.transactionForm_displayoption_search_btn);
-            this.groupBox2.Controls.Add(this.transactionForm_displayOptions_search_txtBox);
-            this.groupBox2.Controls.Add(this.transactionForm_displayOptions_to_DTPicker);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.transactionForm_displayOptions_from_DTPicker);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(9, 420);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(298, 226);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Display options:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(11, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(34, 25);
-            this.label20.TabIndex = 47;
-            this.label20.Text = "🔍";
-            // 
-            // transactionForm_displayoption_search_btn
-            // 
-            this.transactionForm_displayoption_search_btn.Location = new System.Drawing.Point(78, 188);
-            this.transactionForm_displayoption_search_btn.Name = "transactionForm_displayoption_search_btn";
-            this.transactionForm_displayoption_search_btn.Size = new System.Drawing.Size(88, 25);
-            this.transactionForm_displayoption_search_btn.TabIndex = 10;
-            this.transactionForm_displayoption_search_btn.Text = "Search";
-            this.transactionForm_displayoption_search_btn.UseVisualStyleBackColor = true;
-            // 
-            // transactionForm_displayOptions_search_txtBox
-            // 
-            this.transactionForm_displayOptions_search_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionForm_displayOptions_search_txtBox.Location = new System.Drawing.Point(48, 27);
-            this.transactionForm_displayOptions_search_txtBox.Name = "transactionForm_displayOptions_search_txtBox";
-            this.transactionForm_displayOptions_search_txtBox.Size = new System.Drawing.Size(227, 25);
-            this.transactionForm_displayOptions_search_txtBox.TabIndex = 46;
-            // 
-            // transactionForm_displayOptions_to_DTPicker
-            // 
-            this.transactionForm_displayOptions_to_DTPicker.Location = new System.Drawing.Point(13, 156);
-            this.transactionForm_displayOptions_to_DTPicker.Name = "transactionForm_displayOptions_to_DTPicker";
-            this.transactionForm_displayOptions_to_DTPicker.Size = new System.Drawing.Size(230, 22);
-            this.transactionForm_displayOptions_to_DTPicker.TabIndex = 56;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(76, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 15);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "To:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Period from:";
-            // 
-            // transactionForm_displayOptions_from_DTPicker
-            // 
-            this.transactionForm_displayOptions_from_DTPicker.Location = new System.Drawing.Point(13, 100);
-            this.transactionForm_displayOptions_from_DTPicker.Name = "transactionForm_displayOptions_from_DTPicker";
-            this.transactionForm_displayOptions_from_DTPicker.Size = new System.Drawing.Size(230, 22);
-            this.transactionForm_displayOptions_from_DTPicker.TabIndex = 54;
-            // 
-            // transactionForm_refreshlist_btn
-            // 
-            this.transactionForm_refreshlist_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.transactionForm_refreshlist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.transactionForm_refreshlist_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionForm_refreshlist_btn.Location = new System.Drawing.Point(3, 652);
-            this.transactionForm_refreshlist_btn.Name = "transactionForm_refreshlist_btn";
-            this.transactionForm_refreshlist_btn.Size = new System.Drawing.Size(304, 31);
-            this.transactionForm_refreshlist_btn.TabIndex = 53;
-            this.transactionForm_refreshlist_btn.Text = "Refresh list";
-            this.transactionForm_refreshlist_btn.UseVisualStyleBackColor = false;
-            // 
-            // transactionForm_HistoryList_lstView
-            // 
-            this.transactionForm_HistoryList_lstView.BackgroundImageTiled = true;
-            this.transactionForm_HistoryList_lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Transac_ID,
-            this.Transac_Date,
-            this.Transac_By});
-            this.transactionForm_HistoryList_lstView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionForm_HistoryList_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.transactionForm_HistoryList_lstView.GridLines = true;
-            this.transactionForm_HistoryList_lstView.HideSelection = false;
-            this.transactionForm_HistoryList_lstView.Location = new System.Drawing.Point(3, 3);
-            this.transactionForm_HistoryList_lstView.Name = "transactionForm_HistoryList_lstView";
-            this.transactionForm_HistoryList_lstView.Size = new System.Drawing.Size(304, 411);
-            this.transactionForm_HistoryList_lstView.TabIndex = 12;
-            this.transactionForm_HistoryList_lstView.UseCompatibleStateImageBehavior = false;
-            this.transactionForm_HistoryList_lstView.View = System.Windows.Forms.View.Details;
-            this.transactionForm_HistoryList_lstView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.transactionForm_HistoryList_lstView_MouseDoubleClick);
-            // 
-            // Transac_ID
-            // 
-            this.Transac_ID.Text = "Transaction ID:";
-            this.Transac_ID.Width = 115;
-            // 
-            // Transac_Date
-            // 
-            this.Transac_Date.Text = "Transaction Date:";
-            this.Transac_Date.Width = 106;
-            // 
-            // Transac_By
-            // 
-            this.Transac_By.Text = "Cashier";
-            this.Transac_By.Width = 78;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -425,10 +307,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.transactionForm_displayoption_search_btn);
+            this.panel1.Controls.Add(this.transactionForm_refreshlist_btn);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.transactionForm_displayOptions_to_DTPicker);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.transactionForm_viewTransactionLog_lstView);
-            this.panel1.Location = new System.Drawing.Point(477, 42);
+            this.panel1.Controls.Add(this.transactionForm_displayOptions_from_DTPicker);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.transactionForm_displayOptions_search_txtBox);
+            this.panel1.Location = new System.Drawing.Point(162, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 690);
+            this.panel1.Size = new System.Drawing.Size(985, 690);
             this.panel1.TabIndex = 54;
             // 
             // transactionForm_viewTransactionLog_lstView
@@ -457,9 +347,9 @@
             this.transactionForm_viewTransactionLog_lstView.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.transactionForm_viewTransactionLog_lstView.GridLines = true;
             this.transactionForm_viewTransactionLog_lstView.HideSelection = false;
-            this.transactionForm_viewTransactionLog_lstView.Location = new System.Drawing.Point(3, 3);
+            this.transactionForm_viewTransactionLog_lstView.Location = new System.Drawing.Point(4, 41);
             this.transactionForm_viewTransactionLog_lstView.Name = "transactionForm_viewTransactionLog_lstView";
-            this.transactionForm_viewTransactionLog_lstView.Size = new System.Drawing.Size(660, 680);
+            this.transactionForm_viewTransactionLog_lstView.Size = new System.Drawing.Size(975, 605);
             this.transactionForm_viewTransactionLog_lstView.TabIndex = 12;
             this.transactionForm_viewTransactionLog_lstView.UseCompatibleStateImageBehavior = false;
             this.transactionForm_viewTransactionLog_lstView.View = System.Windows.Forms.View.Details;
@@ -550,31 +440,101 @@
             this.view_Customer_Name.Text = "Customer name";
             this.view_Customer_Name.Width = 80;
             // 
-            // transactionForm_toCustomer_btn
+            // label20
             // 
-            this.transactionForm_toCustomer_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.transactionForm_toCustomer_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.transactionForm_toCustomer_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transactionForm_toCustomer_btn.Location = new System.Drawing.Point(3, 520);
-            this.transactionForm_toCustomer_btn.Name = "transactionForm_toCustomer_btn";
-            this.transactionForm_toCustomer_btn.Size = new System.Drawing.Size(143, 49);
-            this.transactionForm_toCustomer_btn.TabIndex = 53;
-            this.transactionForm_toCustomer_btn.Text = "CUSTOMER";
-            this.transactionForm_toCustomer_btn.UseVisualStyleBackColor = false;
-            this.transactionForm_toCustomer_btn.Click += new System.EventHandler(this.transactionForm_toCustomer_btn_Click);
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label20.Location = new System.Drawing.Point(-3, 4);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(34, 25);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "🔍";
             // 
-            // button2
+            // transactionForm_displayoption_search_btn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 245);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 49);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "POS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.transactionForm_displayoption_search_btn.Location = new System.Drawing.Point(873, 8);
+            this.transactionForm_displayoption_search_btn.Name = "transactionForm_displayoption_search_btn";
+            this.transactionForm_displayoption_search_btn.Size = new System.Drawing.Size(88, 23);
+            this.transactionForm_displayoption_search_btn.TabIndex = 10;
+            this.transactionForm_displayoption_search_btn.Text = "Search";
+            this.transactionForm_displayoption_search_btn.UseVisualStyleBackColor = true;
+            this.transactionForm_displayoption_search_btn.Visible = false;
+            this.transactionForm_displayoption_search_btn.Click += new System.EventHandler(this.transactionForm_displayoption_search_btn_Click);
+            // 
+            // transactionForm_displayOptions_search_txtBox
+            // 
+            this.transactionForm_displayOptions_search_txtBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionForm_displayOptions_search_txtBox.Location = new System.Drawing.Point(34, 6);
+            this.transactionForm_displayOptions_search_txtBox.Name = "transactionForm_displayOptions_search_txtBox";
+            this.transactionForm_displayOptions_search_txtBox.Size = new System.Drawing.Size(227, 25);
+            this.transactionForm_displayOptions_search_txtBox.TabIndex = 46;
+            this.transactionForm_displayOptions_search_txtBox.TextChanged += new System.EventHandler(this.transactionForm_displayOptions_search_txtBox_TextChanged);
+            // 
+            // transactionForm_displayOptions_to_DTPicker
+            // 
+            this.transactionForm_displayOptions_to_DTPicker.Location = new System.Drawing.Point(652, 10);
+            this.transactionForm_displayOptions_to_DTPicker.Name = "transactionForm_displayOptions_to_DTPicker";
+            this.transactionForm_displayOptions_to_DTPicker.Size = new System.Drawing.Size(211, 20);
+            this.transactionForm_displayOptions_to_DTPicker.TabIndex = 56;
+            this.transactionForm_displayOptions_to_DTPicker.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(626, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 15);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "To:";
+            this.label3.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(312, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Period from:";
+            this.label2.Visible = false;
+            // 
+            // transactionForm_displayOptions_from_DTPicker
+            // 
+            this.transactionForm_displayOptions_from_DTPicker.Location = new System.Drawing.Point(408, 10);
+            this.transactionForm_displayOptions_from_DTPicker.Name = "transactionForm_displayOptions_from_DTPicker";
+            this.transactionForm_displayOptions_from_DTPicker.Size = new System.Drawing.Size(211, 20);
+            this.transactionForm_displayOptions_from_DTPicker.TabIndex = 54;
+            this.transactionForm_displayOptions_from_DTPicker.Visible = false;
+            // 
+            // transactionForm_refreshlist_btn
+            // 
+            this.transactionForm_refreshlist_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.transactionForm_refreshlist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transactionForm_refreshlist_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionForm_refreshlist_btn.Location = new System.Drawing.Point(4, 652);
+            this.transactionForm_refreshlist_btn.Name = "transactionForm_refreshlist_btn";
+            this.transactionForm_refreshlist_btn.Size = new System.Drawing.Size(974, 31);
+            this.transactionForm_refreshlist_btn.TabIndex = 53;
+            this.transactionForm_refreshlist_btn.Text = "Refresh list";
+            this.transactionForm_refreshlist_btn.UseVisualStyleBackColor = false;
+            this.transactionForm_refreshlist_btn.Click += new System.EventHandler(this.transactionForm_refreshlist_btn_Click);
+            // 
+            // account_level
+            // 
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(3, 121);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 85;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
             // 
             // Transaction_Form
             // 
@@ -583,7 +543,6 @@
             this.ClientSize = new System.Drawing.Size(1149, 734);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Transaction_Form";
@@ -598,10 +557,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.POS_employeeCurrentPhoto_pctrBox)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,21 +580,7 @@
         private System.Windows.Forms.Button transactionForm_toSuppliers_btn;
         private System.Windows.Forms.Button POSForm_inventory_btn;
         public System.Windows.Forms.PictureBox POS_employeeCurrentPhoto_pctrBox;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button transactionForm_refreshlist_btn;
-        private System.Windows.Forms.ListView transactionForm_HistoryList_lstView;
-        private System.Windows.Forms.ColumnHeader Transac_ID;
-        private System.Windows.Forms.ColumnHeader Transac_Date;
-        private System.Windows.Forms.ColumnHeader Transac_By;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button transactionForm_displayoption_search_btn;
-        private System.Windows.Forms.DateTimePicker transactionForm_displayOptions_to_DTPicker;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker transactionForm_displayOptions_from_DTPicker;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox transactionForm_displayOptions_search_txtBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView transactionForm_viewTransactionLog_lstView;
         private System.Windows.Forms.ColumnHeader view_Transac_ID;
@@ -661,5 +604,14 @@
         private System.Windows.Forms.Button stopdebug_btn;
         private System.Windows.Forms.Button transactionForm_toCustomer_btn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button transactionForm_displayoption_search_btn;
+        private System.Windows.Forms.Button transactionForm_refreshlist_btn;
+        public System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DateTimePicker transactionForm_displayOptions_to_DTPicker;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker transactionForm_displayOptions_from_DTPicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox transactionForm_displayOptions_search_txtBox;
+        public System.Windows.Forms.Label account_level;
     }
 }

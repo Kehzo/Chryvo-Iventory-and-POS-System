@@ -298,55 +298,81 @@ namespace YvonnieStore_Beta_2_
         {
             try
             {
+                MySqlConnection conn = new MySqlConnection(myConnection);
 
-                String missing_Firstname = Validates(supplierForm_new_firstname_txtBox.Text) ? "First name" : "";
-                String missing_Middlename = Validates(supplierForm_new_middlename_txtBox.Text) ? "Middle name" : "";
-                String missing_Lastname = Validates(supplierForm_new_lastname_txtBox.Text) ? "Last name" : "";
-                String missing_Company = Validates(supplierForm_new_companyName_txtBox.Text) ? "Company" : "";
-                String missing_ContactNo = Validates(supplierForm_new_contactno_txtBox.Text) ? "Contact no." : "";
+                conn.Open();
+                MySqlCommand command = conn.CreateCommand();
+                string query0 = "select * from supplier_table where supplier_ID   = '" + supplierForm_new_supplierID_lbl.Text + "'";
+                command.CommandText = query0;
+                MySqlDataReader read = command.ExecuteReader();
 
-                if (supplierForm_new_firstname_txtBox.Text == "" || supplierForm_new_middlename_txtBox.Text == "" || supplierForm_new_lastname_txtBox.Text == "" || supplierForm_new_companyName_txtBox.Text == "" || supplierForm_new_contactno_txtBox.Text == "")
+                int count = 0;
+                while (read.Read())
                 {
-                    MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
-                        "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Company + "\n" + missing_ContactNo, "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    count++;
                 }
-                else
+
+                if (count >= 1)
                 {
-                    var gendervalue = "Male";
-                    if (supplierForm_new_genderfemale_rdBtn.Checked == true)
+                    supplierForm_new_supplierID_lbl.Text = "";
+                    Random rand = new Random();
+                    NumberRandom = rand.Next(111111, 999999);
+                    supplierForm_new_supplierID_lbl.Text = NumberRandom.ToString();
+                    MessageBox.Show("Duplicate supplier found with the same ID, Creating nother new ID number. Please click add again. Thank you.", "Duplicate ID found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (count == 0)
+                {
+                    String missing_Firstname = Validates(supplierForm_new_firstname_txtBox.Text) ? "First name" : "";
+                    String missing_Middlename = Validates(supplierForm_new_middlename_txtBox.Text) ? "Middle name" : "";
+                    String missing_Lastname = Validates(supplierForm_new_lastname_txtBox.Text) ? "Last name" : "";
+                    String missing_Company = Validates(supplierForm_new_companyName_txtBox.Text) ? "Company" : "";
+                    String missing_ContactNo = Validates(supplierForm_new_contactno_txtBox.Text) ? "Contact no." : "";
+
+                    if (supplierForm_new_firstname_txtBox.Text == "" || supplierForm_new_middlename_txtBox.Text == "" || supplierForm_new_lastname_txtBox.Text == "" || supplierForm_new_companyName_txtBox.Text == "" || supplierForm_new_contactno_txtBox.Text == "")
                     {
-                        gendervalue = "Female";
+                        MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
+                            "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Company + "\n" + missing_ContactNo, "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
+                    else
+                    {
+                        var gendervalue = "Male";
+                        if (supplierForm_new_genderfemale_rdBtn.Checked == true)
+                        {
+                            gendervalue = "Female";
+                        }
 
-                    MySqlConnection con = new MySqlConnection(myConnection);
-                    con.Open();
-                    MySqlCommand save = con.CreateCommand();
-                    save.Connection = con;
-                    save.CommandText = ("insert into supplier_table (supplier_ID,supplier_firstname,supplier_middlename" +
-                        ",supplier_lastname,supplier_gender," +
-                       "supplier_company,supplier_contactno,supplier_dateadded,supplier_lastvisit,supplier_balance,supplier_insertedby,supplier_status) values(@supplier_ID ,@supplier_firstname, @supplier_middlename,@supplier_lastname,@supplier_gender,@supplier_company,@supplier_contactno,@supplier_dateadded,@supplier_lastvisit,@supplier_balance,@supplier_insertedby,@supplier_status)");
-                    save.Parameters.AddWithValue("@supplier_ID", supplierForm_new_supplierID_lbl.Text);
-                    save.Parameters.AddWithValue("@supplier_firstname", supplierForm_new_firstname_txtBox.Text);
-                    save.Parameters.AddWithValue("@supplier_middlename", supplierForm_new_middlename_txtBox.Text);
-                    save.Parameters.AddWithValue("@supplier_lastname", supplierForm_new_lastname_txtBox.Text);
-                    save.Parameters.AddWithValue("@supplier_gender", gendervalue);
-                    save.Parameters.AddWithValue("@supplier_company", supplierForm_new_companyName_txtBox.Text);
-                    save.Parameters.AddWithValue("@supplier_contactno", supplierForm_new_contactno_txtBox.Text);
-                    save.Parameters.AddWithValue("@supplier_dateadded", DateTime.Now.ToString());
-                    save.Parameters.AddWithValue("@supplier_lastvisit", "N/A");
-                    save.Parameters.AddWithValue("@supplier_balance", 0);
-                    save.Parameters.AddWithValue("@supplier_insertedby", Supplier_user_Firstname.Text);
-                    save.Parameters.AddWithValue("@supplier_status", "ACTIVE");
-                    save.ExecuteNonQuery();
-                    con.Close();
-                    MessageBox.Show("New Supplier added!" + "Supplier ID is " + supplierForm_new_supplierID_lbl.Text);
-                    fillSupplierlist();
-                    supplierForm_new_firstname_txtBox.Clear(); supplierForm_new_middlename_txtBox.Clear(); supplierForm_new_lastname_txtBox.Clear();
-                    supplierForm_new_companyName_txtBox.Clear(); supplierForm_new_contactno_txtBox.Clear(); ; supplierForm_new_gendermale_rdBtn.Checked = true;
-                    supplierForm_new_companyName_txtBox.Clear(); supplierForm_supplierdetails_grpBox.Visible = true;
-                    supplierForm_new_supplier_grpBox.Visible = false; supplierForm_addnewuser_btn.Text = "Add new supplier "; supplierForm_supplierlist_lstView.Enabled = true;
-                    supplierForm_refreshlist_btn.Enabled = true; customerForm_POS_btn.Enabled=true; customerForm_inventory_btn.Enabled = true; customerForm_sales_btn.Enabled = true; customerForm_supplier_btn.Enabled = true;
+                        MySqlConnection con = new MySqlConnection(myConnection);
+                        con.Open();
+                        MySqlCommand save = con.CreateCommand();
+                        save.Connection = con;
+                        save.CommandText = ("insert into supplier_table (supplier_ID,supplier_firstname,supplier_middlename" +
+                            ",supplier_lastname,supplier_gender," +
+                           "supplier_company,supplier_contactno,supplier_dateadded,supplier_lastvisit,supplier_balance,supplier_insertedby,supplier_status) values(@supplier_ID ,@supplier_firstname, @supplier_middlename,@supplier_lastname,@supplier_gender,@supplier_company,@supplier_contactno,@supplier_dateadded,@supplier_lastvisit,@supplier_balance,@supplier_insertedby,@supplier_status)");
+                        save.Parameters.AddWithValue("@supplier_ID", supplierForm_new_supplierID_lbl.Text);
+                        save.Parameters.AddWithValue("@supplier_firstname", supplierForm_new_firstname_txtBox.Text);
+                        save.Parameters.AddWithValue("@supplier_middlename", supplierForm_new_middlename_txtBox.Text);
+                        save.Parameters.AddWithValue("@supplier_lastname", supplierForm_new_lastname_txtBox.Text);
+                        save.Parameters.AddWithValue("@supplier_gender", gendervalue);
+                        save.Parameters.AddWithValue("@supplier_company", supplierForm_new_companyName_txtBox.Text);
+                        save.Parameters.AddWithValue("@supplier_contactno", supplierForm_new_contactno_txtBox.Text);
+                        save.Parameters.AddWithValue("@supplier_dateadded", DateTime.Now.ToString());
+                        save.Parameters.AddWithValue("@supplier_lastvisit", "N/A");
+                        save.Parameters.AddWithValue("@supplier_balance", 0);
+                        save.Parameters.AddWithValue("@supplier_insertedby", Supplier_user_Firstname.Text);
+                        save.Parameters.AddWithValue("@supplier_status", "ACTIVE");
+                        save.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("New Supplier added!" + "Supplier ID is " + supplierForm_new_supplierID_lbl.Text);
+                        fillSupplierlist();
+                        supplierForm_new_firstname_txtBox.Clear(); supplierForm_new_middlename_txtBox.Clear(); supplierForm_new_lastname_txtBox.Clear();
+                        supplierForm_new_companyName_txtBox.Clear(); supplierForm_new_contactno_txtBox.Clear(); ; supplierForm_new_gendermale_rdBtn.Checked = true;
+                        supplierForm_new_companyName_txtBox.Clear(); supplierForm_supplierdetails_grpBox.Visible = true;
+                        supplierForm_new_supplier_grpBox.Visible = false; supplierForm_addnewuser_btn.Text = "Add new supplier "; supplierForm_supplierlist_lstView.Enabled = true;
+                        supplierForm_refreshlist_btn.Enabled = true; customerForm_POS_btn.Enabled = true; customerForm_inventory_btn.Enabled = true; customerForm_sales_btn.Enabled = true; customerForm_supplier_btn.Enabled = true;
+                    }
                 }
+
+                conn.Close();
             }
             catch (Exception tangina)
             {
@@ -491,6 +517,66 @@ namespace YvonnieStore_Beta_2_
         private void supplierForm_addnewusertoDB_btn_Click(object sender, EventArgs e)
         {
             add_new_supplier();
+        }
+
+        private void customerForm_POS_btn_Click(object sender, EventArgs e)
+        {
+            POS_Form toPOSForm = new POS_Form();
+            toPOSForm.POS_user_Firstname.Text = Supplier_user_Firstname.Text;
+            toPOSForm.POS_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toPOSForm.account_level.Text = account_level.Text;
+            this.Close();
+            toPOSForm.Show();
+        }
+
+        private void customerForm_inventory_btn_Click(object sender, EventArgs e)
+        {
+            inventory_Form toInventory = new inventory_Form();
+            toInventory.inventoryForm_user_Firstname.Text = Supplier_user_Firstname.Text;
+            toInventory.inventoryForm_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toInventory.account_level.Text = account_level.Text;
+            this.Close();
+            toInventory.Show();
+        }
+
+        private void customerForm_supplier_btn_Click(object sender, EventArgs e)
+        {
+            customer_form toCustomer = new customer_form();
+            toCustomer.Customer_user_Firstname.Text = Supplier_user_Firstname.Text;
+            toCustomer.Customer_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toCustomer.account_level.Text = account_level.Text;
+            this.Close();
+            toCustomer.Show();
+        }
+
+        private void customerForm_sales_btn_Click(object sender, EventArgs e)
+        {
+            sales_form toSalesForm = new sales_form();
+            toSalesForm.salesForm_user_Firstname.Text = Supplier_user_Firstname.Text;
+            toSalesForm.salesForm_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toSalesForm.account_level.Text = account_level.Text;
+            this.Close();
+            toSalesForm.Show();
+        }
+
+        private void customerForm_users_btn_Click(object sender, EventArgs e)
+        {
+            employees_Form toUserForm = new employees_Form();
+            toUserForm.employeeForm_user_firstname.Text = Supplier_user_Firstname.Text;
+            toUserForm.employeeForm_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toUserForm.account_level.Text = account_level.Text;
+            this.Close();
+            toUserForm.Show();
+        }
+
+        private void customerForm_transactions_btn_Click(object sender, EventArgs e)
+        {
+            Transaction_Form toTransactionForm = new Transaction_Form();
+            toTransactionForm.Transaction_user_Firstname.Text = Supplier_user_Firstname.Text;
+            toTransactionForm.Transaction_user_idnumber.Text = Supplier_user_idnumber.Text;
+            toTransactionForm.account_level.Text = account_level.Text;
+            this.Close();
+            toTransactionForm.Show();
         }
     }
 }

@@ -46,72 +46,12 @@ namespace YvonnieStore_Beta_2_
             try
             {
                 MySqlConnection connection = new MySqlConnection(myConnection);
-                transactionForm_HistoryList_lstView.Items.Clear();
-                connection.Close();
-
-                connection.Open();
-                MySqlCommand command = connection.CreateCommand();
-                string query = "select * from transaction_table";
-                command.CommandText = query;
-                MySqlDataReader read = command.ExecuteReader();
-
-                while (read.Read())
-                {
-                    ListViewItem item = new ListViewItem(read["transaction_ID"].ToString());
-                    item.SubItems.Add(read["transaction_date_made"].ToString());
-                    item.SubItems.Add(read["transaction_user"].ToString());
-                    
-                    transactionForm_HistoryList_lstView.Items.Add(item);
-                    transactionForm_HistoryList_lstView.FullRowSelect = true;
-
-                }
-                connection.Close();
-                int J = 0;
-                foreach (ListViewItem item1 in transactionForm_HistoryList_lstView.Items)
-                {
-                    //J+1 to do not repeat the list from first and remove itself just take a look on next items              
-                    for (int i = J; i < transactionForm_HistoryList_lstView.Items.Count - 1; i++)
-                    {
-
-                        //i compare two subitems that must be unique in my list
-                        if (transactionForm_HistoryList_lstView.Items[J].SubItems[0].ToString() == transactionForm_HistoryList_lstView.Items[i].SubItems[0].ToString())
-
-                            //transactionForm_HistoryList_lstView.Items.RemoveAt(i); // remove the second one 
-                            transactionForm_HistoryList_lstView.Items.RemoveAt(J); // remove the first one and keep the second
-                    }
-                    J++;
-                }
-                transactionForm_HistoryList_lstView.Items[transactionForm_HistoryList_lstView.Items.Count - 1].Remove();
-
-
-                //for (int i = 0; i < transactionForm_HistoryList_lstView.Items.Count - 1; i++)
-                //{
-                //    if (transactionForm_HistoryList_lstView.Items[i].Tag == transactionForm_HistoryList_lstView.Items[i + 1].Tag)
-                //    {
-                //        transactionForm_HistoryList_lstView.Items[i + 1].Remove();
-                //    }
-                //}
-            }
-
-            catch (Exception e)
-            {
-                MessageBox.Show("ERROR: " + e);
-            }
-
-        }
-
-        private void transactionForm_HistoryList_lstView_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                String selectedRow = transactionForm_HistoryList_lstView.SelectedItems[0].Text;
-                MySqlConnection connection = new MySqlConnection(myConnection);
                 transactionForm_viewTransactionLog_lstView.Items.Clear();
                 connection.Close();
 
                 connection.Open();
                 MySqlCommand command = connection.CreateCommand();
-                string query = "select * from transaction_table where transaction_ID = '" + selectedRow + "'";
+                string query = "select * from transaction_table";
                 command.CommandText = query;
                 MySqlDataReader read = command.ExecuteReader();
 
@@ -131,6 +71,7 @@ namespace YvonnieStore_Beta_2_
                     item.SubItems.Add(read["transaction_total_price"].ToString());
                     item.SubItems.Add(read["transaction_cash_rendered"].ToString());
                     item.SubItems.Add(read["transaction_change_rendered"].ToString());
+                    item.SubItems.Add(read["transaction_user"].ToString());
                     item.SubItems.Add(read["transaction_date_made"].ToString());
                     item.SubItems.Add(read["transaction_status"].ToString());
                     item.SubItems.Add(read["transaction_customer_name"].ToString());
@@ -146,6 +87,11 @@ namespace YvonnieStore_Beta_2_
             {
                 MessageBox.Show("ERROR: " + ec);
             }
+       }
+
+        private void transactionForm_HistoryList_lstView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
         }
 
         private void stopdebug_btn_Click(object sender, EventArgs e)
@@ -158,6 +104,7 @@ namespace YvonnieStore_Beta_2_
             POS_Form toPOSForm = new POS_Form();
             toPOSForm.POS_user_Firstname.Text = Transaction_user_Firstname.Text;
             toPOSForm.POS_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toPOSForm.account_level.Text = account_level.Text;
             this.Close();
             toPOSForm.Show();
         }
@@ -167,6 +114,7 @@ namespace YvonnieStore_Beta_2_
             inventory_Form toInventory = new inventory_Form();
             toInventory.inventoryForm_user_Firstname.Text = Transaction_user_Firstname.Text;
             toInventory.inventoryForm_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toInventory.account_level.Text = account_level.Text;
             this.Close();
             toInventory.Show();
         }
@@ -176,6 +124,7 @@ namespace YvonnieStore_Beta_2_
             employees_Form toEmployeeForm = new employees_Form();
             toEmployeeForm.employeeForm_user_firstname.Text = Transaction_user_Firstname.Text;
             toEmployeeForm.employeeForm_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toEmployeeForm.account_level.Text = account_level.Text;
             this.Close();
             toEmployeeForm.Show();
         }
@@ -185,13 +134,19 @@ namespace YvonnieStore_Beta_2_
             sales_form toSalesForm = new sales_form();
             toSalesForm.salesForm_user_Firstname.Text = Transaction_user_Firstname.Text;
             toSalesForm.salesForm_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toSalesForm.account_level.Text = account_level.Text;
             this.Close();
             toSalesForm.Show();
         }
 
         private void transactionForm_toSuppliers_btn_Click(object sender, EventArgs e)
         {
-
+            supplier_Form toSupplier = new supplier_Form();
+            toSupplier.Supplier_user_Firstname.Text = Transaction_user_Firstname.Text;
+            toSupplier.Supplier_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toSupplier.account_level.Text = account_level.Text;
+            this.Close();
+            toSupplier.Show();
         }
 
         private void transactionForm_toCustomer_btn_Click(object sender, EventArgs e)
@@ -199,8 +154,117 @@ namespace YvonnieStore_Beta_2_
             customer_form toCustomer = new customer_form();
             toCustomer.Customer_user_Firstname.Text = Transaction_user_Firstname.Text;
             toCustomer.Customer_user_idnumber.Text = Transaction_user_idnumber.Text;
+            toCustomer.account_level.Text = account_level.Text;
             this.Close();
             toCustomer.Show();
+        }
+
+        private void transactionForm_refreshlist_btn_Click(object sender, EventArgs e)
+        {
+            fill_TransactionList();
+        }
+
+        private void transactionForm_displayOptions_search_txtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (transactionForm_displayOptions_search_txtBox.Text == "")
+            {
+                fill_TransactionList();
+            }
+            else
+            {
+                try
+                {
+                    MySqlConnection connection = new MySqlConnection(myConnection);
+                    transactionForm_viewTransactionLog_lstView.Items.Clear();
+                    connection.Close();
+
+                    connection.Open();
+                    MySqlCommand command = connection.CreateCommand();
+                    string query = "SELECT * FROM transaction_table WHERE transaction_ID LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%' OR transaction_user LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%' OR transaction_customer_name LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%'";
+                    command.CommandText = query;
+                    MySqlDataReader read = command.ExecuteReader();
+
+                    while (read.Read())
+                    {
+
+                        ListViewItem item = new ListViewItem(read["transaction_ID"].ToString());
+                        item.SubItems.Add(read["transaction_item_ID"].ToString());
+                        item.SubItems.Add(read["transaction_item_name"].ToString());
+                        item.SubItems.Add(read["transaction_item_count"].ToString());
+                        item.SubItems.Add(read["transaction_item_category"].ToString());
+                        item.SubItems.Add(read["transaction_item_price"].ToString());
+                        item.SubItems.Add(read["transaction_item_product_line"].ToString());
+                        item.SubItems.Add(read["transaction_item_supplier"].ToString());
+                        item.SubItems.Add(read["transaction_item_additional_details"].ToString());
+                        item.SubItems.Add(read["transaction_item_expiration_date"].ToString());
+                        item.SubItems.Add(read["transaction_item_item_subtotal"].ToString());
+                        item.SubItems.Add(read["transaction_total_price"].ToString());
+                        item.SubItems.Add(read["transaction_cash_rendered"].ToString());
+                        item.SubItems.Add(read["transaction_change_rendered"].ToString());
+                        item.SubItems.Add(read["transaction_user"].ToString());
+                        item.SubItems.Add(read["transaction_date_made"].ToString());
+                        item.SubItems.Add(read["transaction_status"].ToString());
+                        item.SubItems.Add(read["transaction_customer_name"].ToString());
+
+                        transactionForm_viewTransactionLog_lstView.Items.Add(item);
+                        transactionForm_viewTransactionLog_lstView.FullRowSelect = true;
+
+                    }
+                    connection.Close();
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("ERROR SA SEARCH TRANSACTION. Contact admin");
+                }
+            }
+        }
+
+        private void transactionForm_displayoption_search_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(myConnection);
+                transactionForm_viewTransactionLog_lstView.Items.Clear();
+                connection.Close();
+
+                connection.Open();
+                MySqlCommand command = connection.CreateCommand();
+                string query = "SELECT * FROM transaction_table WHERE transaction_ID LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%' OR transaction_user LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%' OR transaction_customer_name LIKE '%" + transactionForm_displayOptions_search_txtBox.Text + "%'";
+                command.CommandText = query;
+                MySqlDataReader read = command.ExecuteReader();
+
+                while (read.Read())
+                {
+
+                    ListViewItem item = new ListViewItem(read["transaction_ID"].ToString());
+                    item.SubItems.Add(read["transaction_item_ID"].ToString());
+                    item.SubItems.Add(read["transaction_item_name"].ToString());
+                    item.SubItems.Add(read["transaction_item_count"].ToString());
+                    item.SubItems.Add(read["transaction_item_category"].ToString());
+                    item.SubItems.Add(read["transaction_item_price"].ToString());
+                    item.SubItems.Add(read["transaction_item_product_line"].ToString());
+                    item.SubItems.Add(read["transaction_item_supplier"].ToString());
+                    item.SubItems.Add(read["transaction_item_additional_details"].ToString());
+                    item.SubItems.Add(read["transaction_item_expiration_date"].ToString());
+                    item.SubItems.Add(read["transaction_item_item_subtotal"].ToString());
+                    item.SubItems.Add(read["transaction_total_price"].ToString());
+                    item.SubItems.Add(read["transaction_cash_rendered"].ToString());
+                    item.SubItems.Add(read["transaction_change_rendered"].ToString());
+                    item.SubItems.Add(read["transaction_user"].ToString());
+                    item.SubItems.Add(read["transaction_date_made"].ToString());
+                    item.SubItems.Add(read["transaction_status"].ToString());
+                    item.SubItems.Add(read["transaction_customer_name"].ToString());
+
+                    transactionForm_viewTransactionLog_lstView.Items.Add(item);
+                    transactionForm_viewTransactionLog_lstView.FullRowSelect = true;
+
+                }
+                connection.Close();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("ERROR SA SEARCH TRANSACTION. Contact admin");
+            }
         }
     }
 }

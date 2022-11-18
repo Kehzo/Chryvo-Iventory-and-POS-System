@@ -262,101 +262,126 @@ namespace YvonnieStore_Beta_2_
         }
         public void add_new_customer()
         {
-            String missing_Firstname = Validates(customerForm_new_firstname_txtBox.Text) ? "First name" : "";
-            String missing_Middlename = Validates(customerForm_new_middlename_txtBox.Text) ? "Middle name" : "";
-            String missing_Lastname = Validates(customerForm_new_lastname_txtBox.Text) ? "Last name" : "";
-            String missing_Address = Validates(customerForm_new_address_txtBox.Text) ? "Address" : "";
-            String missing_ContactNo = Validates(customerForm_new_contactno_txtBox.Text) ? "Contact no." : "";
+            MySqlConnection conn = new MySqlConnection(myConnection);
 
-            if (customerForm_new_firstname_txtBox.Text == "" || customerForm_new_middlename_txtBox.Text == "" || customerForm_new_lastname_txtBox.Text == "" || customerForm_new_address_txtBox.Text == "" || customerForm_new_contactno_txtBox.Text == "")
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+            string query0 = "select * from customer_table where customer_ID   = '" + customerForm_new_customerID_lbl.Text + "'";
+            command.CommandText = query0;
+            MySqlDataReader read = command.ExecuteReader();
+
+            int count = 0;
+            while (read.Read())
             {
-                MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
-                    "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Address + "\n" + missing_ContactNo, "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                count++;
             }
-            else if (customerForm_new_signiture_pctrBox.Image == null)
+
+            if (count >= 1)
             {
-                MessageBox.Show("Signiture field is empty. Please attach image of new employees' signiture to proceed.");
+                customerForm_new_customerID_lbl.Text = "";
+                Random rand = new Random();
+                NumberRandom = rand.Next(111111, 999999);
+                customerForm_new_customerID_lbl.Text = NumberRandom.ToString();
+                MessageBox.Show("Duplicate customer recprd found with the same ID, Creating nother new ID number. Please click add again. Thank you.", "Duplicate ID found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (customerForm_new_employeePhoto_pctrBox.Image == null)
+            else if (count == 0)
             {
-                MessageBox.Show("Employee photo field is empty. Please attach image of new employees' photo to proceed.");
-            }
-            else
-            {
-                var gendervalue = "Male";
-                if (customerForm_new_genderfemale_rdBtn.Checked == true)
+                String missing_Firstname = Validates(customerForm_new_firstname_txtBox.Text) ? "First name" : "";
+                String missing_Middlename = Validates(customerForm_new_middlename_txtBox.Text) ? "Middle name" : "";
+                String missing_Lastname = Validates(customerForm_new_lastname_txtBox.Text) ? "Last name" : "";
+                String missing_Address = Validates(customerForm_new_address_txtBox.Text) ? "Address" : "";
+                String missing_ContactNo = Validates(customerForm_new_contactno_txtBox.Text) ? "Contact no." : "";
+
+                if (customerForm_new_firstname_txtBox.Text == "" || customerForm_new_middlename_txtBox.Text == "" || customerForm_new_lastname_txtBox.Text == "" || customerForm_new_address_txtBox.Text == "" || customerForm_new_contactno_txtBox.Text == "")
                 {
-                    gendervalue = "Female";
+                    MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
+                        "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Address + "\n" + missing_ContactNo, "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-
-                byte[] ImageSaveDefaultPicture = null;
-                byte[] ImageSaveDefaultSigniture = null;
-                string photoCustomer = customerForm_customerPhoto_path_txtBox.Text;
-                string photoSigniturePhoto = customerForm_customerSigniture_path_txtBox.Text;
-                byte[] Employeeimage;
-                byte[] Signitureimage;
-
-                FileStream readEmployeePhoto = new FileStream(photoCustomer, FileMode.Open, FileAccess.Read);
-                FileStream readEmployeeSigniture = new FileStream(photoSigniturePhoto, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(readEmployeePhoto);
-                Employeeimage = br.ReadBytes((int)readEmployeePhoto.Length);
-                BinaryReader br2 = new BinaryReader(readEmployeeSigniture);
-                Signitureimage = br2.ReadBytes((int)readEmployeeSigniture.Length);
-                br.Close();
-                readEmployeePhoto.Close();
-                br2.Close();
-                readEmployeeSigniture.Close();
-                if (imagechecker == false)
+                else if (customerForm_new_signiture_pctrBox.Image == null)
                 {
-                    FileStream FileSt = new FileStream(CustomerNewDefaultPic, FileMode.Open, FileAccess.Read);
-                    BinaryReader ReaderBinary = new BinaryReader(FileSt);
-                    ImageSaveDefaultPicture = ReaderBinary.ReadBytes((int)FileSt.Length);
-                    FileStream FileSt2 = new FileStream(CustomerNewDefaultSigniture, FileMode.Open, FileAccess.Read);
-                    BinaryReader ReaderBinary2 = new BinaryReader(FileSt);
-                    ImageSaveDefaultSigniture = ReaderBinary.ReadBytes((int)FileSt.Length);
-                    ReaderBinary.Close();
-                    FileSt.Close();
-                    FileSt2.Close();
+                    MessageBox.Show("Signiture field is empty. Please attach image of new employees' signiture to proceed.");
                 }
+                else if (customerForm_new_employeePhoto_pctrBox.Image == null)
+                {
+                    MessageBox.Show("Employee photo field is empty. Please attach image of new employees' photo to proceed.");
+                }
+                else
+                {
+                    var gendervalue = "Male";
+                    if (customerForm_new_genderfemale_rdBtn.Checked == true)
+                    {
+                        gendervalue = "Female";
+                    }
 
-                MySqlConnection con = new MySqlConnection(myConnection);
-                con.Open();
-                MySqlCommand save = con.CreateCommand();
-                save.Connection = con;
-                save.CommandText = ("insert into customer_table (customer_ID ,customer_firstname,customer_middlename" +
-                    ",customer_lastname,customer_birthdate," +
-                   "customer_gender,customer_address,customer_contactno,customer_registered,customer_lastpurchased,customer_balance,customer_insertedby" +
-                   ",customer_status,customer_photo,customer_signiturephoto,customer_updatedby) values(@customer_ID,@customer_firstname, @customer_middlename,@customer_lastname,@customer_birthdate,@customer_gender,@customer_address,@customer_contactno,@customer_registered,@customer_lastpurchased,@customer_balance,@customer_insertedby,@customer_status,@customer_photo,@customer_signiturephoto,@customer_updatedby)");
-                save.Parameters.AddWithValue("@customer_ID", customerForm_new_customerID_lbl.Text);
-                save.Parameters.AddWithValue("@customer_firstname", customerForm_new_firstname_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_middlename", customerForm_new_middlename_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_lastname", customerForm_new_lastname_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_birthdate", customerForm_new_employeeDOB_DTpicker.Text);
-                save.Parameters.AddWithValue("@customer_gender", gendervalue);
-                save.Parameters.AddWithValue("@customer_address", customerForm_new_address_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_contactno", customerForm_new_contactno_txtBox.Text);
-                save.Parameters.AddWithValue("@customer_registered", DateTime.Now.ToString());
-                save.Parameters.AddWithValue("@customer_lastpurchased", "N/A");
-                save.Parameters.AddWithValue("@customer_balance", "N/A");
-                save.Parameters.AddWithValue("@customer_insertedby", Customer_user_Firstname.Text);
-                save.Parameters.AddWithValue("@customer_status", "ACTIVE");
-                save.Parameters.Add("@customer_photo", MySqlDbType.Blob);
-                save.Parameters["@customer_photo"].Value = Employeeimage;
-                save.Parameters.Add("@customer_signiturephoto", MySqlDbType.Blob);
-                save.Parameters["@customer_signiturephoto"].Value = Signitureimage;
-                save.Parameters.AddWithValue("@customer_updatedby", "N/A");
-                save.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("New customer added!" + "Customer ID is " + customerForm_new_customerID_lbl.Text);
-                fillCustomerlist();
-                customerForm_new_firstname_txtBox.Clear(); customerForm_new_middlename_txtBox.Clear(); customerForm_new_lastname_txtBox.Clear();
-                customerForm_new_address_txtBox.Clear(); customerForm_new_contactno_txtBox.Clear();; customerForm_new_gendermale_rdBtn.Checked = true;
-                customerForm_customerPhoto_path_txtBox.Clear(); customerForm_customerSigniture_path_txtBox.Clear(); customerForm_customerdetails_grpBox.Visible = true;
-                employeeForm_new_employee_grpBox.Visible = false; customerForm_addnewuser_btn.Text = "Add new customer "; customerForm_customerlist_lstView.Enabled = true;
-                customerForm_refreshlist_btn.Enabled = true; 
+                    byte[] ImageSaveDefaultPicture = null;
+                    byte[] ImageSaveDefaultSigniture = null;
+                    string photoCustomer = customerForm_customerPhoto_path_txtBox.Text;
+                    string photoSigniturePhoto = customerForm_customerSigniture_path_txtBox.Text;
+                    byte[] Employeeimage;
+                    byte[] Signitureimage;
+
+                    FileStream readEmployeePhoto = new FileStream(photoCustomer, FileMode.Open, FileAccess.Read);
+                    FileStream readEmployeeSigniture = new FileStream(photoSigniturePhoto, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(readEmployeePhoto);
+                    Employeeimage = br.ReadBytes((int)readEmployeePhoto.Length);
+                    BinaryReader br2 = new BinaryReader(readEmployeeSigniture);
+                    Signitureimage = br2.ReadBytes((int)readEmployeeSigniture.Length);
+                    br.Close();
+                    readEmployeePhoto.Close();
+                    br2.Close();
+                    readEmployeeSigniture.Close();
+                    if (imagechecker == false)
+                    {
+                        FileStream FileSt = new FileStream(CustomerNewDefaultPic, FileMode.Open, FileAccess.Read);
+                        BinaryReader ReaderBinary = new BinaryReader(FileSt);
+                        ImageSaveDefaultPicture = ReaderBinary.ReadBytes((int)FileSt.Length);
+                        FileStream FileSt2 = new FileStream(CustomerNewDefaultSigniture, FileMode.Open, FileAccess.Read);
+                        BinaryReader ReaderBinary2 = new BinaryReader(FileSt);
+                        ImageSaveDefaultSigniture = ReaderBinary.ReadBytes((int)FileSt.Length);
+                        ReaderBinary.Close();
+                        FileSt.Close();
+                        FileSt2.Close();
+                    }
+
+                    MySqlConnection con = new MySqlConnection(myConnection);
+                    con.Open();
+                    MySqlCommand save = con.CreateCommand();
+                    save.Connection = con;
+                    save.CommandText = ("insert into customer_table (customer_ID ,customer_firstname,customer_middlename" +
+                        ",customer_lastname,customer_birthdate," +
+                       "customer_gender,customer_address,customer_contactno,customer_registered,customer_lastpurchased,customer_balance,customer_insertedby" +
+                       ",customer_status,customer_photo,customer_signiturephoto,customer_updatedby) values(@customer_ID,@customer_firstname, @customer_middlename,@customer_lastname,@customer_birthdate,@customer_gender,@customer_address,@customer_contactno,@customer_registered,@customer_lastpurchased,@customer_balance,@customer_insertedby,@customer_status,@customer_photo,@customer_signiturephoto,@customer_updatedby)");
+                    save.Parameters.AddWithValue("@customer_ID", customerForm_new_customerID_lbl.Text);
+                    save.Parameters.AddWithValue("@customer_firstname", customerForm_new_firstname_txtBox.Text);
+                    save.Parameters.AddWithValue("@customer_middlename", customerForm_new_middlename_txtBox.Text);
+                    save.Parameters.AddWithValue("@customer_lastname", customerForm_new_lastname_txtBox.Text);
+                    save.Parameters.AddWithValue("@customer_birthdate", customerForm_new_employeeDOB_DTpicker.Text);
+                    save.Parameters.AddWithValue("@customer_gender", gendervalue);
+                    save.Parameters.AddWithValue("@customer_address", customerForm_new_address_txtBox.Text);
+                    save.Parameters.AddWithValue("@customer_contactno", customerForm_new_contactno_txtBox.Text);
+                    save.Parameters.AddWithValue("@customer_registered", DateTime.Now.ToString());
+                    save.Parameters.AddWithValue("@customer_lastpurchased", "N/A");
+                    save.Parameters.AddWithValue("@customer_balance", "N/A");
+                    save.Parameters.AddWithValue("@customer_insertedby", Customer_user_Firstname.Text);
+                    save.Parameters.AddWithValue("@customer_status", "ACTIVE");
+                    save.Parameters.Add("@customer_photo", MySqlDbType.Blob);
+                    save.Parameters["@customer_photo"].Value = Employeeimage;
+                    save.Parameters.Add("@customer_signiturephoto", MySqlDbType.Blob);
+                    save.Parameters["@customer_signiturephoto"].Value = Signitureimage;
+                    save.Parameters.AddWithValue("@customer_updatedby", "N/A");
+                    save.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("New customer added!" + "Customer ID is " + customerForm_new_customerID_lbl.Text);
+                    fillCustomerlist();
+                    customerForm_new_firstname_txtBox.Clear(); customerForm_new_middlename_txtBox.Clear(); customerForm_new_lastname_txtBox.Clear();
+                    customerForm_new_address_txtBox.Clear(); customerForm_new_contactno_txtBox.Clear(); ; customerForm_new_gendermale_rdBtn.Checked = true;
+                    customerForm_customerPhoto_path_txtBox.Clear(); customerForm_customerSigniture_path_txtBox.Clear(); customerForm_customerdetails_grpBox.Visible = true;
+                    employeeForm_new_employee_grpBox.Visible = false; customerForm_addnewuser_btn.Text = "Add new customer "; customerForm_customerlist_lstView.Enabled = true;
+                    customerForm_refreshlist_btn.Enabled = true;
+                }
             }
 
-
+            conn.Close();
         }
         public void updateCustomer()
         {
@@ -628,6 +653,7 @@ namespace YvonnieStore_Beta_2_
             POS_Form toPOSForm = new POS_Form();
             toPOSForm.POS_user_Firstname.Text = Customer_user_Firstname.Text;
             toPOSForm.POS_user_idnumber.Text = Customer_user_idnumber.Text;
+            toPOSForm.account_level.Text = account_level.Text;
             this.Close();
             toPOSForm.Show();
         }
@@ -637,6 +663,7 @@ namespace YvonnieStore_Beta_2_
             inventory_Form toInventory = new inventory_Form();
             toInventory.inventoryForm_user_Firstname.Text = Customer_user_Firstname.Text;
             toInventory.inventoryForm_user_idnumber.Text = Customer_user_idnumber.Text;
+            toInventory.account_level.Text = account_level.Text;
             this.Close();
             toInventory.Show();
         }
@@ -646,6 +673,7 @@ namespace YvonnieStore_Beta_2_
             sales_form toSalesForm = new sales_form();
             toSalesForm.salesForm_user_Firstname.Text = Customer_user_Firstname.Text;
             toSalesForm.salesForm_user_idnumber.Text = Customer_user_idnumber.Text;
+            toSalesForm.account_level.Text = account_level.Text;
             this.Close();
             toSalesForm.Show();
         }
@@ -655,6 +683,7 @@ namespace YvonnieStore_Beta_2_
             employees_Form toEmployeeForm = new employees_Form();
             toEmployeeForm.employeeForm_user_firstname.Text = Customer_user_Firstname.Text;
             toEmployeeForm.employeeForm_user_idnumber.Text = Customer_user_idnumber.Text;
+            toEmployeeForm.account_level.Text = account_level.Text;
             this.Close();
             toEmployeeForm.Show();
         }
@@ -664,13 +693,19 @@ namespace YvonnieStore_Beta_2_
             Transaction_Form toTransactionForm = new Transaction_Form();
             toTransactionForm.Transaction_user_Firstname.Text = Customer_user_Firstname.Text;
             toTransactionForm.Transaction_user_idnumber.Text = Customer_user_idnumber.Text;
+            toTransactionForm.account_level.Text = account_level.Text;
             this.Close();
             toTransactionForm.Show();
         }
 
         private void customerForm_supplier_btn_Click(object sender, EventArgs e)
         {
-
+            supplier_Form toSupplier = new supplier_Form();
+            toSupplier.Supplier_user_Firstname.Text = Customer_user_Firstname.Text;
+            toSupplier.Supplier_user_idnumber.Text = Customer_user_idnumber.Text;
+            toSupplier.account_level.Text = account_level.Text;
+            this.Close();
+            toSupplier.Show();
         }
     }
 }

@@ -59,6 +59,7 @@ namespace YvonnieStore_Beta_2_
                 connection.Close();
                 if (count1 == 1)
                 {
+                    string firstname = ""; string lastname = ""; string ID = ""; string pass = ""; string accLevel = ""; string accStatus = "";
                     MySqlCommand copro3 = new MySqlCommand();
                     connection.Open();
                     copro3.Connection = connection;
@@ -66,30 +67,65 @@ namespace YvonnieStore_Beta_2_
                     MySqlDataReader copro = copro3.ExecuteReader();
                     while (copro.Read())
                     {
-                        string firstname = (copro["firstname"].ToString());
-                        string lastname = (copro["lastname"].ToString());
-                        string ID = (copro["id_number"].ToString());
-                        string pass = (copro["password"].ToString());
-                            if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text)
-                            {
-                                MessageBox.Show("Welcome! " + firstname + " " + lastname, "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                POS_Form POS_Form = new POS_Form();
-                                POS_Form.Show();
-                                POS_Form.POS_user_Firstname.Text = firstname;
-                                POS_Form.POS_user_idnumber.Text = ID;
-                                this.Hide();
-
-                            }
-                        
+                         firstname = (copro["firstname"].ToString());
+                         lastname = (copro["lastname"].ToString());
+                         ID = (copro["id_number"].ToString());
+                         pass = (copro["password"].ToString());
+                         accLevel = (copro["account_level"].ToString());
+                         accStatus = (copro["account_status"].ToString());
                     }
-
-
+                    if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text && accLevel == "16" && accStatus == "1")
+                    {
+                        connection.Close();
+                        connection.Open();
+                        MySqlCommand command2 = connection.CreateCommand();
+                        string query1 = "update useraccounts set last_in = '" + DateTime.Now.ToString() + "' where id_number  = '" + usernametxtbox.Text + "'";
+                        command2.CommandText = query1;
+                        command2.ExecuteNonQuery();
+                        MessageBox.Show("Welcome BACK! " + firstname + " " + lastname+ ", YOU HAVE LOGGED IN A SUPER ADMIN ACCOUNT", "SUPER ADMIN ACCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        POS_Form POS_Form = new POS_Form();
+                        POS_Form.Show();
+                        POS_Form.POS_user_Firstname.Text = firstname;
+                        POS_Form.POS_user_idnumber.Text = ID;
+                        POS_Form.account_level.Text = "16";
+                        this.Hide();
+                    }
+                    else if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text && accLevel != "2" && accStatus == "1")
+                    {
+                        connection.Close();
+                        connection.Open();
+                        MySqlCommand command2 = connection.CreateCommand();
+                        string query1 = "update useraccounts set last_in = '" + DateTime.Now.ToString() + "' where id_number  = '" + usernametxtbox.Text + "'";
+                        command2.CommandText = query1;
+                        command2.ExecuteNonQuery();
+                        MessageBox.Show("Welcome! " + firstname + " " + lastname, "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        POS_Form POS_Form = new POS_Form();
+                        POS_Form.Show();
+                        POS_Form.POS_user_Firstname.Text = firstname;
+                        POS_Form.POS_user_idnumber.Text = ID;
+                        POS_Form.account_level.Text = "1";
+                        this.Hide();
+                    }
+                    else if (ID == usernametxtbox.Text && pass == passwordtxtbox.Text && accLevel != "2" && accStatus != "1")
+                    {
+                        usernametxtbox.Text = "";
+                        passwordtxtbox.Text = "";
+                        usernametxtbox.Focus();
+                        MessageBox.Show("Account entered is not active. Please contact admin", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        usernametxtbox.Text = "";
+                        passwordtxtbox.Text = "";
+                        usernametxtbox.Focus();
+                        MessageBox.Show("Account entered has no access privilages. Please contact admin", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
                 }
                 else
                 {
                     usernametxtbox.Text = "";
                     passwordtxtbox.Text = "";
-                    MessageBox.Show(this, "Login Failed, No account found", "Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(this, "Login Failed, No account was found", "No account found!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     usernametxtbox.Focus();
 
                 }

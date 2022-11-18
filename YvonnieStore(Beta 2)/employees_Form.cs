@@ -131,109 +131,138 @@ namespace YvonnieStore_Beta_2_
         //ADD ITEM TO INVENTORY METHOD START HERE//
         public void add_new_user()
         {
-            String missing_Firstname = Validates(employeeForm_new_firstname_txtBox.Text) ? "First name" : "";
-            String missing_Middlename = Validates(employeeForm_new_middlename_txtBox.Text) ? "Middle name" : "";
-            String missing_Lastname = Validates(employeeForm_new_lastname_txtBox.Text) ? "Last name" : "";
-            String missing_Address = Validates(employeeForm_new_address_txtBox.Text) ? "Address" : "";
-            String missing_ContactNo = Validates(employeeForm_new_contactno_txtBox.Text) ? "Contact no." : "";
-            String missing_Password = Validates(employeeForm_new_password_txtBox.Text) ? "Password" : "";
+            MySqlConnection conn = new MySqlConnection(myConnection);
 
-            if (employeeForm_new_firstname_txtBox.Text == "" || employeeForm_new_middlename_txtBox.Text == "" || employeeForm_new_lastname_txtBox.Text == "" || employeeForm_new_address_txtBox.Text == "" || employeeForm_new_contactno_txtBox.Text == "" || employeeForm_new_password_txtBox.Text == "")
+            conn.Open();
+            MySqlCommand command = conn.CreateCommand();
+            string query0 = "select * from useraccounts where id_number = '" + employeeForm_new_employeeID_lbl.Text + "'";
+            command.CommandText = query0;
+            MySqlDataReader read = command.ExecuteReader();
+
+            int count = 0;
+            while (read.Read())
             {
-                MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
-                    "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Address + "\n" + missing_ContactNo + "\n" + missing_Password , "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                count++;
             }
-            else if (employeeForm_new_signiture_pctrBox.Image == null)
+
+            if (count >=1)
             {
-                MessageBox.Show("Signiture field is empty. Please attach image of new employees' signiture to proceed.");
+                ResetForm(); employeeForm_new_employeeID_lbl.Text = NumberRandom.ToString();
+                MessageBox.Show("Duplicate account found with the same ID, Creating nother new ID number. Please click add again. Thank you.", "Duplicate ID found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (employeeForm_new_employeePhoto_pctrBox.Image == null)
+            else if (count == 0)
             {
-                MessageBox.Show("Employee photo field is empty. Please attach image of new employees' photo to proceed.");
-            }
-            else
-            {
-                int account_level_value = 1;
-                int gendervalue = 0;
-                if (employeeForm_new_acctypeAdmin_rdBtn.Checked == true)
+                String missing_Firstname = Validates(employeeForm_new_firstname_txtBox.Text) ? "First name" : "";
+                String missing_Middlename = Validates(employeeForm_new_middlename_txtBox.Text) ? "Middle name" : "";
+                String missing_Lastname = Validates(employeeForm_new_lastname_txtBox.Text) ? "Last name" : "";
+                String missing_Address = Validates(employeeForm_new_address_txtBox.Text) ? "Address" : "";
+                String missing_ContactNo = Validates(employeeForm_new_contactno_txtBox.Text) ? "Contact no." : "";
+                String missing_Password = Validates(employeeForm_new_password_txtBox.Text) ? "Password" : "";
+
+                if (employeeForm_new_firstname_txtBox.Text == "" || employeeForm_new_middlename_txtBox.Text == "" || employeeForm_new_lastname_txtBox.Text == "" || employeeForm_new_address_txtBox.Text == "" || employeeForm_new_contactno_txtBox.Text == "" || employeeForm_new_password_txtBox.Text == "")
                 {
-                    account_level_value = 0;
+                    MessageBox.Show("Please fill up the following blank spaces:" + "\n" + missing_Firstname +
+                        "\n" + missing_Middlename + "\n" + missing_Lastname + "\n" + missing_Address + "\n" + missing_ContactNo + "\n" + missing_Password, "Following fields are empty!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                if (employeeForm_new_genderfemale_rdBtn.Checked == true)
+                else if (employeeForm_new_signiture_pctrBox.Image == null)
                 {
-                    gendervalue = 1;
+                    MessageBox.Show("Signiture field is empty. Please attach image of new employees' signiture to proceed.");
                 }
-
-                byte[] ImageSaveDefaultPicture = null;
-                byte[] ImageSaveDefaultSigniture = null;
-                string photoEmployeePhoto = employeeForm_employeePhoto_path_txtBox.Text;
-                string photoSigniturePhoto = employeeForm_employeeSigniture_path_txtBox.Text;
-                byte[] Employeeimage;
-                byte[] Signitureimage;
-
-                FileStream readEmployeePhoto = new FileStream(photoEmployeePhoto, FileMode.Open, FileAccess.Read);
-                FileStream readEmployeeSigniture = new FileStream(photoSigniturePhoto, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(readEmployeePhoto);
-                Employeeimage = br.ReadBytes((int)readEmployeePhoto.Length);
-                BinaryReader br2 = new BinaryReader(readEmployeeSigniture);
-                Signitureimage = br2.ReadBytes((int)readEmployeeSigniture.Length);
-                br.Close();
-                readEmployeePhoto.Close();
-                br2.Close();
-                readEmployeeSigniture.Close();
-                if (imagechecker == false)
+                else if (employeeForm_new_employeePhoto_pctrBox.Image == null)
                 {
-                    FileStream FileSt = new FileStream(EmployeeNewDefaultPic, FileMode.Open, FileAccess.Read);
-                    BinaryReader ReaderBinary = new BinaryReader(FileSt);
-                    ImageSaveDefaultPicture = ReaderBinary.ReadBytes((int)FileSt.Length);
-                    FileStream FileSt2 = new FileStream(EmployeeNewDefaultSigniture, FileMode.Open, FileAccess.Read);
-                    BinaryReader ReaderBinary2 = new BinaryReader(FileSt);
-                    ImageSaveDefaultSigniture = ReaderBinary.ReadBytes((int)FileSt.Length);
-                    ReaderBinary.Close();
-                    FileSt.Close();
-                    FileSt2.Close();
+                    MessageBox.Show("Employee photo field is empty. Please attach image of new employees' photo to proceed.");
                 }
+                else
+                {
+                    int account_level_value = 2;
+                    int gendervalue = 0;
+                    if (employeeForm_new_acctypeAdmin_rdBtn.Checked == true)
+                    {
+                        account_level_value = 0;
+                    }
+                    else if (employeeForm_new_acctypeEmployeewAccess_rdBtn.Checked == true)
+                    {
+                        account_level_value = 1;
+                    }
+                    if (employeeForm_new_genderfemale_rdBtn.Checked == true)
+                    {
+                        gendervalue = 1;
+                    }
 
-                MySqlConnection con = new MySqlConnection(myConnection);
-                con.Open();
-                MySqlCommand save = con.CreateCommand();
-                save.Connection = con;
-                save.CommandText = ("insert into useraccounts (id_number,password,account_level" +
-                    ",account_status,firstname," +
-                   "middlename,lastname,birthdate,address,gender,contact_no,date_employed" +
-                   ",last_in,last_out,balance,inserted_by,date_exited,employee_picture,employee_signiture,date_archived) values(@ID,@password, @accountlevel,@accountstatus,@firstname,@middlename,@lastname,@birthdate,@address,@gender,@contactno,@dateEmployed,@last_In,@last_Out,@balance,@inserted_by,@date_exited,@employeePicture,@employeeSigniture,@date_archived)");
-                save.Parameters.AddWithValue("@ID", employeeForm_new_employeeID_lbl.Text);
-                save.Parameters.AddWithValue("@password", employeeForm_new_password_txtBox.Text);
-                save.Parameters.AddWithValue("@accountlevel", account_level_value);
-                save.Parameters.AddWithValue("@accountstatus", 1);
-                save.Parameters.AddWithValue("@firstname", employeeForm_new_firstname_txtBox.Text);
-                save.Parameters.AddWithValue("@middlename", employeeForm_new_middlename_txtBox.Text);
-                save.Parameters.AddWithValue("@lastname", employeeForm_new_lastname_txtBox.Text);
-                save.Parameters.AddWithValue("@birthdate", employeeForm_new_employeeDOB_DTpicker.Text);
-                save.Parameters.AddWithValue("@address", employeeForm_new_address_txtBox.Text);
-                save.Parameters.AddWithValue("@gender", gendervalue);
-                save.Parameters.AddWithValue("@contactno", employeeForm_new_contactno_txtBox.Text);
-                save.Parameters.AddWithValue("@dateEmployed", datenow_DTpicker.Text);
-                save.Parameters.AddWithValue("@last_In", "N/A");
-                save.Parameters.AddWithValue("@last_Out", "N/A");
-                save.Parameters.AddWithValue("@balance", "0");
-                save.Parameters.AddWithValue("@inserted_by", employeeForm_user_firstname.Text);
-                save.Parameters.AddWithValue("@date_exited", "ACTIVE");
-                save.Parameters.AddWithValue("@date_archived", "ACTIVE");
-                save.Parameters.Add("@employeePicture", MySqlDbType.Blob);
-                save.Parameters["@employeePicture"].Value = Employeeimage;
-                save.Parameters.Add("@employeeSigniture", MySqlDbType.Blob);
-                save.Parameters["@employeeSigniture"].Value = Signitureimage;
-                save.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("New user added!" + "Your ID is " + employeeForm_new_employeeID_lbl.Text);
-                fillEmployeelist();
-                employeeForm_new_firstname_txtBox.Clear(); employeeForm_new_middlename_txtBox.Clear(); employeeForm_new_middlename_txtBox.Clear();
-                employeeForm_new_lastname_txtBox.Clear(); employeeForm_new_address_txtBox.Clear(); employeeForm_new_contactno_txtBox.Clear();
-                employeeForm_new_password_txtBox.Clear(); employeeForm_new_gendermale_rdBtn.Checked = true; employeeForm_new_acctypeEmployee_rdBtn.Checked = true;
-                employeeForm_employeePhoto_path_txtBox.Clear(); employeeForm_employeeSigniture_path_txtBox.Clear(); employeeForm_employeedetails_grpBox.Visible = true;
-                employeeForm_new_employee_grpBox.Visible = false; employeeForm_addnewuser_btn.Text = "Add new user";
+                    byte[] ImageSaveDefaultPicture = null;
+                    byte[] ImageSaveDefaultSigniture = null;
+                    string photoEmployeePhoto = employeeForm_employeePhoto_path_txtBox.Text;
+                    string photoSigniturePhoto = employeeForm_employeeSigniture_path_txtBox.Text;
+                    byte[] Employeeimage;
+                    byte[] Signitureimage;
+
+                    FileStream readEmployeePhoto = new FileStream(photoEmployeePhoto, FileMode.Open, FileAccess.Read);
+                    FileStream readEmployeeSigniture = new FileStream(photoSigniturePhoto, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(readEmployeePhoto);
+                    Employeeimage = br.ReadBytes((int)readEmployeePhoto.Length);
+                    BinaryReader br2 = new BinaryReader(readEmployeeSigniture);
+                    Signitureimage = br2.ReadBytes((int)readEmployeeSigniture.Length);
+                    br.Close();
+                    readEmployeePhoto.Close();
+                    br2.Close();
+                    readEmployeeSigniture.Close();
+                    if (imagechecker == false)
+                    {
+                        FileStream FileSt = new FileStream(EmployeeNewDefaultPic, FileMode.Open, FileAccess.Read);
+                        BinaryReader ReaderBinary = new BinaryReader(FileSt);
+                        ImageSaveDefaultPicture = ReaderBinary.ReadBytes((int)FileSt.Length);
+                        FileStream FileSt2 = new FileStream(EmployeeNewDefaultSigniture, FileMode.Open, FileAccess.Read);
+                        BinaryReader ReaderBinary2 = new BinaryReader(FileSt);
+                        ImageSaveDefaultSigniture = ReaderBinary.ReadBytes((int)FileSt.Length);
+                        ReaderBinary.Close();
+                        FileSt.Close();
+                        FileSt2.Close();
+                    }
+
+                    MySqlConnection con = new MySqlConnection(myConnection);
+                    con.Open();
+                    MySqlCommand save = con.CreateCommand();
+                    save.Connection = con;
+                    save.CommandText = ("insert into useraccounts (id_number,password,account_level" +
+                        ",account_status,firstname," +
+                       "middlename,lastname,birthdate,address,gender,contact_no,date_employed" +
+                       ",last_in,last_out,balance,inserted_by,date_exited,employee_picture,employee_signiture,date_archived) values(@ID,@password, @accountlevel,@accountstatus,@firstname,@middlename,@lastname,@birthdate,@address,@gender,@contactno,@dateEmployed,@last_In,@last_Out,@balance,@inserted_by,@date_exited,@employeePicture,@employeeSigniture,@date_archived)");
+                    save.Parameters.AddWithValue("@ID", employeeForm_new_employeeID_lbl.Text);
+                    save.Parameters.AddWithValue("@password", employeeForm_new_password_txtBox.Text);
+                    save.Parameters.AddWithValue("@accountlevel", account_level_value);
+                    save.Parameters.AddWithValue("@accountstatus", 1);
+                    save.Parameters.AddWithValue("@firstname", employeeForm_new_firstname_txtBox.Text);
+                    save.Parameters.AddWithValue("@middlename", employeeForm_new_middlename_txtBox.Text);
+                    save.Parameters.AddWithValue("@lastname", employeeForm_new_lastname_txtBox.Text);
+                    save.Parameters.AddWithValue("@birthdate", employeeForm_new_employeeDOB_DTpicker.Text);
+                    save.Parameters.AddWithValue("@address", employeeForm_new_address_txtBox.Text);
+                    save.Parameters.AddWithValue("@gender", gendervalue);
+                    save.Parameters.AddWithValue("@contactno", employeeForm_new_contactno_txtBox.Text);
+                    save.Parameters.AddWithValue("@dateEmployed", datenow_DTpicker.Text);
+                    save.Parameters.AddWithValue("@last_In", "N/A");
+                    save.Parameters.AddWithValue("@last_Out", "N/A");
+                    save.Parameters.AddWithValue("@balance", "0");
+                    save.Parameters.AddWithValue("@inserted_by", employeeForm_user_firstname.Text);
+                    save.Parameters.AddWithValue("@date_exited", "ACTIVE");
+                    save.Parameters.AddWithValue("@date_archived", "ACTIVE");
+                    save.Parameters.Add("@employeePicture", MySqlDbType.Blob);
+                    save.Parameters["@employeePicture"].Value = Employeeimage;
+                    save.Parameters.Add("@employeeSigniture", MySqlDbType.Blob);
+                    save.Parameters["@employeeSigniture"].Value = Signitureimage;
+                    save.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("New user added!" + "Your ID is " + employeeForm_new_employeeID_lbl.Text);
+                    fillEmployeelist();
+                    employeeForm_new_firstname_txtBox.Clear(); employeeForm_new_middlename_txtBox.Clear(); employeeForm_new_middlename_txtBox.Clear();
+                    employeeForm_new_lastname_txtBox.Clear(); employeeForm_new_address_txtBox.Clear(); employeeForm_new_contactno_txtBox.Clear();
+                    employeeForm_new_password_txtBox.Clear(); employeeForm_new_gendermale_rdBtn.Checked = true; employeeForm_new_acctypeEmployeewAccess_rdBtn.Checked = true;
+                    employeeForm_employeePhoto_path_txtBox.Clear(); employeeForm_employeeSigniture_path_txtBox.Clear(); employeeForm_employeedetails_grpBox.Visible = true;
+                    employeeForm_new_employee_grpBox.Visible = false; employeeForm_addnewuser_btn.Text = "Add new user";
+                }
             }
+
+            conn.Close();
+            
             
 
 }
@@ -397,6 +426,10 @@ namespace YvonnieStore_Beta_2_
             switch (employeeForm_addnewuser_btn.Text)
             {
                 case "Add new user":
+                    if (account_level.Text == "16")
+                    {
+                        employeeForm_new_acctypeAdmin_rdBtn.Visible = true;
+                    }
                     employeeForm_new_employeeID_lbl.Text = NumberRandom.ToString(); 
                     employeeForm_employeedetails_grpBox.Visible = false;
                     employeeForm_new_employee_grpBox.Visible = true;
@@ -739,6 +772,7 @@ namespace YvonnieStore_Beta_2_
             POS_Form toPOSForm = new POS_Form();
             toPOSForm.POS_user_Firstname.Text = employeeForm_user_firstname.Text;
             toPOSForm.POS_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toPOSForm.account_level.Text = account_level.Text;
             this.Close();
             toPOSForm.Show();
         }
@@ -746,9 +780,9 @@ namespace YvonnieStore_Beta_2_
         private void employeeForm_inventory_btn_Click(object sender, EventArgs e)
         {
             inventory_Form toInventory = new inventory_Form();
-            toInventory.inventoryForm_user_picture.Image = employeeForm_employeeCurrentPicture_pctrBox.Image;
             toInventory.inventoryForm_user_Firstname.Text = employeeForm_user_firstname.Text;
             toInventory.inventoryForm_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toInventory.account_level.Text = account_level.Text;
             this.Close();
             toInventory.Show();
         }
@@ -777,7 +811,7 @@ namespace YvonnieStore_Beta_2_
         {
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
             if (e.KeyChar == '.'
-                && (sender as TextBox).Text.IndexOf('.') > -1)
+                && employeeForm_employeebalance_txtBox.Text.IndexOf('.') >= 1)
             {
                 e.Handled = true;
             }
@@ -852,7 +886,12 @@ namespace YvonnieStore_Beta_2_
 
         private void employeeForm_suppliers_btn_Click(object sender, EventArgs e)
         {
-
+            supplier_Form toSupplier = new supplier_Form();
+            toSupplier.Supplier_user_Firstname.Text = employeeForm_user_firstname.Text;
+            toSupplier.Supplier_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toSupplier.account_level.Text = account_level.Text;
+            this.Close();
+            toSupplier.Show();
         }
 
         private void employeeForm_sales_btn_Click(object sender, EventArgs e)
@@ -860,6 +899,7 @@ namespace YvonnieStore_Beta_2_
             sales_form toSalesForm = new sales_form();
             toSalesForm.salesForm_user_Firstname.Text = employeeForm_user_firstname.Text;
             toSalesForm.salesForm_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toSalesForm.account_level.Text = account_level.Text;
             this.Close();
             toSalesForm.Show();
         }
@@ -869,6 +909,7 @@ namespace YvonnieStore_Beta_2_
             customer_form toCustomer = new customer_form();
             toCustomer.Customer_user_Firstname.Text = employeeForm_user_firstname.Text;
             toCustomer.Customer_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toCustomer.account_level.Text = account_level.Text;
             this.Close();
             toCustomer.Show();
         }
@@ -878,8 +919,25 @@ namespace YvonnieStore_Beta_2_
             Transaction_Form toTransactionForm = new Transaction_Form();
             toTransactionForm.Transaction_user_Firstname.Text = employeeForm_user_firstname.Text;
             toTransactionForm.Transaction_user_idnumber.Text = employeeForm_user_idnumber.Text;
+            toTransactionForm.account_level.Text = account_level.Text;
             this.Close();
             toTransactionForm.Show();
+        }
+
+        private void employeeForm_new_contactno_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+               && !char.IsDigit(e.KeyChar)
+               && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void employeeForm_new_acctypeAdmin_rdBtn_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

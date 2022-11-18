@@ -138,6 +138,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.customerForm_refreshlist_btn = new System.Windows.Forms.Button();
+            this.account_level = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -182,9 +183,9 @@
             this.POS_toUsers_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POS_toUsers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.POS_toUsers_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POS_toUsers_btn.Location = new System.Drawing.Point(4, 463);
+            this.POS_toUsers_btn.Location = new System.Drawing.Point(3, 300);
             this.POS_toUsers_btn.Name = "POS_toUsers_btn";
-            this.POS_toUsers_btn.Size = new System.Drawing.Size(144, 51);
+            this.POS_toUsers_btn.Size = new System.Drawing.Size(145, 57);
             this.POS_toUsers_btn.TabIndex = 95;
             this.POS_toUsers_btn.Text = "USERS";
             this.POS_toUsers_btn.UseVisualStyleBackColor = false;
@@ -195,9 +196,9 @@
             this.POSForm_toTransactions_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.POSForm_toTransactions_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.POSForm_toTransactions_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(5, 518);
+            this.POSForm_toTransactions_btn.Location = new System.Drawing.Point(3, 418);
             this.POSForm_toTransactions_btn.Name = "POSForm_toTransactions_btn";
-            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(143, 51);
+            this.POSForm_toTransactions_btn.Size = new System.Drawing.Size(145, 57);
             this.POSForm_toTransactions_btn.TabIndex = 94;
             this.POSForm_toTransactions_btn.Text = "TRANSACTIONS";
             this.POSForm_toTransactions_btn.UseVisualStyleBackColor = false;
@@ -226,12 +227,14 @@
             this.stopdebug_btn.TabIndex = 51;
             this.stopdebug_btn.Text = "Stop";
             this.stopdebug_btn.UseVisualStyleBackColor = true;
+            this.stopdebug_btn.Visible = false;
             this.stopdebug_btn.Click += new System.EventHandler(this.stopdebug_btn_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Snow;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.account_level);
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.POSForm_logout_btn);
             this.panel6.Controls.Add(this.groupBox4);
@@ -273,6 +276,7 @@
             this.POSForm_logout_btn.TabIndex = 50;
             this.POSForm_logout_btn.Text = "Logout";
             this.POSForm_logout_btn.UseVisualStyleBackColor = false;
+            this.POSForm_logout_btn.Visible = false;
             // 
             // groupBox4
             // 
@@ -324,9 +328,9 @@
             this.customerForm_POS_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_POS_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_POS_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_POS_btn.Location = new System.Drawing.Point(3, 247);
+            this.customerForm_POS_btn.Location = new System.Drawing.Point(3, 241);
             this.customerForm_POS_btn.Name = "customerForm_POS_btn";
-            this.customerForm_POS_btn.Size = new System.Drawing.Size(145, 49);
+            this.customerForm_POS_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_POS_btn.TabIndex = 4;
             this.customerForm_POS_btn.Text = "POS";
             this.customerForm_POS_btn.UseVisualStyleBackColor = false;
@@ -337,9 +341,9 @@
             this.customerForm_sales_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_sales_btn.Location = new System.Drawing.Point(3, 409);
+            this.customerForm_sales_btn.Location = new System.Drawing.Point(3, 477);
             this.customerForm_sales_btn.Name = "customerForm_sales_btn";
-            this.customerForm_sales_btn.Size = new System.Drawing.Size(145, 50);
+            this.customerForm_sales_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_sales_btn.TabIndex = 3;
             this.customerForm_sales_btn.Text = "SALES";
             this.customerForm_sales_btn.UseVisualStyleBackColor = false;
@@ -350,9 +354,9 @@
             this.customerForm_supplier_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_supplier_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_supplier_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_supplier_btn.Location = new System.Drawing.Point(3, 356);
+            this.customerForm_supplier_btn.Location = new System.Drawing.Point(3, 536);
             this.customerForm_supplier_btn.Name = "customerForm_supplier_btn";
-            this.customerForm_supplier_btn.Size = new System.Drawing.Size(145, 50);
+            this.customerForm_supplier_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_supplier_btn.TabIndex = 2;
             this.customerForm_supplier_btn.Text = "SUPPLIERS";
             this.customerForm_supplier_btn.UseVisualStyleBackColor = false;
@@ -363,9 +367,9 @@
             this.customerForm_inventory_btn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.customerForm_inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerForm_inventory_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerForm_inventory_btn.Location = new System.Drawing.Point(3, 300);
+            this.customerForm_inventory_btn.Location = new System.Drawing.Point(3, 359);
             this.customerForm_inventory_btn.Name = "customerForm_inventory_btn";
-            this.customerForm_inventory_btn.Size = new System.Drawing.Size(145, 53);
+            this.customerForm_inventory_btn.Size = new System.Drawing.Size(145, 57);
             this.customerForm_inventory_btn.TabIndex = 1;
             this.customerForm_inventory_btn.Text = "INVENTORY";
             this.customerForm_inventory_btn.UseVisualStyleBackColor = false;
@@ -1376,6 +1380,17 @@
             this.customerForm_refreshlist_btn.Text = "Refresh list";
             this.customerForm_refreshlist_btn.UseVisualStyleBackColor = false;
             // 
+            // account_level
+            // 
+            this.account_level.AutoSize = true;
+            this.account_level.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_level.Location = new System.Drawing.Point(3, 123);
+            this.account_level.Name = "account_level";
+            this.account_level.Size = new System.Drawing.Size(23, 20);
+            this.account_level.TabIndex = 86;
+            this.account_level.Text = "xx";
+            this.account_level.Visible = false;
+            // 
             // customer_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1384,9 +1399,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.employeeForm_new_employee_grpBox);
             this.Controls.Add(this.customerForm_customerdetails_grpBox);
             this.Controls.Add(this.customerForm_enlarge_EmployeePhoto_pctrBox);
-            this.Controls.Add(this.employeeForm_new_employee_grpBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "customer_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1532,5 +1547,6 @@
         private System.Windows.Forms.Button customerForm_CancelCustomerPicturePreview_btn;
         private System.Windows.Forms.Button POS_toUsers_btn;
         private System.Windows.Forms.Button POSForm_toTransactions_btn;
+        public System.Windows.Forms.Label account_level;
     }
 }
